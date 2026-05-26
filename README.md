@@ -104,7 +104,7 @@ cat output/{video_id}/evidence_package.json
 
 两条链路最终输出格式完全一致，都是 EvidencePackage。
 
-### Processor 说明
+### Processor 说明 （具体可修改）
 
 | Processor | 输入 | 输出 | 工具 |
 |-----------|------|------|------|
@@ -125,7 +125,7 @@ audio           （无依赖）     → asr
                                → beat
 ```
 
-### 输出结构
+### 输出结构（具体可修改）
 
 ```
 output/{video_id}/
