@@ -1,0 +1,40 @@
+# Output
+output/
+temp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Whisper models cache
+~/.cache/whisper/
+
+# OS
+Thumbs.db
+
+# Test videos
+src/stage1/scripts/*.mp4
+src/stage1/scripts/*.mov
+src/stage1/scripts/*.mkv
+src/stage1/scripts/*.webm
+src/stage1/scripts/*.avi
+
+src/stage1/scripts/test_videos/

@@ -1,0 +1,16 @@
+# Core
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Video processing (ffmpeg/ffprobe as system binary)
+Pillow>=10.0.0
+
+# ASR
+openai-whisper>=20231117
+
+# OCR (tesseract fallback)
+pytesseract>=0.3.10
+
+# Beat detection
+librosa>=0.10.0
+soundfile>=0.12.1
