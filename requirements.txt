@@ -1,16 +1,29 @@
+# ViralCut Stage 1 Dependencies
+
 # Core
 python-dotenv>=1.0.0
 requests>=2.31.0
 
-# Video processing (ffmpeg/ffprobe as system binary)
+# Video processing (ffmpeg/ffprobe as system binary: brew install ffmpeg)
 Pillow>=10.0.0
 
-# ASR
-openai-whisper>=20231117
+# ASR - FasterWhisper
+faster-whisper>=1.0.0
 
-# OCR (tesseract fallback)
+# OCR - RapidOCR (primary)
+rapidocr-onnxruntime>=1.3.0
+onnxruntime>=1.16.0
+
+# OCR - Tesseract (fallback, optional)
+# Requires system binary: brew install tesseract
 pytesseract>=0.3.10
+
+# OCR - Image hash dedup
+imagehash>=4.3.0
 
 # Beat detection
 librosa>=0.10.0
 soundfile>=0.12.1
+
+# JSON serialization
+dataclasses-json>=0.6.0
