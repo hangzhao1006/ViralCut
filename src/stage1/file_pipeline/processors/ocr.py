@@ -29,11 +29,13 @@ Processor: OCR 画面文字识别
    - 最快但中文效果一般
 
 推荐 .env：
-OCR_METHOD=fast_hybrid
-OCR_MAX_FRAMES=12
-OCR_BATCH_SIZE=4
-OCR_MAX_WORKERS=2
-OCR_HASH_THRESHOLD=6
+OCR_METHOD=rapid_then_doubao
+RAPID_OCR_MIN_CONF=0.45
+RAPID_FALLBACK_ON_EMPTY=false
+OCR_WATERMARK_MIN_RATIO=0.35
+OCR_WATERMARK_MIN_COUNT=5
+DOUBAO_FALLBACK_MAX_FRAMES=12
+RAPID_FALLBACK_ON_TITLE_FRAME=true
 """
 
 from __future__ import annotations
@@ -77,30 +79,470 @@ def run(input_path: str, output_dir: str, context: dict) -> dict:
     width = int(metadata.get("width", 1) or 1)
     height = int(metadata.get("height", 1) or 1)
 
-    method = os.getenv("OCR_METHOD", "fast_hybrid").lower().strip()
+    method = os.getenv("OCR_METHOD", "rapid_then_doubao").lower().strip()
 
-    logger.info("OCR method: %s, keyframes: %d", method, len(keyframes))
 
-    if method == "fast_hybrid":
+    if method == "rapid":
+        ocr_results = _run_rapid_ocr(keyframes, width, height, fallback_to_doubao=False)
+    elif method == "rapid_then_doubao":
+        ocr_results = _run_rapid_ocr(keyframes, width, height, fallback_to_doubao=True)
+    elif method == "fast_hybrid":
         ocr_results = _run_fast_hybrid_ocr(keyframes, width, height)
-    elif method == "hybrid":
-        ocr_results = _run_hybrid_ocr(keyframes, width, height)
-    elif method == "llm":
+    elif method == "llm" or method == "doubao":
         ocr_results = _run_doubao_ocr(keyframes, width, height)
-    elif method == "tesseract":
-        ocr_results = _run_tesseract_ocr(keyframes, width, height)
     else:
-        logger.warning("Unknown OCR_METHOD=%s, fallback to fast_hybrid", method)
         ocr_results = _run_fast_hybrid_ocr(keyframes, width, height)
 
     ocr_results = _filter_watermarks(ocr_results)
+    ocr_results = _merge_consecutive_duplicates(ocr_results)
+    ocr_results = _add_display_texts(ocr_results)
+
     write_json(os.path.join(output_dir, "ocr.json"), ocr_results)
     return {"ocr_results": ocr_results}
 
+# ============================================================
+# Rapid 模式：推荐默认
+# ============================================================
 
+
+def _run_rapid_ocr(
+    keyframes: list[dict],
+    width: int,
+    height: int,
+    fallback_to_doubao: bool = True,
+) -> list[dict]:
+    """
+    RapidOCR 主流程。
+
+    优点：
+    - 本地 OCR，速度快
+    - 有真实 bbox
+    - 不会像多模态 batch 那样串图
+
+    fallback_to_doubao:
+    - True: RapidOCR 结果质量差时，用 Doubao 单图兜底
+    - False: 只用 RapidOCR
+    """
+    try:
+        from rapidocr_onnxruntime import RapidOCR
+    except ImportError as exc:
+        raise RuntimeError(
+            "rapidocr-onnxruntime is not installed. Run: "
+            "pip install rapidocr-onnxruntime onnxruntime"
+        ) from exc
+
+    engine = RapidOCR()
+
+    ocr_results: list[dict] = []
+    fallback_count = 0
+    fallback_max_frames = int(os.getenv("DOUBAO_FALLBACK_MAX_FRAMES", "12"))
+
+    for idx, frame in enumerate(keyframes):
+        fid = frame["frame_id"]
+        frame_path = frame.get("path")
+
+        if not frame_path or not os.path.exists(frame_path):
+            ocr_results.append({
+                "frame_id": fid,
+                "timestamp": frame.get("timestamp", 0.0),
+                "texts": [],
+                "ocr_source": "rapid",
+                "ocr_source_frame_id": None,
+                "ocr_reused": False,
+                "ocr_skipped_reason": "missing_frame_file",
+            })
+            continue
+
+        logger.info("RapidOCR: %s (%d/%d)", fid, idx + 1, len(keyframes))
+
+        try:
+            raw_result = engine(frame_path)
+            result = _unwrap_rapidocr_result(raw_result)
+            texts = _parse_rapidocr_result(result, width, height)
+        except Exception as exc:
+            logger.warning("RapidOCR failed for %s: %s", fid, exc)
+            texts = []
+
+        should_fallback, fallback_reason = _should_fallback_to_doubao(
+            texts=texts,
+            frame=frame,
+            frame_index=idx,
+        )
+
+        if fallback_to_doubao and should_fallback and (fallback_max_frames <= 0 or fallback_count < fallback_max_frames):
+            logger.info(
+                "RapidOCR fallback to Doubao: %s reason=%s (%d/%d)",
+                fid,
+                fallback_reason,
+                fallback_count + 1,
+                fallback_max_frames,
+            )
+
+            rapid_texts = texts
+            doubao_texts = _run_doubao_single_frame(frame, width, height)
+
+            # Doubao 兜底失败时，不要用空结果覆盖 RapidOCR 结果。
+            if doubao_texts:
+                texts = doubao_texts
+                ocr_source = "doubao_fallback"
+                fallback_count += 1
+            else:
+                texts = rapid_texts
+                ocr_source = "rapid_fallback_failed"
+        else:
+            ocr_source = "rapid"
+            if fallback_to_doubao and should_fallback:
+                logger.info(
+                    "Skip Doubao fallback for %s because fallback budget is used up. reason=%s",
+                    fid,
+                    fallback_reason,
+                )
+
+        ocr_results.append({
+            "frame_id": fid,
+            "timestamp": frame.get("timestamp", 0.0),
+            "texts": texts,
+            "ocr_source": ocr_source,
+            "ocr_fallback_reason": fallback_reason if fallback_to_doubao and should_fallback else None,
+            "ocr_source_frame_id": fid,
+            "ocr_reused": False,
+        })
+
+    return ocr_results
+
+
+def _unwrap_rapidocr_result(raw_result):
+    """
+    兼容不同版本 RapidOCR 的返回格式。
+
+    常见格式：
+    - (result, elapse)
+    - (result, elapse, something)
+    - result
+    """
+    if isinstance(raw_result, tuple):
+        return raw_result[0] if raw_result else []
+    return raw_result
+
+
+def _parse_rapidocr_result(
+    result,
+    width: int,
+    height: int,
+) -> list[dict]:
+    texts: list[dict] = []
+
+    if not result:
+        return texts
+
+    for item in result:
+        try:
+            box = item[0]
+            content = str(item[1]).strip()
+            confidence = float(item[2])
+        except Exception:
+            continue
+
+        if not content:
+            continue
+
+        xs = [float(p[0]) for p in box]
+        ys = [float(p[1]) for p in box]
+
+        x1 = int(max(0, min(xs)))
+        y1 = int(max(0, min(ys)))
+        x2 = int(min(width, max(xs)))
+        y2 = int(min(height, max(ys)))
+
+        bbox = [x1, y1, x2, y2]
+
+        texts.append({
+            "content": content,
+            "bbox": bbox,
+            "normalized_bbox": _normalize_bbox(bbox, width, height),
+            "confidence": round(confidence, 4),
+            "text_type": "rapidocr",
+        })
+
+    return texts
+
+def _should_fallback_to_doubao(
+    texts: list[dict],
+    frame: dict | None = None,
+    frame_index: int | None = None,
+) -> tuple[bool, str | None]:
+    """
+    判断 RapidOCR 是否需要 Doubao 兜底。
+
+    这里不再使用针对某条测试视频的错词硬编码。
+    只使用通用 OCR 质量信号：
+    - 平均置信度
+    - 文本是否为空
+    - 文本是否乱码
+    - 中文结果是否过度碎片化
+    - bbox 是否异常重叠
+    - 标题/开头 hook 页是否高价值
+    - 综合 OCR quality score
+    """
+    if not texts:
+        if os.getenv("RAPID_FALLBACK_ON_EMPTY", "false").lower().strip() == "true":
+            return True, "empty_result"
+        return False, None
+
+    confidences = [float(t.get("confidence", 0.0) or 0.0) for t in texts]
+    avg_conf = sum(confidences) / max(len(confidences), 1)
+    min_conf = float(os.getenv("RAPID_OCR_MIN_CONF", "0.55"))
+
+    if avg_conf < min_conf:
+        return True, f"low_avg_conf:{avg_conf:.3f}"
+
+    joined = "".join(t.get("content", "") for t in texts).strip()
+    normalized = _normalize_ocr_quality_text(joined)
+
+    if len(normalized) <= 1:
+        return True, "too_short"
+
+    if _looks_like_ocr_garbage(joined):
+        return True, "ocr_garbage"
+
+    if _is_probable_title_or_hook_frame(texts, frame, frame_index):
+        return True, "title_or_hook_frame"
+
+    if _is_fragmented_chinese_result(texts):
+        return True, "fragmented_chinese"
+
+    if os.getenv("RAPID_FALLBACK_ON_LOW_QUALITY", "true").lower().strip() == "true":
+        score, reasons = _score_rapid_ocr_quality(texts)
+        min_score = float(os.getenv("RAPID_OCR_MIN_QUALITY_SCORE", "0.42"))
+        if score < min_score:
+            reason = "+".join(reasons) if reasons else "low_quality_score"
+            return True, f"low_quality_score:{score:.3f}:{reason}"
+
+    return False, None
+
+
+def _normalize_ocr_quality_text(text: str) -> str:
+    """用于 OCR 质量判断的轻量文本归一化。"""
+    if not text:
+        return ""
+    text = text.lower().strip()
+    for ch in [" ", "\n", "\t", "，", ",", "。", ".", "：", ":", "、", "!", "！", "?", "？"]:
+        text = text.replace(ch, "")
+    return text
+
+
+def _score_rapid_ocr_quality(texts: list[dict]) -> tuple[float, list[str]]:
+    """
+    给 RapidOCR 结果一个通用质量分，不依赖具体错词表。
+
+    分数越低，越应该用 Doubao 兜底。
+    这不是最终字幕质量评估，只是控制 fallback 成本的启发式指标。
+    """
+    if not texts:
+        return 0.0, ["empty"]
+
+    contents = [str(t.get("content", "")).strip() for t in texts if str(t.get("content", "")).strip()]
+    joined = "".join(contents)
+    if not joined:
+        return 0.0, ["empty_text"]
+
+    total_chars = len(joined)
+    chinese_count = sum(1 for ch in joined if "\u4e00" <= ch <= "\u9fff")
+    alnum_count = sum(1 for ch in joined if ch.isalnum() or "\u4e00" <= ch <= "\u9fff")
+    symbol_count = max(total_chars - alnum_count, 0)
+
+    avg_conf = sum(float(t.get("confidence", 0.0) or 0.0) for t in texts) / max(len(texts), 1)
+    valid_char_ratio = alnum_count / max(total_chars, 1)
+    symbol_ratio = symbol_count / max(total_chars, 1)
+    short_block_ratio = sum(1 for c in contents if len(c) <= 2) / max(len(contents), 1)
+    avg_block_len = total_chars / max(len(contents), 1)
+    overlap_ratio = _bbox_overlap_ratio(texts)
+
+    score = 0.0
+    reasons: list[str] = []
+
+    # confidence 是最主要信号，但不能单独决定，因为 OCR 可能高置信错识别。
+    score += max(0.0, min(1.0, avg_conf)) * 0.42
+
+    # 合法字符占比高说明不像乱码。
+    score += max(0.0, min(1.0, valid_char_ratio)) * 0.20
+
+    # 文本长度太短时不稳定；但不要惩罚 BGM、CTA、X3 这类短标签太多。
+    length_score = min(total_chars / 8.0, 1.0)
+    if total_chars <= 3 and len(texts) <= 1:
+        length_score = max(length_score, 0.55)
+    score += length_score * 0.15
+
+    # 中文 OCR 常见问题是被切成很多单字/双字碎片。
+    fragmentation_penalty = 0.0
+    if len(texts) >= 3 and short_block_ratio >= 0.70 and chinese_count >= 3:
+        fragmentation_penalty += 0.18
+        reasons.append("fragmented_blocks")
+    if len(texts) >= 2 and avg_block_len < 2.2 and chinese_count >= 4:
+        fragmentation_penalty += 0.10
+        reasons.append("short_avg_block")
+
+    # 符号过多通常是乱码或检测框异常。
+    symbol_penalty = 0.0
+    if symbol_ratio > 0.35:
+        symbol_penalty += 0.16
+        reasons.append("many_symbols")
+
+    # bbox 大量重叠通常说明检测/解析不稳定。
+    overlap_penalty = 0.0
+    if overlap_ratio > 0.35:
+        overlap_penalty += 0.12
+        reasons.append("overlap_boxes")
+
+    score -= fragmentation_penalty + symbol_penalty + overlap_penalty
+    score = max(0.0, min(1.0, score))
+
+    if avg_conf < 0.60:
+        reasons.append("mid_low_conf")
+    if valid_char_ratio < 0.70:
+        reasons.append("low_valid_char_ratio")
+
+    return score, reasons
+
+
+def _bbox_overlap_ratio(texts: list[dict]) -> float:
+    """计算 OCR 文本框的平均重叠程度，用于发现异常 bbox。"""
+    boxes = []
+    for t in texts:
+        bbox = t.get("bbox") or []
+        if len(bbox) != 4:
+            continue
+        try:
+            x1, y1, x2, y2 = [float(v) for v in bbox]
+        except Exception:
+            continue
+        if x2 <= x1 or y2 <= y1:
+            continue
+        boxes.append((x1, y1, x2, y2))
+
+    if len(boxes) < 2:
+        return 0.0
+
+    overlaps = []
+    for i in range(len(boxes)):
+        for j in range(i + 1, len(boxes)):
+            overlaps.append(_bbox_iou(boxes[i], boxes[j]))
+
+    if not overlaps:
+        return 0.0
+    return sum(1 for x in overlaps if x > 0.25) / len(overlaps)
+
+
+def _bbox_iou(a: tuple[float, float, float, float], b: tuple[float, float, float, float]) -> float:
+    ax1, ay1, ax2, ay2 = a
+    bx1, by1, bx2, by2 = b
+    ix1, iy1 = max(ax1, bx1), max(ay1, by1)
+    ix2, iy2 = min(ax2, bx2), min(ay2, by2)
+    iw, ih = max(0.0, ix2 - ix1), max(0.0, iy2 - iy1)
+    inter = iw * ih
+    if inter <= 0:
+        return 0.0
+    area_a = max(0.0, ax2 - ax1) * max(0.0, ay2 - ay1)
+    area_b = max(0.0, bx2 - bx1) * max(0.0, by2 - by1)
+    union = area_a + area_b - inter
+    return inter / union if union > 0 else 0.0
+
+
+def _is_probable_title_or_hook_frame(
+    texts: list[dict],
+    frame: dict | None,
+    frame_index: int | None,
+) -> bool:
+    """
+    标题/开头 hook 页对 Stage 2 很重要，RapidOCR 容易漏“2/你”等关键字。
+    默认只对前 3 秒或前 3 帧里的多文本块页面做 Doubao 兜底。
+    """
+    if os.getenv("RAPID_FALLBACK_ON_TITLE_FRAME", "true").lower().strip() != "true":
+        return False
+
+    timestamp = float((frame or {}).get("timestamp", 999999.0) or 999999.0)
+    index = frame_index if frame_index is not None else 999999
+    early = timestamp <= float(os.getenv("RAPID_TITLE_FRAME_MAX_TIME", "3.0")) or index <= int(os.getenv("RAPID_TITLE_FRAME_MAX_INDEX", "2"))
+    if not early:
+        return False
+
+    joined = "".join(t.get("content", "") for t in texts).strip()
+    chinese_count = sum(1 for ch in joined if "\u4e00" <= ch <= "\u9fff")
+    return len(texts) >= 2 and chinese_count >= 6
+
+
+def _is_fragmented_chinese_result(texts: list[dict]) -> bool:
+    """
+    识别结果很碎时让 Doubao 兜底。
+    但保留“鼓点X3 / BGM / CTA”等短标签，不要过度触发。
+    """
+    joined = "".join(t.get("content", "") for t in texts).strip()
+    chinese_count = sum(1 for ch in joined if "\u4e00" <= ch <= "\u9fff")
+    alpha_digit_count = sum(1 for ch in joined if ch.isalpha() or ch.isdigit())
+
+    if chinese_count == 0:
+        return False
+
+    # 单个短标签通常是有效结构提示，不兜底，例如“鼓点X3”“BGM”。
+    if len(texts) <= 1 and alpha_digit_count > 0:
+        return False
+
+    # 多个很短中文碎片，常见于 RapidOCR 漏识别/切碎。
+    short_blocks = [t for t in texts if len(t.get("content", "").strip()) <= 2]
+    if len(texts) >= 2 and len(short_blocks) / max(len(texts), 1) >= 0.65 and chinese_count <= 6:
+        return True
+
+    return False
+
+
+def _looks_like_ocr_garbage(text: str) -> bool:
+    if not text:
+        return True
+
+    # 大量奇怪符号
+    symbol_count = sum(1 for ch in text if not ch.isalnum() and not "\u4e00" <= ch <= "\u9fff")
+    if symbol_count / max(len(text), 1) > 0.5:
+        return True
+
+    # 英文超长无意义串
+    import re
+    letters = re.findall(r"[A-Za-z]", text)
+    if len(letters) >= 12:
+        words = re.findall(r"[A-Za-z]+", text)
+        if words:
+            avg_word_len = sum(len(w) for w in words) / len(words)
+            if avg_word_len > 14:
+                return True
+
+    return False
+
+def _run_doubao_single_frame(
+    frame: dict,
+    width: int,
+    height: int,
+) -> list[dict]:
+    try:
+        from src.stage1.utils.doubao import call_ocr
+    except Exception as exc:
+        logger.warning("Doubao OCR unavailable: %s", exc)
+        return []
+
+    try:
+        raw_texts = call_ocr(frame["path"])
+        texts = _parse_doubao_items(
+            raw_texts=raw_texts,
+            width=width,
+            height=height,
+        )
+        return texts
+    except Exception as exc:
+        logger.warning("Doubao fallback failed for %s: %s", frame.get("frame_id"), exc)
+        return []
+        
 # ============================================================
 # Fast Hybrid 模式：推荐默认
 # ============================================================
+
 
 def _run_fast_hybrid_ocr(
     keyframes: list[dict],
@@ -120,7 +562,8 @@ def _run_fast_hybrid_ocr(
     try:
         from src.stage1.utils.doubao import call_ocr
     except Exception as exc:
-        logger.warning("Doubao OCR unavailable, fallback to Tesseract: %s", exc)
+        logger.warning(
+            "Doubao OCR unavailable, fallback to Tesseract: %s", exc)
         return _run_tesseract_ocr(keyframes, width, height)
 
     max_frames = int(os.getenv("OCR_MAX_FRAMES", "24"))
@@ -148,7 +591,8 @@ def _run_fast_hybrid_ocr(
             for frame in keyframes
         ]
 
-    logger.info("Fast hybrid OCR: valid keyframes %d/%d", len(valid_frames), len(keyframes))
+    logger.info("Fast hybrid OCR: valid keyframes %d/%d",
+                len(valid_frames), len(keyframes))
 
     # Step 1: 更保守的图像去重
     # 只有真正相似的帧才允许复用 OCR
@@ -166,7 +610,8 @@ def _run_fast_hybrid_ocr(
     # Step 2: 控制实际 OCR 帧数
     # 注意：没被选中的 representative 不再复用最近 OCR 帧
     if max_frames > 0 and len(representative_frames) > max_frames:
-        frames_to_ocr = _sample_frames_evenly(representative_frames, max_frames)
+        frames_to_ocr = _sample_frames_evenly(
+            representative_frames, max_frames)
     else:
         frames_to_ocr = representative_frames
 
@@ -185,7 +630,8 @@ def _run_fast_hybrid_ocr(
         fid = frame["frame_id"]
         frame_path = frame["path"]
 
-        logger.info("Doubao single OCR: %s (%d/%d)", fid, idx + 1, len(frames_to_ocr))
+        logger.info("Doubao single OCR: %s (%d/%d)",
+                    fid, idx + 1, len(frames_to_ocr))
 
         try:
             raw_texts = call_ocr(frame_path)
@@ -243,6 +689,7 @@ def _run_fast_hybrid_ocr(
 
     return ocr_results
 
+
 def _parse_doubao_items(
     raw_texts: list[dict],
     width: int,
@@ -293,7 +740,8 @@ def _dedup_by_image_hash_strict(
         from PIL import Image
         import imagehash
     except ImportError as exc:
-        logger.warning("Pillow/imagehash not available, skip image dedup: %s", exc)
+        logger.warning(
+            "Pillow/imagehash not available, skip image dedup: %s", exc)
         return frames, {frame["frame_id"]: frame["frame_id"] for frame in frames}
 
     representative_frames: list[dict] = []
@@ -307,7 +755,8 @@ def _dedup_by_image_hash_strict(
         try:
             hashes = _compute_multi_roi_hash(frame_path)
         except Exception as exc:
-            logger.debug("Failed to compute multi ROI hash for %s: %s", frame_path, exc)
+            logger.debug(
+                "Failed to compute multi ROI hash for %s: %s", frame_path, exc)
             representative_frames.append(frame)
             representative_hashes.append({})
             frame_to_rep[fid] = fid
@@ -395,6 +844,7 @@ def _is_multi_roi_hash_similar(
         return True
 
     return False
+
 
 def _sample_frames_evenly(frames: list[dict], max_frames: int) -> list[dict]:
     """
@@ -496,14 +946,16 @@ def _run_hybrid_ocr(keyframes: list[dict], width: int, height: int) -> list[dict
         else:
             frames_without_text.append(frame)
 
-    logger.info("Tesseract filter: %d/%d frames with text", len(frames_with_text), len(keyframes))
+    logger.info("Tesseract filter: %d/%d frames with text",
+                len(frames_with_text), len(keyframes))
 
     if tesseract_available and len(frames_with_text) > 1:
         frames_to_ocr = _dedup_frames(frames_with_text, frame_raw_texts)
     else:
         frames_to_ocr = frames_with_text
 
-    logger.info("Text dedup: %d/%d frames sent to Doubao", len(frames_to_ocr), len(frames_with_text))
+    logger.info("Text dedup: %d/%d frames sent to Doubao",
+                len(frames_to_ocr), len(frames_with_text))
 
     doubao_results: dict[str, list[dict]] = {}
     batch_size = int(os.getenv("OCR_BATCH_SIZE", "4"))
@@ -678,49 +1130,6 @@ def _run_tesseract_ocr(keyframes: list[dict], width: int, height: int) -> list[d
 # ============================================================
 # 工具函数
 # ============================================================
-def _filter_watermarks(ocr_results: list[dict], threshold: float = 0.5) -> list[dict]:
-    """
-    过滤水印文字：统计所有帧的文字出现频率，
-    出现在超过 threshold 比例的帧中的文字视为水印，自动去除。
-    """
-    total_frames = len(ocr_results)
-    if total_frames < 3:
-        return ocr_results
-
-    # 统计每段文字出现在多少帧里
-    text_freq = {}
-    for result in ocr_results:
-        seen = set()
-        for t in result.get("texts", []):
-            content = t["content"].strip()
-            if content not in seen:
-                text_freq[content] = text_freq.get(content, 0) + 1
-                seen.add(content)
-
-    # 出现频率超过阈值的是水印
-    watermarks = {
-        text for text, count in text_freq.items()
-        if count / total_frames >= threshold
-    }
-
-    if watermarks:
-        logger.info("检测到水印文字（已过滤）: %s", watermarks)
-
-    # 从每帧结果中去除水印
-    filtered = []
-    for result in ocr_results:
-        new_texts = [
-            t for t in result.get("texts", [])
-            if t["content"].strip() not in watermarks
-        ]
-        filtered.append({
-            **result,
-            "texts": new_texts,
-        })
-
-    return filtered
-
-    
 def _check_tesseract() -> bool:
     try:
         import pytesseract
@@ -866,3 +1275,324 @@ def _estimate_bbox_from_position(position: str, width: int, height: int) -> dict
             round(ny2, 6),
         ],
     }
+
+
+def _filter_watermarks(ocr_results: list[dict]) -> list[dict]:
+    """
+    为每帧增加 clean_texts，过滤平台水印、账号信息等低价值 OCR 文本。
+
+    判断逻辑：
+    1. 命中平台/账号关键词：删除
+    2. 高频重复 + 角落位置：删除
+    3. 角落位置 + 像账号/Logo：删除
+
+    注意：不删除原始 texts。
+    - texts: 原始 OCR 结果，用于调试和前端画 bbox
+    - clean_texts: 过滤后的主内容，供 Stage 2 使用
+    - removed_watermarks: 被过滤掉的水印/平台信息
+    """
+    repeated_watermarks = _detect_repeated_watermark_texts(ocr_results)
+
+    for item in ocr_results:
+        texts = item.get("texts", [])
+
+        clean_texts = []
+        removed_texts = []
+
+        for text_item in texts:
+            reason = _get_watermark_reason(text_item, repeated_watermarks)
+
+            if reason:
+                removed_item = dict(text_item)
+                removed_item["watermark_reason"] = reason
+                removed_texts.append(removed_item)
+            else:
+                clean_texts.append(text_item)
+
+        item["clean_texts"] = clean_texts
+        item["removed_watermarks"] = removed_texts
+        item["has_meaningful_text"] = len(clean_texts) > 0
+
+    return ocr_results
+
+
+def _detect_repeated_watermark_texts(ocr_results: list[dict]) -> set[str]:
+    """
+    找出在大量帧中反复出现的文本。
+
+    高频文本不一定都是水印，所以后续还会结合位置判断。
+    """
+    from collections import Counter
+
+    total_frames = len(ocr_results)
+    if total_frames < 3:
+        return set()
+
+    min_ratio = float(os.getenv("OCR_WATERMARK_MIN_RATIO", "0.35"))
+    min_count = int(os.getenv("OCR_WATERMARK_MIN_COUNT", "5"))
+
+    counter: Counter[str] = Counter()
+
+    for item in ocr_results:
+        seen_in_frame = set()
+
+        for text_item in item.get("texts", []):
+            content = text_item.get("content", "").strip()
+            norm = _normalize_watermark_text(content)
+            if norm:
+                seen_in_frame.add(norm)
+
+        for norm in seen_in_frame:
+            counter[norm] += 1
+
+    repeated = {
+        text for text, count in counter.items()
+        if count >= min_count and count / max(total_frames, 1) >= min_ratio
+    }
+
+    if repeated:
+        logger.info("Detected repeated OCR texts as watermark candidates: %s", repeated)
+
+    return repeated
+
+
+def _get_watermark_reason(text_item: dict, repeated_watermarks: set[str]) -> str | None:
+    content = text_item.get("content", "").strip()
+
+    if not content:
+        return "empty_text"
+
+    # 强平台/账号关键词可以直接删除，例如抖音号、douyin、FENDA。
+    if _matches_strong_platform_watermark(content):
+        return "platform_keyword"
+
+    norm = _normalize_watermark_text(content)
+
+    # 弱平台提示词只在角落/边缘区域删除，避免误删正文中的“关注/搜索”。
+    if _matches_weak_platform_hint(content) and _is_corner_or_edge_text(text_item):
+        return "weak_platform_hint_at_edge"
+
+    # 高频 + 角落/边缘，才判定为水印。避免误删中央重复 CTA。
+    if norm in repeated_watermarks and _is_corner_or_edge_text(text_item):
+        return "repeated_corner_text"
+
+    # 角落 + 像账号/Logo，也判定为水印。
+    if _is_corner_or_edge_text(text_item) and _looks_like_account_or_logo(content):
+        return "corner_account_or_logo"
+
+    return None
+
+
+def _matches_strong_platform_watermark(content: str) -> bool:
+    text = _normalize_watermark_text(content)
+
+    strong_patterns = [
+        "抖音",
+        "抖音号",
+        "douyin",
+        "fenda2452236",
+        "fenda",
+        "venda",
+        "芬达",
+    ]
+
+    return any(_normalize_watermark_text(pattern) in text for pattern in strong_patterns)
+
+
+def _matches_weak_platform_hint(content: str) -> bool:
+    text = _normalize_watermark_text(content)
+
+    weak_patterns = [
+        "来抖音",
+        "发现更多",
+        "发现更多创作者",
+        "搜索",
+        "关注",
+    ]
+
+    return any(_normalize_watermark_text(pattern) in text for pattern in weak_patterns)
+
+
+# Backward-compatible alias.
+def _matches_platform_watermark(content: str) -> bool:
+    return _matches_strong_platform_watermark(content) or _matches_weak_platform_hint(content)
+
+
+def _normalize_watermark_text(text: str) -> str:
+    """
+    水印匹配用归一化。
+    保留中英文和数字，去掉常见空格/标点差异。
+    """
+    if not text:
+        return ""
+
+    text = text.lower().strip()
+    remove_chars = [" ", "\n", "\t", "：", ":", "，", ",", "。", ".", "、", "-", "_", "@"]
+    for ch in remove_chars:
+        text = text.replace(ch, "")
+
+    return text
+
+
+def _is_corner_or_edge_text(text_item: dict) -> bool:
+    """
+    判断文字是否位于角落/边缘区域。
+
+    这版故意保守：
+    - 右下角：平台水印高发区
+    - 左下角：只有非常贴边/很低的位置才算，避免误删左下字幕
+    - 顶部边缘：账号/平台提示高发区
+    """
+    bbox = text_item.get("normalized_bbox") or []
+    if len(bbox) != 4:
+        return False
+
+    x1, y1, x2, y2 = bbox
+
+    # 右下角，典型平台水印位置。
+    if x1 > 0.58 and y1 > 0.66:
+        return True
+
+    # 左下角靠边且很低，避免把左下字幕当水印。
+    if x1 < 0.08 and x2 < 0.42 and y1 > 0.82:
+        return True
+
+    # 顶部边缘，常见平台条/账号信息。
+    if y2 < 0.11:
+        return True
+
+    return False
+
+
+def _looks_like_account_or_logo(content: str) -> bool:
+    """
+    判断是否像账号名、Logo、平台标识。
+
+    关键原则：
+    - 中文短句不要当 logo。
+    - 不使用 len(text)<=1，避免误删 OCR 拆开的有效单字。
+    """
+    if not content:
+        return True
+
+    text = content.strip()
+    lower = text.lower()
+
+    # 明确平台/账号。
+    if _matches_strong_platform_watermark(text):
+        return True
+
+    # 中文短句更可能是字幕，不按 logo 删除。
+    chinese_count = sum(1 for ch in text if "\u4e00" <= ch <= "\u9fff")
+    if chinese_count >= 2:
+        return False
+
+    if text.startswith("@"):
+        return True
+
+    if any(ch.isdigit() for ch in text) and any(ch.isalpha() for ch in text):
+        return True
+
+    if "号" in text or "id" in lower:
+        return True
+
+    # 英文/拼音短品牌名，位于角落时大概率是 logo/账号。
+    alpha_chars = [ch for ch in text if ch.isalpha()]
+    if len(alpha_chars) >= 3 and len(text) <= 16:
+        return True
+
+    return False
+
+
+def _add_display_texts(ocr_results: list[dict]) -> list[dict]:
+    """
+    给前端和 Stage 2 添加推荐读取字段。
+
+    - display_texts: 推荐读取的结构化文本列表
+    - display_text: 拼接后的字符串，适合前端直接展示
+    """
+    for item in ocr_results:
+        if item.get("is_duplicate_text_frame", False):
+            display_texts = item.get("unique_clean_texts", [])
+        else:
+            display_texts = item.get("unique_clean_texts") or item.get("clean_texts", [])
+
+        item["display_texts"] = display_texts
+        item["display_text"] = " ".join(
+            t.get("content", "").strip()
+            for t in display_texts
+            if t.get("content", "").strip()
+        )
+
+    return ocr_results
+
+
+def _merge_consecutive_duplicates(ocr_results: list[dict]) -> list[dict]:
+    """
+    标记连续重复 OCR 内容。
+
+    不删除 frame 本身，避免破坏 keyframe 对齐。
+    只增加字段：
+    - is_duplicate_text_frame
+    - duplicate_of_frame_id
+    - unique_clean_texts
+
+    Stage 2 可以优先读取 unique_clean_texts。
+    """
+    prev_signature = None
+    prev_frame_id = None
+
+    for item in ocr_results:
+        clean_texts = item.get("clean_texts", [])
+        signature = _make_text_signature(clean_texts)
+
+        if signature and signature == prev_signature:
+            item["is_duplicate_text_frame"] = True
+            item["duplicate_of_frame_id"] = prev_frame_id
+            item["unique_clean_texts"] = []
+        else:
+            item["is_duplicate_text_frame"] = False
+            item["duplicate_of_frame_id"] = None
+            item["unique_clean_texts"] = clean_texts
+
+            if signature:
+                prev_signature = signature
+                prev_frame_id = item.get("frame_id")
+            else:
+                # 空文本帧打断连续重复链，避免 A / 空 / A 被误判为连续重复。
+                prev_signature = None
+                prev_frame_id = None
+
+    return ocr_results
+
+
+def _make_text_signature(texts: list[dict]) -> str:
+    """
+    把一帧的 clean_texts 变成可比较签名。
+    """
+    contents = []
+
+    for item in texts:
+        content = item.get("content", "").strip()
+        if content:
+            contents.append(_normalize_text_for_dedup(content))
+
+    if not contents:
+        return ""
+
+    return "|".join(contents)
+
+
+def _normalize_text_for_dedup(text: str) -> str:
+    """
+    用于去重的文本归一化。
+    """
+    text = text.strip()
+    text = text.replace(" ", "")
+    text = text.replace("\n", "")
+    text = text.replace("，", ",")
+    text = text.replace("。", ".")
+    text = text.replace("：", ":")
+    text = text.replace("！", "!")
+    text = text.replace("？", "?")
+    return text.lower()
