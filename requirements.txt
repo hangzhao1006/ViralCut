@@ -1,0 +1,24 @@
+# ViralCut — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# --- Video download ---------------------------------------------------------
+yt-dlp>=2024.1.0
+
+# --- Speech recognition -----------------------------------------------------
+openai-whisper>=20231117
+
+# --- OCR --------------------------------------------------------------------
+easyocr>=1.7.0               # uses PyTorch; no PaddlePaddle/oneDNN dependency
+
+# --- Shot detection ---------------------------------------------------------
+scenedetect[opencv]>=0.6.3
+
+# --- Audio analysis ---------------------------------------------------------
+librosa>=0.10.0
+
+# --- Env / config -----------------------------------------------------------
+python-dotenv>=1.0.0
+
+# --- Transitive dependencies (pinned for stability) -------------------------
+numpy>=1.24.0
+opencv-python>=4.8.0

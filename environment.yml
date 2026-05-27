@@ -1,0 +1,33 @@
+name: viralcut
+channels:
+  - pytorch          # official PyTorch channel (handles CUDA deps automatically)
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python version
+  - python=3.10
+
+  # System-level binaries
+  - ffmpeg
+  - xz               # fixes _lzma DLL missing on Windows
+
+  # PyTorch with CUDA — conda resolves cuDNN/CUDA runtime automatically
+  # cu121 works on your CUDA 13.0 driver (NVIDIA backward compatible)
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+
+  # pip packages (no conda equivalent or requires special index)
+  - pip
+  - pip:
+    - yt-dlp>=2024.1.0
+    - openai-whisper>=20231117
+    - paddleocr>=2.7.3
+    - scenedetect[opencv]>=0.6.3
+    - librosa>=0.10.0
+    - python-dotenv>=1.0.0
+    - numpy>=1.24.0
+    - opencv-python>=4.8.0
