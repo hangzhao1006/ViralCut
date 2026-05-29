@@ -97,6 +97,7 @@ def _to_ocr_result(data: dict) -> OcrResult:
         texts=texts,
         ocr_source_frame_id=data.get("ocr_source_frame_id"),
         ocr_reused=data.get("ocr_reused", False),
+        display_text=data.get("display_text"),
     )
 
 def _filter_basic_analysis(data: dict[str, Any]) -> dict[str, Any]:
@@ -110,5 +111,6 @@ def _filter_basic_analysis(data: dict[str, Any]) -> dict[str, Any]:
         "ocr_text_per_second",
         "subtitle_density",
         "estimated_pace",
+        "beat_sync_score",
     }
     return {k: v for k, v in data.items() if k in allowed}

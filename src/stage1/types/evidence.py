@@ -29,6 +29,7 @@ class VideoSource:
     original_filename: Optional[str] = None
     url: Optional[str] = None
     platform: Optional[str] = None
+    social_metadata: Optional[dict] = None
 
 
 @dataclass
@@ -86,6 +87,7 @@ class OcrResult:
     texts: list[OcrTextBox] = field(default_factory=list)
     ocr_source_frame_id: Optional[str] = None
     ocr_reused: bool = False
+    display_text: Optional[str] = None
 
 @dataclass
 class BeatInfo:
@@ -93,6 +95,8 @@ class BeatInfo:
     beat_timestamps: list[float] = field(default_factory=list)
     has_vocal: bool = False
     beat_sync_score: Optional[float] = None
+    rms_energy: Optional[list] = None
+    rms_timestamps: Optional[list] = None
 
 
 @dataclass
