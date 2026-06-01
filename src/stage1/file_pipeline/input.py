@@ -49,7 +49,7 @@ def validate_and_prepare(file_path: str) -> dict:
     if file_size > 500 * 1024 * 1024:
         logger.warning("Video file is larger than 500MB; processing may be slow.")
 
-    video_id = generate_video_id()
+    video_id = generate_video_id(os.path.basename(file_path))
     output_dir = create_output_dir(video_id)
 
     source = VideoSource(

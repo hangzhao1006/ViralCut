@@ -11,11 +11,26 @@ from urllib.parse import urlparse
 SUPPORTED_VIDEO_EXTENSIONS = {".mp4", ".mov", ".mkv", ".webm", ".avi", ".flv"}
 
 
-def generate_video_id() -> str:
-    """生成唯一 video_id，格式：vid_{日期}_{随机串}"""
-    date = datetime.now().strftime("%Y%m%d")
-    suffix = uuid.uuid4().hex[:8]
-    return f"vid_{date}_{suffix}"
+def generate_video_id(filename: str = "") -> str:
+    """生成可读的 video_id。
+    
+    示例：
+      3246165181.mov  → 3246165181_0531
+      my_video.mp4    → my_video_0531
+      (空)            → video_0531_a3b2
+    """
+    import re
+    date_str = datetime.now().strftime("%m%d")
+
+    if filename:
+        name = os.path.splitext(os.path.basename(filename))[0]
+        name = re.sub(r'[^\w\u4e00-\u9fff]', '_', name).strip('_')
+        if len(name) > 30:
+            name = name[:30]
+        return f"{name}_{date_str}"
+    else:
+        suffix = uuid.uuid4().hex[:4]
+        return f"video_{date_str}_{suffix}"
 
 
 def create_output_dir(video_id: str, base_dir: str = "output") -> str:

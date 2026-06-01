@@ -110,6 +110,7 @@ class BasicAnalysis:
     ocr_text_per_second: float
     subtitle_density: str
     estimated_pace: str
+    beat_sync_score: Optional[float] = None
 
 
 @dataclass
