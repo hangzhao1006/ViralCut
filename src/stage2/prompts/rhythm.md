@@ -13,8 +13,13 @@
 5. 最终只输出 JSON，不要输出 markdown。
 6. 如果某个 segment 的 duration 太短，导致 shots_per_second 或 beat_alignment 不稳定，应在 reason 中说明，不要过度解读。
 7. 如果 Script Agent 标记的 climax 缺少节奏数据支撑，可以将 confirmed 设为 false，并给出更可能的 peak_shot_density_range。
-8. rhythm_pattern 必须从数据中归纳，不要默认写 gradual_acceleration。可选值包括：steady_fast, gradual_acceleration, wave_like, climax_spike, slow_to_fast_to_slow, uncertain。
+8. rhythm_pattern从数据归纳。可选值：steady_slow, steady_fast, gradual_acceleration, wave_like, climax_spike, slow_to_fast_to_slow, progressive_information_reveal, progressive_visual_versioning, steady_display_with_information_peak, uncertain。如果scene_cut_count很低且beat_sync_score为0，但OCR/keyframe信息逐步增加，应优先选择progressive_information_reveal或progressive_visual_versioning。
 9. 每个 segment_rhythm 应包含 evidence_refs，例如 metrics:seg_003、beat_alignment:seg_003。
+9. 如果全片scene_count <= 3，不要把短segment的高shots_per_second直接解释为快切或镜头密度峰值。应说明这是segment时长较短导致的密度放大。
+10. 如果cut_beat_alignment = 0且beat_sync_score接近0，不要声称视频存在明显音乐卡点。可以说BGM提供氛围，但不驱动切镜。
+11. 对于海报展示/设计迭代/活动预告类视频，应优先分析visual_version_change（画面内容变化）而非shot_density（镜头切换密度）。rhythm_driver应标记为visual_version_change或information_reveal，而非scene_cut。
+12. 对于duration < 1.5秒的segment，即使shots_per_second较高，也不能仅凭此判断为fast。必须结合真实scene_cut_count判断。
+13. climax的reason应优先使用rhythm_driver解释。如果rhythm_driver是information_reveal，reason不要把shot_density作为主要原因，应写信息完整度峰值。
 
 ## 分析步骤
 
@@ -31,6 +36,15 @@
 - medium: 0.5 <= shots_per_second < 1.0
 - fast: 1.0 <= shots_per_second < 2.0
 - very_fast: shots_per_second >= 2.0
+
+## rhythm_driver 枚举
+
+- scene_cut: 镜头切换驱动节奏
+- beat_sync: 音乐卡点驱动节奏
+- visual_version_change: 画面内容变化驱动（非切镜）
+- information_reveal: 信息逐步补全驱动
+- speech: 语音/旁白驱动
+- uncertain: 无法明确判断
 
 ## 输出 JSON 格式
 
@@ -53,7 +67,9 @@
       "beats_per_second": 1.8,
       "cut_beat_alignment": 0.0,
       "role": "title setup, slow pace builds anticipation",
-      "reason": "标题卡持续展示，无切镜"
+      "reason": "标题卡持续展示，无切镜",
+      "scene_cut_count": 0,
+      "rhythm_driver": "scene_cut"
     }
   ],
   "climax_analysis": {

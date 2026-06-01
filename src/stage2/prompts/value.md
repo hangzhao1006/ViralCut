@@ -26,6 +26,10 @@
 - social_proof
 - mixed
 - uncertain
+- event_announcement
+- exhibition_promotion
+- design_showcase
+- portfolio_showcase
 
 ## 输出 JSON 格式
 

@@ -223,18 +223,34 @@ class TimelineIndex:
             if dur > 0:
                 shot_durations.append(dur)
 
+        # Scene cuts that START inside this range (not just overlap)
+        scene_cut_count = sum(1 for s in self.scenes if start < _get_time(s) < end)
+
+        # OCR change: count consecutive keyframes with different display_text
+        sorted_text_frames = sorted(text_frames, key=lambda k: k.get("timestamp", 0))
+        ocr_change_count = 0
+        for i in range(1, len(sorted_text_frames)):
+            prev_text = sorted_text_frames[i-1].get("display_text", "")
+            curr_text = sorted_text_frames[i].get("display_text", "")
+            if prev_text != curr_text:
+                ocr_change_count += 1
+
         return {
             "time_range": [round(start, 3), round(end, 3)],
             "duration": round(span, 3),
             "shot_count": len(scenes),
+            "scene_cut_count": scene_cut_count,
             "avg_shot_duration": round(sum(shot_durations) / len(shot_durations), 3) if shot_durations else None,
             "shot_density": round(len(scenes) / span, 4),
             "keyframe_count": len(keyframes),
+            "keyframes_per_second": round(len(keyframes) / span, 4),
             "beat_count": len(beats),
             "beats_per_second": round(len(beats) / span, 4),
             "text_frame_count": len(text_frames),
             "unique_text_count": len({k.get("display_text") for k in text_frames if k.get("display_text")}),
+            "ocr_change_count": ocr_change_count,
             "transcript_count": len([t for t in self.transcript if _in_range(t, start, end)]),
+            "short_segment_warning": span < 1.5 and len(scenes) > 0,
         }
 
     def search_text(self, keyword: str) -> list[dict[str, Any]]:
@@ -316,3 +332,15 @@ def build_timeline_index(evidence_package: dict[str, Any]) -> TimelineIndex:
 
 def build_timeline_index_from_file(path: str) -> TimelineIndex:
     return TimelineIndex.from_file(path)
+
+def get_all_segment_metrics(self) -> list[dict[str, Any]]:
+    """一次性返回所有segment的metrics，避免逐段调用。"""
+    if not self.segments:
+        return []
+    return [
+        {
+            "segment_id": seg.get("segment_id"),
+            **self.compute_metrics(seg["start_time"], seg["end_time"])
+        }
+        for seg in self.segments
+    ]

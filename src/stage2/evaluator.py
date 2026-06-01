@@ -73,6 +73,7 @@ class Stage2Evaluator:
             "energy": energy,
             "transfer": transfer,
         }))
+        checks.append(self._check_rhythm_consistency(rhythm))
 
         hard_failures = [c for c in checks if c.get("hard_fail")]
         weighted_score = sum(c.get("score", 0.0) * c.get("weight", 1.0) for c in checks)
@@ -244,6 +245,51 @@ class Stage2Evaluator:
             "missing_preview": missing[:8],
         }
 
+    def _check_rhythm_consistency(self, rhythm: dict[str, Any]) -> dict[str, Any]:
+        """Warn when rhythm conclusions don't match actual video metrics."""
+        warnings = []
+        scene_count = len(self.timeline.scenes)
+        beat_sync = self.timeline.beats_info.get("beat_sync_score", 0)
+        pattern = str(rhythm.get("rhythm_pattern", "")).lower()
+        cutting = rhythm.get("cutting_strategy", {})
+        primary_cut = str(cutting.get("primary", "")).lower() if isinstance(cutting, dict) else ""
+
+        # Check 1: low scene_count but claims acceleration/fast
+        if scene_count <= 3 and any(kw in pattern for kw in ["acceleration", "fast", "spike"]):
+            warnings.append(
+                f"scene_count={scene_count} but rhythm_pattern='{rhythm.get('rhythm_pattern')}'. "
+                "Rhythm conclusion may be driven by short segment duration rather than real cuts."
+            )
+
+        # Check 2: beat_sync near zero but claims cut_on_beat
+        if beat_sync < 0.1 and "beat" in primary_cut:
+            warnings.append(
+                f"beat_sync_score={beat_sync} but cutting_strategy='{primary_cut}'. "
+                "Beat alignment is too low to claim cut-on-beat as primary strategy."
+            )
+
+        # Check 3: short segment marked as fast
+        seg_rhythms = rhythm.get("segment_rhythm", [])
+        for sr in seg_rhythms:
+            tr = sr.get("time_range", [0, 0])
+            dur = tr[1] - tr[0] if len(tr) == 2 else 0
+            pace = str(sr.get("pace", "")).lower()
+            if dur < 1.5 and pace in ("fast", "very_fast"):
+                warnings.append(
+                    f"{sr.get('segment_id')}: duration={dur:.1f}s marked as '{pace}'. "
+                    "Very short segments inflate shot_density; may not represent real fast cutting."
+                )
+
+        score = 1.0 if not warnings else max(0.5, 1.0 - 0.15 * len(warnings))
+        return {
+            "name": "rhythm_consistency",
+            "score": round(score, 4),
+            "weight": 0.6,
+            "hard_fail": False,
+            "message": f"{len(warnings)} warning(s)" if warnings else "no issues",
+            "warnings": warnings,
+        }
+
     def _recommendations(self, checks: list[dict[str, Any]]) -> list[str]:
         recs: list[str] = []
         for c in checks:
@@ -260,4 +306,6 @@ class Stage2Evaluator:
                 recs.append("Revise Transfer Agent: add machine-executable slots with slot_type, duration_seconds, and input_requirements.")
             elif name == "important_ocr_coverage":
                 recs.append("Improve prompts: important OCR display_texts should be referenced in script/value/packaging evidence.")
+            elif name == "rhythm_consistency":
+                recs.append("Rhythm Agent may have over-interpreted short segments as fast cutting. Check scene_count and segment durations.")
         return recs

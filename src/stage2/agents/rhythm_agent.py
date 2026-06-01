@@ -19,7 +19,8 @@ class RhythmAgent(BaseAgent):
     def user_prompt(self) -> str:
         return (
             "请先调用 read_blackboard('script') 获取段落划分，"
-            "再调用 get_overview 获取整体节奏信息，"
-            "然后对每个 segment 调用 compute_metrics 和 get_cut_beat_alignment 分析节奏，"
+            "再调用 get_all_segment_metrics 一次性获取所有段落的metrics，"
+            "不要逐段调用 compute_metrics。"
+            "然后对关键段落调用 get_cut_beat_alignment，"
             "最后输出节奏结构 JSON。"
         )

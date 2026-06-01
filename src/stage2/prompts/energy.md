@@ -12,6 +12,9 @@
 4. 如果某段 evidence 不足，标记 confidence 较低或写入 uncertainty。
 5. Energy curve 应覆盖主要 script segments。
 6. 最终只输出 JSON，不要输出 markdown。
+7. Energy peak不一定来自镜头快切。对于设计展示、海报展示、活动预告类视频，peak可以来自：信息完整度达到峰值、最终版本首次出现、视觉元素最完整。
+8. 如果Rhythm Agent的primary_rhythm_driver不是scene_cut，Energy的peak归因也不应该写shot_density。应使用Rhythm报告的实际driver。
+9. 对于scene_count很少的视频，不要在drivers里写rapid_cuts或fast_cutting，改用visual_version_peak或information_completion_peak。
 
 ## 输出 JSON 格式
 

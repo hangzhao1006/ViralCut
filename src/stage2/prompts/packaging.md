@@ -17,6 +17,8 @@
 5. 没有证据支持的视觉特效、贴纸、转场，不要强行判断；用 `uncertain_elements` 标记。
 6. evidence.text 必须保留工具返回原文；style summary 可以做轻微归纳。
 7. 最终只输出 JSON，不要输出 markdown。
+8. subtitle_style不要把所有大字都写成instruction_text。对于海报/活动宣传/展览视频，应使用poster_info_text / event_info_text / title_display_text等更具体的类型。
+
 
 ## 分析重点
 

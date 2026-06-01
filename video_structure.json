@@ -1,0 +1,1529 @@
+{
+  "video_id": "55702300_0531",
+  "duration": 18.433,
+  "script_structure": {
+    "segments": [
+      {
+        "segment_id": "seg_001",
+        "function": "hook",
+        "start_time": 0.0,
+        "end_time": 3.0,
+        "hook_type": "title_card",
+        "core_text": "展示2026造物逐空焕新产品设计系毕业作品展主标题",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_000",
+            "text": "逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书"
+          }
+        ],
+        "reason": "开头用大字标题卡直接点明毕业展核心主题，快速吸引观众注意力",
+        "confidence": 0.95
+      },
+      {
+        "segment_id": "seg_002",
+        "function": "introduction",
+        "start_time": 3.0,
+        "end_time": 6.0,
+        "core_text": "补充毕业展中英文主题与艺术与设计学院归属信息",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_001",
+            "text": "小红书 造物逐空 (焕新) 产品设计系毕业作品展 duation Exhibition of Product design Department CREATION EMPTINESS RENEWAL 展览时间05.09-11 展览地点座一楼展厅 Xxx_L CREATION, PURSUIT OF EMPTINESS, RENEWAL 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION 艺术与设计学院 SCHOOL OF ART AND DESIGN Product Design 2026"
+          }
+        ],
+        "reason": "承接标题卡，补充展览的主办学院等基础背景信息",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "function": "demonstration",
+        "start_time": 6.0,
+        "end_time": 7.85,
+        "core_text": "展示毕业展主题文字的动态排版视觉效果",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_002",
+            "text": "小红书 造物 逐空(焕新) 展览时间 展览地点 产品设计系 毕业作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL 026 产品设计系 毕业作品展 GRADUATION EXHIBITION 20 造物 逐空 焕新 Product Design 2026 艺术与设计学院 SCHOOL OF ART AND DESIGN"
+          }
+        ],
+        "reason": "动态调整文字排版，展示毕业展视觉设计的呈现效果",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_004",
+        "function": "instruction",
+        "start_time": 7.85,
+        "end_time": 9.0,
+        "core_text": "提示观众关注展览的时间与地点关键信息",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_003",
+            "text": "小红书 造物 逐空(焕新) 展览时间：2026 展览地点： Xxx_L 产品设计系 毕业 作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION 艺术与设计学院 SCHOOL OF ART AND DESIGN Product Design 2026"
+          }
+        ],
+        "reason": "画面文字重点突出展览时间地点字段，引导观众获取核心观展信息",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_005",
+        "function": "demonstration",
+        "start_time": 9.0,
+        "end_time": 12.0,
+        "core_text": "展示完整展览信息的全版式视觉呈现效果",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_004",
+            "text": "小红书 造物 逐空(焕新) 展览时间: 2026.05.09- 展览地点: 09C座一楼展 产品设计系毕业作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL PURSUIT OF RENEWAL 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION 藝術與設計學院 SCHOOL OF ART AND DESIGN Product Design 2026"
+          }
+        ],
+        "reason": "逐步补全展览信息细节，展示完整海报的设计效果",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "function": "instruction",
+        "start_time": 12.0,
+        "end_time": 15.0,
+        "core_text": "明确告知观众完整的展览时间2026.05.09-11和展览地点09C座一楼展厅",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_005",
+            "text": "小红书 时间：2026.05.09-11 展览地点：09C座一楼展厅 造物逐空（焕新） Xxx_L 产品设计系毕业作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL PURSUIT OF EMPTINESS. RENEW 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design 2026 艺术与设计学院 SCHOOL OF ART AND DESIGN"
+          }
+        ],
+        "reason": "画面清晰展示完整的观展时间地点，完成核心信息传递",
+        "confidence": 0.95
+      },
+      {
+        "segment_id": "seg_007",
+        "function": "transition",
+        "start_time": 15.0,
+        "end_time": 17.066,
+        "core_text": "从展览信息展示过渡到创作者账号信息展示",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_005",
+            "text": "小红书 时间：2026.05.09-11 展览地点：09C座一楼展厅 造物逐空（焕新） Xxx_L 产品设计系毕业作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL PURSUIT OF EMPTINESS. RENEW 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design 2026 艺术与设计学院 SCHOOL OF ART AND DESIGN"
+          }
+        ],
+        "reason": "完成展览信息传递后，自然过渡到收尾的账号露出环节",
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_008",
+        "function": "cta",
+        "start_time": 17.066,
+        "end_time": 18.433,
+        "core_text": "展示创作者小红书账号信息，引导观众关注",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_006",
+            "text": "小红书号：4287481687 Q Xxx_L 小红书 你的生活指南"
+          }
+        ],
+        "reason": "画面直接展示小红书账号ID，属于明确的引导关注行动号召",
+        "confidence": 0.9
+      }
+    ],
+    "hook_type": "title_card",
+    "cta_type": "follow",
+    "structure_pattern": "title_hook → introduction → demo → info_prompt → demo → info_complete → transition → cta",
+    "uncertainty": "部分段落边界基于关键帧时间点划分，视频无明显语音内容辅助验证边界，整体划分置信度较高"
+  },
+  "rhythm_structure": {
+    "overall_rhythm": {
+      "pace": "very_slow",
+      "bpm": 117.188,
+      "beat_sync_score": 0.0,
+      "avg_shot_duration": 9.216
+    },
+    "segment_rhythm": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          3.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 15.7,
+        "beat_count": 5,
+        "beats_per_second": 1.6667,
+        "cut_beat_alignment": 0.0,
+        "role": "title setup, 展示毕业展主标题",
+        "reason": "单镜头持续展示主标题海报，无实际场景切镜，数据来源metrics:seg_001",
+        "scene_cut_count": 0,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          3.0,
+          6.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 15.7,
+        "beat_count": 6,
+        "beats_per_second": 2.0,
+        "cut_beat_alignment": 0.0,
+        "role": "introduction, 补充学院归属等基础背景信息",
+        "reason": "单镜头展示补充信息后的海报版本，无场景切镜，数据来源metrics:seg_002",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          6.0,
+          7.85
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.5405,
+        "avg_shot_duration": 15.7,
+        "beat_count": 3,
+        "beats_per_second": 1.6216,
+        "cut_beat_alignment": 0.0,
+        "role": "demonstration, 展示动态排版视觉效果",
+        "reason": "单镜头展示动态排版效果，无场景切镜，数据来源metrics:seg_003",
+        "scene_cut_count": 0,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          7.85,
+          9.0
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.8696,
+        "avg_shot_duration": 15.7,
+        "beat_count": 3,
+        "beats_per_second": 2.6087,
+        "cut_beat_alignment": 0.0,
+        "role": "instruction, 提示观众关注核心观展信息",
+        "reason": "segment时长仅1.15秒，shot_density偏高为时长较短导致的密度放大，无实际场景切镜，数据来源metrics:seg_004",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          9.0,
+          12.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 15.7,
+        "beat_count": 6,
+        "beats_per_second": 2.0,
+        "cut_beat_alignment": 0.0,
+        "role": "demonstration, 逐步补全展览信息细节",
+        "reason": "单镜头展示信息逐步补全的海报版本，无场景切镜，数据来源metrics:seg_005",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          12.0,
+          15.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 15.7,
+        "beat_count": 6,
+        "beats_per_second": 2.0,
+        "cut_beat_alignment": 0.0,
+        "role": "information peak, 完整展示全部观展核心信息",
+        "reason": "单镜头展示信息完整的最终版海报，无场景切镜，全片信息完整度最高，数据来源metrics:seg_006",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          15.0,
+          17.066
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.9681,
+        "avg_shot_duration": 9.216,
+        "beat_count": 4,
+        "beats_per_second": 1.9361,
+        "cut_beat_alignment": 0.0,
+        "role": "transition, 从展览信息过渡到账号信息展示",
+        "reason": "仅1次场景切镜，为全片唯一实际场景切换，数据来源metrics:seg_007",
+        "scene_cut_count": 1,
+        "rhythm_driver": "scene_cut"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          17.066,
+          18.433
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.7315,
+        "avg_shot_duration": 2.733,
+        "beat_count": 0,
+        "beats_per_second": 0.0,
+        "cut_beat_alignment": 0.0,
+        "role": "cta, 展示创作者账号引导关注",
+        "reason": "segment时长仅1.367秒，shot_density偏高为时长较短导致的密度放大，无场景切镜，数据来源metrics:seg_008",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal"
+      }
+    ],
+    "climax_analysis": {
+      "script_suggested_range": null,
+      "confirmed": true,
+      "confirmed_range": [
+        12.0,
+        15.0
+      ],
+      "peak_shot_density_range": [
+        15.0,
+        17.066
+      ],
+      "peak_shots_per_second": 0.9681,
+      "peak_beat_alignment": 0.0,
+      "reason": "该段为全片信息完整度峰值，所有核心观展信息全部展示完成，rhythm_driver为information_reveal"
+    },
+    "rhythm_pattern": "progressive_information_reveal",
+    "rhythm_description": "视频全程无明显快切，节奏由海报内容的信息逐步补全驱动，从主标题展示到最终完整信息露出，最后过渡到账号引导关注",
+    "cutting_strategy": {
+      "primary": "no_obvious_cut",
+      "secondary": "cut_on_content_switch",
+      "evidence_segments": [
+        "seg_007"
+      ]
+    },
+    "audio_observations": {
+      "bgm_role": "atmosphere_only",
+      "speech_role": "minimal",
+      "sound_effects_mentioned": [],
+      "reason": "beat_sync_score为0，BGM仅提供背景氛围，完全不驱动切镜，全片语音内容极少"
+    },
+    "uncertainty": "全片scene_count仅为2，大部分短segment的shot_density偏高为时长较短导致的密度放大，不存在实际快切效果"
+  },
+  "packaging_structure": {
+    "packaging_structure": {
+      "subtitle_density": "high",
+      "subtitle_style": "event_info_text",
+      "title_card_usage": true,
+      "dominant_text_layout": "centered",
+      "visual_emphasis": [
+        "large event theme text",
+        "full poster info display",
+        "highlight key exhibition time/location"
+      ],
+      "transition_style": "uncertain",
+      "sticker_usage": "uncertain"
+    },
+    "segment_packaging": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          3.0
+        ],
+        "packaging_role": "opening event title card",
+        "text_density": "high",
+        "layout": "large centered event main title",
+        "evidence_refs": [
+          "frame_000"
+        ],
+        "reason": "开头直接展示2026产品设计系毕业展主视觉海报核心主题，快速点明活动属性"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          3.0,
+          6.0
+        ],
+        "packaging_role": "supplementary info card",
+        "text_density": "high",
+        "layout": "multi-line centered mixed Chinese-English text",
+        "evidence_refs": [
+          "frame_001"
+        ],
+        "reason": "补充毕业展的主办学院中英文信息，完善活动背景说明"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          6.0,
+          7.85
+        ],
+        "packaging_role": "dynamic typography demo",
+        "text_density": "high",
+        "layout": "dynamic rearranged centered text",
+        "evidence_refs": [
+          "frame_002"
+        ],
+        "reason": "动态调整海报文字排版，展示视觉设计的动态呈现效果"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          7.85,
+          9.0
+        ],
+        "packaging_role": "key info prompt card",
+        "text_density": "medium",
+        "layout": "highlighted time/location label text",
+        "evidence_refs": [
+          "frame_003"
+        ],
+        "reason": "单独突出「展览时间」「展览地点」字段，引导观众关注核心观展信息"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          9.0,
+          12.0
+        ],
+        "packaging_role": "full poster preview",
+        "text_density": "high",
+        "layout": "gradually completed centered poster layout",
+        "evidence_refs": [
+          "frame_004"
+        ],
+        "reason": "逐步补全展览信息细节，展示完整海报的设计效果"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          12.0,
+          15.0
+        ],
+        "packaging_role": "core info confirmation card",
+        "text_density": "medium",
+        "layout": "prominent centered time/location text",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "reason": "清晰展示完整的展览时间2026.05.09-11和展览地点09C座一楼展厅，完成核心信息传递"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          15.0,
+          17.066
+        ],
+        "packaging_role": "transition layout",
+        "text_density": "high",
+        "layout": "retained full event info layout",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "reason": "保留完整展览信息的同时自然过渡到收尾环节"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          17.066,
+          18.433
+        ],
+        "packaging_role": "CTA account display card",
+        "text_density": "low",
+        "layout": "corner/centered account info text",
+        "evidence_refs": [
+          "frame_006"
+        ],
+        "reason": "展示创作者小红书账号ID，引导观众关注账号"
+      }
+    ],
+    "key_packaging_patterns": [
+      {
+        "name": "gradual event info reveal",
+        "description": "从主标题到补充信息、关键信息提示再到完整信息展示，逐步递进传递毕业展全部内容",
+        "evidence_refs": [
+          "frame_000",
+          "frame_001",
+          "frame_003",
+          "frame_005"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "full poster dynamic demo",
+        "description": "以动态排版形式完整展示毕业展海报的设计细节，突出视觉设计质感",
+        "evidence_refs": [
+          "frame_002",
+          "frame_004"
+        ],
+        "transfer_relevance": "medium"
+      },
+      {
+        "name": "final CTA account exposure",
+        "description": "结尾单独展示创作者社交账号信息，完成私域引流引导",
+        "evidence_refs": [
+          "frame_006"
+        ],
+        "transfer_relevance": "high"
+      }
+    ],
+    "uncertain_elements": [
+      "transition_type",
+      "sticker_elements",
+      "special visual effects"
+    ],
+    "uncertainty": "当前仅通过OCR和关键帧占位信息无法确认具体转场动画类型、是否存在装饰贴纸和额外视觉特效，需要完整视觉分析进一步验证"
+  },
+  "value_strategy": {
+    "value_strategy": {
+      "primary_value": "向观众完整传递2026造物逐空焕新产品设计系毕业作品展的观展时间、地点信息，同时展示本次毕业展主题海报的动态视觉设计效果",
+      "value_type": "exhibition_promotion",
+      "target_audience": "关注设计类展览的艺术学生、设计从业者、创意内容爱好者",
+      "conversion_goal": "获取观展信息 / 关注创作者账号",
+      "primary_hook_value": "开篇直接亮出2026产品设计系毕业作品展主标题，快速抓取设计爱好者注意力",
+      "creator_cta": "展示小红书账号ID 4287481687，引导观众关注创作者账号",
+      "platform_cta": "小红书 你的生活指南",
+      "selling_points": []
+    },
+    "value_progression": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          3.0
+        ],
+        "value_role": "hook",
+        "claim": "用大字标题卡直接点明毕业展核心主题，快速吸引目标受众注意力",
+        "evidence_refs": [
+          "frame_000"
+        ],
+        "evidence_text": "逐空 焕新 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 产品设计系毕业作品展"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          3.0,
+          6.0
+        ],
+        "value_role": "introduction",
+        "claim": "补充毕业展中英文主题与艺术与设计学院的主办归属背景信息",
+        "evidence_refs": [
+          "frame_001"
+        ],
+        "evidence_text": "造物逐空 (焕新) 产品设计系毕业作品展 艺术与设计学院 SCHOOL OF ART AND DESIGN"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          6.0,
+          7.85
+        ],
+        "value_role": "demonstration",
+        "claim": "动态调整文字排版，展示毕业展主题视觉设计的呈现效果",
+        "evidence_refs": [
+          "frame_002"
+        ],
+        "evidence_text": "造物 逐空(焕新) 产品设计系 毕业作品展 动态排版展示"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          7.85,
+          9.0
+        ],
+        "value_role": "info_prompt",
+        "claim": "重点突出展览时间地点字段，引导观众留意核心观展信息",
+        "evidence_refs": [
+          "frame_003"
+        ],
+        "evidence_text": "展览时间：2026 展览地点："
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          9.0,
+          12.0
+        ],
+        "value_role": "demonstration",
+        "claim": "逐步补全展览信息细节，展示完整海报的全版式视觉设计效果",
+        "evidence_refs": [
+          "frame_004"
+        ],
+        "evidence_text": "展览时间: 2026.05.09- 展览地点: 09C座一楼展 产品设计系毕业作品展"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          12.0,
+          15.0
+        ],
+        "value_role": "info_complete",
+        "claim": "明确告知观众完整的展览时间2026.05.09-11和展览地点09C座一楼展厅，完成核心观展信息传递",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "evidence_text": "时间：2026.05.09-11 展览地点：09C座一楼展厅 造物逐空（焕新）产品设计系毕业作品展"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          15.0,
+          17.066
+        ],
+        "value_role": "transition",
+        "claim": "从展览信息展示自然过渡到创作者账号信息露出环节",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "evidence_text": "造物逐空（焕新）产品设计系毕业作品展 艺术与设计学院 SCHOOL OF ART AND DESIGN"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          17.066,
+          18.433
+        ],
+        "value_role": "cta",
+        "claim": "展示创作者小红书账号ID，引导观众关注创作者",
+        "evidence_refs": [
+          "frame_006"
+        ],
+        "evidence_text": "小红书号：4287481687 Xxx_L"
+      }
+    ],
+    "conversion_strategy": {
+      "has_creator_cta": true,
+      "cta_type": "follow",
+      "save_or_learn_intent": true,
+      "comment_or_purchase_intent": false,
+      "reason": "视频核心为产品设计系毕业展览的宣传推广，完整传递了观展时间地点信息方便观众保存使用，末尾明确展示创作者小红书账号ID引导关注，全程无任何商品购买相关的引导内容"
+    },
+    "uncertainty": "视频不存在任何商品售卖、价格、促销相关信息，仅为毕业展览宣传与创作者账号引流，无不确定的价值主张内容"
+  },
+  "energy_curve": {
+    "energy_curve": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          3.0
+        ],
+        "energy_level": "medium",
+        "role": "hook_attention",
+        "drivers": [
+          "large_title_card",
+          "clear_exhibition_theme_promise"
+        ],
+        "evidence_refs": [
+          "script:seg_001",
+          "packaging:seg_001",
+          "value:seg_001",
+          "rhythm:seg_001"
+        ],
+        "confidence": 0.92
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          3.0,
+          6.0
+        ],
+        "energy_level": "low",
+        "role": "background_supplement",
+        "drivers": [
+          "basic_background_info_reveal",
+          "supplementary_organizer_info"
+        ],
+        "evidence_refs": [
+          "script:seg_002",
+          "packaging:seg_002",
+          "value:seg_002",
+          "rhythm:seg_002"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          6.0,
+          7.85
+        ],
+        "energy_level": "medium",
+        "role": "visual_demonstration",
+        "drivers": [
+          "dynamic_typography_effect",
+          "visual_design_showcase"
+        ],
+        "evidence_refs": [
+          "script:seg_003",
+          "packaging:seg_003",
+          "value:seg_003",
+          "rhythm:seg_003"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          7.85,
+          9.0
+        ],
+        "energy_level": "medium",
+        "role": "key_info_prompt",
+        "drivers": [
+          "highlighted_time_location_label",
+          "audience_attention_guidance"
+        ],
+        "evidence_refs": [
+          "script:seg_004",
+          "packaging:seg_004",
+          "value:seg_004",
+          "rhythm:seg_004"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          9.0,
+          12.0
+        ],
+        "energy_level": "medium",
+        "role": "full_poster_preview",
+        "drivers": [
+          "gradual_info_completion",
+          "full_layout_demo"
+        ],
+        "evidence_refs": [
+          "script:seg_005",
+          "packaging:seg_005",
+          "value:seg_005",
+          "rhythm:seg_005"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          12.0,
+          15.0
+        ],
+        "energy_level": "peak",
+        "role": "core_info_delivery_climax",
+        "drivers": [
+          "information_completion_peak",
+          "full_exhibition_time_location_reveal",
+          "complete_poster_visual_presentation"
+        ],
+        "evidence_refs": [
+          "script:seg_006",
+          "packaging:seg_006",
+          "value:seg_006",
+          "rhythm:climax_analysis"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          15.0,
+          17.066
+        ],
+        "energy_level": "low",
+        "role": "content_transition",
+        "drivers": [
+          "only_scene_cut_of_full_video",
+          "content_switch_preparation"
+        ],
+        "evidence_refs": [
+          "script:seg_007",
+          "packaging:seg_007",
+          "value:seg_007",
+          "rhythm:seg_007"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          17.066,
+          18.433
+        ],
+        "energy_level": "medium",
+        "role": "cta_guidance",
+        "drivers": [
+          "creator_account_info_display",
+          "follow_action_guide"
+        ],
+        "evidence_refs": [
+          "script:seg_008",
+          "packaging:seg_008",
+          "value:seg_008",
+          "rhythm:seg_008"
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "energy_pattern": "progressive_information_reveal_to_climax",
+    "peak_moments": [
+      {
+        "time_range": [
+          12.0,
+          15.0
+        ],
+        "reason": "全片信息完整度达到峰值，所有核心观展时间、地点信息全部展示完成，毕业展海报视觉元素呈现最完整，是信息传递的最高潮点",
+        "evidence_refs": [
+          "rhythm:climax_analysis",
+          "script:seg_006",
+          "value:seg_006"
+        ]
+      }
+    ],
+    "attention_strategy": {
+      "opening": "large centered event title card hook",
+      "middle": "alternating dynamic visual demonstration and key information prompt",
+      "climax": "full core exhibition information complete reveal",
+      "ending": "creator social account follow guidance"
+    },
+    "uncertainty": "当前仅通过OCR和关键帧信息无法确认具体转场动画类型、是否存在装饰贴纸和额外视觉特效，全片无实际快切效果，部分短片段的shot密度偏高为时长较短导致的数值放大，不存在真实的快速剪辑带来的能量提升"
+  },
+  "transfer_blueprint": {
+    "transfer_blueprint": {
+      "source_video_type": "exhibition_promotion_poster_demo",
+      "dominant_structure": "title_hook → background_intro → dynamic_typography_demo → key_info_prompt → full_poster_preview → core_info_climax → transition → creator_cta",
+      "structure_template": [
+        {
+          "slot_id": "slot_001",
+          "slot_type": "opening_title_card",
+          "source_segment_id": "seg_001",
+          "source_time_range": [
+            0.0,
+            3.0
+          ],
+          "duration_seconds": 3.0,
+          "duration_ratio": 0.163,
+          "purpose": "用大字号主标题直接点明活动核心主题，第一时间抓取目标受众注意力",
+          "template": "{event_year} {event_name} 主标题大字展示",
+          "input_requirements": {
+            "needed_assets": [
+              "event_main_title_text",
+              "high_contrast_background"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "centered layout",
+              "large bold title text",
+              "high text-background contrast"
+            ]
+          },
+          "required_elements": [
+            "clear event core theme",
+            "highly visible main title"
+          ],
+          "replaceable_elements": [
+            "event_year",
+            "event_name",
+            "background color/style"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_002",
+          "slot_type": "background_supplement_card",
+          "source_segment_id": "seg_002",
+          "source_time_range": [
+            3.0,
+            6.0
+          ],
+          "duration_seconds": 3.0,
+          "duration_ratio": 0.163,
+          "purpose": "补充活动主办主体、中英文名称等基础背景信息，完善受众认知",
+          "template": "补充{organizer_name} 中英文活动全称信息",
+          "input_requirements": {
+            "needed_assets": [
+              "supplementary_info_text",
+              "consistent poster background"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "multi-line centered layout",
+              "mixed Chinese-English text support"
+            ]
+          },
+          "required_elements": [
+            "clear organizer info",
+            "consistent visual style with opening title"
+          ],
+          "replaceable_elements": [
+            "organizer name",
+            "event bilingual description"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_003",
+          "slot_type": "dynamic_typography_demo",
+          "source_segment_id": "seg_003",
+          "source_time_range": [
+            6.0,
+            7.85
+          ],
+          "duration_seconds": 1.85,
+          "duration_ratio": 0.1,
+          "purpose": "展示海报文字动态排版效果，突出视觉设计质感",
+          "template": "动态调整海报文字排版顺序与位置",
+          "input_requirements": {
+            "needed_assets": [
+              "all poster text elements",
+              "dynamic animation asset"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "smooth text movement",
+              "no layout overflow"
+            ]
+          },
+          "required_elements": [
+            "smooth dynamic text transition",
+            "no broken visual elements"
+          ],
+          "replaceable_elements": [
+            "typography animation style",
+            "text movement path"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_004",
+          "slot_type": "key_info_prompt_card",
+          "source_segment_id": "seg_004",
+          "source_time_range": [
+            7.85,
+            9.0
+          ],
+          "duration_seconds": 1.15,
+          "duration_ratio": 0.062,
+          "purpose": "高亮提示观众关注核心实用信息字段",
+          "template": "高亮展示{key_info_label} 字段",
+          "input_requirements": {
+            "needed_assets": [
+              "key info label text",
+              "highlight visual effect"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "highlighted text color",
+              "no other distracting elements"
+            ]
+          },
+          "required_elements": [
+            "clear key info label",
+            "obvious highlight effect"
+          ],
+          "replaceable_elements": [
+            "key info type (time/location/price)",
+            "highlight color"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_005",
+          "slot_type": "full_poster_preview",
+          "source_segment_id": "seg_005",
+          "source_time_range": [
+            9.0,
+            12.0
+          ],
+          "duration_seconds": 3.0,
+          "duration_ratio": 0.163,
+          "purpose": "逐步补全所有信息细节，展示完整海报的全版式效果",
+          "template": "逐步填充剩余海报信息元素，完成全版式预览",
+          "input_requirements": {
+            "needed_assets": [
+              "remaining info text assets",
+              "full poster layout template"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "gradual info reveal",
+              "no layout distortion"
+            ]
+          },
+          "required_elements": [
+            "complete poster layout",
+            "progressive info display"
+          ],
+          "replaceable_elements": [
+            "poster layout style",
+            "info fill order"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_006",
+          "slot_type": "core_info_climax_card",
+          "source_segment_id": "seg_006",
+          "source_time_range": [
+            12.0,
+            15.0
+          ],
+          "duration_seconds": 3.0,
+          "duration_ratio": 0.163,
+          "purpose": "完整展示全部核心实用信息，完成信息传递高潮",
+          "template": "清晰展示完整的{full_key_info_content}",
+          "input_requirements": {
+            "needed_assets": [
+              "full key info text",
+              "prominent display layout"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "large readable text",
+              "no information missing"
+            ]
+          },
+          "required_elements": [
+            "100% complete core practical info",
+            "high readability"
+          ],
+          "replaceable_elements": [
+            "specific info content (time/location/price)",
+            "text display position"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_007",
+          "slot_type": "content_transition",
+          "source_segment_id": "seg_007",
+          "source_time_range": [
+            15.0,
+            17.066
+          ],
+          "duration_seconds": 2.066,
+          "duration_ratio": 0.112,
+          "purpose": "从核心信息展示自然过渡到收尾环节",
+          "template": "保留完整核心信息的同时平滑切换画面焦点",
+          "input_requirements": {
+            "needed_assets": [
+              "transition animation asset"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "smooth transition",
+              "no abrupt scene jump"
+            ]
+          },
+          "required_elements": [
+            "no information loss during transition",
+            "smooth visual experience"
+          ],
+          "replaceable_elements": [
+            "transition animation type",
+            "transition duration"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_008",
+          "slot_type": "creator_cta_card",
+          "source_segment_id": "seg_008",
+          "source_time_range": [
+            17.066,
+            18.433
+          ],
+          "duration_seconds": 1.367,
+          "duration_ratio": 0.074,
+          "purpose": "展示创作者社交账号信息，引导观众关注",
+          "template": "清晰展示{creator_platform} 账号ID信息",
+          "input_requirements": {
+            "needed_assets": [
+              "creator account text",
+              "platform logo"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "clear readable account text",
+              "no occlusion"
+            ]
+          },
+          "required_elements": [
+            "accurate creator account info",
+            "high visibility"
+          ],
+          "replaceable_elements": [
+            "platform type",
+            "account display position"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "editing_rules": [
+        {
+          "rule_name": "no_fast_cut_strategy",
+          "description": "全程不使用快切，节奏完全由信息逐步披露驱动，适配海报类宣传内容的慢节奏展示需求",
+          "source_evidence": [
+            "rhythm:cutting_strategy",
+            "rhythm:overall_rhythm"
+          ],
+          "applies_to_slots": [
+            "all slots"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "centered_text_layout_consistency",
+          "description": "所有信息卡片统一使用居中文字布局，保持视觉风格高度统一",
+          "source_evidence": [
+            "packaging:dominant_text_layout"
+          ],
+          "applies_to_slots": [
+            "opening_title_card",
+            "background_supplement_card",
+            "key_info_prompt_card",
+            "core_info_climax_card"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "info_progressive_reveal",
+          "description": "从主标题到补充信息、关键提示再到完整信息，按照递进顺序逐步披露内容，避免一次性信息过载",
+          "source_evidence": [
+            "value:value_progression",
+            "energy:energy_pattern"
+          ],
+          "applies_to_slots": [
+            "all info display slots"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "bgm_as_atmosphere_only",
+          "description": "背景音乐仅作为氛围烘托使用，不驱动任何镜头切换，避免干扰信息传递",
+          "source_evidence": [
+            "rhythm:audio_observations"
+          ],
+          "applies_to_slots": [
+            "all slots"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "adaptation_guidance": {
+        "for_exhibition_promotion": "完整保留标题钩子、背景补充、动态排版演示、关键信息提示、核心信息高潮的递进结构，替换对应活动的时间地点等信息即可直接复用",
+        "for_poster_design_showcase": "弱化核心实用信息权重，延长动态排版演示和全版式预览的时长，突出设计细节展示效果",
+        "for_product_promotion": "将活动信息替换为产品核心卖点、价格、购买渠道信息，保留逐步披露的递进节奏，把核心信息高潮段替换为产品核心利益点完整展示"
+      }
+    },
+    "non_transferable_elements": [
+      {
+        "element": "platform_cta_text",
+        "reason": "原视频末尾的小红书平台官方引导语不属于创作者可控的可迁移结构，不同平台对应内容不同"
+      },
+      {
+        "element": "original_exhibition_specific_content",
+        "reason": "原视频中2026产品设计系毕业展的专属文字内容属于特定素材，无法直接迁移到其他主题内容"
+      }
+    ],
+    "uncertainty": "具体转场动画样式、装饰贴纸元素、特殊视觉特效需要后续视觉工具进一步确认，当前迁移蓝图基于已确认的结构和节奏规则生成"
+  },
+  "analysis_metadata": {
+    "total_duration_seconds": 251.5,
+    "total_llm_calls": 28,
+    "total_tool_calls": 32,
+    "vision_budget": {
+      "total_used": 4,
+      "max_total": 16,
+      "max_per_agent": 4,
+      "used_by_agent": {
+        "packaging": 4
+      }
+    },
+    "blackboard_history": [
+      {
+        "timestamp": "2026-06-01T01:31:42.828230+00:00",
+        "action": "write",
+        "agent_name": "script",
+        "key": "script",
+        "summary": "script completed in 3 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-01T01:32:47.585405+00:00",
+        "action": "write",
+        "agent_name": "rhythm",
+        "key": "rhythm",
+        "summary": "rhythm completed after max rounds (11 LLM calls)"
+      },
+      {
+        "timestamp": "2026-06-01T01:33:18.811158+00:00",
+        "action": "write",
+        "agent_name": "packaging",
+        "key": "packaging",
+        "summary": "packaging completed in 3 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-01T01:33:46.016447+00:00",
+        "action": "write",
+        "agent_name": "value",
+        "key": "value",
+        "summary": "value completed in 2 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-01T01:34:17.576219+00:00",
+        "action": "write",
+        "agent_name": "energy",
+        "key": "energy",
+        "summary": "energy completed in 2 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-01T01:34:17.576410+00:00",
+        "action": "write",
+        "agent_name": "pipeline",
+        "key": "overview",
+        "summary": "video overview for Transfer Agent"
+      },
+      {
+        "timestamp": "2026-06-01T01:35:17.279203+00:00",
+        "action": "write",
+        "agent_name": "transfer",
+        "key": "transfer",
+        "summary": "transfer completed in 7 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-01T01:35:17.282703+00:00",
+        "action": "write",
+        "agent_name": "evaluator",
+        "key": "evaluator",
+        "summary": "evaluation pass score=1.0"
+      }
+    ],
+    "agent_details": {
+      "script": {
+        "llm_calls": 3,
+        "tool_calls": 2,
+        "tool_history": [
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"55702300_0531\", \"duration\": 18.433, \"resolution\": \"718x1018\", \"fps\": 30.0, \"scene_count\": 2, \"keyframe_count\": 7, \"transcript_segment_count\": 1, \"ocr_frame_count\": 7, \"beat_count\": 33, \"beat_sync_score\": 0.0, \"bpm\": 117.188, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 9.216, \"shot_density\": 0.1085, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"scene_id\": \"scene_000\", \"display_text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 6.0, \"scene_id\": \"scene_000\", \"display_text\": \"小红书 造物逐空 (焕新) 产品设计系毕业作品展 duation Exhibition of Product design Department CREATION EMPTINESS RENEWAL 展览时间05.09-11 展览地点座一楼展厅 Xxx_L CREATIO..."
+          }
+        ]
+      },
+      "rhythm": {
+        "llm_calls": 11,
+        "tool_calls": 10,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"展示2026造物逐空焕新产品设计系毕业作品展主标题\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}], \"reason\": \"开头用大字标题卡直接点明毕业展核心主题，快速吸引观众注意力\", \"confidence\": 0.95}, {\"segment_id\": \"seg_0..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"55702300_0531\", \"duration\": 18.433, \"resolution\": \"718x1018\", \"fps\": 30.0, \"scene_count\": 2, \"keyframe_count\": 7, \"transcript_segment_count\": 1, \"ocr_frame_count\": 7, \"beat_count\": 33, \"beat_sync_score\": 0.0, \"bpm\": 117.188, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 9.216, \"shot_density\": 0.1085, \"has_speech\": true}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 0.0,
+              "end_time": 3.0
+            },
+            "result_preview": "{\"time_range\": [0.0, 3.0], \"duration\": 3.0, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 15.7, \"shot_density\": 0.3333, \"keyframe_count\": 0, \"keyframes_per_second\": 0.0, \"beat_count\": 5, \"beats_per_second\": 1.6667, \"text_frame_count\": 0, \"unique_text_count\": 0, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 3.0,
+              "end_time": 6.0
+            },
+            "result_preview": "{\"time_range\": [3.0, 6.0], \"duration\": 3.0, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 15.7, \"shot_density\": 0.3333, \"keyframe_count\": 1, \"keyframes_per_second\": 0.3333, \"beat_count\": 6, \"beats_per_second\": 2.0, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 6.0,
+              "end_time": 7.85
+            },
+            "result_preview": "{\"time_range\": [6.0, 7.85], \"duration\": 1.85, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 15.7, \"shot_density\": 0.5405, \"keyframe_count\": 1, \"keyframes_per_second\": 0.5405, \"beat_count\": 3, \"beats_per_second\": 1.6216, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 7.85,
+              "end_time": 9.0
+            },
+            "result_preview": "{\"time_range\": [7.85, 9.0], \"duration\": 1.15, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 15.7, \"shot_density\": 0.8696, \"keyframe_count\": 1, \"keyframes_per_second\": 0.8696, \"beat_count\": 3, \"beats_per_second\": 2.6087, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": true}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 9.0,
+              "end_time": 12.0
+            },
+            "result_preview": "{\"time_range\": [9.0, 12.0], \"duration\": 3.0, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 15.7, \"shot_density\": 0.3333, \"keyframe_count\": 1, \"keyframes_per_second\": 0.3333, \"beat_count\": 6, \"beats_per_second\": 2.0, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 12.0,
+              "end_time": 15.0
+            },
+            "result_preview": "{\"time_range\": [12.0, 15.0], \"duration\": 3.0, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 15.7, \"shot_density\": 0.3333, \"keyframe_count\": 1, \"keyframes_per_second\": 0.3333, \"beat_count\": 6, \"beats_per_second\": 2.0, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 15.0,
+              "end_time": 17.066
+            },
+            "result_preview": "{\"time_range\": [15.0, 17.066], \"duration\": 2.066, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 9.216, \"shot_density\": 0.9681, \"keyframe_count\": 1, \"keyframes_per_second\": 0.484, \"beat_count\": 4, \"beats_per_second\": 1.9361, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 17.066,
+              "end_time": 18.433
+            },
+            "result_preview": "{\"time_range\": [17.066, 18.433], \"duration\": 1.367, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 2.733, \"shot_density\": 0.7315, \"keyframe_count\": 1, \"keyframes_per_second\": 0.7315, \"beat_count\": 0, \"beats_per_second\": 0.0, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": true}"
+          }
+        ]
+      },
+      "packaging": {
+        "llm_calls": 3,
+        "tool_calls": 7,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"展示2026造物逐空焕新产品设计系毕业作品展主标题\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}], \"reason\": \"开头用大字标题卡直接点明毕业展核心主题，快速吸引观众注意力\", \"confidence\": 0.95}, {\"segment_id\": \"seg_0..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"55702300_0531\", \"duration\": 18.433, \"resolution\": \"718x1018\", \"fps\": 30.0, \"scene_count\": 2, \"keyframe_count\": 7, \"transcript_segment_count\": 1, \"ocr_frame_count\": 7, \"beat_count\": 33, \"beat_sync_score\": 0.0, \"bpm\": 117.188, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 9.216, \"shot_density\": 0.1085, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"scene_id\": \"scene_000\", \"display_text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 6.0, \"scene_id\": \"scene_000\", \"display_text\": \"小红书 造物逐空 (焕新) 产品设计系毕业作品展 duation Exhibition of Product design Department CREATION EMPTINESS RENEWAL 展览时间05.09-11 展览地点座一楼展厅 Xxx_L CREATIO..."
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_000"
+            },
+            "result_preview": "{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"path\": \"output/55702300_0531/frames/frame_000.jpg\", \"display_text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 1, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 1}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_003"
+            },
+            "result_preview": "{\"frame_id\": \"frame_003\", \"timestamp\": 9.0, \"path\": \"output/55702300_0531/frames/frame_003.jpg\", \"display_text\": \"小红书 造物 逐空(焕新) 展览时间：2026 展览地点： Xxx_L 产品设计系 毕业 作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION 艺术与设计学院 SCHOOL OF ART AND DESIGN Product Design 2026\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 2, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent..."
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_005"
+            },
+            "result_preview": "{\"frame_id\": \"frame_005\", \"timestamp\": 15.0, \"path\": \"output/55702300_0531/frames/frame_005.jpg\", \"display_text\": \"小红书 时间：2026.05.09-11 展览地点：09C座一楼展厅 造物逐空（焕新） Xxx_L 产品设计系毕业作品展 Graduation Exhibition of Product Design Department CREATION EMPTINESS RENEWAL PURSUIT OF EMPTINESS. RENEW 2026 造物逐空焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design 2026 艺术与设计学院 SCHOOL OF ART AND DESIGN\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 3, \"max_total..."
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_006"
+            },
+            "result_preview": "{\"frame_id\": \"frame_006\", \"timestamp\": 17.066, \"path\": \"output/55702300_0531/frames/frame_006.jpg\", \"display_text\": \"小红书号：4287481687 Q Xxx_L 小红书 你的生活指南\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 4, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 4}}}"
+          }
+        ]
+      },
+      "value": {
+        "llm_calls": 2,
+        "tool_calls": 3,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"展示2026造物逐空焕新产品设计系毕业作品展主标题\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}], \"reason\": \"开头用大字标题卡直接点明毕业展核心主题，快速吸引观众注意力\", \"confidence\": 0.95}, {\"segment_id\": \"seg_0..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"55702300_0531\", \"duration\": 18.433, \"resolution\": \"718x1018\", \"fps\": 30.0, \"scene_count\": 2, \"keyframe_count\": 7, \"transcript_segment_count\": 1, \"ocr_frame_count\": 7, \"beat_count\": 33, \"beat_sync_score\": 0.0, \"bpm\": 117.188, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 9.216, \"shot_density\": 0.1085, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"scene_id\": \"scene_000\", \"display_text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 6.0, \"scene_id\": \"scene_000\", \"display_text\": \"小红书 造物逐空 (焕新) 产品设计系毕业作品展 duation Exhibition of Product design Department CREATION EMPTINESS RENEWAL 展览时间05.09-11 展览地点座一楼展厅 Xxx_L CREATIO..."
+          }
+        ]
+      },
+      "energy": {
+        "llm_calls": 2,
+        "tool_calls": 4,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"展示2026造物逐空焕新产品设计系毕业作品展主标题\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}], \"reason\": \"开头用大字标题卡直接点明毕业展核心主题，快速吸引观众注意力\", \"confidence\": 0.95}, {\"segment_id\": \"seg_0..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"very_slow\", \"bpm\": 117.188, \"beat_sync_score\": 0.0, \"avg_shot_duration\": 9.216}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"pace\": \"slow\", \"shots_per_second\": 0.3333, \"avg_shot_duration\": 15.7, \"beat_count\": 5, \"beats_per_second\": 1.6667, \"cut_beat_alignment\": 0.0, \"role\": \"title setup, 展示毕业展主标题\", \"reason\": \"单镜头持续展示主标题海报，无实际场景切镜，数据来源metrics:seg_001\", \"scene_cut_count\": 0, \"rhythm_driver\": \"visual_version_change\"}, {\"segment_id\": \"seg_002\"..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"event_info_text\", \"title_card_usage\": true, \"dominant_text_layout\": \"centered\", \"visual_emphasis\": [\"large event theme text\", \"full poster info display\", \"highlight key exhibition time/location\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"packaging_role\": \"opening event title card\", \"text_density\": \"high\", \"layout\": \"large center..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"向观众完整传递2026造物逐空焕新产品设计系毕业作品展的观展时间、地点信息，同时展示本次毕业展主题海报的动态视觉设计效果\", \"value_type\": \"exhibition_promotion\", \"target_audience\": \"关注设计类展览的艺术学生、设计从业者、创意内容爱好者\", \"conversion_goal\": \"获取观展信息 / 关注创作者账号\", \"primary_hook_value\": \"开篇直接亮出2026产品设计系毕业作品展主标题，快速抓取设计爱好者注意力\", \"creator_cta\": \"展示小红书账号ID 4287481687，引导观众关注创作者账号\", \"platform_cta\": \"小红书 你的生活指南\", \"selling_points\": []}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"value_role\": \"hook\", \"claim\": \"用..."
+          }
+        ]
+      },
+      "transfer": {
+        "llm_calls": 7,
+        "tool_calls": 6,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "overview"
+            },
+            "result_preview": "{\"video_id\": \"55702300_0531\", \"duration\": 18.433, \"resolution\": \"718x1018\", \"fps\": 30.0, \"scene_count\": 2, \"keyframe_count\": 7, \"transcript_segment_count\": 1, \"ocr_frame_count\": 7, \"beat_count\": 33, \"beat_sync_score\": 0.0, \"bpm\": 117.188, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 9.216, \"shot_density\": 0.1085, \"has_speech\": true}"
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"展示2026造物逐空焕新产品设计系毕业作品展主标题\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"逐空 焕新) 展览时间:2026.05.09-11 展览地点:09C座一楼展厅 设计系 毕业 作品展 CREATION EMPTINESS RENEWAL CREATION 造物 (焕 EMPTINESS RENEWAL 2026 造物 逐空 焕新 产品设计系毕业作品展 GRADUATION EXHIBITION Product Design Xxx_L 2026 小红书\"}], \"reason\": \"开头用大字标题卡直接点明毕业展核心主题，快速吸引观众注意力\", \"confidence\": 0.95}, {\"segment_id\": \"seg_0..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"very_slow\", \"bpm\": 117.188, \"beat_sync_score\": 0.0, \"avg_shot_duration\": 9.216}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"pace\": \"slow\", \"shots_per_second\": 0.3333, \"avg_shot_duration\": 15.7, \"beat_count\": 5, \"beats_per_second\": 1.6667, \"cut_beat_alignment\": 0.0, \"role\": \"title setup, 展示毕业展主标题\", \"reason\": \"单镜头持续展示主标题海报，无实际场景切镜，数据来源metrics:seg_001\", \"scene_cut_count\": 0, \"rhythm_driver\": \"visual_version_change\"}, {\"segment_id\": \"seg_002\"..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"event_info_text\", \"title_card_usage\": true, \"dominant_text_layout\": \"centered\", \"visual_emphasis\": [\"large event theme text\", \"full poster info display\", \"highlight key exhibition time/location\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"packaging_role\": \"opening event title card\", \"text_density\": \"high\", \"layout\": \"large center..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"向观众完整传递2026造物逐空焕新产品设计系毕业作品展的观展时间、地点信息，同时展示本次毕业展主题海报的动态视觉设计效果\", \"value_type\": \"exhibition_promotion\", \"target_audience\": \"关注设计类展览的艺术学生、设计从业者、创意内容爱好者\", \"conversion_goal\": \"获取观展信息 / 关注创作者账号\", \"primary_hook_value\": \"开篇直接亮出2026产品设计系毕业作品展主标题，快速抓取设计爱好者注意力\", \"creator_cta\": \"展示小红书账号ID 4287481687，引导观众关注创作者账号\", \"platform_cta\": \"小红书 你的生活指南\", \"selling_points\": []}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"value_role\": \"hook\", \"claim\": \"用..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "energy"
+            },
+            "result_preview": "{\"energy_curve\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"energy_level\": \"medium\", \"role\": \"hook_attention\", \"drivers\": [\"large_title_card\", \"clear_exhibition_theme_promise\"], \"evidence_refs\": [\"script:seg_001\", \"packaging:seg_001\", \"value:seg_001\", \"rhythm:seg_001\"], \"confidence\": 0.92}, {\"segment_id\": \"seg_002\", \"time_range\": [3.0, 6.0], \"energy_level\": \"low\", \"role\": \"background_supplement\", \"drivers\": [\"basic_background_info_reveal\", \"supplementary_organizer_info\"], \"evidence_re..."
+          }
+        ]
+      },
+      "evaluator": {
+        "llm_calls": 0,
+        "tool_calls": 0,
+        "tool_history": []
+      }
+    }
+  },
+  "evaluation": {
+    "status": "pass",
+    "score": 1.0,
+    "thresholds": {
+      "pass": 0.75,
+      "warning": 0.6
+    },
+    "checks": [
+      {
+        "name": "script_time_coverage",
+        "score": 1.0,
+        "weight": 1.2,
+        "hard_fail": false,
+        "message": "segments=8, coverage=100.00%",
+        "gaps": [],
+        "overlaps": []
+      },
+      {
+        "name": "segment_evidence",
+        "score": 1.0,
+        "weight": 1.0,
+        "hard_fail": false,
+        "message": "8/8 segments have evidence",
+        "missing_segments": []
+      },
+      {
+        "name": "required_agent_outputs",
+        "score": 1.0,
+        "weight": 1.0,
+        "hard_fail": false,
+        "message": "missing=[]",
+        "missing": []
+      },
+      {
+        "name": "transfer_blueprint",
+        "score": 1.0,
+        "weight": 1.4,
+        "hard_fail": false,
+        "message": "slots=8, rules=4",
+        "slots_missing_machine_fields": []
+      },
+      {
+        "name": "important_ocr_coverage",
+        "score": 1.0,
+        "weight": 0.8,
+        "hard_fail": false,
+        "message": "1/1 important OCR items referenced",
+        "missing_preview": []
+      },
+      {
+        "name": "rhythm_consistency",
+        "score": 1.0,
+        "weight": 0.6,
+        "hard_fail": false,
+        "message": "no issues",
+        "warnings": []
+      }
+    ],
+    "hard_failures": [],
+    "recommendations": []
+  }
+}
