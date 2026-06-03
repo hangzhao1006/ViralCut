@@ -16,6 +16,9 @@ scenedetect[opencv]>=0.6.3
 # --- Audio analysis ---------------------------------------------------------
 librosa>=0.10.0
 
+# --- LLM / VLM API ----------------------------------------------------------
+openai>=1.30.0               # OpenAI-compatible client (used for OpenRouter calls)
+
 # --- Env / config -----------------------------------------------------------
 python-dotenv>=1.0.0
 
