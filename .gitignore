@@ -1,6 +1,8 @@
 # Output
 output/
 temp/
+src/output/
+src/stage1/output/
 
 # Python
 __pycache__/
@@ -38,3 +40,15 @@ src/stage1/scripts/*.webm
 src/stage1/scripts/*.avi
 
 src/stage1/scripts/test_videos/
+
+# Downloaded videos & audio (link pipeline / yt-dlp)
+*.mp4
+*.mp3
+*.wav
+*.m4a
+*.webm
+
+# Model weights (Whisper etc.)
+*.pt
+*.pth
+*.bin

@@ -27,3 +27,26 @@ soundfile>=0.12.1
 
 # JSON serialization
 dataclasses-json>=0.6.0
+
+# =========================================================
+# Link pipeline (src/stage1/link_pipeline) dependencies
+# =========================================================
+
+# Video download
+yt-dlp>=2024.1.0
+
+# Link pipeline ASR (openai-whisper, separate from faster-whisper above)
+openai-whisper>=20231117
+
+# Link pipeline OCR (EasyOCR, uses PyTorch)
+easyocr>=1.7.0
+
+# Shot detection
+scenedetect[opencv]>=0.6.3
+
+# LLM / VLM API (OpenAI-compatible client, used for OpenRouter calls)
+openai>=1.30.0
+
+# Link pipeline transitive deps
+numpy>=1.24.0
+opencv-python>=4.8.0
