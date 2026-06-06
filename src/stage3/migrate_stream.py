@@ -73,6 +73,7 @@ def run_migration_stream(
             {"role": "user", "content": user_prompt},
         ],
         "temperature": float(os.getenv("LLM_TEMPERATURE", "0.1")),
+        "max_tokens": 8192,
         "stream": True,
     }
     headers = {

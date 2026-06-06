@@ -1,18 +1,18 @@
-import { useState, useEffect, useRef } from 'react';
-import type { AnalysisResult, MigrationResult, MigratedSlot } from './types';
-import * as api from './lib/api';
-import type { TaskStatus } from './lib/api';
-import VideoPlayer from './components/analysis/VideoPlayer';
-import AgentPanel from './components/analysis/AgentPanel';
-import MultiTrackTimeline from './components/analysis/MultiTrackTimeline';
-import AgentProgress from './components/analysis/AgentProgress';
-import AssetLibrary from './components/AssetLibrary';
-import type { AnalyzedAsset } from './components/AssetLibrary';
-import MigrationPanel from './components/migration/MigrationPanel';
-import MigrationPreview from './components/migration/MigrationPreview';
-import MigrationProgress from './components/migration/MigrationProgress';
-import DataInspector from './components/DataInspector';
-import { extractPartialSlots } from './lib/streamParse';
+import { useState, useEffect, useRef } from "react";
+import type { AnalysisResult, MigrationResult, MigratedSlot } from "./types";
+import * as api from "./lib/api";
+import type { TaskStatus } from "./lib/api";
+import VideoPlayer from "./components/analysis/VideoPlayer";
+import AgentPanel from "./components/analysis/AgentPanel";
+import MultiTrackTimeline from "./components/analysis/MultiTrackTimeline";
+import AgentProgress from "./components/analysis/AgentProgress";
+import AssetLibrary from "./components/AssetLibrary";
+import type { AnalyzedAsset } from "./components/AssetLibrary";
+import MigrationForm from "./components/migration/MigrationForm";
+import MigrationPreview from "./components/migration/MigrationPreview";
+import MigrationProgress from "./components/migration/MigrationProgress";
+import DataInspector from "./components/DataInspector";
+import { extractPartialSlots } from "./lib/streamParse";
 
 export default function App() {
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
@@ -21,24 +21,31 @@ export default function App() {
   const [assets, setAssets] = useState<AnalyzedAsset[]>([]);
   const [migration, setMigration] = useState<MigrationResult | null>(null);
   const [migrating, setMigrating] = useState(false);
-  const [streamText, setStreamText] = useState('');
+  const [streamText, setStreamText] = useState("");
   const [lastContent, setLastContent] = useState<Record<string, unknown>>({});
-  const [showMigrationPanel, setShowMigrationPanel] = useState(false);
-  const [bottomView, setBottomView] = useState<'analysis' | 'migration' | 'data'>('analysis');
+  const [bottomView, setBottomView] = useState<
+    "analysis" | "migration" | "data"
+  >("analysis");
   const [samples, setSamples] = useState<string[]>([]);
   const [taskStatus, setTaskStatus] = useState<TaskStatus | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const startRef = useRef<number>(0);
 
   useEffect(() => {
-    api.listSamples().then((r) => setSamples(r.samples ?? [])).catch(() => {});
+    api
+      .listSamples()
+      .then((r) => setSamples(r.samples ?? []))
+      .catch(() => {});
   }, []);
 
-  const analyzing = taskStatus?.status === 'processing';
+  const analyzing = taskStatus?.status === "processing";
 
   useEffect(() => {
     if (!analyzing) return;
-    const t = setInterval(() => setElapsed(Math.floor((Date.now() - startRef.current) / 1000)), 1000);
+    const t = setInterval(
+      () => setElapsed(Math.floor((Date.now() - startRef.current) / 1000)),
+      1000,
+    );
     return () => clearInterval(t);
   }, [analyzing]);
 
@@ -46,7 +53,7 @@ export default function App() {
     const result = await api.getSample(videoId);
     setAnalysis(result);
     setMigration(null);
-    setBottomView('analysis');
+    setBottomView("analysis");
     setTaskStatus(null);
   }
 
@@ -54,15 +61,20 @@ export default function App() {
     startRef.current = Date.now();
     setElapsed(0);
     setAnalysis(null);
-    setTaskStatus({ task_id: '', status: 'processing', stage: 'stage1', message: '上传中...' });
+    setTaskStatus({
+      task_id: "",
+      status: "processing",
+      stage: "stage1",
+      message: "上传中...",
+    });
     const { task_id } = await api.uploadAndAnalyze(file);
     const poll = setInterval(async () => {
       const status = await api.getStatus(task_id);
       setTaskStatus(status);
-      if (status.status === 'done') {
+      if (status.status === "done") {
         clearInterval(poll);
         setAnalysis(await api.getResult(task_id));
-      } else if (status.status === 'failed') {
+      } else if (status.status === "failed") {
         clearInterval(poll);
       }
     }, 2000);
@@ -71,13 +83,12 @@ export default function App() {
   async function handleMigrate(newContent: Record<string, unknown>) {
     if (!analysis) return;
     setMigrating(true);
-    setStreamText('');
+    setStreamText("");
     setMigration(null);
-    setShowMigrationPanel(false);
-    setBottomView('migration');
+    setBottomView("migration");
     const userAssets = {
-      videos: assets.filter((a) => a.type === 'video'),
-      images: assets.filter((a) => a.type === 'image'),
+      videos: assets.filter((a) => a.type === "video"),
+      images: assets.filter((a) => a.type === "image"),
       texts: [],
       has_bgm: false,
     };
@@ -92,13 +103,13 @@ export default function App() {
           if (result && result.migrated_slots?.length) {
             setMigration(result);
           } else {
-            alert('迁移解析失败，请看后端日志');
-            console.log('migration result:', result);
+            alert("迁移解析失败，请看后端日志");
+            console.log("migration result:", result);
           }
         },
       );
     } catch (e) {
-      alert('迁移出错: ' + String(e));
+      alert("迁移出错: " + String(e));
     } finally {
       setMigrating(false);
     }
@@ -116,25 +127,39 @@ export default function App() {
     setMigration({ ...migration, migrated_slots: slots });
   }
 
-  async function handleSlotRegenerate(idx: number, instruction: string, forceStrategy: string) {
+  async function handleSlotRegenerate(
+    idx: number,
+    instruction: string,
+    forceStrategy: string,
+  ) {
     if (!migration || !analysis) return;
     const current = migration.migrated_slots[idx];
-    const ctx = lastContent as { newContent?: Record<string, unknown>; userAssets?: Record<string, unknown> };
+    const ctx = lastContent as {
+      newContent?: Record<string, unknown>;
+      userAssets?: Record<string, unknown>;
+    };
     const result = await api.migrateSlot(
-      analysis.video_id, idx, current as unknown as Record<string, unknown>,
-      ctx.newContent ?? {}, ctx.userAssets ?? {}, instruction, forceStrategy,
+      analysis.video_id,
+      idx,
+      current as unknown as Record<string, unknown>,
+      ctx.newContent ?? {},
+      ctx.userAssets ?? {},
+      instruction,
+      forceStrategy,
     );
     if ((result as { error?: string }).error) {
-      alert('重新生成失败: ' + (result as { error?: string }).error);
+      alert("重新生成失败: " + (result as { error?: string }).error);
       return;
     }
     handleSlotUpdate(idx, result as unknown as MigratedSlot);
   }
 
   function downloadJson(data: unknown, filename: string) {
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify(data, null, 2)], {
+      type: "application/json",
+    });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
     a.download = filename;
     a.click();
@@ -143,32 +168,34 @@ export default function App() {
 
   function handleExport() {
     if (!analysis) return;
-    downloadJson(analysis.video_structure, `${analysis.video_id}_video_structure.json`);
-    if (migration) downloadJson(migration, `${analysis.video_id}_migration_result.json`);
+    downloadJson(
+      analysis.video_structure,
+      `${analysis.video_id}_video_structure.json`,
+    );
+    if (migration)
+      downloadJson(migration, `${analysis.video_id}_migration_result.json`);
   }
 
-  // Reuse a previously-saved analysis result (skip re-analysis)
   function handleReuseUpload(file: File) {
     const reader = new FileReader();
     reader.onload = () => {
       try {
         const data = JSON.parse(reader.result as string);
-        // Accept either a full AnalysisResult or a bare video_structure
         if (data.video_structure) {
           setAnalysis(data as AnalysisResult);
         } else if (data.transfer_blueprint || data.script_structure) {
           setAnalysis({
-            video_id: data.video_id ?? 'uploaded',
-            video_url: '',
+            video_id: data.video_id ?? "uploaded",
+            video_url: "",
             video_structure: data,
             evidence_package: null,
           });
         }
         setMigration(null);
-        setBottomView('analysis');
+        setBottomView("analysis");
         setTaskStatus(null);
       } catch {
-        alert('JSON 解析失败，请上传 video_structure.json 或完整分析结果');
+        alert("JSON 解析失败，请上传 video_structure.json 或完整分析结果");
       }
     };
     reader.readAsText(file);
@@ -180,87 +207,137 @@ export default function App() {
   return (
     <div className="min-h-screen text-slate-900">
       <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-8">
-
         {/* Top bar */}
         <div className="mb-4 flex flex-col gap-3 rounded-3xl border border-white/70 bg-white/75 px-4 py-3 shadow-[0_18px_48px_rgba(15,23,42,0.08)] backdrop-blur xl:flex-row xl:items-center xl:justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-white shadow-lg shadow-slate-900/20">VC</div>
+            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-white shadow-lg shadow-slate-900/20">
+              VC
+            </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[15px] font-semibold tracking-tight text-slate-950">{analysis ? analysis.video_id : 'ViralCut'}</span>
+                <span className="text-[15px] font-semibold tracking-tight text-slate-950">
+                  {analysis ? analysis.video_id : "ViralCut"}
+                </span>
                 {structure?.evaluation && (
                   <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-700">
                     已分析 · {structure.evaluation.score}分
                   </span>
                 )}
               </div>
-              <div className="mt-0.5 text-[11px] text-slate-500">爆款视频结构迁移引擎 · Evidence-based multi-agent workflow</div>
+              <div className="mt-0.5 text-[11px] text-slate-500">
+                爆款视频结构迁移引擎 · Evidence-based multi-agent workflow
+              </div>
             </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <label className="vc-button cursor-pointer">
               上传视频
-              <input type="file" accept="video/*" className="hidden"
-                onChange={(e) => e.target.files?.[0] && handleUpload(e.target.files[0])} />
+              <input
+                type="file"
+                accept="video/*"
+                className="hidden"
+                onChange={(e) =>
+                  e.target.files?.[0] && handleUpload(e.target.files[0])
+                }
+              />
             </label>
             <label className="vc-button cursor-pointer">
               复用结果
-              <input type="file" accept="application/json,.json" className="hidden"
-                onChange={(e) => e.target.files?.[0] && handleReuseUpload(e.target.files[0])} />
+              <input
+                type="file"
+                accept="application/json,.json"
+                className="hidden"
+                onChange={(e) =>
+                  e.target.files?.[0] && handleReuseUpload(e.target.files[0])
+                }
+              />
             </label>
             {samples.length > 0 && (
-              <select onChange={(e) => e.target.value && loadSample(e.target.value)}
-                className="vc-button h-[34px] cursor-pointer appearance-none pr-8" defaultValue="">
+              <select
+                onChange={(e) => e.target.value && loadSample(e.target.value)}
+                className="vc-button h-[34px] cursor-pointer appearance-none pr-8"
+                defaultValue=""
+              >
                 <option value="">样例</option>
-                {samples.map((s) => <option key={s} value={s}>{s}</option>)}
+                {samples.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
               </select>
             )}
-            <button disabled={!analysis} onClick={handleExport}
-              className="vc-button">
-              导出结果
-            </button>
             <button
               disabled={!analysis}
-              onClick={() => setShowMigrationPanel(true)}
-              className="vc-button-primary"
+              onClick={handleExport}
+              className="vc-button"
             >
-              生成新视频
+              导出结果
             </button>
           </div>
         </div>
 
         {/* Progress while analyzing */}
-        {taskStatus && (analyzing || taskStatus.status === 'failed') && (
-          taskStatus.status === 'failed' ? (
+        {taskStatus &&
+          (analyzing || taskStatus.status === "failed") &&
+          (taskStatus.status === "failed" ? (
             <div className="mb-4 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700 shadow-sm">
               分析失败: {taskStatus.message}
             </div>
-          ) : <AgentProgress status={taskStatus} elapsed={elapsed} />
-        )}
+          ) : (
+            <AgentProgress status={taskStatus} elapsed={elapsed} />
+          ))}
 
         {!analysis && !analyzing && (
           <div className="vc-card flex min-h-[520px] flex-col items-center justify-center rounded-[2rem] px-6 py-24 text-center">
-            <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-950 text-2xl text-white shadow-xl shadow-slate-900/20">▶</div>
-            <div className="text-lg font-semibold tracking-tight text-slate-900">开始一次结构拆解</div>
-            <div className="mt-2 max-w-md text-sm leading-6 text-slate-500">上传爆款视频或选择样例，系统会完成 Stage 1 证据提取和 Stage 2 多 Agent 结构分析。</div>
+            <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-950 text-2xl text-white shadow-xl shadow-slate-900/20">
+              ▶
+            </div>
+            <div className="text-lg font-semibold tracking-tight text-slate-900">
+              开始一次结构拆解
+            </div>
+            <div className="mt-2 max-w-md text-sm leading-6 text-slate-500">
+              上传爆款视频或选择样例，系统会完成 Stage 1 证据提取和 Stage 2 多
+              Agent 结构分析。
+            </div>
           </div>
         )}
 
         {/* Unified workspace */}
         {analysis && structure && (
           <div className="vc-card overflow-hidden rounded-[2rem]">
-            {/* 3-column */}
-            <div className="grid min-h-[520px] grid-cols-[240px_minmax(0,1fr)_320px] bg-white">
-              {/* Left: asset library */}
-              <div className="border-r border-slate-200/80 bg-slate-50/60">
-                <AssetLibrary assets={assets} onAssetsAdded={(a) => setAssets((prev) => [...prev, ...a])} />
+            {/* 3-column — wider left column */}
+            <div className="grid min-h-[520px] grid-cols-[300px_minmax(0,1fr)_320px] bg-white">
+              {/* Left: asset library (top) + generate form (bottom) */}
+              <div className="flex flex-col border-r border-slate-200/80 bg-slate-50/60">
+                <div className="border-b border-slate-200/80">
+                  <AssetLibrary
+                    assets={assets}
+                    onAssetsAdded={(a) => setAssets((prev) => [...prev, ...a])}
+                    onRemove={(id) =>
+                      setAssets((prev) => prev.filter((a) => a.id !== id))
+                    }
+                  />
+                </div>
+                {blueprint && (
+                  <MigrationForm
+                    blueprint={blueprint}
+                    assets={assets}
+                    loading={migrating}
+                    onMigrate={handleMigrate}
+                  />
+                )}
               </div>
 
               {/* Center: video preview */}
               <div className="flex items-center justify-center bg-[radial-gradient(circle_at_50%_20%,rgba(79,70,229,0.08),transparent_34%),#f8fafc] p-5">
                 <div className="w-full max-w-[560px]">
-                  <VideoPlayer videoUrl={analysis.video_url} structure={structure}
-                    currentTime={currentTime} onTimeUpdate={setCurrentTime} seekTo={seekTo} />
+                  <VideoPlayer
+                    videoUrl={analysis.video_url}
+                    structure={structure}
+                    currentTime={currentTime}
+                    onTimeUpdate={setCurrentTime}
+                    seekTo={seekTo}
+                  />
                 </div>
               </div>
 
@@ -269,9 +346,13 @@ export default function App() {
                 <div className="mb-3 flex items-center justify-between">
                   <div>
                     <div className="vc-kicker">Inspector</div>
-                    <div className="mt-1 text-sm font-semibold text-slate-900">当前片段分析</div>
+                    <div className="mt-1 text-sm font-semibold text-slate-900">
+                      当前片段分析
+                    </div>
                   </div>
-                  <div className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-500">{currentTime.toFixed(1)}s</div>
+                  <div className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-500">
+                    {currentTime.toFixed(1)}s
+                  </div>
                 </div>
                 <AgentPanel structure={structure} currentTime={currentTime} />
               </div>
@@ -280,32 +361,49 @@ export default function App() {
             {/* Bottom: timeline */}
             <div className="border-t border-slate-200/80 bg-white p-4">
               <div className="mb-3 flex items-center gap-2 rounded-2xl bg-slate-100/70 p-1">
-                <button onClick={() => setBottomView('analysis')}
-                  className={`rounded-xl px-3 py-1.5 text-xs font-medium transition ${bottomView === 'analysis' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}>
+                <button
+                  onClick={() => setBottomView("analysis")}
+                  className={`rounded-xl px-3 py-1.5 text-xs font-medium transition ${bottomView === "analysis" ? "bg-white text-slate-950 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+                >
                   分析时间线
                 </button>
-                <button onClick={() => setBottomView('data')}
-                  className={`rounded-xl px-3 py-1.5 text-xs font-medium transition ${bottomView === 'data' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}>
+                <button
+                  onClick={() => setBottomView("data")}
+                  className={`rounded-xl px-3 py-1.5 text-xs font-medium transition ${bottomView === "data" ? "bg-white text-slate-950 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+                >
                   数据详情
                 </button>
-                {migration && (
-                  <button onClick={() => setBottomView('migration')}
-                    className={`rounded-xl px-3 py-1.5 text-xs font-medium transition ${bottomView === 'migration' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-800'}`}>
+                {(migration || migrating || streamText) && (
+                  <button
+                    onClick={() => setBottomView("migration")}
+                    className={`rounded-xl px-3 py-1.5 text-xs font-medium transition ${bottomView === "migration" ? "bg-white text-slate-950 shadow-sm" : "text-slate-500 hover:text-slate-800"}`}
+                  >
                     迁移预览
                   </button>
                 )}
               </div>
-              {bottomView === 'analysis' && (
-                <MultiTrackTimeline structure={structure} evidence={analysis.evidence_package}
-                  currentTime={currentTime} onSeek={doSeek} />
+              {bottomView === "analysis" && (
+                <MultiTrackTimeline
+                  structure={structure}
+                  evidence={analysis.evidence_package}
+                  currentTime={currentTime}
+                  onSeek={doSeek}
+                />
               )}
-              {bottomView === 'data' && (
-                <DataInspector structure={structure} evidence={analysis.evidence_package} />
+              {bottomView === "data" && (
+                <DataInspector
+                  structure={structure}
+                  evidence={analysis.evidence_package}
+                />
               )}
-              {bottomView === 'migration' && (
-                migration && blueprint ? (
-                  <MigrationPreview blueprint={blueprint} migration={migration}
-                    onSlotUpdate={handleSlotUpdate} onSlotRegenerate={handleSlotRegenerate} />
+              {bottomView === "migration" &&
+                (migration && blueprint ? (
+                  <MigrationPreview
+                    blueprint={blueprint}
+                    migration={migration}
+                    onSlotUpdate={handleSlotUpdate}
+                    onSlotRegenerate={handleSlotRegenerate}
+                  />
                 ) : (migrating || streamText) && blueprint ? (
                   <MigrationProgress
                     blueprint={blueprint}
@@ -313,22 +411,12 @@ export default function App() {
                     done={!migrating}
                   />
                 ) : (
-                  <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 py-12 text-center text-sm text-slate-400">点击“生成新视频”开始迁移</div>
-                )
-              )}
+                  <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 py-12 text-center text-sm text-slate-400">
+                    在左栏填写主题后点击"生成新视频"
+                  </div>
+                ))}
             </div>
           </div>
-        )}
-
-        {/* Migration setup panel (slide-in overlay) */}
-        {showMigrationPanel && blueprint && (
-          <MigrationPanel
-            blueprint={blueprint}
-            assets={assets}
-            loading={migrating}
-            onClose={() => setShowMigrationPanel(false)}
-            onMigrate={handleMigrate}
-          />
         )}
       </div>
     </div>

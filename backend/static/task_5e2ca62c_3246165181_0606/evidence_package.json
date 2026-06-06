@@ -1,0 +1,7239 @@
+{
+  "video_id": "task_5e2ca62c_3246165181_0606",
+  "source": {
+    "type": "file",
+    "local_path": "/Users/apple/Documents/GitHub/ViralCut/backend/static/uploads/task_5e2ca62c_3246165181.mov",
+    "original_filename": "task_5e2ca62c_3246165181.mov",
+    "url": null,
+    "platform": null,
+    "social_metadata": null
+  },
+  "metadata": {
+    "duration": 118.212,
+    "width": 1280,
+    "height": 720,
+    "fps": 24.0,
+    "codec": "h264",
+    "file_size": 17220280,
+    "has_audio": true,
+    "has_subtitle_track": false,
+    "bitrate": 1165382,
+    "aspect_ratio": "16:9"
+  },
+  "scenes": [
+    {
+      "scene_id": "scene_000",
+      "index": 0,
+      "start_time": 0.0,
+      "end_time": 10.083,
+      "duration": 10.083,
+      "keyframe_ids": [
+        "frame_000",
+        "frame_001",
+        "frame_002",
+        "frame_003"
+      ]
+    },
+    {
+      "scene_id": "scene_001",
+      "index": 1,
+      "start_time": 10.083,
+      "end_time": 10.833,
+      "duration": 0.75,
+      "keyframe_ids": [
+        "frame_004"
+      ]
+    },
+    {
+      "scene_id": "scene_002",
+      "index": 2,
+      "start_time": 10.833,
+      "end_time": 19.917,
+      "duration": 9.084,
+      "keyframe_ids": [
+        "frame_005",
+        "frame_006",
+        "frame_007"
+      ]
+    },
+    {
+      "scene_id": "scene_003",
+      "index": 3,
+      "start_time": 19.917,
+      "end_time": 21.375,
+      "duration": 1.458,
+      "keyframe_ids": [
+        "frame_008"
+      ]
+    },
+    {
+      "scene_id": "scene_004",
+      "index": 4,
+      "start_time": 21.375,
+      "end_time": 22.833,
+      "duration": 1.458,
+      "keyframe_ids": [
+        "frame_009"
+      ]
+    },
+    {
+      "scene_id": "scene_005",
+      "index": 5,
+      "start_time": 22.833,
+      "end_time": 24.292,
+      "duration": 1.459,
+      "keyframe_ids": [
+        "frame_010"
+      ]
+    },
+    {
+      "scene_id": "scene_006",
+      "index": 6,
+      "start_time": 24.292,
+      "end_time": 26.208,
+      "duration": 1.916,
+      "keyframe_ids": [
+        "frame_011"
+      ]
+    },
+    {
+      "scene_id": "scene_007",
+      "index": 7,
+      "start_time": 26.208,
+      "end_time": 26.792,
+      "duration": 0.584,
+      "keyframe_ids": [
+        "frame_012"
+      ]
+    },
+    {
+      "scene_id": "scene_008",
+      "index": 8,
+      "start_time": 26.792,
+      "end_time": 30.75,
+      "duration": 3.958,
+      "keyframe_ids": [
+        "frame_013"
+      ]
+    },
+    {
+      "scene_id": "scene_009",
+      "index": 9,
+      "start_time": 30.75,
+      "end_time": 31.5,
+      "duration": 0.75,
+      "keyframe_ids": [
+        "frame_014"
+      ]
+    },
+    {
+      "scene_id": "scene_010",
+      "index": 10,
+      "start_time": 31.5,
+      "end_time": 41.208,
+      "duration": 9.708,
+      "keyframe_ids": [
+        "frame_015",
+        "frame_016",
+        "frame_017",
+        "frame_018"
+      ]
+    },
+    {
+      "scene_id": "scene_011",
+      "index": 11,
+      "start_time": 41.208,
+      "end_time": 44.208,
+      "duration": 3.0,
+      "keyframe_ids": [
+        "frame_019"
+      ]
+    },
+    {
+      "scene_id": "scene_012",
+      "index": 12,
+      "start_time": 44.208,
+      "end_time": 46.583,
+      "duration": 2.375,
+      "keyframe_ids": [
+        "frame_020"
+      ]
+    },
+    {
+      "scene_id": "scene_013",
+      "index": 13,
+      "start_time": 46.583,
+      "end_time": 51.625,
+      "duration": 5.042,
+      "keyframe_ids": [
+        "frame_021",
+        "frame_022"
+      ]
+    },
+    {
+      "scene_id": "scene_014",
+      "index": 14,
+      "start_time": 51.625,
+      "end_time": 56.75,
+      "duration": 5.125,
+      "keyframe_ids": [
+        "frame_023",
+        "frame_024"
+      ]
+    },
+    {
+      "scene_id": "scene_015",
+      "index": 15,
+      "start_time": 56.75,
+      "end_time": 57.125,
+      "duration": 0.375,
+      "keyframe_ids": [
+        "frame_025"
+      ]
+    },
+    {
+      "scene_id": "scene_016",
+      "index": 16,
+      "start_time": 57.125,
+      "end_time": 57.458,
+      "duration": 0.333,
+      "keyframe_ids": [
+        "frame_026"
+      ]
+    },
+    {
+      "scene_id": "scene_017",
+      "index": 17,
+      "start_time": 57.458,
+      "end_time": 57.792,
+      "duration": 0.334,
+      "keyframe_ids": [
+        "frame_027"
+      ]
+    },
+    {
+      "scene_id": "scene_018",
+      "index": 18,
+      "start_time": 57.792,
+      "end_time": 58.125,
+      "duration": 0.333,
+      "keyframe_ids": [
+        "frame_028"
+      ]
+    },
+    {
+      "scene_id": "scene_019",
+      "index": 19,
+      "start_time": 58.125,
+      "end_time": 65.375,
+      "duration": 7.25,
+      "keyframe_ids": [
+        "frame_029",
+        "frame_030",
+        "frame_031"
+      ]
+    },
+    {
+      "scene_id": "scene_020",
+      "index": 20,
+      "start_time": 65.375,
+      "end_time": 69.5,
+      "duration": 4.125,
+      "keyframe_ids": [
+        "frame_032"
+      ]
+    },
+    {
+      "scene_id": "scene_021",
+      "index": 21,
+      "start_time": 69.5,
+      "end_time": 69.958,
+      "duration": 0.458,
+      "keyframe_ids": [
+        "frame_033"
+      ]
+    },
+    {
+      "scene_id": "scene_022",
+      "index": 22,
+      "start_time": 69.958,
+      "end_time": 70.542,
+      "duration": 0.584,
+      "keyframe_ids": [
+        "frame_034"
+      ]
+    },
+    {
+      "scene_id": "scene_023",
+      "index": 23,
+      "start_time": 70.542,
+      "end_time": 72.792,
+      "duration": 2.25,
+      "keyframe_ids": [
+        "frame_035"
+      ]
+    },
+    {
+      "scene_id": "scene_024",
+      "index": 24,
+      "start_time": 72.792,
+      "end_time": 73.75,
+      "duration": 0.958,
+      "keyframe_ids": [
+        "frame_036"
+      ]
+    },
+    {
+      "scene_id": "scene_025",
+      "index": 25,
+      "start_time": 73.75,
+      "end_time": 74.458,
+      "duration": 0.708,
+      "keyframe_ids": [
+        "frame_037"
+      ]
+    },
+    {
+      "scene_id": "scene_026",
+      "index": 26,
+      "start_time": 74.458,
+      "end_time": 75.167,
+      "duration": 0.709,
+      "keyframe_ids": [
+        "frame_038"
+      ]
+    },
+    {
+      "scene_id": "scene_027",
+      "index": 27,
+      "start_time": 75.167,
+      "end_time": 76.042,
+      "duration": 0.875,
+      "keyframe_ids": [
+        "frame_039"
+      ]
+    },
+    {
+      "scene_id": "scene_028",
+      "index": 28,
+      "start_time": 76.042,
+      "end_time": 76.625,
+      "duration": 0.583,
+      "keyframe_ids": [
+        "frame_040"
+      ]
+    },
+    {
+      "scene_id": "scene_029",
+      "index": 29,
+      "start_time": 76.625,
+      "end_time": 80.083,
+      "duration": 3.458,
+      "keyframe_ids": [
+        "frame_041"
+      ]
+    },
+    {
+      "scene_id": "scene_030",
+      "index": 30,
+      "start_time": 80.083,
+      "end_time": 82.958,
+      "duration": 2.875,
+      "keyframe_ids": [
+        "frame_042"
+      ]
+    },
+    {
+      "scene_id": "scene_031",
+      "index": 31,
+      "start_time": 82.958,
+      "end_time": 83.417,
+      "duration": 0.459,
+      "keyframe_ids": [
+        "frame_043"
+      ]
+    },
+    {
+      "scene_id": "scene_032",
+      "index": 32,
+      "start_time": 83.417,
+      "end_time": 85.958,
+      "duration": 2.541,
+      "keyframe_ids": [
+        "frame_044"
+      ]
+    },
+    {
+      "scene_id": "scene_033",
+      "index": 33,
+      "start_time": 85.958,
+      "end_time": 91.417,
+      "duration": 5.459,
+      "keyframe_ids": [
+        "frame_045",
+        "frame_046"
+      ]
+    },
+    {
+      "scene_id": "scene_034",
+      "index": 34,
+      "start_time": 91.417,
+      "end_time": 91.75,
+      "duration": 0.333,
+      "keyframe_ids": [
+        "frame_047"
+      ]
+    },
+    {
+      "scene_id": "scene_035",
+      "index": 35,
+      "start_time": 91.75,
+      "end_time": 92.583,
+      "duration": 0.833,
+      "keyframe_ids": [
+        "frame_048"
+      ]
+    },
+    {
+      "scene_id": "scene_036",
+      "index": 36,
+      "start_time": 92.583,
+      "end_time": 93.0,
+      "duration": 0.417,
+      "keyframe_ids": [
+        "frame_049"
+      ]
+    },
+    {
+      "scene_id": "scene_037",
+      "index": 37,
+      "start_time": 93.0,
+      "end_time": 93.542,
+      "duration": 0.542,
+      "keyframe_ids": [
+        "frame_050"
+      ]
+    },
+    {
+      "scene_id": "scene_038",
+      "index": 38,
+      "start_time": 93.542,
+      "end_time": 95.75,
+      "duration": 2.208,
+      "keyframe_ids": [
+        "frame_051"
+      ]
+    },
+    {
+      "scene_id": "scene_039",
+      "index": 39,
+      "start_time": 95.75,
+      "end_time": 96.125,
+      "duration": 0.375,
+      "keyframe_ids": [
+        "frame_052"
+      ]
+    },
+    {
+      "scene_id": "scene_040",
+      "index": 40,
+      "start_time": 96.125,
+      "end_time": 96.542,
+      "duration": 0.417,
+      "keyframe_ids": [
+        "frame_053"
+      ]
+    },
+    {
+      "scene_id": "scene_041",
+      "index": 41,
+      "start_time": 96.542,
+      "end_time": 97.375,
+      "duration": 0.833,
+      "keyframe_ids": [
+        "frame_054"
+      ]
+    },
+    {
+      "scene_id": "scene_042",
+      "index": 42,
+      "start_time": 97.375,
+      "end_time": 97.75,
+      "duration": 0.375,
+      "keyframe_ids": [
+        "frame_055"
+      ]
+    },
+    {
+      "scene_id": "scene_043",
+      "index": 43,
+      "start_time": 97.75,
+      "end_time": 98.333,
+      "duration": 0.583,
+      "keyframe_ids": [
+        "frame_056"
+      ]
+    },
+    {
+      "scene_id": "scene_044",
+      "index": 44,
+      "start_time": 98.333,
+      "end_time": 100.208,
+      "duration": 1.875,
+      "keyframe_ids": [
+        "frame_057"
+      ]
+    },
+    {
+      "scene_id": "scene_045",
+      "index": 45,
+      "start_time": 100.208,
+      "end_time": 100.625,
+      "duration": 0.417,
+      "keyframe_ids": [
+        "frame_058"
+      ]
+    },
+    {
+      "scene_id": "scene_046",
+      "index": 46,
+      "start_time": 100.625,
+      "end_time": 101.333,
+      "duration": 0.708,
+      "keyframe_ids": [
+        "frame_059"
+      ]
+    },
+    {
+      "scene_id": "scene_047",
+      "index": 47,
+      "start_time": 101.333,
+      "end_time": 101.667,
+      "duration": 0.334,
+      "keyframe_ids": [
+        "frame_060"
+      ]
+    },
+    {
+      "scene_id": "scene_048",
+      "index": 48,
+      "start_time": 101.667,
+      "end_time": 102.042,
+      "duration": 0.375,
+      "keyframe_ids": [
+        "frame_061"
+      ]
+    },
+    {
+      "scene_id": "scene_049",
+      "index": 49,
+      "start_time": 102.042,
+      "end_time": 102.667,
+      "duration": 0.625,
+      "keyframe_ids": [
+        "frame_062"
+      ]
+    },
+    {
+      "scene_id": "scene_050",
+      "index": 50,
+      "start_time": 102.667,
+      "end_time": 104.458,
+      "duration": 1.791,
+      "keyframe_ids": [
+        "frame_063"
+      ]
+    },
+    {
+      "scene_id": "scene_051",
+      "index": 51,
+      "start_time": 104.458,
+      "end_time": 104.875,
+      "duration": 0.417,
+      "keyframe_ids": [
+        "frame_064"
+      ]
+    },
+    {
+      "scene_id": "scene_052",
+      "index": 52,
+      "start_time": 104.875,
+      "end_time": 106.083,
+      "duration": 1.208,
+      "keyframe_ids": [
+        "frame_065"
+      ]
+    },
+    {
+      "scene_id": "scene_053",
+      "index": 53,
+      "start_time": 106.083,
+      "end_time": 106.417,
+      "duration": 0.334,
+      "keyframe_ids": [
+        "frame_066"
+      ]
+    },
+    {
+      "scene_id": "scene_054",
+      "index": 54,
+      "start_time": 106.417,
+      "end_time": 118.212,
+      "duration": 11.795,
+      "keyframe_ids": [
+        "frame_067",
+        "frame_068",
+        "frame_069",
+        "frame_070"
+      ]
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_id": "frame_000",
+      "scene_id": "scene_000",
+      "timestamp": 3.0,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_000.jpg"
+    },
+    {
+      "frame_id": "frame_001",
+      "scene_id": "scene_000",
+      "timestamp": 5.042,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_001.jpg"
+    },
+    {
+      "frame_id": "frame_002",
+      "scene_id": "scene_000",
+      "timestamp": 6.0,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_002.jpg"
+    },
+    {
+      "frame_id": "frame_003",
+      "scene_id": "scene_000",
+      "timestamp": 9.0,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_003.jpg"
+    },
+    {
+      "frame_id": "frame_004",
+      "scene_id": "scene_001",
+      "timestamp": 10.458,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_004.jpg"
+    },
+    {
+      "frame_id": "frame_005",
+      "scene_id": "scene_002",
+      "timestamp": 13.833,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_005.jpg"
+    },
+    {
+      "frame_id": "frame_006",
+      "scene_id": "scene_002",
+      "timestamp": 15.375,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_006.jpg"
+    },
+    {
+      "frame_id": "frame_007",
+      "scene_id": "scene_002",
+      "timestamp": 16.833,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_007.jpg"
+    },
+    {
+      "frame_id": "frame_008",
+      "scene_id": "scene_003",
+      "timestamp": 20.646,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_008.jpg"
+    },
+    {
+      "frame_id": "frame_009",
+      "scene_id": "scene_004",
+      "timestamp": 22.104,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_009.jpg"
+    },
+    {
+      "frame_id": "frame_010",
+      "scene_id": "scene_005",
+      "timestamp": 23.562,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_010.jpg"
+    },
+    {
+      "frame_id": "frame_011",
+      "scene_id": "scene_006",
+      "timestamp": 25.25,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_011.jpg"
+    },
+    {
+      "frame_id": "frame_012",
+      "scene_id": "scene_007",
+      "timestamp": 26.5,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_012.jpg"
+    },
+    {
+      "frame_id": "frame_013",
+      "scene_id": "scene_008",
+      "timestamp": 28.771,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_013.jpg"
+    },
+    {
+      "frame_id": "frame_014",
+      "scene_id": "scene_009",
+      "timestamp": 31.125,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_014.jpg"
+    },
+    {
+      "frame_id": "frame_015",
+      "scene_id": "scene_010",
+      "timestamp": 34.5,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_015.jpg"
+    },
+    {
+      "frame_id": "frame_016",
+      "scene_id": "scene_010",
+      "timestamp": 36.354,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_016.jpg"
+    },
+    {
+      "frame_id": "frame_017",
+      "scene_id": "scene_010",
+      "timestamp": 37.5,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_017.jpg"
+    },
+    {
+      "frame_id": "frame_018",
+      "scene_id": "scene_010",
+      "timestamp": 40.5,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_018.jpg"
+    },
+    {
+      "frame_id": "frame_019",
+      "scene_id": "scene_011",
+      "timestamp": 42.708,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_019.jpg"
+    },
+    {
+      "frame_id": "frame_020",
+      "scene_id": "scene_012",
+      "timestamp": 45.395,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_020.jpg"
+    },
+    {
+      "frame_id": "frame_021",
+      "scene_id": "scene_013",
+      "timestamp": 49.104,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_021.jpg"
+    },
+    {
+      "frame_id": "frame_022",
+      "scene_id": "scene_013",
+      "timestamp": 49.583,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_022.jpg"
+    },
+    {
+      "frame_id": "frame_023",
+      "scene_id": "scene_014",
+      "timestamp": 54.188,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_023.jpg"
+    },
+    {
+      "frame_id": "frame_024",
+      "scene_id": "scene_014",
+      "timestamp": 54.625,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_024.jpg"
+    },
+    {
+      "frame_id": "frame_025",
+      "scene_id": "scene_015",
+      "timestamp": 56.938,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_025.jpg"
+    },
+    {
+      "frame_id": "frame_026",
+      "scene_id": "scene_016",
+      "timestamp": 57.291,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_026.jpg"
+    },
+    {
+      "frame_id": "frame_027",
+      "scene_id": "scene_017",
+      "timestamp": 57.625,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_027.jpg"
+    },
+    {
+      "frame_id": "frame_028",
+      "scene_id": "scene_018",
+      "timestamp": 57.959,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_028.jpg"
+    },
+    {
+      "frame_id": "frame_029",
+      "scene_id": "scene_019",
+      "timestamp": 61.125,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_029.jpg"
+    },
+    {
+      "frame_id": "frame_030",
+      "scene_id": "scene_019",
+      "timestamp": 61.75,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_030.jpg"
+    },
+    {
+      "frame_id": "frame_031",
+      "scene_id": "scene_019",
+      "timestamp": 64.125,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_031.jpg"
+    },
+    {
+      "frame_id": "frame_032",
+      "scene_id": "scene_020",
+      "timestamp": 67.438,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_032.jpg"
+    },
+    {
+      "frame_id": "frame_033",
+      "scene_id": "scene_021",
+      "timestamp": 69.729,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_033.jpg"
+    },
+    {
+      "frame_id": "frame_034",
+      "scene_id": "scene_022",
+      "timestamp": 70.25,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_034.jpg"
+    },
+    {
+      "frame_id": "frame_035",
+      "scene_id": "scene_023",
+      "timestamp": 71.667,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_035.jpg"
+    },
+    {
+      "frame_id": "frame_036",
+      "scene_id": "scene_024",
+      "timestamp": 73.271,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_036.jpg"
+    },
+    {
+      "frame_id": "frame_037",
+      "scene_id": "scene_025",
+      "timestamp": 74.104,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_037.jpg"
+    },
+    {
+      "frame_id": "frame_038",
+      "scene_id": "scene_026",
+      "timestamp": 74.812,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_038.jpg"
+    },
+    {
+      "frame_id": "frame_039",
+      "scene_id": "scene_027",
+      "timestamp": 75.605,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_039.jpg"
+    },
+    {
+      "frame_id": "frame_040",
+      "scene_id": "scene_028",
+      "timestamp": 76.334,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_040.jpg"
+    },
+    {
+      "frame_id": "frame_041",
+      "scene_id": "scene_029",
+      "timestamp": 78.354,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_041.jpg"
+    },
+    {
+      "frame_id": "frame_042",
+      "scene_id": "scene_030",
+      "timestamp": 81.52,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_042.jpg"
+    },
+    {
+      "frame_id": "frame_043",
+      "scene_id": "scene_031",
+      "timestamp": 83.188,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_043.jpg"
+    },
+    {
+      "frame_id": "frame_044",
+      "scene_id": "scene_032",
+      "timestamp": 84.688,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_044.jpg"
+    },
+    {
+      "frame_id": "frame_045",
+      "scene_id": "scene_033",
+      "timestamp": 88.688,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_045.jpg"
+    },
+    {
+      "frame_id": "frame_046",
+      "scene_id": "scene_033",
+      "timestamp": 88.958,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_046.jpg"
+    },
+    {
+      "frame_id": "frame_047",
+      "scene_id": "scene_034",
+      "timestamp": 91.584,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_047.jpg"
+    },
+    {
+      "frame_id": "frame_048",
+      "scene_id": "scene_035",
+      "timestamp": 92.166,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_048.jpg"
+    },
+    {
+      "frame_id": "frame_049",
+      "scene_id": "scene_036",
+      "timestamp": 92.791,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_049.jpg"
+    },
+    {
+      "frame_id": "frame_050",
+      "scene_id": "scene_037",
+      "timestamp": 93.271,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_050.jpg"
+    },
+    {
+      "frame_id": "frame_051",
+      "scene_id": "scene_038",
+      "timestamp": 94.646,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_051.jpg"
+    },
+    {
+      "frame_id": "frame_052",
+      "scene_id": "scene_039",
+      "timestamp": 95.938,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_052.jpg"
+    },
+    {
+      "frame_id": "frame_053",
+      "scene_id": "scene_040",
+      "timestamp": 96.334,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_053.jpg"
+    },
+    {
+      "frame_id": "frame_054",
+      "scene_id": "scene_041",
+      "timestamp": 96.959,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_054.jpg"
+    },
+    {
+      "frame_id": "frame_055",
+      "scene_id": "scene_042",
+      "timestamp": 97.562,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_055.jpg"
+    },
+    {
+      "frame_id": "frame_056",
+      "scene_id": "scene_043",
+      "timestamp": 98.041,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_056.jpg"
+    },
+    {
+      "frame_id": "frame_057",
+      "scene_id": "scene_044",
+      "timestamp": 99.27,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_057.jpg"
+    },
+    {
+      "frame_id": "frame_058",
+      "scene_id": "scene_045",
+      "timestamp": 100.416,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_058.jpg"
+    },
+    {
+      "frame_id": "frame_059",
+      "scene_id": "scene_046",
+      "timestamp": 100.979,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_059.jpg"
+    },
+    {
+      "frame_id": "frame_060",
+      "scene_id": "scene_047",
+      "timestamp": 101.5,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_060.jpg"
+    },
+    {
+      "frame_id": "frame_061",
+      "scene_id": "scene_048",
+      "timestamp": 101.855,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_061.jpg"
+    },
+    {
+      "frame_id": "frame_062",
+      "scene_id": "scene_049",
+      "timestamp": 102.355,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_062.jpg"
+    },
+    {
+      "frame_id": "frame_063",
+      "scene_id": "scene_050",
+      "timestamp": 103.562,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_063.jpg"
+    },
+    {
+      "frame_id": "frame_064",
+      "scene_id": "scene_051",
+      "timestamp": 104.666,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_064.jpg"
+    },
+    {
+      "frame_id": "frame_065",
+      "scene_id": "scene_052",
+      "timestamp": 105.479,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_065.jpg"
+    },
+    {
+      "frame_id": "frame_066",
+      "scene_id": "scene_053",
+      "timestamp": 106.25,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_066.jpg"
+    },
+    {
+      "frame_id": "frame_067",
+      "scene_id": "scene_054",
+      "timestamp": 109.417,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_067.jpg"
+    },
+    {
+      "frame_id": "frame_068",
+      "scene_id": "scene_054",
+      "timestamp": 112.315,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_068.jpg"
+    },
+    {
+      "frame_id": "frame_069",
+      "scene_id": "scene_054",
+      "timestamp": 112.417,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_069.jpg"
+    },
+    {
+      "frame_id": "frame_070",
+      "scene_id": "scene_054",
+      "timestamp": 115.417,
+      "path": "output/task_5e2ca62c_3246165181_0606/frames/frame_070.jpg"
+    }
+  ],
+  "transcript": [
+    {
+      "start": 16.68,
+      "end": 17.58,
+      "text": "He's the new you",
+      "confidence": -0.4576
+    },
+    {
+      "start": 17.98,
+      "end": 19.38,
+      "text": "No one's the new me, pal",
+      "confidence": -0.4576
+    }
+  ],
+  "ocr_results": [
+    {
+      "frame_id": "frame_000",
+      "timestamp": 3.0,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            25,
+            14,
+            576,
+            108
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.99,
+          "text_type": "brand"
+        },
+        {
+          "content": "抖音号: Fenda2452236",
+          "bbox": [
+            25,
+            14,
+            576,
+            108
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "芬达、",
+          "bbox": [
+            25,
+            14,
+            576,
+            108
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        },
+        {
+          "content": "2分钟教你学会",
+          "bbox": [
+            25,
+            288,
+            576,
+            432
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.4,
+            0.45,
+            0.6
+          ],
+          "confidence": 0.99,
+          "text_type": "selling_point"
+        },
+        {
+          "content": "高燃混剪",
+          "bbox": [
+            25,
+            576,
+            576,
+            684
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.8,
+            0.45,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "selling_point"
+        },
+        {
+          "content": "炫酷的开头很重要",
+          "bbox": [
+            192,
+            576,
+            1088,
+            684
+          ],
+          "normalized_bbox": [
+            0.15,
+            0.8,
+            0.85,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "subtitle"
+        }
+      ],
+      "ocr_source_frame_id": "frame_000",
+      "ocr_reused": false,
+      "display_text": "2分钟教你学会 高燃混剪 炫酷的开头很重要"
+    },
+    {
+      "frame_id": "frame_001",
+      "timestamp": 5.042,
+      "texts": [
+        {
+          "content": "注意镜头的切换",
+          "bbox": [
+            256,
+            288,
+            1024,
+            432
+          ],
+          "normalized_bbox": [
+            0.2,
+            0.4,
+            0.8,
+            0.6
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            704,
+            576,
+            1254,
+            684
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "brand"
+        },
+        {
+          "content": "抖音号: Fenda2452236",
+          "bbox": [
+            704,
+            576,
+            1254,
+            684
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "芬达、",
+          "bbox": [
+            704,
+            576,
+            1254,
+            684
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        }
+      ],
+      "ocr_source_frame_id": "frame_001",
+      "ocr_reused": false,
+      "display_text": "注意镜头的切换"
+    },
+    {
+      "frame_id": "frame_002",
+      "timestamp": 6.0,
+      "texts": [
+        {
+          "content": "注意镜头的切换",
+          "bbox": [
+            256,
+            288,
+            1024,
+            432
+          ],
+          "normalized_bbox": [
+            0.2,
+            0.4,
+            0.8,
+            0.6
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            704,
+            576,
+            1254,
+            684
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "brand"
+        },
+        {
+          "content": "抖音号: Fenda2452236",
+          "bbox": [
+            704,
+            576,
+            1254,
+            684
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "芬达、",
+          "bbox": [
+            704,
+            576,
+            1254,
+            684
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        }
+      ],
+      "ocr_source_frame_id": "frame_002",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_003",
+      "timestamp": 9.0,
+      "texts": [
+        {
+          "content": "一切",
+          "bbox": [
+            549,
+            265,
+            733,
+            360
+          ],
+          "normalized_bbox": [
+            0.428906,
+            0.368056,
+            0.572656,
+            0.5
+          ],
+          "confidence": 0.6517,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "音效",
+          "bbox": [
+            548,
+            357,
+            731,
+            451
+          ],
+          "normalized_bbox": [
+            0.428125,
+            0.495833,
+            0.571094,
+            0.626389
+          ],
+          "confidence": 0.6082,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.6653,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8266,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.6364,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_003",
+      "ocr_reused": false,
+      "display_text": "一切 音效"
+    },
+    {
+      "frame_id": "frame_004",
+      "timestamp": 10.458,
+      "texts": [
+        {
+          "content": "重音必切镜",
+          "bbox": [
+            74,
+            544,
+            287,
+            580
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.755556,
+            0.224219,
+            0.805556
+          ],
+          "confidence": 0.7731,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1177,
+            563,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.919531,
+            0.781944,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.5548,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8298,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            668,
+            1246,
+            701
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.927778,
+            0.973437,
+            0.973611
+          ],
+          "confidence": 0.7425,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_004",
+      "ocr_reused": false,
+      "display_text": "重音必切镜"
+    },
+    {
+      "frame_id": "frame_005",
+      "timestamp": 13.833,
+      "texts": [
+        {
+          "content": "学会听音乐匹配镜头",
+          "bbox": [
+            75,
+            545,
+            460,
+            580
+          ],
+          "normalized_bbox": [
+            0.058594,
+            0.756944,
+            0.359375,
+            0.805556
+          ],
+          "confidence": 0.8643,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.6652,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "上升音效",
+          "bbox": [
+            73,
+            609,
+            231,
+            648
+          ],
+          "normalized_bbox": [
+            0.057031,
+            0.845833,
+            0.180469,
+            0.9
+          ],
+          "confidence": 0.7131,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8306,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7352,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_005",
+      "ocr_reused": false,
+      "display_text": "学会听音乐匹配镜头 上升音效"
+    },
+    {
+      "frame_id": "frame_006",
+      "timestamp": 15.375,
+      "texts": [
+        {
+          "content": "学会听音乐匹配镜头",
+          "bbox": [
+            74,
+            543,
+            460,
+            581
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.754167,
+            0.359375,
+            0.806944
+          ],
+          "confidence": 0.8634,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6644,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "等待切镜",
+          "bbox": [
+            301,
+            596,
+            602,
+            655
+          ],
+          "normalized_bbox": [
+            0.235156,
+            0.827778,
+            0.470313,
+            0.909722
+          ],
+          "confidence": 0.68,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "上升音效",
+          "bbox": [
+            75,
+            606,
+            268,
+            652
+          ],
+          "normalized_bbox": [
+            0.058594,
+            0.841667,
+            0.209375,
+            0.905556
+          ],
+          "confidence": 0.7482,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.832,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.736,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_006",
+      "ocr_reused": false,
+      "display_text": "学会听音乐匹配镜头 等待切镜 上升音效"
+    },
+    {
+      "frame_id": "frame_007",
+      "timestamp": 16.833,
+      "texts": [
+        {
+          "content": "不要抢音乐节羞",
+          "bbox": [
+            453,
+            342,
+            826,
+            384
+          ],
+          "normalized_bbox": [
+            0.353906,
+            0.475,
+            0.645312,
+            0.533333
+          ],
+          "confidence": 0.7774,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            563,
+            1256,
+            608
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.781944,
+            0.98125,
+            0.844444
+          ],
+          "confidence": 0.6629,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.9087,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.6294,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_007",
+      "ocr_reused": false,
+      "display_text": "不要抢音乐节羞"
+    },
+    {
+      "frame_id": "frame_008",
+      "timestamp": 20.646,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1069,
+            103,
+            1169,
+            133
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.143056,
+            0.913281,
+            0.184722
+          ],
+          "confidence": 0.8083,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "鼓点X3",
+          "bbox": [
+            72,
+            542,
+            224,
+            582
+          ],
+          "normalized_bbox": [
+            0.05625,
+            0.752778,
+            0.175,
+            0.808333
+          ],
+          "confidence": 0.5155,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            561,
+            1259,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.779167,
+            0.983594,
+            0.844444
+          ],
+          "confidence": 0.639,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "听好节羞",
+          "bbox": [
+            74,
+            608,
+            275,
+            651
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.844444,
+            0.214844,
+            0.904167
+          ],
+          "confidence": 0.7245,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.8453,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7127,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_008",
+      "ocr_reused": false,
+      "display_text": "鼓点X3 听好节羞"
+    },
+    {
+      "frame_id": "frame_009",
+      "timestamp": 22.104,
+      "texts": [
+        {
+          "content": "注意身位",
+          "bbox": [
+            509,
+            338,
+            771,
+            388
+          ],
+          "normalized_bbox": [
+            0.397656,
+            0.469444,
+            0.602344,
+            0.538889
+          ],
+          "confidence": 0.7819,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "鼓点×7",
+          "bbox": [
+            72,
+            543,
+            221,
+            583
+          ],
+          "normalized_bbox": [
+            0.05625,
+            0.754167,
+            0.172656,
+            0.809722
+          ],
+          "confidence": 0.7009,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.665,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "听好节羞",
+          "bbox": [
+            73,
+            608,
+            273,
+            651
+          ],
+          "normalized_bbox": [
+            0.057031,
+            0.844444,
+            0.213281,
+            0.904167
+          ],
+          "confidence": 0.7453,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8328,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.761,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_009",
+      "ocr_reused": false,
+      "display_text": "注意身位 鼓点×7 听好节羞"
+    },
+    {
+      "frame_id": "frame_010",
+      "timestamp": 23.562,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1069,
+            103,
+            1168,
+            133
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.143056,
+            0.9125,
+            0.184722
+          ],
+          "confidence": 0.8268,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "鼓点X3",
+          "bbox": [
+            72,
+            542,
+            224,
+            582
+          ],
+          "normalized_bbox": [
+            0.05625,
+            0.752778,
+            0.175,
+            0.808333
+          ],
+          "confidence": 0.618,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1175,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.917969,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6605,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "同节羞切勿重复卡点",
+          "bbox": [
+            75,
+            608,
+            532,
+            650
+          ],
+          "normalized_bbox": [
+            0.058594,
+            0.844444,
+            0.415625,
+            0.902778
+          ],
+          "confidence": 0.7955,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.8468,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1145,
+            667,
+            1247,
+            704
+          ],
+          "normalized_bbox": [
+            0.894531,
+            0.926389,
+            0.974219,
+            0.977778
+          ],
+          "confidence": 0.7471,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_010",
+      "ocr_reused": false,
+      "display_text": "鼓点X3 同节羞切勿重复卡点"
+    },
+    {
+      "frame_id": "frame_011",
+      "timestamp": 25.25,
+      "texts": [
+        {
+          "content": "增加高级感",
+          "bbox": [
+            476,
+            338,
+            804,
+            387
+          ],
+          "normalized_bbox": [
+            0.371875,
+            0.469444,
+            0.628125,
+            0.5375
+          ],
+          "confidence": 0.6883,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "鼓点×7",
+          "bbox": [
+            73,
+            541,
+            234,
+            584
+          ],
+          "normalized_bbox": [
+            0.057031,
+            0.751389,
+            0.182812,
+            0.811111
+          ],
+          "confidence": 0.7099,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6649,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "同节羞切勿重复夏卡点",
+          "bbox": [
+            76,
+            610,
+            531,
+            650
+          ],
+          "normalized_bbox": [
+            0.059375,
+            0.847222,
+            0.414844,
+            0.902778
+          ],
+          "confidence": 0.6957,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8232,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7436,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_011",
+      "ocr_reused": false,
+      "display_text": "增加高级感 鼓点×7 同节羞切勿重复夏卡点"
+    },
+    {
+      "frame_id": "frame_012",
+      "timestamp": 26.5,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1069,
+            100,
+            1169,
+            132
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.138889,
+            0.913281,
+            0.183333
+          ],
+          "confidence": 0.7792,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1180,
+            563,
+            1263,
+            608
+          ],
+          "normalized_bbox": [
+            0.921875,
+            0.781944,
+            0.986719,
+            0.844444
+          ],
+          "confidence": 0.6611,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "卡点要精准",
+          "bbox": [
+            77,
+            607,
+            327,
+            651
+          ],
+          "normalized_bbox": [
+            0.060156,
+            0.843056,
+            0.255469,
+            0.904167
+          ],
+          "confidence": 0.8216,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8325,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            666,
+            1245,
+            704
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.925,
+            0.972656,
+            0.977778
+          ],
+          "confidence": 0.7935,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_012",
+      "ocr_reused": false,
+      "display_text": "卡点要精准"
+    },
+    {
+      "frame_id": "frame_013",
+      "timestamp": 28.771,
+      "texts": [
+        {
+          "content": "就算是脚步",
+          "bbox": [
+            314,
+            325,
+            965,
+            402
+          ],
+          "normalized_bbox": [
+            0.245312,
+            0.451389,
+            0.753906,
+            0.558333
+          ],
+          "confidence": 0.8316,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1259,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.983594,
+            0.844444
+          ],
+          "confidence": 0.6649,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8311,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7453,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_013",
+      "ocr_reused": false,
+      "display_text": "就算是脚步"
+    },
+    {
+      "frame_id": "frame_014",
+      "timestamp": 31.125,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1071,
+            105,
+            1167,
+            132
+          ],
+          "normalized_bbox": [
+            0.836719,
+            0.145833,
+            0.911719,
+            0.183333
+          ],
+          "confidence": 0.7776,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1171,
+            561,
+            1259,
+            608
+          ],
+          "normalized_bbox": [
+            0.914844,
+            0.779167,
+            0.983594,
+            0.844444
+          ],
+          "confidence": 0.6415,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "人物呼吸音",
+          "bbox": [
+            79,
+            608,
+            325,
+            650
+          ],
+          "normalized_bbox": [
+            0.061719,
+            0.844444,
+            0.253906,
+            0.902778
+          ],
+          "confidence": 0.816,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.8983,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达",
+          "bbox": [
+            1147,
+            669,
+            1239,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.967969,
+            0.972222
+          ],
+          "confidence": 0.7171,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_014",
+      "ocr_reused": false,
+      "display_text": "人物呼吸音"
+    },
+    {
+      "frame_id": "frame_015",
+      "timestamp": 34.5,
+      "texts": [
+        {
+          "content": "盾牌",
+          "bbox": [
+            531,
+            327,
+            751,
+            402
+          ],
+          "normalized_bbox": [
+            0.414844,
+            0.454167,
+            0.586719,
+            0.558333
+          ],
+          "confidence": 0.6638,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1180,
+            564,
+            1262,
+            608
+          ],
+          "normalized_bbox": [
+            0.921875,
+            0.783333,
+            0.985938,
+            0.844444
+          ],
+          "confidence": 0.6647,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8342,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7331,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_015",
+      "ocr_reused": false,
+      "display_text": "盾牌"
+    },
+    {
+      "frame_id": "frame_016",
+      "timestamp": 36.354,
+      "texts": [
+        {
+          "content": "弓箭",
+          "bbox": [
+            525,
+            323,
+            759,
+            404
+          ],
+          "normalized_bbox": [
+            0.410156,
+            0.448611,
+            0.592969,
+            0.561111
+          ],
+          "confidence": 0.52,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1259,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.983594,
+            0.844444
+          ],
+          "confidence": 0.6649,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8308,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7331,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_016",
+      "ocr_reused": false,
+      "display_text": "弓箭"
+    },
+    {
+      "frame_id": "frame_017",
+      "timestamp": 37.5,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.665,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.905,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.625,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_017",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_018",
+      "timestamp": 40.5,
+      "texts": [
+        {
+          "content": "DA",
+          "bbox": [
+            1130,
+            110,
+            1162,
+            128
+          ],
+          "normalized_bbox": [
+            0.882812,
+            0.152778,
+            0.907813,
+            0.177778
+          ],
+          "confidence": 0.623,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "打斗音效要清晰",
+          "bbox": [
+            74,
+            545,
+            374,
+            580
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.756944,
+            0.292187,
+            0.805556
+          ],
+          "confidence": 0.798,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1179,
+            562,
+            1264,
+            608
+          ],
+          "normalized_bbox": [
+            0.921094,
+            0.780556,
+            0.9875,
+            0.844444
+          ],
+          "confidence": 0.6622,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "等待最后卡点",
+          "bbox": [
+            74,
+            607,
+            364,
+            649
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.843056,
+            0.284375,
+            0.901389
+          ],
+          "confidence": 0.7851,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.9042,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1244,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.971875,
+            0.975
+          ],
+          "confidence": 0.7562,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_018",
+      "ocr_reused": false,
+      "display_text": "DA 打斗音效要清晰 等待最后卡点"
+    },
+    {
+      "frame_id": "frame_019",
+      "timestamp": 42.708,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1072,
+            104,
+            1168,
+            130
+          ],
+          "normalized_bbox": [
+            0.8375,
+            0.144444,
+            0.9125,
+            0.180556
+          ],
+          "confidence": 0.7292,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "原片有BGM",
+          "bbox": [
+            74,
+            542,
+            311,
+            578
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.752778,
+            0.242969,
+            0.802778
+          ],
+          "confidence": 0.7883,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1177,
+            562,
+            1262,
+            608
+          ],
+          "normalized_bbox": [
+            0.919531,
+            0.780556,
+            0.985938,
+            0.844444
+          ],
+          "confidence": 0.6598,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "自己配上升音效",
+          "bbox": [
+            76,
+            607,
+            427,
+            649
+          ],
+          "normalized_bbox": [
+            0.059375,
+            0.843056,
+            0.333594,
+            0.901389
+          ],
+          "confidence": 0.7799,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.8976,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            668,
+            1244,
+            701
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.927778,
+            0.971875,
+            0.973611
+          ],
+          "confidence": 0.7062,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_019",
+      "ocr_reused": false,
+      "display_text": "原片有BGM 自己配上升音效"
+    },
+    {
+      "frame_id": "frame_020",
+      "timestamp": 45.395,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1069,
+            103,
+            1168,
+            133
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.143056,
+            0.9125,
+            0.184722
+          ],
+          "confidence": 0.826,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            562,
+            1261,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.780556,
+            0.985156,
+            0.844444
+          ],
+          "confidence": 0.661,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "一句台词进八高燃",
+          "bbox": [
+            79,
+            606,
+            483,
+            651
+          ],
+          "normalized_bbox": [
+            0.061719,
+            0.841667,
+            0.377344,
+            0.904167
+          ],
+          "confidence": 0.7683,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            984,
+            627,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.76875,
+            0.870833,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.841,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7166,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_020",
+      "ocr_reused": false,
+      "display_text": "一句台词进八高燃"
+    },
+    {
+      "frame_id": "frame_021",
+      "timestamp": 49.104,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            563,
+            1259,
+            609
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.781944,
+            0.983594,
+            0.845833
+          ],
+          "confidence": 0.662,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8285,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7651,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_021",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_022",
+      "timestamp": 49.583,
+      "texts": [
+        {
+          "content": "不不",
+          "bbox": [
+            670,
+            291,
+            750,
+            437
+          ],
+          "normalized_bbox": [
+            0.523438,
+            0.404167,
+            0.585938,
+            0.606944
+          ],
+          "confidence": 0.6628,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "能变",
+          "bbox": [
+            810,
+            288,
+            891,
+            440
+          ],
+          "normalized_bbox": [
+            0.632812,
+            0.4,
+            0.696094,
+            0.611111
+          ],
+          "confidence": 0.6652,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1259,
+            607
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.983594,
+            0.843056
+          ],
+          "confidence": 0.6595,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.9034,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7399,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_022",
+      "ocr_reused": false,
+      "display_text": "不不 能变"
+    },
+    {
+      "frame_id": "frame_023",
+      "timestamp": 54.188,
+      "texts": [
+        {
+          "content": "任何动作",
+          "bbox": [
+            62,
+            271,
+            1225,
+            468
+          ],
+          "normalized_bbox": [
+            0.048438,
+            0.376389,
+            0.957031,
+            0.65
+          ],
+          "confidence": 0.754,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "尽量匹配音效",
+          "bbox": [
+            237,
+            462,
+            1041,
+            535
+          ],
+          "normalized_bbox": [
+            0.185156,
+            0.641667,
+            0.813281,
+            0.743056
+          ],
+          "confidence": 0.8538,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6647,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8292,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1243,
+            699
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.971094,
+            0.970833
+          ],
+          "confidence": 0.7736,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_023",
+      "ocr_reused": false,
+      "display_text": "任何动作 尽量匹配音效"
+    },
+    {
+      "frame_id": "frame_024",
+      "timestamp": 54.625,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6649,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8314,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.75,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_024",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_025",
+      "timestamp": 56.938,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            560,
+            1264,
+            609
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.777778,
+            0.9875,
+            0.845833
+          ],
+          "confidence": 0.6642,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8242,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1148,
+            670,
+            1244,
+            700
+          ],
+          "normalized_bbox": [
+            0.896875,
+            0.930556,
+            0.971875,
+            0.972222
+          ],
+          "confidence": 0.7658,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_025",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_026",
+      "timestamp": 57.291,
+      "texts": [
+        {
+          "content": "快点x4",
+          "bbox": [
+            540,
+            336,
+            733,
+            390
+          ],
+          "normalized_bbox": [
+            0.421875,
+            0.466667,
+            0.572656,
+            0.541667
+          ],
+          "confidence": 0.6997,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1180,
+            564,
+            1262,
+            607
+          ],
+          "normalized_bbox": [
+            0.921875,
+            0.783333,
+            0.985938,
+            0.843056
+          ],
+          "confidence": 0.664,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.9065,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7544,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_026",
+      "ocr_reused": false,
+      "display_text": "快点x4"
+    },
+    {
+      "frame_id": "frame_027",
+      "timestamp": 57.625,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1070,
+            104,
+            1168,
+            131
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.144444,
+            0.9125,
+            0.181944
+          ],
+          "confidence": 0.8152,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "快点x6",
+          "bbox": [
+            540,
+            337,
+            731,
+            387
+          ],
+          "normalized_bbox": [
+            0.421875,
+            0.468056,
+            0.571094,
+            0.5375
+          ],
+          "confidence": 0.6909,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1171,
+            562,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.914844,
+            0.780556,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.6617,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.9246,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7675,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_027",
+      "ocr_reused": false,
+      "display_text": "快点x6"
+    },
+    {
+      "frame_id": "frame_028",
+      "timestamp": 57.959,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1068,
+            102,
+            1169,
+            135
+          ],
+          "normalized_bbox": [
+            0.834375,
+            0.141667,
+            0.913281,
+            0.1875
+          ],
+          "confidence": 0.7945,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "快点×日",
+          "bbox": [
+            538,
+            334,
+            733,
+            391
+          ],
+          "normalized_bbox": [
+            0.420312,
+            0.463889,
+            0.572656,
+            0.543056
+          ],
+          "confidence": 0.6824,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1171,
+            562,
+            1258,
+            609
+          ],
+          "normalized_bbox": [
+            0.914844,
+            0.780556,
+            0.982812,
+            0.845833
+          ],
+          "confidence": 0.6571,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.9237,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1145,
+            667,
+            1249,
+            704
+          ],
+          "normalized_bbox": [
+            0.894531,
+            0.926389,
+            0.975781,
+            0.977778
+          ],
+          "confidence": 0.8035,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_028",
+      "ocr_reused": false,
+      "display_text": "快点×日"
+    },
+    {
+      "frame_id": "frame_029",
+      "timestamp": 61.125,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1070,
+            104,
+            1167,
+            131
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.144444,
+            0.911719,
+            0.181944
+          ],
+          "confidence": 0.8267,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "谢志家",
+          "bbox": [
+            825,
+            235,
+            1135,
+            440
+          ],
+          "normalized_bbox": [
+            0.644531,
+            0.326389,
+            0.886719,
+            0.611111
+          ],
+          "confidence": 0.5065,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "段经典的搞笑头",
+          "bbox": [
+            110,
+            538,
+            465,
+            583
+          ],
+          "normalized_bbox": [
+            0.085938,
+            0.747222,
+            0.363281,
+            0.809722
+          ],
+          "confidence": 0.8244,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6605,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "可以增加视频趣味性",
+          "bbox": [
+            74,
+            606,
+            532,
+            651
+          ],
+          "normalized_bbox": [
+            0.057813,
+            0.841667,
+            0.415625,
+            0.904167
+          ],
+          "confidence": 0.8125,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1262,
+            652
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985938,
+            0.905556
+          ],
+          "confidence": 0.8987,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1145,
+            669,
+            1242,
+            702
+          ],
+          "normalized_bbox": [
+            0.894531,
+            0.929167,
+            0.970313,
+            0.975
+          ],
+          "confidence": 0.7481,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_029",
+      "ocr_reused": false,
+      "display_text": "谢志家 段经典的搞笑头 可以增加视频趣味性"
+    },
+    {
+      "frame_id": "frame_030",
+      "timestamp": 61.75,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1070,
+            105,
+            1167,
+            131
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.145833,
+            0.911719,
+            0.181944
+          ],
+          "confidence": 0.8284,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "谢志家",
+          "bbox": [
+            844,
+            229,
+            1130,
+            429
+          ],
+          "normalized_bbox": [
+            0.659375,
+            0.318056,
+            0.882812,
+            0.595833
+          ],
+          "confidence": 0.5547,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "段经典的搞笑镜头古格·来",
+          "bbox": [
+            105,
+            533,
+            672,
+            602
+          ],
+          "normalized_bbox": [
+            0.082031,
+            0.740278,
+            0.525,
+            0.836111
+          ],
+          "confidence": 0.6417,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1175,
+            562,
+            1261,
+            608
+          ],
+          "normalized_bbox": [
+            0.917969,
+            0.780556,
+            0.985156,
+            0.844444
+          ],
+          "confidence": 0.6566,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "可以增加视频趣味性",
+          "bbox": [
+            75,
+            606,
+            532,
+            651
+          ],
+          "normalized_bbox": [
+            0.058594,
+            0.841667,
+            0.415625,
+            0.904167
+          ],
+          "confidence": 0.8701,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.9014,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7415,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_030",
+      "ocr_reused": false,
+      "display_text": "谢志家 段经典的搞笑镜头古格·来 可以增加视频趣味性"
+    },
+    {
+      "frame_id": "frame_031",
+      "timestamp": 64.125,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1068,
+            101,
+            1166,
+            133
+          ],
+          "normalized_bbox": [
+            0.834375,
+            0.140278,
+            0.910937,
+            0.184722
+          ],
+          "confidence": 0.8244,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1177,
+            562,
+            1262,
+            608
+          ],
+          "normalized_bbox": [
+            0.919531,
+            0.780556,
+            0.985938,
+            0.844444
+          ],
+          "confidence": 0.6602,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            627,
+            1262,
+            652
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.870833,
+            0.985938,
+            0.905556
+          ],
+          "confidence": 0.8377,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达",
+          "bbox": [
+            1147,
+            669,
+            1240,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.96875,
+            0.972222
+          ],
+          "confidence": 0.6281,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_031",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_032",
+      "timestamp": 67.438,
+      "texts": [
+        {
+          "content": "阅 片",
+          "bbox": [
+            251,
+            271,
+            774,
+            469
+          ],
+          "normalized_bbox": [
+            0.196094,
+            0.376389,
+            0.604688,
+            0.651389
+          ],
+          "confidence": 0.6763,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1174,
+            564,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.917188,
+            0.783333,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.6648,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            987,
+            630,
+            1260,
+            652
+          ],
+          "normalized_bbox": [
+            0.771094,
+            0.875,
+            0.984375,
+            0.905556
+          ],
+          "confidence": 0.8589,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.6999,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_032",
+      "ocr_reused": false,
+      "display_text": "阅 片"
+    },
+    {
+      "frame_id": "frame_033",
+      "timestamp": 69.729,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1069,
+            101,
+            1169,
+            133
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.140278,
+            0.913281,
+            0.184722
+          ],
+          "confidence": 0.761,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1177,
+            562,
+            1262,
+            608
+          ],
+          "normalized_bbox": [
+            0.919531,
+            0.780556,
+            0.985938,
+            0.844444
+          ],
+          "confidence": 0.6639,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.8981,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            669,
+            1244,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.971875,
+            0.975
+          ],
+          "confidence": 0.7142,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_033",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_034",
+      "timestamp": 70.25,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1073,
+            104,
+            1166,
+            130
+          ],
+          "normalized_bbox": [
+            0.838281,
+            0.144444,
+            0.910937,
+            0.180556
+          ],
+          "confidence": 0.7641,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6587,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            627,
+            1262,
+            652
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.870833,
+            0.985938,
+            0.905556
+          ],
+          "confidence": 0.838,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            668,
+            1244,
+            701
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.927778,
+            0.971875,
+            0.973611
+          ],
+          "confidence": 0.774,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_034",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_035",
+      "timestamp": 71.667,
+      "texts": [
+        {
+          "content": "FEND",
+          "bbox": [
+            1071,
+            102,
+            1146,
+            132
+          ],
+          "normalized_bbox": [
+            0.836719,
+            0.141667,
+            0.895312,
+            0.183333
+          ],
+          "confidence": 0.6207,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1179,
+            562,
+            1264,
+            608
+          ],
+          "normalized_bbox": [
+            0.921094,
+            0.780556,
+            0.9875,
+            0.844444
+          ],
+          "confidence": 0.6616,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.8536,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            666,
+            1245,
+            703
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.925,
+            0.972656,
+            0.976389
+          ],
+          "confidence": 0.7826,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_035",
+      "ocr_reused": false,
+      "display_text": "FEND"
+    },
+    {
+      "frame_id": "frame_036",
+      "timestamp": 73.271,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1070,
+            104,
+            1171,
+            131
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.144444,
+            0.914844,
+            0.181944
+          ],
+          "confidence": 0.8106,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1179,
+            562,
+            1264,
+            608
+          ],
+          "normalized_bbox": [
+            0.921094,
+            0.780556,
+            0.9875,
+            0.844444
+          ],
+          "confidence": 0.6639,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1263,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.986719,
+            0.908333
+          ],
+          "confidence": 0.8472,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7807,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_036",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_037",
+      "timestamp": 74.104,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            563,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.781944,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6623,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1262,
+            652
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985938,
+            0.905556
+          ],
+          "confidence": 0.9036,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7317,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_037",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_038",
+      "timestamp": 74.812,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1069,
+            104,
+            1166,
+            131
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.144444,
+            0.910937,
+            0.181944
+          ],
+          "confidence": 0.7632,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1171,
+            562,
+            1257,
+            608
+          ],
+          "normalized_bbox": [
+            0.914844,
+            0.780556,
+            0.982031,
+            0.844444
+          ],
+          "confidence": 0.661,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.9263,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1247,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.974219,
+            0.975
+          ],
+          "confidence": 0.8074,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_038",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_039",
+      "timestamp": 75.605,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1071,
+            105,
+            1167,
+            132
+          ],
+          "normalized_bbox": [
+            0.836719,
+            0.145833,
+            0.911719,
+            0.183333
+          ],
+          "confidence": 0.8206,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6593,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.851,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.7274,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_039",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_040",
+      "timestamp": 76.334,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1072,
+            104,
+            1165,
+            131
+          ],
+          "normalized_bbox": [
+            0.8375,
+            0.144444,
+            0.910156,
+            0.181944
+          ],
+          "confidence": 0.7452,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1171,
+            556,
+            1263,
+            610
+          ],
+          "normalized_bbox": [
+            0.914844,
+            0.772222,
+            0.986719,
+            0.847222
+          ],
+          "confidence": 0.5379,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            627,
+            1262,
+            652
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.870833,
+            0.985938,
+            0.905556
+          ],
+          "confidence": 0.8292,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            668,
+            1243,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.927778,
+            0.971094,
+            0.975
+          ],
+          "confidence": 0.7542,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_040",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_041",
+      "timestamp": 78.354,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1259,
+            607
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.983594,
+            0.843056
+          ],
+          "confidence": 0.6647,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8287,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.6605,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_041",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_042",
+      "timestamp": 81.52,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6629,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8675,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7393,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_042",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_043",
+      "timestamp": 83.188,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1072,
+            104,
+            1164,
+            130
+          ],
+          "normalized_bbox": [
+            0.8375,
+            0.144444,
+            0.909375,
+            0.180556
+          ],
+          "confidence": 0.7766,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.6618,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1261,
+            652
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985156,
+            0.905556
+          ],
+          "confidence": 0.9023,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7798,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_043",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_044",
+      "timestamp": 84.688,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            562,
+            1262,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.780556,
+            0.985938,
+            0.844444
+          ],
+          "confidence": 0.6654,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            984,
+            627,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.76875,
+            0.870833,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8598,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.734,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_044",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_045",
+      "timestamp": 88.688,
+      "texts": [
+        {
+          "content": "困扰",
+          "bbox": [
+            742,
+            294,
+            822,
+            440
+          ],
+          "normalized_bbox": [
+            0.579688,
+            0.408333,
+            0.642188,
+            0.611111
+          ],
+          "confidence": 0.6515,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "不足",
+          "bbox": [
+            465,
+            293,
+            546,
+            441
+          ],
+          "normalized_bbox": [
+            0.363281,
+            0.406944,
+            0.426563,
+            0.6125
+          ],
+          "confidence": 0.6623,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.665,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.9056,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.7278,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_045",
+      "ocr_reused": false,
+      "display_text": "困扰 不足"
+    },
+    {
+      "frame_id": "frame_046",
+      "timestamp": 88.958,
+      "texts": [
+        {
+          "content": "困扰",
+          "bbox": [
+            739,
+            293,
+            826,
+            442
+          ],
+          "normalized_bbox": [
+            0.577344,
+            0.406944,
+            0.645312,
+            0.613889
+          ],
+          "confidence": 0.6441,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "不足",
+          "bbox": [
+            465,
+            293,
+            546,
+            441
+          ],
+          "normalized_bbox": [
+            0.363281,
+            0.406944,
+            0.426563,
+            0.6125
+          ],
+          "confidence": 0.6622,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.6653,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.9058,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1245,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.972656,
+            0.972222
+          ],
+          "confidence": 0.7278,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_046",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_047",
+      "timestamp": 91.584,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1070,
+            105,
+            1168,
+            132
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.145833,
+            0.9125,
+            0.183333
+          ],
+          "confidence": 0.8271,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1169,
+            561,
+            1259,
+            610
+          ],
+          "normalized_bbox": [
+            0.913281,
+            0.779167,
+            0.983594,
+            0.847222
+          ],
+          "confidence": 0.6655,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.8389,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1243,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.971094,
+            0.972222
+          ],
+          "confidence": 0.6909,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_047",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_048",
+      "timestamp": 92.166,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            563,
+            1257,
+            607
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.781944,
+            0.982031,
+            0.843056
+          ],
+          "confidence": 0.6642,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8292,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            669,
+            1249,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.975781,
+            0.975
+          ],
+          "confidence": 0.727,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_048",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_049",
+      "timestamp": 92.791,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1174,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.917188,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6644,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8505,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1147,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7031,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_049",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_050",
+      "timestamp": 93.271,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1072,
+            105,
+            1167,
+            131
+          ],
+          "normalized_bbox": [
+            0.8375,
+            0.145833,
+            0.911719,
+            0.181944
+          ],
+          "confidence": 0.7664,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1177,
+            562,
+            1264,
+            608
+          ],
+          "normalized_bbox": [
+            0.919531,
+            0.780556,
+            0.9875,
+            0.844444
+          ],
+          "confidence": 0.6648,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.9246,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            668,
+            1244,
+            701
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.927778,
+            0.971875,
+            0.973611
+          ],
+          "confidence": 0.7489,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_050",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_051",
+      "timestamp": 94.646,
+      "texts": [
+        {
+          "content": "卡点才巫",
+          "bbox": [
+            369,
+            329,
+            910,
+            396
+          ],
+          "normalized_bbox": [
+            0.288281,
+            0.456944,
+            0.710938,
+            0.55
+          ],
+          "confidence": 0.6682,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1174,
+            564,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.917188,
+            0.783333,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.6642,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8217,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7632,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_051",
+      "ocr_reused": false,
+      "display_text": "卡点才巫"
+    },
+    {
+      "frame_id": "frame_052",
+      "timestamp": 95.938,
+      "texts": [
+        {
+          "content": "FEDA",
+          "bbox": [
+            1070,
+            103,
+            1168,
+            132
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.143056,
+            0.9125,
+            0.183333
+          ],
+          "confidence": 0.7279,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1175,
+            563,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.917969,
+            0.781944,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.575,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.9239,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            667,
+            1247,
+            703
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.926389,
+            0.974219,
+            0.976389
+          ],
+          "confidence": 0.7399,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_052",
+      "ocr_reused": false,
+      "display_text": "FEDA"
+    },
+    {
+      "frame_id": "frame_053",
+      "timestamp": 96.334,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1067,
+            103,
+            1169,
+            133
+          ],
+          "normalized_bbox": [
+            0.833594,
+            0.143056,
+            0.913281,
+            0.184722
+          ],
+          "confidence": 0.8139,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1175,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.917969,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6624,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1261,
+            652
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985156,
+            0.905556
+          ],
+          "confidence": 0.9076,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            666,
+            1246,
+            703
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.925,
+            0.973437,
+            0.976389
+          ],
+          "confidence": 0.7895,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_053",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_054",
+      "timestamp": 96.959,
+      "texts": [
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.9238,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7458,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_054",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_055",
+      "timestamp": 97.562,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6646,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            627,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.870833,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.9126,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7737,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_055",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_056",
+      "timestamp": 98.041,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1067,
+            101,
+            1170,
+            134
+          ],
+          "normalized_bbox": [
+            0.833594,
+            0.140278,
+            0.914062,
+            0.186111
+          ],
+          "confidence": 0.7767,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1174,
+            560,
+            1261,
+            609
+          ],
+          "normalized_bbox": [
+            0.917188,
+            0.777778,
+            0.985156,
+            0.845833
+          ],
+          "confidence": 0.6631,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1261,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985156,
+            0.906944
+          ],
+          "confidence": 0.8708,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7045,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_056",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_057",
+      "timestamp": 99.27,
+      "texts": [
+        {
+          "content": "不要乱闪",
+          "bbox": [
+            429,
+            327,
+            849,
+            398
+          ],
+          "normalized_bbox": [
+            0.335156,
+            0.454167,
+            0.663281,
+            0.552778
+          ],
+          "confidence": 0.7984,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            562,
+            1263,
+            609
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.780556,
+            0.986719,
+            0.845833
+          ],
+          "confidence": 0.6648,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8266,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7542,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_057",
+      "ocr_reused": false,
+      "display_text": "不要乱闪"
+    },
+    {
+      "frame_id": "frame_058",
+      "timestamp": 100.416,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.6619,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8497,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7732,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_058",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_059",
+      "timestamp": 100.979,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1178,
+            564,
+            1260,
+            607
+          ],
+          "normalized_bbox": [
+            0.920312,
+            0.783333,
+            0.984375,
+            0.843056
+          ],
+          "confidence": 0.6651,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.8977,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7698,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_059",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_060",
+      "timestamp": 101.5,
+      "texts": [
+        {
+          "content": "END",
+          "bbox": [
+            1093,
+            98,
+            1154,
+            129
+          ],
+          "normalized_bbox": [
+            0.853906,
+            0.136111,
+            0.901563,
+            0.179167
+          ],
+          "confidence": 0.6247,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            563,
+            1261,
+            609
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.781944,
+            0.985156,
+            0.845833
+          ],
+          "confidence": 0.6549,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.8883,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            669,
+            1245,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.972656,
+            0.975
+          ],
+          "confidence": 0.7308,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_060",
+      "ocr_reused": false,
+      "display_text": "END"
+    },
+    {
+      "frame_id": "frame_061",
+      "timestamp": 101.855,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1271,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.992969,
+            0.844444
+          ],
+          "confidence": 0.6315,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452836",
+          "bbox": [
+            981,
+            621,
+            1265,
+            659
+          ],
+          "normalized_bbox": [
+            0.766406,
+            0.8625,
+            0.988281,
+            0.915278
+          ],
+          "confidence": 0.8092,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1148,
+            670,
+            1244,
+            700
+          ],
+          "normalized_bbox": [
+            0.896875,
+            0.930556,
+            0.971875,
+            0.972222
+          ],
+          "confidence": 0.7917,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_061",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_062",
+      "timestamp": 102.355,
+      "texts": [
+        {
+          "content": "抖音",
+          "bbox": [
+            1174,
+            562,
+            1263,
+            609
+          ],
+          "normalized_bbox": [
+            0.917188,
+            0.780556,
+            0.986719,
+            0.845833
+          ],
+          "confidence": 0.6645,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            988,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.771875,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.8538,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1149,
+            670,
+            1242,
+            701
+          ],
+          "normalized_bbox": [
+            0.897656,
+            0.930556,
+            0.970313,
+            0.973611
+          ],
+          "confidence": 0.7713,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_062",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_063",
+      "timestamp": 103.562,
+      "texts": [
+        {
+          "content": "学会",
+          "bbox": [
+            307,
+            320,
+            517,
+            411
+          ],
+          "normalized_bbox": [
+            0.239844,
+            0.444444,
+            0.403906,
+            0.570833
+          ],
+          "confidence": 0.6651,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "提前",
+          "bbox": [
+            539,
+            328,
+            738,
+            400
+          ],
+          "normalized_bbox": [
+            0.421094,
+            0.455556,
+            0.576562,
+            0.555556
+          ],
+          "confidence": 0.665,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1259,
+            607
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.983594,
+            0.843056
+          ],
+          "confidence": 0.6628,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.901,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q 芬达、",
+          "bbox": [
+            1146,
+            669,
+            1244,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.971875,
+            0.975
+          ],
+          "confidence": 0.7457,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_063",
+      "ocr_reused": false,
+      "display_text": "学会 提前"
+    },
+    {
+      "frame_id": "frame_064",
+      "timestamp": 104.666,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1070,
+            105,
+            1167,
+            131
+          ],
+          "normalized_bbox": [
+            0.835938,
+            0.145833,
+            0.911719,
+            0.181944
+          ],
+          "confidence": 0.8276,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            562,
+            1259,
+            608
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.780556,
+            0.983594,
+            0.844444
+          ],
+          "confidence": 0.6638,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.9069,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1148,
+            670,
+            1246,
+            700
+          ],
+          "normalized_bbox": [
+            0.896875,
+            0.930556,
+            0.973437,
+            0.972222
+          ],
+          "confidence": 0.7836,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_064",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_065",
+      "timestamp": 105.479,
+      "texts": [
+        {
+          "content": "FEND.",
+          "bbox": [
+            1069,
+            103,
+            1161,
+            133
+          ],
+          "normalized_bbox": [
+            0.835156,
+            0.143056,
+            0.907031,
+            0.184722
+          ],
+          "confidence": 0.7138,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            562,
+            1262,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.780556,
+            0.985938,
+            0.844444
+          ],
+          "confidence": 0.6641,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.9101,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            669,
+            1248,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.975,
+            0.975
+          ],
+          "confidence": 0.743,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_065",
+      "ocr_reused": false,
+      "display_text": "FEND."
+    },
+    {
+      "frame_id": "frame_066",
+      "timestamp": 106.25,
+      "texts": [
+        {
+          "content": "FENDA",
+          "bbox": [
+            1073,
+            105,
+            1165,
+            131
+          ],
+          "normalized_bbox": [
+            0.838281,
+            0.145833,
+            0.910156,
+            0.181944
+          ],
+          "confidence": 0.8081,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1172,
+            562,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.915625,
+            0.780556,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6603,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            985,
+            628,
+            1262,
+            653
+          ],
+          "normalized_bbox": [
+            0.769531,
+            0.872222,
+            0.985938,
+            0.906944
+          ],
+          "confidence": 0.9005,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            669,
+            1249,
+            702
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.929167,
+            0.975781,
+            0.975
+          ],
+          "confidence": 0.7224,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_066",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_067",
+      "timestamp": 109.417,
+      "texts": [
+        {
+          "content": "牛逼的剪辑师",
+          "bbox": [
+            370,
+            336,
+            908,
+            387
+          ],
+          "normalized_bbox": [
+            0.289062,
+            0.466667,
+            0.709375,
+            0.5375
+          ],
+          "confidence": 0.8167,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1174,
+            564,
+            1258,
+            608
+          ],
+          "normalized_bbox": [
+            0.917188,
+            0.783333,
+            0.982812,
+            0.844444
+          ],
+          "confidence": 0.6648,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            629,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.873611,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8245,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1146,
+            669,
+            1246,
+            702
+          ],
+          "normalized_bbox": [
+            0.895312,
+            0.929167,
+            0.973437,
+            0.975
+          ],
+          "confidence": 0.7602,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_067",
+      "ocr_reused": false,
+      "display_text": "牛逼的剪辑师"
+    },
+    {
+      "frame_id": "frame_068",
+      "timestamp": 112.315,
+      "texts": [
+        {
+          "content": "加干",
+          "bbox": [
+            273,
+            271,
+            808,
+            466
+          ],
+          "normalized_bbox": [
+            0.213281,
+            0.376389,
+            0.63125,
+            0.647222
+          ],
+          "confidence": 0.5108,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1173,
+            562,
+            1259,
+            608
+          ],
+          "normalized_bbox": [
+            0.916406,
+            0.780556,
+            0.983594,
+            0.844444
+          ],
+          "confidence": 0.6639,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "致敬抖音每一位剪辑",
+          "bbox": [
+            250,
+            625,
+            947,
+            673
+          ],
+          "normalized_bbox": [
+            0.195312,
+            0.868056,
+            0.739844,
+            0.934722
+          ],
+          "confidence": 0.8326,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            986,
+            628,
+            1262,
+            654
+          ],
+          "normalized_bbox": [
+            0.770312,
+            0.872222,
+            0.985938,
+            0.908333
+          ],
+          "confidence": 0.8431,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1244,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.971875,
+            0.972222
+          ],
+          "confidence": 0.7854,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_068",
+      "ocr_reused": false,
+      "display_text": "加干"
+    },
+    {
+      "frame_id": "frame_069",
+      "timestamp": 112.417,
+      "texts": [
+        {
+          "content": "加 干",
+          "bbox": [
+            274,
+            272,
+            809,
+            467
+          ],
+          "normalized_bbox": [
+            0.214062,
+            0.377778,
+            0.632031,
+            0.648611
+          ],
+          "confidence": 0.5461,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            1176,
+            564,
+            1260,
+            608
+          ],
+          "normalized_bbox": [
+            0.91875,
+            0.783333,
+            0.984375,
+            0.844444
+          ],
+          "confidence": 0.6644,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "致敬抖音每一位剪辑",
+          "bbox": [
+            250,
+            625,
+            952,
+            673
+          ],
+          "normalized_bbox": [
+            0.195312,
+            0.868056,
+            0.74375,
+            0.934722
+          ],
+          "confidence": 0.8615,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            987,
+            628,
+            1261,
+            654
+          ],
+          "normalized_bbox": [
+            0.771094,
+            0.872222,
+            0.985156,
+            0.908333
+          ],
+          "confidence": 0.8873,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Q芬达、",
+          "bbox": [
+            1147,
+            670,
+            1244,
+            700
+          ],
+          "normalized_bbox": [
+            0.896094,
+            0.930556,
+            0.971875,
+            0.972222
+          ],
+          "confidence": 0.7863,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_069",
+      "ocr_reused": false,
+      "display_text": ""
+    },
+    {
+      "frame_id": "frame_070",
+      "timestamp": 115.417,
+      "texts": [
+        {
+          "content": "抖音号：Fenda2452236",
+          "bbox": [
+            460,
+            248,
+            820,
+            280
+          ],
+          "normalized_bbox": [
+            0.359375,
+            0.344444,
+            0.640625,
+            0.388889
+          ],
+          "confidence": 0.901,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音搜索",
+          "bbox": [
+            349,
+            348,
+            513,
+            388
+          ],
+          "normalized_bbox": [
+            0.272656,
+            0.483333,
+            0.400781,
+            0.538889
+          ],
+          "confidence": 0.7248,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "芬达、",
+          "bbox": [
+            659,
+            347,
+            754,
+            393
+          ],
+          "normalized_bbox": [
+            0.514844,
+            0.481944,
+            0.589063,
+            0.545833
+          ],
+          "confidence": 0.6023,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "来抖音",
+          "bbox": [
+            434,
+            492,
+            560,
+            533
+          ],
+          "normalized_bbox": [
+            0.339062,
+            0.683333,
+            0.4375,
+            0.740278
+          ],
+          "confidence": 0.7488,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "发现更多创作者",
+          "bbox": [
+            560,
+            495,
+            843,
+            531
+          ],
+          "normalized_bbox": [
+            0.4375,
+            0.6875,
+            0.658594,
+            0.7375
+          ],
+          "confidence": 0.863,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "抖音",
+          "bbox": [
+            617,
+            608,
+            731,
+            664
+          ],
+          "normalized_bbox": [
+            0.482031,
+            0.844444,
+            0.571094,
+            0.922222
+          ],
+          "confidence": 0.6621,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_070",
+      "ocr_reused": false,
+      "display_text": "发现更多创作者"
+    }
+  ],
+  "beats": {
+    "bpm": 156.25,
+    "beat_timestamps": [
+      1.6,
+      1.984,
+      2.368,
+      2.752,
+      3.136,
+      3.52,
+      3.904,
+      4.288,
+      4.672,
+      5.056,
+      5.44,
+      5.824,
+      6.208,
+      6.592,
+      6.976,
+      7.392,
+      7.776,
+      8.16,
+      8.512,
+      8.928,
+      9.344,
+      9.728,
+      10.112,
+      10.496,
+      10.88,
+      11.264,
+      11.648,
+      12.032,
+      12.416,
+      12.8,
+      13.152,
+      13.536,
+      13.92,
+      14.304,
+      14.688,
+      15.072,
+      15.456,
+      15.84,
+      16.224,
+      16.608,
+      16.992,
+      17.344,
+      17.728,
+      18.112,
+      18.464,
+      18.816,
+      19.2,
+      19.616,
+      20.0,
+      20.384,
+      20.736,
+      21.088,
+      21.44,
+      21.824,
+      22.176,
+      22.528,
+      22.88,
+      23.264,
+      23.616,
+      23.968,
+      24.32,
+      24.704,
+      25.056,
+      25.44,
+      25.792,
+      26.176,
+      26.528,
+      26.912,
+      27.264,
+      27.616,
+      27.968,
+      28.352,
+      28.704,
+      29.056,
+      29.408,
+      29.76,
+      30.144,
+      30.528,
+      30.88,
+      31.232,
+      31.584,
+      31.968,
+      32.32,
+      32.672,
+      33.056,
+      33.408,
+      33.76,
+      34.112,
+      34.464,
+      34.848,
+      35.2,
+      35.552,
+      35.936,
+      36.288,
+      36.64,
+      37.024,
+      37.376,
+      37.728,
+      38.08,
+      38.432,
+      38.784,
+      39.168,
+      39.552,
+      39.936,
+      40.32,
+      40.704,
+      41.088,
+      41.472,
+      41.856,
+      42.24,
+      42.624,
+      42.976,
+      43.392,
+      43.776,
+      44.16,
+      44.544,
+      44.928,
+      45.28,
+      45.632,
+      45.952,
+      46.304,
+      46.656,
+      47.04,
+      47.392,
+      47.776,
+      48.128,
+      48.48,
+      48.864,
+      49.216,
+      49.568,
+      49.952,
+      50.304,
+      50.656,
+      51.008,
+      51.392,
+      51.744,
+      52.096,
+      52.448,
+      52.832,
+      53.184,
+      53.568,
+      53.92,
+      54.272,
+      54.624,
+      55.008,
+      55.36,
+      55.712,
+      56.064,
+      56.416,
+      56.768,
+      57.152,
+      57.504,
+      57.888,
+      58.272,
+      58.656,
+      59.04,
+      59.424,
+      59.808,
+      60.192,
+      60.576,
+      60.928,
+      61.312,
+      61.696,
+      62.112,
+      62.496,
+      62.88,
+      63.264,
+      63.648,
+      64.0,
+      64.352,
+      64.704,
+      65.088,
+      65.44,
+      65.824,
+      66.208,
+      66.592,
+      66.976,
+      67.36,
+      67.744,
+      68.128,
+      68.544,
+      68.896,
+      69.248,
+      69.6,
+      69.952,
+      70.336,
+      70.72,
+      71.104,
+      71.52,
+      71.904,
+      72.32,
+      72.704,
+      73.056,
+      73.44,
+      73.856,
+      74.24,
+      74.624,
+      74.976,
+      75.36,
+      75.744,
+      76.128,
+      76.48,
+      76.864,
+      77.248,
+      77.664,
+      78.08,
+      78.464,
+      78.88,
+      79.296,
+      79.712,
+      80.096,
+      80.448,
+      80.832,
+      81.216,
+      81.6,
+      82.016,
+      82.368,
+      82.72,
+      83.136,
+      83.52,
+      83.872,
+      84.256,
+      84.64,
+      85.056,
+      85.44,
+      85.824,
+      86.208,
+      86.592,
+      86.976,
+      87.36,
+      87.744,
+      88.128,
+      88.512,
+      88.896,
+      89.28,
+      89.664,
+      90.048,
+      90.4,
+      90.752,
+      91.104,
+      91.456,
+      91.84,
+      92.256,
+      92.672,
+      93.088,
+      93.472,
+      93.856,
+      94.24,
+      94.624,
+      95.008,
+      95.392,
+      95.808,
+      96.224,
+      96.64,
+      97.056,
+      97.44,
+      97.856,
+      98.24,
+      98.624,
+      99.008,
+      99.392,
+      99.776,
+      100.16,
+      100.576,
+      100.992,
+      101.408,
+      101.792,
+      102.208,
+      102.592,
+      102.976,
+      103.36,
+      103.744,
+      104.16,
+      104.544,
+      104.928,
+      105.344,
+      105.76,
+      106.176,
+      106.592,
+      106.976,
+      107.36,
+      107.744,
+      108.128,
+      108.512,
+      108.928,
+      109.344,
+      109.76,
+      110.144,
+      110.56,
+      110.976,
+      111.36,
+      111.744,
+      112.128,
+      112.48,
+      112.864,
+      113.248,
+      113.632,
+      114.016,
+      114.4,
+      114.784,
+      115.168,
+      115.552,
+      115.936,
+      116.288
+    ],
+    "has_vocal": false,
+    "beat_sync_score": 0.6852,
+    "rms_energy": null,
+    "rms_timestamps": null
+  },
+  "basic_analysis": {
+    "shot_count": 55,
+    "avg_shot_duration": 2.149,
+    "shot_density": 0.4653,
+    "transcript_segment_count": 2,
+    "transcript_char_count": 40,
+    "ocr_text_count": 305,
+    "ocr_text_per_second": 2.5801,
+    "subtitle_density": "high",
+    "estimated_pace": "medium",
+    "beat_sync_score": 0.6852
+  },
+  "processing_info": {
+    "started_at": "2026-06-06T05:44:38.986961+00:00",
+    "completed_at": "2026-06-06T05:45:49.946870+00:00",
+    "total_duration_ms": 70960,
+    "processors": [
+      {
+        "name": "metadata",
+        "status": "success",
+        "duration_ms": 38,
+        "error": null
+      },
+      {
+        "name": "scene_detect",
+        "status": "success",
+        "duration_ms": 1309,
+        "error": null
+      },
+      {
+        "name": "audio",
+        "status": "success",
+        "duration_ms": 136,
+        "error": null
+      },
+      {
+        "name": "keyframe",
+        "status": "success",
+        "duration_ms": 5442,
+        "error": null
+      },
+      {
+        "name": "asr",
+        "status": "success",
+        "duration_ms": 5645,
+        "error": null
+      },
+      {
+        "name": "beat",
+        "status": "success",
+        "duration_ms": 2649,
+        "error": null
+      },
+      {
+        "name": "ocr",
+        "status": "success",
+        "duration_ms": 55631,
+        "error": null
+      },
+      {
+        "name": "basic_analysis",
+        "status": "success",
+        "duration_ms": 0,
+        "error": null
+      }
+    ]
+  }
+}

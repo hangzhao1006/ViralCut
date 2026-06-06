@@ -13,9 +13,10 @@ export interface AnalyzedAsset {
 interface Props {
   assets: AnalyzedAsset[];
   onAssetsAdded: (assets: AnalyzedAsset[]) => void;
+  onRemove: (id: string) => void;
 }
 
-export default function AssetLibrary({ assets, onAssetsAdded }: Props) {
+export default function AssetLibrary({ assets, onAssetsAdded, onRemove }: Props) {
   const [uploading, setUploading] = useState(false);
   const [dragOver, setDragOver] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -82,6 +83,15 @@ export default function AssetLibrary({ assets, onAssetsAdded }: Props) {
                 {a.scene_type}
               </span>
             )}
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); onRemove(a.id); }}
+              className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-black/55 text-[11px] text-white opacity-0 backdrop-blur transition hover:bg-rose-500 group-hover:opacity-100"
+              title="删除素材"
+              aria-label="删除素材"
+            >
+              ✕
+            </button>
           </div>
         ))}
       </div>

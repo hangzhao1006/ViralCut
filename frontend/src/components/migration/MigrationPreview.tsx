@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { TransferBlueprint, MigrationResult, MigratedSlot } from '../../types';
 import { STRATEGY_LABELS } from '../../lib/colors';
 import EditableSlotCard from './EditableSlotCard';
@@ -9,109 +10,110 @@ interface Props {
   onSlotRegenerate?: (index: number, instruction: string, forceStrategy: string) => Promise<void>;
 }
 
-const MATCH_LABEL: Record<string, string> = {
-  filled: '素材匹配',
-  gap: '缺口补全',
-  restructured: '结构重排',
-  aigc_needed: 'AIGC生成',
-};
-
 export default function MigrationPreview({ blueprint, migration, onSlotUpdate, onSlotRegenerate }: Props) {
   const sourceSlots = blueprint.structure_template ?? [];
   const migratedSlots = migration.migrated_slots ?? [];
   const gs = migration.gap_summary;
+  const [selected, setSelected] = useState<number | null>(null);
+
+  const totalDur = migratedSlots.reduce((s, x) => s + (x.duration_seconds || 1), 0) || 1;
+  const editable = onSlotUpdate && onSlotRegenerate;
 
   return (
-    <div className="rounded-[1.75rem] border border-slate-200/80 bg-white p-4 shadow-sm">
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-sm font-semibold text-slate-950">迁移过程：爆款骨架 → 新视频</span>
-        <span className="text-xs text-slate-500">
-          可迁移度 {migration.overall_feasibility} · {gs?.filled}/{gs?.total_slots} 填充 · {gs?.gaps} 缺口
-        </span>
-      </div>
-
-      <div className="text-xs text-slate-500 mb-3">{migration.migration_summary}</div>
-
-      {/* New video timeline (slots mapped temporally) */}
-      <div className="mb-4">
-        <div className="text-[11px] font-medium text-slate-400 mb-1">新视频时间线</div>
-        <div className="flex gap-0.5 h-8">
-          {migratedSlots.map((m) => {
-            const total = migratedSlots.reduce((s, x) => s + (x.duration_seconds || 1), 0);
-            const w = ((m.duration_seconds || 1) / total) * 100;
-            const isFilled = m.status === 'filled';
-            return (
-              <div
-                key={m.slot_id}
-                title={`${m.slot_type} · ${m.duration_seconds}s · ${isFilled ? '已填充' : '缺口'}`}
-                className="rounded flex items-center justify-center text-[8px] overflow-hidden whitespace-nowrap"
-                style={{
-                  width: `${w}%`,
-                  background: isFilled ? '#EAF3DE' : '#FAEEDA',
-                  color: isFilled ? '#27500A' : '#854F0B',
-                }}
-              >
-                {m.duration_seconds}s
-              </div>
-            );
-          })}
+    <div className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm">
+      {/* Header */}
+      <div className="mb-3 flex items-center justify-between">
+        <div>
+          <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-indigo-400">Migration</div>
+          <div className="mt-0.5 text-sm font-semibold text-slate-900">爆款骨架 → 新视频</div>
+        </div>
+        <div className="flex items-center gap-2 text-[11px]">
+          <span className="rounded-full bg-slate-100 px-2.5 py-1 font-medium text-slate-600">可迁移度 {migration.overall_feasibility}</span>
+          <span className="rounded-full bg-emerald-50 px-2.5 py-1 font-medium text-emerald-700">{gs?.filled} 填充</span>
+          <span className="rounded-full bg-amber-50 px-2.5 py-1 font-medium text-amber-700">{gs?.gaps} 缺口</span>
         </div>
       </div>
 
-      {/* Mapping grid */}
-      <div className="grid grid-cols-[1fr_80px_1fr] gap-y-2 items-stretch max-h-[320px] overflow-y-auto pr-1">
-        <div className="text-[11px] font-medium text-slate-400 text-center pb-1">爆款骨架 · {blueprint.source_video_type}</div>
-        <div />
-        <div className="text-[11px] font-medium text-slate-400 text-center pb-1">{migration.new_video_type}</div>
+      <div className="mb-4 text-xs leading-relaxed text-slate-500">{migration.migration_summary}</div>
 
+      {/* New video timeline — click a block to edit */}
+      <div className="mb-2 flex items-center justify-between">
+        <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">New video timeline</div>
+        {editable && <div className="text-[11px] text-slate-400">点击片段编辑</div>}
+      </div>
+      <div className="flex gap-1">
         {migratedSlots.map((m, i) => {
-          const src = sourceSlots[i];
-          return <FlowRow key={m.slot_id} src={src} migrated={m} />;
+          const w = ((m.duration_seconds || 1) / totalDur) * 100;
+          const isFilled = m.status === 'filled';
+          const isSel = selected === i;
+          return (
+            <button
+              key={m.slot_id}
+              type="button"
+              onClick={() => editable && setSelected(isSel ? null : i)}
+              title={`${m.slot_type} · ${m.duration_seconds}s`}
+              className={`flex h-12 flex-col items-center justify-center overflow-hidden rounded-xl text-[9px] font-medium transition-all ${
+                isSel ? 'ring-2 ring-indigo-500 ring-offset-1' : 'ring-1 ring-black/5'
+              }`}
+              style={{
+                width: `${w}%`,
+                background: isFilled ? '#EAF3DE' : '#FAEEDA',
+                color: isFilled ? '#27500A' : '#854F0B',
+                cursor: editable ? 'pointer' : 'default',
+              }}
+            >
+              <span className="max-w-full truncate px-1 font-semibold">{m.slot_type?.slice(0, 8)}</span>
+              <span className="opacity-70">{m.duration_seconds}s</span>
+            </button>
+          );
         })}
       </div>
 
-      {/* Applied framework rules */}
-      {migration.applied_rules?.length > 0 && (
-        <div className="mt-4 px-3 py-2.5 rounded-2xl border border-slate-200/70 bg-slate-50/80">
-          <div className="text-[11px] text-slate-600">
-            <span className="font-medium">套用的骨架规则: </span>
-            {migration.applied_rules.join(' · ')}
-          </div>
+      {/* Selected slot editor — appears right under the clicked block */}
+      {editable && selected !== null && migratedSlots[selected] && (
+        <div className="mt-3">
+          <EditableSlotCard
+            slot={migratedSlots[selected]}
+            index={selected}
+            sourceSlot={sourceSlots[selected]}
+            onUpdate={onSlotUpdate!}
+            onRegenerate={onSlotRegenerate!}
+            defaultOpen
+          />
         </div>
       )}
 
-      {/* Legend */}
-      <div className="mt-2 flex gap-4 text-[10px] text-slate-500 flex-wrap">
-        <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-emerald-100" />已填充</span>
-        <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-amber-100" />缺口+补全策略</span>
-        <span className="flex items-center gap-1"><span className="w-3.5 h-0.5 bg-emerald-600" />素材匹配</span>
-        <span className="flex items-center gap-1"><span className="w-3.5 border-t border-dashed border-amber-500" />需补全</span>
-      </div>
+      {/* Collapsible skeleton mapping */}
+      <details className="mt-4 group">
+        <summary className="flex cursor-pointer items-center gap-1.5 text-xs font-medium text-slate-500 transition hover:text-slate-700">
+          <span className="transition group-open:rotate-90">▸</span> 查看骨架映射关系
+        </summary>
+        <div className="mt-3 grid max-h-[260px] grid-cols-[1fr_64px_1fr] items-stretch gap-y-1.5 overflow-y-auto pr-1">
+          <div className="pb-1 text-center text-[10px] font-medium text-slate-400">爆款骨架</div>
+          <div />
+          <div className="pb-1 text-center text-[10px] font-medium text-slate-400">新视频</div>
+          {migratedSlots.map((m, i) => (
+            <FlowRow key={m.slot_id} src={sourceSlots[i]} migrated={m} />
+          ))}
+        </div>
+      </details>
 
-      {/* Editable slot cards */}
-      {onSlotUpdate && onSlotRegenerate && (
-        <div className="mt-4 rounded-2xl border border-slate-200/70 bg-slate-50/70 p-3">
-          <div className="mb-2 flex items-center justify-between">
-            <div>
-              <div className="vc-kicker">Slot editor</div>
-              <div className="mt-1 text-xs font-semibold text-slate-800">逐段编辑与重生成</div>
-            </div>
-            <span className="rounded-full bg-white px-2 py-1 text-[10px] font-medium text-slate-500 shadow-sm">{migratedSlots.length} slots</span>
-          </div>
-          <div className="max-h-[280px] space-y-2 overflow-y-auto pr-1">
-            {migratedSlots.map((m, i) => (
-              <EditableSlotCard key={m.slot_id} slot={m} index={i}
-                onUpdate={onSlotUpdate} onRegenerate={onSlotRegenerate} />
-            ))}
+      {/* Applied rules */}
+      {migration.applied_rules?.length > 0 && (
+        <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5">
+          <div className="text-[11px] leading-relaxed text-slate-600">
+            <span className="font-semibold text-slate-700">套用的骨架规则：</span>{migration.applied_rules.join(' · ')}
           </div>
         </div>
       )}
 
       {/* New script */}
       {migration.new_script && (
-        <details className="mt-3">
-          <summary className="text-xs text-slate-500 cursor-pointer">查看完整新脚本</summary>
-          <pre className="text-[11px] text-slate-600 whitespace-pre-wrap font-sans leading-relaxed mt-2 rounded-2xl border border-slate-200/70 bg-slate-50/80 p-3">
+        <details className="mt-3 group">
+          <summary className="flex cursor-pointer items-center gap-1.5 text-xs font-medium text-slate-500 transition hover:text-slate-700">
+            <span className="transition group-open:rotate-90">▸</span> 查看完整新脚本
+          </summary>
+          <pre className="mt-2 whitespace-pre-wrap rounded-xl bg-slate-50 p-3 font-sans text-[11px] leading-relaxed text-slate-600">
             {migration.new_script}
           </pre>
         </details>
@@ -120,47 +122,38 @@ export default function MigrationPreview({ blueprint, migration, onSlotUpdate, o
   );
 }
 
-function FlowRow({ src, migrated }: { src?: { slot_type: string; duration_seconds: number; purpose: string }; migrated: MigratedSlot }) {
+function FlowRow({ src, migrated }: {
+  src?: { slot_type: string; duration_seconds: number; purpose: string };
+  migrated: MigratedSlot;
+}) {
   const isFilled = migrated.status === 'filled';
   const arrowColor = isFilled ? '#1D9E75' : '#EF9F27';
-  const dashed = !isFilled;
-
   return (
     <>
-      {/* Source skeleton slot */}
-      <div className="rounded-lg px-2.5 py-2" style={{ background: '#EEEDFE' }}>
-        <div className="text-[11px] font-medium" style={{ color: '#3C3489' }}>
+      <div className="rounded-xl px-2.5 py-2" style={{ background: '#EEF2FF' }}>
+        <div className="text-[11px] font-semibold text-indigo-900">
           {src?.slot_type ?? migrated.slot_type} · {src?.duration_seconds ?? migrated.duration_seconds}s
         </div>
-        <div className="text-[10px] truncate" style={{ color: '#534AB7' }}>{src?.purpose ?? ''}</div>
+        <div className="truncate text-[10px] text-indigo-500">{src?.purpose ?? ''}</div>
       </div>
-
-      {/* Arrow with match label */}
-      <div className="flex items-center justify-center relative">
-        <svg width="80" height="36">
-          <line x1="0" y1="18" x2="80" y2="18" stroke={arrowColor} strokeWidth="1.5" strokeDasharray={dashed ? '3 2' : undefined} />
-          <polygon points="74,14 80,18 74,22" fill={arrowColor} />
+      <div className="flex items-center justify-center">
+        <svg width="64" height="30">
+          <line x1="0" y1="15" x2="64" y2="15" stroke={arrowColor} strokeWidth="1.5" strokeDasharray={isFilled ? undefined : '3 2'} />
+          <polygon points="58,11 64,15 58,19" fill={arrowColor} />
         </svg>
-        <span className="absolute text-[8px] bg-white px-1" style={{ color: isFilled ? '#0F6E56' : '#854F0B' }}>
-          {MATCH_LABEL[migrated.status] ?? ''}
-        </span>
       </div>
-
-      {/* New video slot */}
-      <div className="rounded-lg px-2.5 py-2" style={{ background: isFilled ? '#EAF3DE' : '#FAEEDA' }}>
-        <div className="text-[11px] font-medium" style={{ color: isFilled ? '#27500A' : '#633806' }}>
-          {migrated.slot_type} · {migrated.duration_seconds}s {isFilled ? '✓' : ''}
+      <div className="rounded-xl px-2.5 py-2" style={{ background: isFilled ? '#EAF3DE' : '#FAEEDA' }}>
+        <div className="text-[11px] font-semibold" style={{ color: isFilled ? '#27500A' : '#633806' }}>
+          {migrated.slot_type} {isFilled ? '✓' : ''}
         </div>
-        <div className="text-[10px] truncate" style={{ color: isFilled ? '#3B6D11' : '#854F0B' }}>
+        <div className="truncate text-[10px]" style={{ color: isFilled ? '#3B6D11' : '#854F0B' }}>
           {migrated.migrated_content?.text ?? ''}
         </div>
         {migrated.gap && (
-          <div className="text-[10px] mt-1" style={{ color: '#854F0B' }}>
+          <div className="mt-0.5 text-[10px]" style={{ color: '#854F0B' }}>
             {migrated.gap.missing}
             {migrated.fill_strategy && (
-              <span className="block text-slate-500">
-                → {STRATEGY_LABELS[migrated.fill_strategy.type] ?? migrated.fill_strategy.type}: {migrated.fill_strategy.description}
-              </span>
+              <span className="block text-slate-500">→ {STRATEGY_LABELS[migrated.fill_strategy.type] ?? migrated.fill_strategy.type}</span>
             )}
           </div>
         )}
