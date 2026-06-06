@@ -50,3 +50,11 @@ openai>=1.30.0
 # Link pipeline transitive deps
 numpy>=1.24.0
 opencv-python>=4.8.0
+
+# =========================================================
+# Leo variant Stage 2 (src/stage2/leo_variant) dependencies
+# =========================================================
+
+# Structured schemas for the leo_variant multi-agent pipeline
+pydantic>=2.0.0
+# (also uses `openai` above as the OpenRouter client)
