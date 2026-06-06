@@ -1,0 +1,258 @@
+{
+  "new_video_type": "product_ad",
+  "migration_summary": "参考原设计迭代展示的递进结构，按照产品发布类适配指导，将多版设计替换为咖啡机不同研发阶段的原型展示，保留开篇钩子、多版本递进、最终量产版高潮、转化引导收尾的完整节奏，适配咖啡机新品推广需求",
+  "overall_feasibility": 0.7,
+  "migrated_slots": [
+    {
+      "slot_id": "slot_001",
+      "slot_type": "opening_title_card",
+      "duration_seconds": 3.0,
+      "status": "filled",
+      "migrated_content": {
+        "text": "全新智能咖啡机 正式发布 | 首发限时优惠开启",
+        "visual": "居中布局，高对比度大字体展示产品上市核心信息，简约浅色系背景"
+      },
+      "matched_assets": [
+        "text_1",
+        "i1"
+      ],
+      "gap": null,
+      "fill_strategy": null,
+      "reason": "符合开篇钩子直接亮出核心事件抓注意力的要求，用户已有文字和图片素材可直接支撑制作"
+    },
+    {
+      "slot_id": "slot_002",
+      "slot_type": "product_prototype_demo_1",
+      "duration_seconds": 3.0,
+      "status": "filled",
+      "migrated_content": {
+        "text": "Version 1: 初代工程原型 基础出水功能验证",
+        "visual": "初代咖啡机原型机全屏居中静态展示"
+      },
+      "matched_assets": [
+        "v1"
+      ],
+      "gap": null,
+      "fill_strategy": null,
+      "reason": "复用用户第一个产品视频素材，对应第一版原型展示要求"
+    },
+    {
+      "slot_id": "slot_003",
+      "slot_type": "product_prototype_demo_2",
+      "duration_seconds": 1.85,
+      "status": "filled",
+      "migrated_content": {
+        "text": "Version 2: 外观优化版 调整机身材质与按键布局",
+        "visual": "第二版优化原型机全屏居中静态展示"
+      },
+      "matched_assets": [
+        "v2"
+      ],
+      "gap": null,
+      "fill_strategy": null,
+      "reason": "复用用户第二个产品视频素材，对应第二版调整后原型展示要求"
+    },
+    {
+      "slot_id": "slot_004",
+      "slot_type": "product_prototype_demo_3",
+      "duration_seconds": 1.15,
+      "status": "gap",
+      "migrated_content": {
+        "text": "Version 3: 功能升级版 新增自动萃取温控模块",
+        "visual": "第三版新增温控功能的原型机全屏居中展示"
+      },
+      "matched_assets": [],
+      "gap": {
+        "missing": "缺少第三版功能升级原型的展示素材",
+        "affected_requirement": "min_clip_count:1"
+      },
+      "fill_strategy": {
+        "type": "aigc",
+        "description": "AI生成第三版原型的渲染图，全屏居中展示即可",
+        "alternative": "也可通过文字卡片标注该版本升级点，跳过画面展示"
+      },
+      "reason": "用户现有素材没有覆盖该版本原型，采用AIGC生成低成本补全"
+    },
+    {
+      "slot_id": "slot_005",
+      "slot_type": "product_prototype_demo_4",
+      "duration_seconds": 3.0,
+      "status": "gap",
+      "migrated_content": {
+        "text": "Version 4: 细节打磨版 优化萃取压力与水箱容量",
+        "visual": "第四版细节优化原型机全屏居中静态展示"
+      },
+      "matched_assets": [],
+      "gap": {
+        "missing": "缺少第四版细节打磨原型的展示素材",
+        "affected_requirement": "min_clip_count:1"
+      },
+      "fill_strategy": {
+        "type": "text_fill",
+        "description": "用全屏文字卡片标注该版本的升级细节，无需额外画面素材",
+        "alternative": "复用已有产品素材局部放大展示细节"
+      },
+      "reason": "该版本核心是传递升级信息，用文字说明即可降低素材依赖"
+    },
+    {
+      "slot_id": "slot_006",
+      "slot_type": "product_prototype_demo_5",
+      "duration_seconds": 3.0,
+      "status": "filled",
+      "migrated_content": {
+        "text": "Version 5: 接近量产版 补全所有外观标识与功能",
+        "visual": "接近最终量产状态的咖啡机全屏居中展示"
+      },
+      "matched_assets": [
+        "v3"
+      ],
+      "gap": null,
+      "fill_strategy": null,
+      "reason": "复用用户第三个产品视频素材，对应接近定稿的版本展示要求"
+    },
+    {
+      "slot_id": "slot_007",
+      "slot_type": "final_product_climax",
+      "duration_seconds": 2.066,
+      "status": "filled",
+      "migrated_content": {
+        "text": "Final Version: 最终量产版智能咖啡机 完整功能全量上线",
+        "visual": "最终版量产咖啡机完整展示，搭配蒸汽、咖啡液流动的高光特效呈现峰值视觉效果"
+      },
+      "matched_assets": [
+        "i2"
+      ],
+      "gap": null,
+      "fill_strategy": null,
+      "reason": "用用户提供的产品主图作为最终高潮展示，符合全片能量峰值的要求"
+    },
+    {
+      "slot_id": "slot_008",
+      "slot_type": "product_cta",
+      "duration_seconds": 1.367,
+      "status": "gap",
+      "migrated_content": {
+        "text": "点击小黄车 立即抢购 | 首发限时立减200元",
+        "visual": "引导下单文字放在画面右下角，搭配购物车图标"
+      },
+      "matched_assets": [],
+      "gap": {
+        "missing": "缺少引导转化的图标素材和适配的氛围BGM",
+        "affected_requirement": "无硬性素材要求，仅需补充包装元素"
+      },
+      "fill_strategy": {
+        "type": "packaging",
+        "description": "用视频剪辑软件自带的购物车贴纸和免费轻快氛围BGM补全收尾部分",
+        "alternative": "AIGC生成适配的背景音"
+      },
+      "reason": "收尾部分仅需简单包装元素，用剪辑工具自带资源即可低成本完成"
+    }
+  ],
+  "gap_summary": {
+    "total_slots": 8,
+    "filled": 5,
+    "gaps": 3,
+    "gap_slots": [
+      "slot_004",
+      "slot_005",
+      "slot_008"
+    ]
+  },
+  "applied_rules": [
+    "static_full_display_for_each_design_version",
+    "version_switch_on_visual_complete",
+    "bgm_as_atmosphere_only",
+    "energy_progressive_build_to_climax",
+    "adaptation_guidance.for_product_unveil"
+  ],
+  "new_script": "[3.0s] 全新智能咖啡机 正式发布 | 首发限时优惠开启 | 素材：i1+text_1 居中大字体标题卡\n[3.0s] Version 1: 初代工程原型 基础出水功能验证 | 素材：v1 初代原型全屏居中展示\n[1.85s] Version 2: 外观优化版 调整机身材质与按键布局 | 素材：v2 第二版原型全屏居中展示\n[1.15s] Version 3: 功能升级版 新增自动萃取温控模块 | 素材：AIGC生成的第三版原型渲染图 全屏居中展示\n[3.0s] Version 4: 细节打磨版 优化萃取压力与水箱容量 | 素材：全屏文字卡片标注升级点\n[3.0s] Version 5: 接近量产版 补全所有外观标识与功能 | 素材：v3 准量产版咖啡机全屏展示\n[2.066s] Final Version: 最终量产版智能咖啡机 完整功能全量上线 | 素材：i2 最终版产品高光展示\n[1.367s] 点击小黄车 立即抢购 | 首发限时立减200元 | 素材：右下角文字+购物车贴纸",
+  "_precheck": {
+    "user_video_count": 3,
+    "user_image_count": 2,
+    "user_text_count": 1,
+    "total_video_duration": 15.0,
+    "has_bgm": false,
+    "slot_checks": [
+      {
+        "slot_id": "slot_001",
+        "slot_type": "opening_title_card",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": true,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_002",
+        "slot_type": "design_version_demo_1",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_003",
+        "slot_type": "design_version_demo_2",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_004",
+        "slot_type": "design_version_demo_3",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_005",
+        "slot_type": "design_version_demo_4",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_006",
+        "slot_type": "design_version_demo_5",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_007",
+        "slot_type": "final_design_climax",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      },
+      {
+        "slot_id": "slot_008",
+        "slot_type": "creator_cta",
+        "min_clip_count": 1,
+        "needs_video": false,
+        "needs_image": false,
+        "needs_music": false,
+        "likely_gap": false,
+        "gap_reasons": []
+      }
+    ]
+  }
+}

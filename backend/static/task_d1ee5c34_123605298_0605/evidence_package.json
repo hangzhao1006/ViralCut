@@ -1,0 +1,2453 @@
+{
+  "video_id": "task_d1ee5c34_123605298_0605",
+  "source": {
+    "type": "file",
+    "local_path": "/Users/apple/Documents/GitHub/ViralCut/backend/static/uploads/task_d1ee5c34_123605298.mov",
+    "original_filename": "task_d1ee5c34_123605298.mov",
+    "url": null,
+    "platform": null,
+    "social_metadata": null
+  },
+  "metadata": {
+    "duration": 39.008,
+    "width": 1138,
+    "height": 640,
+    "fps": 30.0,
+    "codec": "h264",
+    "file_size": 2791401,
+    "has_audio": true,
+    "has_subtitle_track": false,
+    "bitrate": 572477,
+    "aspect_ratio": "16:9"
+  },
+  "scenes": [
+    {
+      "scene_id": "scene_000",
+      "index": 0,
+      "start_time": 0.0,
+      "end_time": 17.6,
+      "duration": 17.6,
+      "keyframe_ids": [
+        "frame_000",
+        "frame_001",
+        "frame_002",
+        "frame_003",
+        "frame_004",
+        "frame_005"
+      ]
+    },
+    {
+      "scene_id": "scene_001",
+      "index": 1,
+      "start_time": 17.6,
+      "end_time": 39.008,
+      "duration": 21.408,
+      "keyframe_ids": [
+        "frame_006",
+        "frame_007",
+        "frame_008",
+        "frame_009",
+        "frame_010",
+        "frame_011",
+        "frame_012",
+        "frame_013"
+      ]
+    }
+  ],
+  "keyframes": [
+    {
+      "frame_id": "frame_000",
+      "scene_id": "scene_000",
+      "timestamp": 3.0,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_000.jpg"
+    },
+    {
+      "frame_id": "frame_001",
+      "scene_id": "scene_000",
+      "timestamp": 6.0,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_001.jpg"
+    },
+    {
+      "frame_id": "frame_002",
+      "scene_id": "scene_000",
+      "timestamp": 8.8,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_002.jpg"
+    },
+    {
+      "frame_id": "frame_003",
+      "scene_id": "scene_000",
+      "timestamp": 9.0,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_003.jpg"
+    },
+    {
+      "frame_id": "frame_004",
+      "scene_id": "scene_000",
+      "timestamp": 12.0,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_004.jpg"
+    },
+    {
+      "frame_id": "frame_005",
+      "scene_id": "scene_000",
+      "timestamp": 15.0,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_005.jpg"
+    },
+    {
+      "frame_id": "frame_006",
+      "scene_id": "scene_001",
+      "timestamp": 20.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_006.jpg"
+    },
+    {
+      "frame_id": "frame_007",
+      "scene_id": "scene_001",
+      "timestamp": 23.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_007.jpg"
+    },
+    {
+      "frame_id": "frame_008",
+      "scene_id": "scene_001",
+      "timestamp": 26.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_008.jpg"
+    },
+    {
+      "frame_id": "frame_009",
+      "scene_id": "scene_001",
+      "timestamp": 28.304,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_009.jpg"
+    },
+    {
+      "frame_id": "frame_010",
+      "scene_id": "scene_001",
+      "timestamp": 29.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_010.jpg"
+    },
+    {
+      "frame_id": "frame_011",
+      "scene_id": "scene_001",
+      "timestamp": 32.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_011.jpg"
+    },
+    {
+      "frame_id": "frame_012",
+      "scene_id": "scene_001",
+      "timestamp": 35.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_012.jpg"
+    },
+    {
+      "frame_id": "frame_013",
+      "scene_id": "scene_001",
+      "timestamp": 38.6,
+      "path": "output/task_d1ee5c34_123605298_0605/frames/frame_013.jpg"
+    }
+  ],
+  "transcript": [],
+  "ocr_results": [
+    {
+      "frame_id": "frame_000",
+      "timestamp": 3.0,
+      "texts": [
+        {
+          "content": "built your next",
+          "bbox": [
+            343,
+            293,
+            785,
+            358
+          ],
+          "normalized_bbox": [
+            0.301406,
+            0.457813,
+            0.689807,
+            0.559375
+          ],
+          "confidence": 0.8399,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            110,
+            565,
+            432,
+            601
+          ],
+          "normalized_bbox": [
+            0.096661,
+            0.882812,
+            0.379613,
+            0.939063
+          ],
+          "confidence": 0.8811,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "小红书",
+          "bbox": [
+            1004,
+            560,
+            1090,
+            597
+          ],
+          "normalized_bbox": [
+            0.88225,
+            0.875,
+            0.957821,
+            0.932813
+          ],
+          "confidence": 0.6684,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_000",
+      "ocr_reused": false,
+      "display_text": "built your next Studio Both Sides"
+    },
+    {
+      "frame_id": "frame_001",
+      "timestamp": 6.0,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            36,
+            132,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.05625,
+            0.115993,
+            0.11875
+          ],
+          "confidence": 0.7444,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.9369,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Create a hil",
+          "bbox": [
+            311,
+            267,
+            811,
+            345
+          ],
+          "normalized_bbox": [
+            0.273286,
+            0.417187,
+            0.712654,
+            0.539062
+          ],
+          "confidence": 0.9171,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_001",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides Create a hil"
+    },
+    {
+      "frame_id": "frame_002",
+      "timestamp": 8.8,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            35,
+            132,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.054688,
+            0.115993,
+            0.11875
+          ],
+          "confidence": 0.7487,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio BothSides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.8963,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "NMDR1'Speed",
+          "bbox": [
+            761,
+            296,
+            824,
+            308
+          ],
+          "normalized_bbox": [
+            0.668717,
+            0.4625,
+            0.724077,
+            0.48125
+          ],
+          "confidence": 0.8246,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "5188",
+          "bbox": [
+            923,
+            296,
+            947,
+            309
+          ],
+          "normalized_bbox": [
+            0.811072,
+            0.4625,
+            0.832162,
+            0.482812
+          ],
+          "confidence": 0.6295,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "online sneaker marketplace",
+          "bbox": [
+            206,
+            458,
+            965,
+            516
+          ],
+          "normalized_bbox": [
+            0.181019,
+            0.715625,
+            0.847979,
+            0.80625
+          ],
+          "confidence": 0.8868,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "end",
+          "bbox": [
+            32,
+            459,
+            162,
+            513
+          ],
+          "normalized_bbox": [
+            0.02812,
+            0.717187,
+            0.142355,
+            0.801562
+          ],
+          "confidence": 0.64,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "with",
+          "bbox": [
+            1010,
+            451,
+            1135,
+            514
+          ],
+          "normalized_bbox": [
+            0.887522,
+            0.704688,
+            0.997364,
+            0.803125
+          ],
+          "confidence": 0.7762,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_002",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio BothSides NMDR1'Speed 5188 online sneaker marketplace end"
+    },
+    {
+      "frame_id": "frame_003",
+      "timestamp": 9.0,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            35,
+            132,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.054688,
+            0.115993,
+            0.11875
+          ],
+          "confidence": 0.7487,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio BothSides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.8969,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "OnyxRunnerV2",
+          "bbox": [
+            199,
+            294,
+            265,
+            306
+          ],
+          "normalized_bbox": [
+            0.174868,
+            0.459375,
+            0.232865,
+            0.478125
+          ],
+          "confidence": 0.8449,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "$320",
+          "bbox": [
+            358,
+            294,
+            383,
+            307
+          ],
+          "normalized_bbox": [
+            0.314587,
+            0.459375,
+            0.336555,
+            0.479687
+          ],
+          "confidence": 0.7868,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "RetroHighPineGreen'",
+          "bbox": [
+            478,
+            294,
+            568,
+            308
+          ],
+          "normalized_bbox": [
+            0.420035,
+            0.459375,
+            0.499121,
+            0.48125
+          ],
+          "confidence": 0.8724,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "$459",
+          "bbox": [
+            638,
+            293,
+            664,
+            309
+          ],
+          "normalized_bbox": [
+            0.560633,
+            0.457813,
+            0.58348,
+            0.482812
+          ],
+          "confidence": 0.6713,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "NMDR1'Speed",
+          "bbox": [
+            756,
+            294,
+            818,
+            306
+          ],
+          "normalized_bbox": [
+            0.664323,
+            0.459375,
+            0.718805,
+            0.478125
+          ],
+          "confidence": 0.8309,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "$188",
+          "bbox": [
+            915,
+            294,
+            939,
+            306
+          ],
+          "normalized_bbox": [
+            0.804042,
+            0.459375,
+            0.825132,
+            0.478125
+          ],
+          "confidence": 0.7773,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "online sneaker marketplace",
+          "bbox": [
+            205,
+            459,
+            963,
+            516
+          ],
+          "normalized_bbox": [
+            0.180141,
+            0.717187,
+            0.846221,
+            0.80625
+          ],
+          "confidence": 0.8898,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "end",
+          "bbox": [
+            38,
+            459,
+            169,
+            514
+          ],
+          "normalized_bbox": [
+            0.033392,
+            0.717187,
+            0.148506,
+            0.803125
+          ],
+          "confidence": 0.743,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "with",
+          "bbox": [
+            1003,
+            451,
+            1135,
+            514
+          ],
+          "normalized_bbox": [
+            0.881371,
+            0.704688,
+            0.997364,
+            0.803125
+          ],
+          "confidence": 0.786,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_003",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio BothSides OnyxRunnerV2 $320 RetroHighPineGreen' $459 NMDR1'Speed $188 online sneaker marketplace end"
+    },
+    {
+      "frame_id": "frame_004",
+      "timestamp": 12.0,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            35,
+            133,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.054688,
+            0.116872,
+            0.11875
+          ],
+          "confidence": 0.7491,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.8931,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Leticia Kutch",
+          "bbox": [
+            656,
+            216,
+            738,
+            233
+          ],
+          "normalized_bbox": [
+            0.57645,
+            0.3375,
+            0.648506,
+            0.364063
+          ],
+          "confidence": 0.8604,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "nendations,",
+          "bbox": [
+            4,
+            459,
+            368,
+            519
+          ],
+          "normalized_bbox": [
+            0.003515,
+            0.717187,
+            0.323374,
+            0.810937
+          ],
+          "confidence": 0.8545,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "product reviews,",
+          "bbox": [
+            447,
+            451,
+            992,
+            522
+          ],
+          "normalized_bbox": [
+            0.392794,
+            0.704688,
+            0.871705,
+            0.815625
+          ],
+          "confidence": 0.8698,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_004",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides Leticia Kutch nendations, product reviews,"
+    },
+    {
+      "frame_id": "frame_005",
+      "timestamp": 15.0,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            35,
+            132,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.054688,
+            0.115993,
+            0.11875
+          ],
+          "confidence": 0.749,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio BothSides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.8965,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Sneaker Store",
+          "bbox": [
+            298,
+            96,
+            370,
+            107
+          ],
+          "normalized_bbox": [
+            0.261863,
+            0.15,
+            0.325132,
+            0.167187
+          ],
+          "confidence": 0.8722,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "320.00$",
+          "bbox": [
+            298,
+            114,
+            403,
+            137
+          ],
+          "normalized_bbox": [
+            0.261863,
+            0.178125,
+            0.35413,
+            0.214062
+          ],
+          "confidence": 0.8157,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Piy by bankand",
+          "bbox": [
+            312,
+            155,
+            378,
+            167
+          ],
+          "normalized_bbox": [
+            0.274165,
+            0.242188,
+            0.332162,
+            0.260937
+          ],
+          "confidence": 0.6879,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Cardnumber",
+          "bbox": [
+            339,
+            183,
+            418,
+            197
+          ],
+          "normalized_bbox": [
+            0.297891,
+            0.285938,
+            0.367311,
+            0.307812
+          ],
+          "confidence": 0.8973,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Pay",
+          "bbox": [
+            310,
+            276,
+            350,
+            299
+          ],
+          "normalized_bbox": [
+            0.272408,
+            0.43125,
+            0.307557,
+            0.467187
+          ],
+          "confidence": 0.7355,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "stripe",
+          "bbox": [
+            376,
+            281,
+            415,
+            297
+          ],
+          "normalized_bbox": [
+            0.330404,
+            0.439063,
+            0.364675,
+            0.464062
+          ],
+          "confidence": 0.8092,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "oard, and secure checkout",
+          "bbox": [
+            2,
+            428,
+            745,
+            485
+          ],
+          "normalized_bbox": [
+            0.001757,
+            0.66875,
+            0.654657,
+            0.757812
+          ],
+          "confidence": 0.8336,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Searchsilhouettes...",
+          "bbox": [
+            620,
+            551,
+            894,
+            583
+          ],
+          "normalized_bbox": [
+            0.544815,
+            0.860938,
+            0.785589,
+            0.910937
+          ],
+          "confidence": 0.8429,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_005",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio BothSides Sneaker Store 320.00$ Piy by bankand Cardnumber Pay stripe oard, and secure checkout Searchsilhouettes..."
+    },
+    {
+      "frame_id": "frame_006",
+      "timestamp": 20.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            37,
+            134,
+            77
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.057813,
+            0.11775,
+            0.120313
+          ],
+          "confidence": 0.7481,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            699,
+            38,
+            1021,
+            72
+          ],
+          "normalized_bbox": [
+            0.614236,
+            0.059375,
+            0.897188,
+            0.1125
+          ],
+          "confidence": 0.9264,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "THE NEW",
+          "bbox": [
+            368,
+            140,
+            763,
+            209
+          ],
+          "normalized_bbox": [
+            0.323374,
+            0.21875,
+            0.670475,
+            0.326562
+          ],
+          "confidence": 0.8462,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "STANDARD",
+          "bbox": [
+            323,
+            209,
+            807,
+            277
+          ],
+          "normalized_bbox": [
+            0.283831,
+            0.326562,
+            0.709139,
+            0.432812
+          ],
+          "confidence": 0.8356,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Acquire themostsought-after silhouettes.",
+          "bbox": [
+            468,
+            288,
+            681,
+            302
+          ],
+          "normalized_bbox": [
+            0.411248,
+            0.45,
+            0.598418,
+            0.471875
+          ],
+          "confidence": 0.9239,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Authenticated, immaculate, and ready to ship.",
+          "bbox": [
+            459,
+            302,
+            690,
+            316
+          ],
+          "normalized_bbox": [
+            0.403339,
+            0.471875,
+            0.606327,
+            0.49375
+          ],
+          "confidence": 0.905,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "SHOPAIRVERTEXINFRARED",
+          "bbox": [
+            434,
+            347,
+            566,
+            361
+          ],
+          "normalized_bbox": [
+            0.381371,
+            0.542188,
+            0.497364,
+            0.564063
+          ],
+          "confidence": 0.9195,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "VIEWALLDROPS",
+          "bbox": [
+            616,
+            345,
+            694,
+            360
+          ],
+          "normalized_bbox": [
+            0.541301,
+            0.539062,
+            0.609842,
+            0.5625
+          ],
+          "confidence": 0.9159,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "MatchedForYou.",
+          "bbox": [
+            235,
+            431,
+            373,
+            456
+          ],
+          "normalized_bbox": [
+            0.206503,
+            0.673438,
+            0.327768,
+            0.7125
+          ],
+          "confidence": 0.8497,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_006",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides THE NEW STANDARD Acquire themostsought-after silhouettes. Authenticated, immaculate, and ready to ship. SHOPAIRVERTEXINFRARED VIEWALLDROPS MatchedForYou."
+    },
+    {
+      "frame_id": "frame_007",
+      "timestamp": 23.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            36,
+            132,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.05625,
+            0.115993,
+            0.11875
+          ],
+          "confidence": 0.7432,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            698,
+            36,
+            1022,
+            73
+          ],
+          "normalized_bbox": [
+            0.613357,
+            0.05625,
+            0.898067,
+            0.114062
+          ],
+          "confidence": 0.9018,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "ops from",
+          "bbox": [
+            0,
+            177,
+            926,
+            461
+          ],
+          "normalized_bbox": [
+            0.0,
+            0.276562,
+            0.813708,
+            0.720313
+          ],
+          "confidence": 0.7671,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_007",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides ops from"
+    },
+    {
+      "frame_id": "frame_008",
+      "timestamp": 26.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.99,
+          "text_type": "brand"
+        },
+        {
+          "content": "Login into your account",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.95,
+          "text_type": "other"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "title_bar"
+        },
+        {
+          "content": "Continue with email",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.97,
+          "text_type": "cta"
+        },
+        {
+          "content": "or",
+          "bbox": [
+            22,
+            256,
+            512,
+            384
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.4,
+            0.45,
+            0.6
+          ],
+          "confidence": 0.96,
+          "text_type": "other"
+        },
+        {
+          "content": "Auth",
+          "bbox": [
+            227,
+            256,
+            910,
+            384
+          ],
+          "normalized_bbox": [
+            0.2,
+            0.4,
+            0.8,
+            0.6
+          ],
+          "confidence": 0.99,
+          "text_type": "title_bar"
+        },
+        {
+          "content": "Sign in",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.97,
+          "text_type": "other"
+        },
+        {
+          "content": "Sign in with Google",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "cta"
+        },
+        {
+          "content": "Enter Verification Code",
+          "bbox": [
+            625,
+            512,
+            1115,
+            608
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.98,
+          "text_type": "title_bar"
+        },
+        {
+          "content": "Enter code that we have sent to your email",
+          "bbox": [
+            625,
+            512,
+            1115,
+            608
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.95,
+          "text_type": "subtitle"
+        },
+        {
+          "content": "5",
+          "bbox": [
+            625,
+            512,
+            1115,
+            608
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "3",
+          "bbox": [
+            625,
+            512,
+            1115,
+            608
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "1",
+          "bbox": [
+            625,
+            512,
+            1115,
+            608
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        }
+      ],
+      "ocr_source_frame_id": "frame_008",
+      "ocr_reused": false,
+      "display_text": "小红书 Login into your account Studio Both Sides Continue with email or Auth Sign in Sign in with Google Enter Verification Code Enter code that we have sent to your email 5 3 1"
+    },
+    {
+      "frame_id": "frame_009",
+      "timestamp": 28.304,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            47,
+            37,
+            132,
+            75
+          ],
+          "normalized_bbox": [
+            0.041301,
+            0.057813,
+            0.115993,
+            0.117188
+          ],
+          "confidence": 0.7405,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            699,
+            36,
+            1023,
+            73
+          ],
+          "normalized_bbox": [
+            0.614236,
+            0.05625,
+            0.898946,
+            0.114062
+          ],
+          "confidence": 0.9202,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "About Gravity Team",
+          "bbox": [
+            127,
+            101,
+            214,
+            115
+          ],
+          "normalized_bbox": [
+            0.111599,
+            0.157812,
+            0.188049,
+            0.179688
+          ],
+          "confidence": 0.8523,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "PostPilotisforT",
+          "bbox": [
+            995,
+            114,
+            1113,
+            129
+          ],
+          "normalized_bbox": [
+            0.874341,
+            0.178125,
+            0.978032,
+            0.201563
+          ],
+          "confidence": 0.811,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "25",
+          "bbox": [
+            533,
+            206,
+            549,
+            220
+          ],
+          "normalized_bbox": [
+            0.468366,
+            0.321875,
+            0.482425,
+            0.34375
+          ],
+          "confidence": 0.6358,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Login into",
+          "bbox": [
+            907,
+            272,
+            958,
+            287
+          ],
+          "normalized_bbox": [
+            0.797012,
+            0.425,
+            0.841828,
+            0.448437
+          ],
+          "confidence": 0.8089,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "digital",
+          "bbox": [
+            291,
+            282,
+            351,
+            303
+          ],
+          "normalized_bbox": [
+            0.255712,
+            0.440625,
+            0.308436,
+            0.473438
+          ],
+          "confidence": 0.8101,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "youraccount",
+          "bbox": [
+            907,
+            283,
+            969,
+            297
+          ],
+          "normalized_bbox": [
+            0.797012,
+            0.442188,
+            0.851494,
+            0.464062
+          ],
+          "confidence": 0.8629,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "makers",
+          "bbox": [
+            291,
+            302,
+            363,
+            319
+          ],
+          "normalized_bbox": [
+            0.255712,
+            0.471875,
+            0.318981,
+            0.498437
+          ],
+          "confidence": 0.8547,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Plus despite,Geeib",
+          "bbox": [
+            309,
+            358,
+            403,
+            370
+          ],
+          "normalized_bbox": [
+            0.271529,
+            0.559375,
+            0.35413,
+            0.578125
+          ],
+          "confidence": 0.5996,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Se orsign et drechariges",
+          "bbox": [
+            320,
+            367,
+            395,
+            378
+          ],
+          "normalized_bbox": [
+            0.281195,
+            0.573438,
+            0.3471,
+            0.590625
+          ],
+          "confidence": 0.7437,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Launch",
+          "bbox": [
+            69,
+            448,
+            133,
+            473
+          ],
+          "normalized_bbox": [
+            0.060633,
+            0.7,
+            0.116872,
+            0.739062
+          ],
+          "confidence": 0.7619,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "day",
+          "bbox": [
+            66,
+            471,
+            100,
+            495
+          ],
+          "normalized_bbox": [
+            0.057996,
+            0.735938,
+            0.087873,
+            0.773438
+          ],
+          "confidence": 0.7294,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "About Gravity Team",
+          "bbox": [
+            738,
+            478,
+            827,
+            492
+          ],
+          "normalized_bbox": [
+            0.648506,
+            0.746875,
+            0.726714,
+            0.76875
+          ],
+          "confidence": 0.8752,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Crew Member",
+          "bbox": [
+            475,
+            511,
+            536,
+            523
+          ],
+          "normalized_bbox": [
+            0.417399,
+            0.798438,
+            0.471002,
+            0.817187
+          ],
+          "confidence": 0.8125,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "char(st",
+          "bbox": [
+            551,
+            575,
+            586,
+            587
+          ],
+          "normalized_bbox": [
+            0.484183,
+            0.898438,
+            0.514938,
+            0.917188
+          ],
+          "confidence": 0.5705,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Dirtih_ints",
+          "bbox": [
+            473,
+            594,
+            524,
+            611
+          ],
+          "normalized_bbox": [
+            0.415641,
+            0.928125,
+            0.460457,
+            0.954688
+          ],
+          "confidence": 0.6907,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "date",
+          "bbox": [
+            550,
+            597,
+            574,
+            609
+          ],
+          "normalized_bbox": [
+            0.483304,
+            0.932813,
+            0.504394,
+            0.951562
+          ],
+          "confidence": 0.6702,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "NULL",
+          "bbox": [
+            614,
+            595,
+            635,
+            608
+          ],
+          "normalized_bbox": [
+            0.539543,
+            0.929688,
+            0.557996,
+            0.95
+          ],
+          "confidence": 0.5366,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "birth_alate",
+          "bbox": [
+            475,
+            617,
+            527,
+            629
+          ],
+          "normalized_bbox": [
+            0.417399,
+            0.964063,
+            0.463093,
+            0.982812
+          ],
+          "confidence": 0.7612,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_009",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides About Gravity Team PostPilotisforT 25 Login into digital youraccount makers Plus despite,Geeib Se orsign et drechariges Launch day About Gravity Team Crew Member char(st Dirtih_ints date NULL birth_alate"
+    },
+    {
+      "frame_id": "frame_010",
+      "timestamp": 29.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.99,
+          "text_type": "brand"
+        },
+        {
+          "content": "Credit & Debit Cards",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        },
+        {
+          "content": "Axis Bank **** **** **** 8395",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.97,
+          "text_type": "other"
+        },
+        {
+          "content": "VISA HDFC Bank **** **** **** 6246",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.97,
+          "text_type": "other"
+        },
+        {
+          "content": "Add New Card",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.96,
+          "text_type": "cta"
+        },
+        {
+          "content": "Payment Options",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.99,
+          "text_type": "title_bar"
+        },
+        {
+          "content": "Order Summary",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        },
+        {
+          "content": "Nike Air Jordan Retro 1 High OG U...",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.95,
+          "text_type": "other"
+        },
+        {
+          "content": "Qty: 1 Size: 7 UK",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.97,
+          "text_type": "other"
+        },
+        {
+          "content": "2972 Westheimer Rd. Santa Ana, Illinois 85486",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.96,
+          "text_type": "other"
+        },
+        {
+          "content": "Total Amount ₹6,699.0",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "price"
+        },
+        {
+          "content": "Payments",
+          "bbox": [
+            22,
+            12,
+            512,
+            96
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.02,
+            0.45,
+            0.15
+          ],
+          "confidence": 0.99,
+          "text_type": "other"
+        },
+        {
+          "content": "Address Order Summary Paym",
+          "bbox": [
+            22,
+            256,
+            512,
+            384
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.4,
+            0.45,
+            0.6
+          ],
+          "confidence": 0.95,
+          "text_type": "other"
+        },
+        {
+          "content": "Saved Cards",
+          "bbox": [
+            22,
+            256,
+            512,
+            384
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.4,
+            0.45,
+            0.6
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        },
+        {
+          "content": "HDFC Bank Credit Card **** **** **** 1234",
+          "bbox": [
+            22,
+            256,
+            512,
+            384
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.4,
+            0.45,
+            0.6
+          ],
+          "confidence": 0.97,
+          "text_type": "other"
+        },
+        {
+          "content": "CVV",
+          "bbox": [
+            22,
+            512,
+            512,
+            608
+          ],
+          "normalized_bbox": [
+            0.02,
+            0.8,
+            0.45,
+            0.95
+          ],
+          "confidence": 0.96,
+          "text_type": "other"
+        },
+        {
+          "content": "Payments",
+          "bbox": [
+            227,
+            256,
+            910,
+            384
+          ],
+          "normalized_bbox": [
+            0.2,
+            0.4,
+            0.8,
+            0.6
+          ],
+          "confidence": 0.99,
+          "text_type": "title_bar"
+        },
+        {
+          "content": "Payment Method",
+          "bbox": [
+            625,
+            12,
+            1115,
+            96
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.02,
+            0.98,
+            0.15
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        },
+        {
+          "content": "Name on card John Doe",
+          "bbox": [
+            625,
+            256,
+            1115,
+            384
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.4,
+            0.98,
+            0.6
+          ],
+          "confidence": 0.97,
+          "text_type": "other"
+        },
+        {
+          "content": "Card number",
+          "bbox": [
+            625,
+            512,
+            1115,
+            608
+          ],
+          "normalized_bbox": [
+            0.55,
+            0.8,
+            0.98,
+            0.95
+          ],
+          "confidence": 0.98,
+          "text_type": "other"
+        }
+      ],
+      "ocr_source_frame_id": "frame_010",
+      "ocr_reused": false,
+      "display_text": "小红书 Credit & Debit Cards Axis Bank **** **** **** 8395 VISA HDFC Bank **** **** **** 6246 Add New Card Payment Options Studio Both Sides Order Summary Nike Air Jordan Retro 1 High OG U... Qty: 1 Size: 7 UK 2972 Westheimer Rd. Santa Ana, Illinois 85486 Total Amount ₹6,699.0 Payments Address Order Summary Paym Saved Cards HDFC Bank Credit Card **** **** **** 1234 CVV Payments Payment Method Name on card John Doe Card number"
+    },
+    {
+      "frame_id": "frame_011",
+      "timestamp": 32.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            46,
+            35,
+            132,
+            76
+          ],
+          "normalized_bbox": [
+            0.040422,
+            0.054688,
+            0.115993,
+            0.11875
+          ],
+          "confidence": 0.7491,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "AboutGravityTeam",
+          "bbox": [
+            748,
+            26,
+            840,
+            40
+          ],
+          "normalized_bbox": [
+            0.657293,
+            0.040625,
+            0.738137,
+            0.0625
+          ],
+          "confidence": 0.9325,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.9351,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "About Gravity Team",
+          "bbox": [
+            18,
+            197,
+            135,
+            217
+          ],
+          "normalized_bbox": [
+            0.015817,
+            0.307812,
+            0.118629,
+            0.339062
+          ],
+          "confidence": 0.848,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "25+",
+          "bbox": [
+            151,
+            272,
+            167,
+            283
+          ],
+          "normalized_bbox": [
+            0.132689,
+            0.425,
+            0.146749,
+            0.442188
+          ],
+          "confidence": 0.709,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "to production",
+          "bbox": [
+            293,
+            268,
+            843,
+            358
+          ],
+          "normalized_bbox": [
+            0.257469,
+            0.41875,
+            0.740773,
+            0.559375
+          ],
+          "confidence": 0.8645,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "200+",
+          "bbox": [
+            34,
+            311,
+            62,
+            323
+          ],
+          "normalized_bbox": [
+            0.029877,
+            0.485938,
+            0.054482,
+            0.504687
+          ],
+          "confidence": 0.7125,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "24/7",
+          "bbox": [
+            93,
+            311,
+            114,
+            323
+          ],
+          "normalized_bbox": [
+            0.081722,
+            0.485938,
+            0.100176,
+            0.504687
+          ],
+          "confidence": 0.7298,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "PostPilotisfor",
+          "bbox": [
+            997,
+            510,
+            1108,
+            525
+          ],
+          "normalized_bbox": [
+            0.876098,
+            0.796875,
+            0.973638,
+            0.820312
+          ],
+          "confidence": 0.8586,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_011",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides About Gravity Team 25+ to production 200+ 24/7"
+    },
+    {
+      "frame_id": "frame_012",
+      "timestamp": 35.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            47,
+            37,
+            134,
+            77
+          ],
+          "normalized_bbox": [
+            0.041301,
+            0.057813,
+            0.11775,
+            0.120313
+          ],
+          "confidence": 0.6648,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            700,
+            37,
+            1021,
+            71
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.057813,
+            0.897188,
+            0.110937
+          ],
+          "confidence": 0.8983,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "start shipping",
+          "bbox": [
+            263,
+            260,
+            880,
+            376
+          ],
+          "normalized_bbox": [
+            0.231107,
+            0.40625,
+            0.773286,
+            0.5875
+          ],
+          "confidence": 0.9019,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_012",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides start shipping"
+    },
+    {
+      "frame_id": "frame_013",
+      "timestamp": 38.6,
+      "texts": [
+        {
+          "content": "小红书",
+          "bbox": [
+            47,
+            37,
+            134,
+            77
+          ],
+          "normalized_bbox": [
+            0.041301,
+            0.057813,
+            0.11775,
+            0.120313
+          ],
+          "confidence": 0.6491,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Studio Both Sides",
+          "bbox": [
+            700,
+            36,
+            1021,
+            72
+          ],
+          "normalized_bbox": [
+            0.615114,
+            0.05625,
+            0.897188,
+            0.1125
+          ],
+          "confidence": 0.8895,
+          "text_type": "rapidocr"
+        },
+        {
+          "content": "Layout.dev",
+          "bbox": [
+            425,
+            282,
+            894,
+            367
+          ],
+          "normalized_bbox": [
+            0.373462,
+            0.440625,
+            0.785589,
+            0.573438
+          ],
+          "confidence": 0.8404,
+          "text_type": "rapidocr"
+        }
+      ],
+      "ocr_source_frame_id": "frame_013",
+      "ocr_reused": false,
+      "display_text": "小红书 Studio Both Sides Layout.dev"
+    }
+  ],
+  "beats": {
+    "bpm": 110.294,
+    "beat_timestamps": [
+      0.48,
+      1.024,
+      1.568,
+      2.112,
+      2.624,
+      3.168,
+      3.712,
+      4.224,
+      4.768,
+      5.344,
+      5.888,
+      6.432,
+      6.976,
+      7.52,
+      8.064,
+      8.608,
+      9.152,
+      9.728,
+      10.272,
+      10.816,
+      11.328,
+      11.904,
+      12.416,
+      12.96,
+      13.504,
+      14.08,
+      14.624,
+      15.168,
+      15.712,
+      16.256,
+      16.8,
+      17.344,
+      17.888,
+      18.432,
+      18.976,
+      19.52,
+      20.064,
+      20.608,
+      21.184,
+      21.728,
+      22.272,
+      22.816,
+      23.36,
+      23.904,
+      24.448,
+      24.992,
+      25.536,
+      26.08,
+      26.624,
+      27.168,
+      27.712,
+      28.256,
+      28.8,
+      29.344,
+      29.888,
+      30.432,
+      31.008,
+      31.552,
+      32.096,
+      32.64,
+      33.152,
+      33.728,
+      34.272,
+      34.816,
+      35.36
+    ],
+    "has_vocal": false,
+    "beat_sync_score": 0.0,
+    "rms_energy": null,
+    "rms_timestamps": null
+  },
+  "basic_analysis": {
+    "shot_count": 2,
+    "avg_shot_duration": 19.504,
+    "shot_density": 0.0513,
+    "transcript_segment_count": 0,
+    "transcript_char_count": 0,
+    "ocr_text_count": 120,
+    "ocr_text_per_second": 3.0763,
+    "subtitle_density": "high",
+    "estimated_pace": "slow",
+    "beat_sync_score": 0.0
+  },
+  "processing_info": {
+    "started_at": "2026-06-06T02:21:41.440084+00:00",
+    "completed_at": "2026-06-06T02:22:38.630754+00:00",
+    "total_duration_ms": 57190,
+    "processors": [
+      {
+        "name": "metadata",
+        "status": "success",
+        "duration_ms": 33,
+        "error": null
+      },
+      {
+        "name": "scene_detect",
+        "status": "success",
+        "duration_ms": 435,
+        "error": null
+      },
+      {
+        "name": "audio",
+        "status": "success",
+        "duration_ms": 66,
+        "error": null
+      },
+      {
+        "name": "keyframe",
+        "status": "success",
+        "duration_ms": 873,
+        "error": null
+      },
+      {
+        "name": "asr",
+        "status": "success",
+        "duration_ms": 3183,
+        "error": null
+      },
+      {
+        "name": "beat",
+        "status": "success",
+        "duration_ms": 2088,
+        "error": null
+      },
+      {
+        "name": "ocr",
+        "status": "success",
+        "duration_ms": 50466,
+        "error": null
+      },
+      {
+        "name": "basic_analysis",
+        "status": "success",
+        "duration_ms": 0,
+        "error": null
+      }
+    ]
+  }
+}

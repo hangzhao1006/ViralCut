@@ -110,59 +110,124 @@ def run_single_agent(
     return result
 
 
-def run_full_pipeline(evidence_path: str | Path) -> dict[str, Any]:
-    """Run the complete implemented Stage 2 multi-agent pipeline.
+def run_full_pipeline(
+    evidence_path,
+    progress_callback=None,
+    on_agent_done=None,
+):
+    """Run the complete Stage 2 multi-agent pipeline.
 
-    Phase 1: Script Agent
-    Phase 2: Rhythm + Packaging + Value
-             logically parallel, implemented sequentially for MVP;
-             each only reads Script output.
-    Phase 3: Energy Agent
-    Phase 4: Transfer Agent
-    Phase 5: Rule-based Evaluator
+    Optional callbacks for progress reporting:
+      progress_callback(agent_name, message) — called when an agent starts
+      on_agent_done(agent_name) — called when an agent finishes
     """
     from src.stage2.llm_client import create_llm_client
 
     ctx = create_stage2_context(evidence_path)
     client = create_llm_client()
+    tools = ctx["tools"]
+    blackboard = ctx["blackboard"]
+    timeline = ctx["timeline"]
     total_start = time.perf_counter()
-    results: dict[str, AgentResult] = {}
 
-    for agent_name in IMPLEMENTED_AGENTS:
-        logger.info("=== Stage 2: %s Agent ===", agent_name.capitalize())
-        _ensure_agent_completed(agent_name, client, ctx, results)
+    results = {}
 
-    video_structure = _build_video_structure(ctx=ctx, results=results, total_start=total_start)
+    def _notify_start(name, msg):
+        if progress_callback:
+            try:
+                progress_callback(name, msg)
+            except Exception:
+                pass
 
-    logger.info("=== Stage 2: Evaluator ===")
-    evaluator = Stage2Evaluator(ctx["timeline"], ctx["blackboard"])
-    evaluation = evaluator.evaluate(video_structure)
-    results["evaluator"] = AgentResult(
-        agent_name="evaluator",
-        output=evaluation,
-        tool_history=[],
-        raw_response=None,
-        llm_calls=0,
-    )
-    video_structure["evaluation"] = evaluation
-    video_structure["analysis_metadata"]["agent_details"]["evaluator"] = {
-        "llm_calls": 0,
-        "tool_calls": 0,
-        "tool_history": [],
-    }
-    video_structure["analysis_metadata"]["blackboard_history"] = ctx["blackboard"].history
+    def _notify_done(name):
+        if on_agent_done:
+            try:
+                on_agent_done(name)
+            except Exception:
+                pass
+
+    # Phase 1: Script
+    logger.info("=== Phase 1: Script Agent ===")
+    _notify_start("script", "正在分析脚本结构...")
+    script_agent = _create_agent("script", client)
+    results["script"] = script_agent.run(tools=tools, blackboard=blackboard)
+    script_output = results["script"].output
+    if script_output.get("segments"):
+        timeline.set_segments(script_output["segments"])
+        logger.info("Script Agent output %d segments", len(script_output["segments"]))
+    else:
+        logger.warning("Script Agent produced no segments!")
+    _notify_done("script")
+
+    # Phase 2: Rhythm + Packaging + Value (sequential, only read script)
+    for agent_name in ["rhythm", "packaging", "value"]:
+        logger.info("=== Phase 2: %s Agent ===", agent_name.capitalize())
+        _notify_start(agent_name, f"正在分析{agent_name}...")
+        agent = _create_agent(agent_name, client)
+        results[agent_name] = agent.run(tools=tools, blackboard=blackboard)
+        _notify_done(agent_name)
+
+    # Phase 3: Energy
+    logger.info("=== Phase 3: Energy Agent ===")
+    _notify_start("energy", "正在生成能量曲线...")
+    energy_agent = _create_agent("energy", client)
+    results["energy"] = energy_agent.run(tools=tools, blackboard=blackboard)
+    _notify_done("energy")
+
+    # Write overview to blackboard for Transfer Agent
+    blackboard.write("overview", timeline.get_overview(), key="overview")
+
+    # Phase 4: Transfer
+    logger.info("=== Phase 4: Transfer Agent ===")
+    _notify_start("transfer", "正在提取迁移蓝图...")
+    transfer_agent = _create_agent("transfer", client)
+    results["transfer"] = transfer_agent.run(tools=tools, blackboard=blackboard)
+    _notify_done("transfer")
 
     total_elapsed = time.perf_counter() - total_start
-    logger.info(
-        "Stage 2 pipeline completed in %.1fs (%d LLM calls, %d tool calls), eval=%s score=%.3f",
-        total_elapsed,
-        sum(r.llm_calls for r in results.values()),
-        sum(len(r.tool_history) for r in results.values()),
-        evaluation.get("status"),
-        evaluation.get("score", 0.0),
-    )
-    return video_structure
+    total_llm_calls = sum(r.llm_calls for r in results.values())
+    total_tool_calls = sum(len(r.tool_history) for r in results.values())
 
+    logger.info(
+        "Stage 2 pipeline completed in %.1fs (%d LLM calls, %d tool calls)",
+        total_elapsed, total_llm_calls, total_tool_calls,
+    )
+
+    video_structure = {
+        "video_id": timeline.get_overview().get("video_id"),
+        "duration": timeline.duration,
+        "script_structure": blackboard.read("script", {}),
+        "rhythm_structure": blackboard.read("rhythm", {}),
+        "packaging_structure": blackboard.read("packaging", {}),
+        "value_strategy": blackboard.read("value", {}),
+        "energy_curve": blackboard.read("energy", {}),
+        "transfer_blueprint": blackboard.read("transfer", {}),
+        "analysis_metadata": {
+            "total_duration_seconds": round(total_elapsed, 1),
+            "total_llm_calls": total_llm_calls,
+            "total_tool_calls": total_tool_calls,
+            "vision_budget": ctx["vision_budget"].status(),
+            "blackboard_history": blackboard.history,
+            "agent_details": {
+                name: {
+                    "llm_calls": r.llm_calls,
+                    "tool_calls": len(r.tool_history),
+                    "tool_history": r.tool_history,
+                }
+                for name, r in results.items()
+            },
+        },
+    }
+
+    # Run evaluator if available
+    try:
+        from src.stage2.evaluator import evaluate
+        video_structure["evaluation"] = evaluate(video_structure, timeline)
+    except Exception as exc:
+        logger.warning("Evaluator skipped: %s", exc)
+
+    return video_structure
+    
 
 def _ensure_agent_completed(
     agent_name: str,
@@ -304,3 +369,11 @@ if __name__ == "__main__":
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2, default=str)
     print(f"Output: {out_path}")
+
+    # Auto-generate human-readable report
+    from src.stage2.report import generate_report
+    report_text = generate_report(result)
+    report_path = out_path.replace(".json", "_report.md") if out_path else "video_structure_report.md"
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(report_text)
+    logger.info("Report saved to %s", report_path)

@@ -1,0 +1,1760 @@
+{
+  "video_id": "task_b394cdbc_3246165181_0605",
+  "duration": 118.212,
+  "script_structure": {
+    "segments": [
+      {
+        "segment_id": "seg_001",
+        "function": "hook",
+        "start_time": 0.0,
+        "end_time": 5.0,
+        "hook_type": "title_card",
+        "core_text": "2分钟教你学会高燃混剪，炫酷的开头很重要",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_000",
+            "text": "2分钟教你学会 高燃混剪 炫酷的开头很重要"
+          }
+        ],
+        "reason": "开头用大字标题直接点明主题，承诺快速学会高燃混剪技巧，吸引观众停留",
+        "confidence": 0.95
+      },
+      {
+        "segment_id": "seg_002",
+        "function": "instruction",
+        "start_time": 5.0,
+        "end_time": 10.5,
+        "core_text": "注意镜头的切换，配合音效，重音必切镜",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_001",
+            "text": "注意镜头的切换"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_003",
+            "text": "一切 音效"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_004",
+            "text": "重音必切镜"
+          }
+        ],
+        "reason": "连续输出基础剪辑核心指令，讲解镜头切换和音效配合的基础规则",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "function": "instruction",
+        "start_time": 10.5,
+        "end_time": 27.0,
+        "core_text": "学会听音乐匹配镜头，不要抢节奏，卡点要精准，同节奏切勿重复卡点",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_005",
+            "text": "学会听音乐匹配镜头 上升音效"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_007",
+            "text": "不要抢音乐节羞"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_012",
+            "text": "卡点要精准"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_011",
+            "text": "增加高级感 鼓点×7 同节羞切勿重复夏卡点"
+          }
+        ],
+        "reason": "深入讲解音乐节奏匹配镜头的进阶要点，明确卡点的精准度要求",
+        "confidence": 0.88
+      },
+      {
+        "segment_id": "seg_004",
+        "function": "demonstration",
+        "start_time": 27.0,
+        "end_time": 43.0,
+        "core_text": "展示脚步、人物呼吸音、盾牌弓箭等元素的卡点示范，打斗音效要清晰，等待最后卡点",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_013",
+            "text": "就算是脚步"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_014",
+            "text": "人物呼吸音"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_015",
+            "text": "盾牌"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_016",
+            "text": "弓箭"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_018",
+            "text": "DA 打斗音效要清晰 等待最后卡点"
+          }
+        ],
+        "reason": "用具体的动作和音效元素做实操示范，演示前面讲解的卡点规则",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_005",
+        "function": "instruction",
+        "start_time": 43.0,
+        "end_time": 56.0,
+        "core_text": "原片有BGM时自己配上升音效，一句台词切入高燃状态，任何动作尽量匹配音效",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_019",
+            "text": "原片有BGM 自己配上升音效"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_020",
+            "text": "一句台词进八高燃"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_023",
+            "text": "任何动作 尽量匹配音效"
+          }
+        ],
+        "reason": "补充讲解BGM处理和高燃段落切入的技巧，完善音效匹配规则",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "function": "demonstration",
+        "start_time": 56.0,
+        "end_time": 72.0,
+        "core_text": "展示多段连续快速卡点效果，加入经典搞笑镜头增加视频趣味性",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_026",
+            "text": "快点x4"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_027",
+            "text": "快点x6"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_029",
+            "text": "谢志家 段经典的搞笑头 可以增加视频趣味性"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_035",
+            "text": "FEND"
+          }
+        ],
+        "reason": "连续快速切换镜头展示高燃卡点效果，同时演示趣味元素的添加方法",
+        "confidence": 0.82
+      },
+      {
+        "segment_id": "seg_007",
+        "function": "climax",
+        "start_time": 72.0,
+        "end_time": 96.0,
+        "core_text": "全节奏高燃混剪高潮段落，密集卡点呈现最强视觉冲击，展示完整高燃效果",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_045",
+            "text": "困扰 不足"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_051",
+            "text": "卡点才巫"
+          }
+        ],
+        "reason": "该时间段镜头切换密度最高，节拍同步率最高，是全视频节奏最快视觉冲击最强的段落，标记为疑似高潮",
+        "confidence": 0.78
+      },
+      {
+        "segment_id": "seg_008",
+        "function": "instruction",
+        "start_time": 96.0,
+        "end_time": 103.0,
+        "core_text": "剪辑注意不要乱闪，卡点节奏要合理",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_057",
+            "text": "不要乱闪"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_060",
+            "text": "END"
+          }
+        ],
+        "reason": "补充剪辑避坑提示，提醒不要出现画面乱闪的错误操作",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_009",
+        "function": "resolution",
+        "start_time": 103.0,
+        "end_time": 118.212,
+        "core_text": "总结剪辑要点，鼓励观众成为牛逼的剪辑师，发现更多创作者",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_063",
+            "text": "学会 提前"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_067",
+            "text": "牛逼的剪辑师"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_070",
+            "text": "发现更多创作者"
+          }
+        ],
+        "reason": "收尾总结全部教学内容，给出正向鼓励，完成内容闭环",
+        "confidence": 0.9
+      }
+    ],
+    "hook_type": "title_card",
+    "cta_type": null,
+    "structure_pattern": "title_hook → basic_instruction → advanced_instruction → demo → supplementary_instruction → effect_demo → climax → warning_instruction → ending_summary",
+    "uncertainty": "高潮段边界为估算值，部分画面文字存在识别误差，未检测到明确的付费/关注类强CTA"
+  },
+  "rhythm_structure": {
+    "overall_rhythm": {
+      "pace": "medium",
+      "bpm": 156.25,
+      "beat_sync_score": 0.6852,
+      "avg_shot_duration": 2.149
+    },
+    "segment_rhythm": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          5.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.2,
+        "avg_shot_duration": 10.083,
+        "beat_count": 9,
+        "beats_per_second": 1.8,
+        "cut_beat_alignment": 0.0,
+        "role": "title setup, slow pace builds anticipation",
+        "reason": "标题卡持续展示，无场景切镜，仅单帧画面呈现主题信息",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_001",
+          "beat_alignment:seg_001"
+        ]
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          5.0,
+          10.5
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3636,
+        "avg_shot_duration": 5.417,
+        "beat_count": 15,
+        "beats_per_second": 2.7273,
+        "cut_beat_alignment": 0.22,
+        "role": "basic rule instruction, initial rhythm establishment",
+        "reason": "仅1次场景切镜，逐步输出基础剪辑规则，信息渐进式展示",
+        "scene_cut_count": 1,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_002",
+          "beat_alignment:seg_002"
+        ]
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          10.5,
+          27.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.4848,
+        "avg_shot_duration": 2.583,
+        "beat_count": 44,
+        "beats_per_second": 2.6667,
+        "cut_beat_alignment": 0.41,
+        "role": "advanced rule instruction, rhythm awareness training",
+        "reason": "7次场景切镜，逐步讲解音乐匹配进阶要点，OCR信息逐帧更新",
+        "scene_cut_count": 7,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_003",
+          "beat_alignment:seg_003"
+        ]
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          27.0,
+          43.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.25,
+        "avg_shot_duration": 4.354,
+        "beat_count": 44,
+        "beats_per_second": 2.75,
+        "cut_beat_alignment": 0.35,
+        "role": "element demonstration, show basic matching logic",
+        "reason": "仅3次场景切镜，逐个展示不同音效元素的卡点示范，画面切换频率低",
+        "scene_cut_count": 3,
+        "rhythm_driver": "visual_version_change",
+        "evidence_refs": [
+          "metrics:seg_004",
+          "beat_alignment:seg_004"
+        ]
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          43.0,
+          56.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3077,
+        "avg_shot_duration": 3.886,
+        "beat_count": 35,
+        "beats_per_second": 2.6923,
+        "cut_beat_alignment": 0.38,
+        "role": "supplementary instruction, complete skill system",
+        "reason": "3次场景切镜，补充BGM处理和高燃段落切入技巧，信息密度适中",
+        "scene_cut_count": 3,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_005",
+          "beat_alignment:seg_005"
+        ]
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          56.0,
+          72.0
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.625,
+        "avg_shot_duration": 2.117,
+        "beat_count": 43,
+        "beats_per_second": 2.6875,
+        "cut_beat_alignment": 0.72,
+        "role": "fast effect demonstration, rhythm acceleration start",
+        "reason": "9次场景切镜，连续展示快速卡点效果，镜头切换频率明显提升，卡点对齐度显著上升",
+        "scene_cut_count": 9,
+        "rhythm_driver": "beat_sync",
+        "evidence_refs": [
+          "metrics:seg_006",
+          "beat_alignment:seg_006"
+        ]
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          72.0,
+          96.0
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.7083,
+        "avg_shot_duration": 1.505,
+        "beat_count": 62,
+        "beats_per_second": 2.5833,
+        "cut_beat_alignment": 0.82,
+        "role": "climax demonstration, full high燃 rhythm presentation",
+        "reason": "16次场景切镜，全片最长的高节奏段落，卡点对齐度处于高位，连续输出高燃混剪效果",
+        "scene_cut_count": 16,
+        "rhythm_driver": "beat_sync",
+        "evidence_refs": [
+          "metrics:seg_007",
+          "beat_alignment:seg_007"
+        ]
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          96.0,
+          103.0
+        ],
+        "pace": "fast",
+        "shots_per_second": 1.7143,
+        "avg_shot_duration": 0.726,
+        "beat_count": 18,
+        "beats_per_second": 2.5714,
+        "cut_beat_alignment": 0.88,
+        "role": "warning instruction, final fast rhythm peak",
+        "reason": "11次场景切镜，镜头密度全片最高，卡点对齐度达到峰值，快速演示错误剪辑效果",
+        "scene_cut_count": 11,
+        "rhythm_driver": "beat_sync",
+        "evidence_refs": [
+          "metrics:seg_008",
+          "beat_alignment:seg_008"
+        ]
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          103.0,
+          118.212
+        ],
+        "pace": "very_slow",
+        "shots_per_second": 0.131,
+        "avg_shot_duration": 7.6,
+        "beat_count": 34,
+        "beats_per_second": 2.235,
+        "cut_beat_alignment": 0.1,
+        "role": "resolution, rhythm cooldown and summary",
+        "reason": "仅1次场景切镜，收尾总结全部教学内容，画面变化极少，节奏明显放缓",
+        "scene_cut_count": 1,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_009",
+          "beat_alignment:seg_009"
+        ]
+      }
+    ],
+    "climax_analysis": {
+      "script_suggested_range": [
+        72.0,
+        96.0
+      ],
+      "confirmed": true,
+      "confirmed_range": [
+        72.0,
+        103.0
+      ],
+      "peak_shot_density_range": [
+        96.0,
+        103.0
+      ],
+      "peak_shots_per_second": 1.7143,
+      "peak_beat_alignment": 0.88,
+      "reason": "该区间覆盖全片镜头密度最高、cut-beat对齐度最强的段落，完整呈现高燃混剪的核心节奏示范，信息完整度达到峰值",
+      "rhythm_driver": "beat_sync"
+    },
+    "rhythm_pattern": "gradual_acceleration",
+    "rhythm_description": "视频从开头慢节奏的标题引入和基础规则讲解，逐步提升镜头切换频率和卡点对齐度，最终在72-103秒区间达到节奏峰值，最后收尾阶段节奏快速回落放缓",
+    "cutting_strategy": {
+      "primary": "cut_on_beat",
+      "secondary": "cut_on_action",
+      "evidence_segments": [
+        "seg_006",
+        "seg_007",
+        "seg_008"
+      ]
+    },
+    "audio_observations": {
+      "bgm_role": "dominant",
+      "speech_role": "minimal",
+      "sound_effects_mentioned": [
+        "重音",
+        "上升音效",
+        "人物呼吸音",
+        "鼓点",
+        "打斗音效"
+      ],
+      "reason": "BGM主导全片节奏，所有卡点规则均围绕音乐鼓点和音效匹配设计，人声仅少量出现用于核心要点提示，音效元素是卡点设计的核心参考依据"
+    },
+    "uncertainty": "seg_008时长仅7秒，高镜头密度存在一定的时长放大效应，高潮边界存在约3秒的模糊区间"
+  },
+  "packaging_structure": {
+    "packaging_structure": {
+      "subtitle_density": "high",
+      "subtitle_style": "large_bold_instruction_text",
+      "title_card_usage": true,
+      "dominant_text_layout": "centered",
+      "visual_emphasis": [
+        "large_text",
+        "high_frequency_instruction_text",
+        "key_rule_highlight"
+      ],
+      "transition_style": "uncertain",
+      "sticker_usage": "uncertain"
+    },
+    "segment_packaging": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          5.0
+        ],
+        "packaging_role": "title_card",
+        "text_density": "high",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_000"
+        ],
+        "reason": "开头使用大字标题直接点明2分钟学会高燃混剪的收益，快速吸引观众停留"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          5.0,
+          10.5
+        ],
+        "packaging_role": "basic_instruction_card",
+        "text_density": "medium",
+        "layout": "centered large instruction text",
+        "evidence_refs": [
+          "frame_001",
+          "frame_003",
+          "frame_004"
+        ],
+        "reason": "依次输出基础剪辑核心规则的大字提示，明确镜头切换和音效配合要点"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          10.5,
+          27.0
+        ],
+        "packaging_role": "advanced_instruction_card",
+        "text_density": "high",
+        "layout": "centered multi-line instruction text",
+        "evidence_refs": [
+          "frame_005",
+          "frame_007",
+          "frame_012",
+          "frame_011"
+        ],
+        "reason": "连续输出音乐节奏匹配镜头的进阶要点，用大字强调卡点精准度要求"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          27.0,
+          43.0
+        ],
+        "packaging_role": "demo_annotation",
+        "text_density": "medium",
+        "layout": "centered short keyword text",
+        "evidence_refs": [
+          "frame_013",
+          "frame_014",
+          "frame_015",
+          "frame_016",
+          "frame_018"
+        ],
+        "reason": "用短关键词标注演示用到的各类音效和元素，辅助观众理解示范内容"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          43.0,
+          56.0
+        ],
+        "packaging_role": "supplementary_instruction_card",
+        "text_density": "medium",
+        "layout": "centered large instruction text",
+        "evidence_refs": [
+          "frame_019",
+          "frame_020",
+          "frame_023"
+        ],
+        "reason": "补充BGM处理和高燃段落切入的技巧，用大字突出操作要点"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          56.0,
+          72.0
+        ],
+        "packaging_role": "effect_demo_annotation",
+        "text_density": "medium",
+        "layout": "centered short count text",
+        "evidence_refs": [
+          "frame_026",
+          "frame_027",
+          "frame_029",
+          "frame_035"
+        ],
+        "reason": "用数字标注连续卡点次数，同时提示趣味元素添加方法"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          72.0,
+          96.0
+        ],
+        "packaging_role": "climax_emphasis_text",
+        "text_density": "low",
+        "layout": "centered minimal text",
+        "evidence_refs": [
+          "frame_045",
+          "frame_051"
+        ],
+        "reason": "高潮段落仅保留极少量强调文字，避免文字干扰高燃混剪的视觉冲击"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          96.0,
+          103.0
+        ],
+        "packaging_role": "warning_instruction_card",
+        "text_density": "low",
+        "layout": "centered short warning text",
+        "evidence_refs": [
+          "frame_057",
+          "frame_060"
+        ],
+        "reason": "用大字提示剪辑避坑要点，最后标注END提示演示段落结束"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          103.0,
+          118.212
+        ],
+        "packaging_role": "ending_summary_card",
+        "text_density": "medium",
+        "layout": "centered encouraging text",
+        "evidence_refs": [
+          "frame_063",
+          "frame_067",
+          "frame_070"
+        ],
+        "reason": "用正向鼓励的大字文字总结内容，引导观众完成学习闭环"
+      }
+    ],
+    "key_packaging_patterns": [
+      {
+        "name": "value_promise_title_card",
+        "description": "前几秒用居中大字标题直接说明观众可获得的学习收益，快速抓注意力",
+        "evidence_refs": [
+          "frame_000"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "rule_centered_large_text_highlight",
+        "description": "所有教学核心规则都使用居中加粗大字展示，确保观众快速捕捉关键知识点",
+        "evidence_refs": [
+          "frame_004",
+          "frame_012",
+          "frame_019",
+          "frame_023"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "climax_text_minimization",
+        "description": "高潮高燃混剪段落大幅减少文字数量，避免文字干扰画面的节奏冲击感",
+        "evidence_refs": [
+          "frame_051"
+        ],
+        "transfer_relevance": "medium"
+      },
+      {
+        "name": "ending_positive_encouragement_text",
+        "description": "结尾用正向鼓励的大字文字强化学习成就感，提升观众对内容的好感度",
+        "evidence_refs": [
+          "frame_067"
+        ],
+        "transfer_relevance": "medium"
+      }
+    ],
+    "uncertain_elements": [
+      "transition_type",
+      "sticker_effect_details",
+      "text_background_contrast_degree"
+    ],
+    "uncertainty": "转场具体样式、贴纸特效细节以及文字背景的强对比程度受当前视觉描述限制，需要进一步调用全量视觉接口确认"
+  },
+  "value_strategy": {
+    "value_strategy": {
+      "primary_value": "系统教授用户高燃混剪的全流程剪辑实操技巧，从基础镜头切换、音效配合到进阶卡点规则、避坑要点完整覆盖",
+      "value_type": "skill_learning",
+      "target_audience": "想要学习视频剪辑的新手创作者、影视剪辑爱好者",
+      "conversion_goal": "learn / save",
+      "primary_hook_value": "2分钟教你学会高燃混剪，炫酷的开头很重要",
+      "creator_cta": null,
+      "platform_cta": "发现更多创作者",
+      "selling_points": null
+    },
+    "value_progression": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          5.0
+        ],
+        "value_role": "promise",
+        "claim": "用短时间承诺快速掌握高燃混剪技能，直接点明主题吸引观众停留",
+        "evidence_refs": [
+          "frame_000"
+        ],
+        "evidence_text": "2分钟教你学会 高燃混剪 炫酷的开头很重要"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          5.0,
+          10.5
+        ],
+        "value_role": "basic_instruction",
+        "claim": "输出剪辑基础核心规则，讲解镜头切换和音效配合的入门要点",
+        "evidence_refs": [
+          "frame_001",
+          "frame_003",
+          "frame_004"
+        ],
+        "evidence_text": "注意镜头的切换、一切 音效、重音必切镜"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          10.5,
+          27.0
+        ],
+        "value_role": "advanced_instruction",
+        "claim": "深入讲解音乐节奏匹配镜头的进阶要点，明确卡点精准度要求，避免重复卡点错误",
+        "evidence_refs": [
+          "frame_005",
+          "frame_007",
+          "frame_011",
+          "frame_012"
+        ],
+        "evidence_text": "学会听音乐匹配镜头 上升音效、不要抢音乐节羞、同节羞切勿重复夏卡点、卡点要精准"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          27.0,
+          43.0
+        ],
+        "value_role": "demonstration",
+        "claim": "用脚步、呼吸音、盾牌、弓箭等具体元素做实操示范，演示卡点规则的落地方法",
+        "evidence_refs": [
+          "frame_013",
+          "frame_014",
+          "frame_015",
+          "frame_016",
+          "frame_018"
+        ],
+        "evidence_text": "就算是脚步、人物呼吸音、盾牌、弓箭、DA 打斗音效要清晰 等待最后卡点"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          43.0,
+          56.0
+        ],
+        "value_role": "supplementary_instruction",
+        "claim": "补充讲解原片自带BGM时的音效处理方法，以及高燃段落的切入技巧",
+        "evidence_refs": [
+          "frame_019",
+          "frame_020",
+          "frame_023"
+        ],
+        "evidence_text": "原片有BGM 自己配上升音效、一句台词进八高燃、任何动作 尽量匹配音效"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          56.0,
+          72.0
+        ],
+        "value_role": "effect_demonstration",
+        "claim": "展示连续快速卡点的高燃效果，同时演示添加趣味镜头提升视频质感的技巧",
+        "evidence_refs": [
+          "frame_026",
+          "frame_027",
+          "frame_029"
+        ],
+        "evidence_text": "快点x4、快点x6、谢志家 段经典的搞笑镜头古格·来 可以增加视频趣味性"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          72.0,
+          96.0
+        ],
+        "value_role": "climax_showcase",
+        "claim": "呈现全节奏高燃混剪高潮段落，用密集卡点展示最强视觉冲击效果，让观众直观看到最终成品效果",
+        "evidence_refs": [
+          "frame_045",
+          "frame_051"
+        ],
+        "evidence_text": "困扰 不足、卡点才巫"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          96.0,
+          103.0
+        ],
+        "value_role": "warning_instruction",
+        "claim": "补充剪辑避坑提示，提醒观众不要出现画面乱闪的错误操作",
+        "evidence_refs": [
+          "frame_057",
+          "frame_060"
+        ],
+        "evidence_text": "不要乱闪、END"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          103.0,
+          118.212
+        ],
+        "value_role": "summary_encouragement",
+        "claim": "总结全部教学内容，正向鼓励观众成为优秀剪辑师，完成内容闭环",
+        "evidence_refs": [
+          "frame_063",
+          "frame_067",
+          "frame_070"
+        ],
+        "evidence_text": "学会 提前、牛逼的剪辑师、发现更多创作者"
+      }
+    ],
+    "conversion_strategy": {
+      "has_creator_cta": false,
+      "cta_type": "none_or_platform_guide",
+      "save_or_learn_intent": true,
+      "comment_or_purchase_intent": false,
+      "reason": "视频全程为剪辑技能教学内容，没有创作者主动发起的关注、收藏、评论、购买类引导，仅末尾出现平台自带的「发现更多创作者」提示，属于平台UI而非创作者主动转化策略"
+    },
+    "uncertainty": "未检测到明确的商品售卖信息、付费引导、创作者主动发起的强CTA，部分画面文字存在OCR识别误差，高潮段边界为估算值"
+  },
+  "energy_curve": {
+    "energy_curve": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          5.0
+        ],
+        "energy_level": "medium",
+        "role": "hook_attention",
+        "drivers": [
+          "large_title_card",
+          "clear_2min_skill_learning_promise"
+        ],
+        "evidence_refs": [
+          "script:seg_001",
+          "packaging:seg_001",
+          "value:seg_001"
+        ],
+        "confidence": 0.92
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          5.0,
+          10.5
+        ],
+        "energy_level": "low",
+        "role": "foundational_rule_setup",
+        "drivers": [
+          "basic_core_instruction_output",
+          "low_scene_cut_density"
+        ],
+        "evidence_refs": [
+          "script:seg_002",
+          "rhythm:seg_002",
+          "value:seg_002"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          10.5,
+          27.0
+        ],
+        "energy_level": "medium",
+        "role": "advanced_knowledge_build",
+        "drivers": [
+          "progressive_skill_point_reveal",
+          "information_density_increase"
+        ],
+        "evidence_refs": [
+          "script:seg_003",
+          "rhythm:seg_003",
+          "value:seg_003"
+        ],
+        "confidence": 0.88
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          27.0,
+          43.0
+        ],
+        "energy_level": "medium",
+        "role": "practical_demonstration",
+        "drivers": [
+          "visual_element_iteration",
+          "concrete_operation_showcase"
+        ],
+        "evidence_refs": [
+          "script:seg_004",
+          "rhythm:seg_004",
+          "value:seg_004"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          43.0,
+          56.0
+        ],
+        "energy_level": "medium",
+        "role": "skill_system_completion",
+        "drivers": [
+          "supplementary_skill_output",
+          "knowledge_coverage_expansion"
+        ],
+        "evidence_refs": [
+          "script:seg_005",
+          "rhythm:seg_005",
+          "value:seg_005"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          56.0,
+          72.0
+        ],
+        "energy_level": "high",
+        "role": "rhythm_acceleration",
+        "drivers": [
+          "beat_sync_rate_significant_rise",
+          "shot_switch_frequency_improvement"
+        ],
+        "evidence_refs": [
+          "script:seg_006",
+          "rhythm:seg_006",
+          "value:seg_006"
+        ],
+        "confidence": 0.87
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          72.0,
+          96.0
+        ],
+        "energy_level": "high",
+        "role": "high_effect_showcase",
+        "drivers": [
+          "full_high_burn_montage_presentation",
+          "continuous_dense_beat_matching"
+        ],
+        "evidence_refs": [
+          "script:seg_007",
+          "rhythm:seg_007",
+          "packaging:seg_007",
+          "value:seg_007"
+        ],
+        "confidence": 0.82
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          96.0,
+          103.0
+        ],
+        "energy_level": "peak",
+        "role": "final_energy_climax",
+        "drivers": [
+          "full_video_highest_shot_density",
+          "peak_beat_alignment_score"
+        ],
+        "evidence_refs": [
+          "script:seg_008",
+          "rhythm:seg_008",
+          "value:seg_008"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          103.0,
+          118.212
+        ],
+        "energy_level": "low",
+        "role": "energy_cooldown",
+        "drivers": [
+          "rhythm_obviously_slow_down",
+          "summary_positive_encouragement"
+        ],
+        "evidence_refs": [
+          "script:seg_009",
+          "rhythm:seg_009",
+          "packaging:seg_009",
+          "value:seg_009"
+        ],
+        "confidence": 0.9
+      }
+    ],
+    "energy_pattern": "gradual_acceleration_to_peak_then_cooldown",
+    "peak_moments": [
+      {
+        "time_range": [
+          96.0,
+          103.0
+        ],
+        "reason": "全片镜头密度、节拍对齐度同时达到峰值，7秒内完成11次场景切换，节奏驱动的最高能量点",
+        "evidence_refs": [
+          "rhythm:climax_analysis",
+          "rhythm:seg_008",
+          "script:seg_008"
+        ]
+      }
+    ],
+    "attention_strategy": {
+      "opening": "large title value promise to hook audience immediately",
+      "middle": "alternating knowledge instruction and practical demonstration to maintain learning attention",
+      "climax": "beat-driven high density montage to present full high-burn effect",
+      "ending": "skill summary and positive encouragement to complete learning closed loop"
+    },
+    "uncertainty": "高潮边界存在约3秒模糊区间，转场样式、贴纸特效细节未完全确认，少量画面存在OCR识别误差，部分视觉冲击强度需要全量视觉API进一步验证"
+  },
+  "transfer_blueprint": {
+    "transfer_blueprint": {
+      "source_video_type": "high_burn_montage_editing_tutorial",
+      "dominant_structure": "title_hook + multi_layer_instruction + alternating_demo + gradual_acceleration_climax + summary_ending",
+      "structure_template": [
+        {
+          "slot_id": "slot_001",
+          "slot_type": "title_card",
+          "source_segment_id": "seg_001",
+          "source_time_range": [
+            0.0,
+            5.0
+          ],
+          "duration_seconds": 5.0,
+          "duration_ratio": 0.042,
+          "purpose": "immediately state short learning time and clear skill benefit to hook audience",
+          "template": "{duration}分钟教你学会{target_skill}，{core_advantage}",
+          "input_requirements": {
+            "needed_assets": [
+              "title_text",
+              "static_background_or_related_clip"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "large centered text",
+              "high contrast between text and background"
+            ]
+          },
+          "required_elements": [
+            "clear short time promise",
+            "explicit skill learning benefit",
+            "large bold title text"
+          ],
+          "replaceable_elements": [
+            "specific duration number",
+            "target skill name",
+            "core advantage description",
+            "background style"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_002",
+          "slot_type": "basic_instruction_card",
+          "source_segment_id": "seg_002",
+          "source_time_range": [
+            5.0,
+            10.5
+          ],
+          "duration_seconds": 5.5,
+          "duration_ratio": 0.047,
+          "purpose": "output first core basic operation rule for beginners",
+          "template": "{basic_operation_note}",
+          "input_requirements": {
+            "needed_assets": [
+              "instruction_text",
+              "simple reference clip"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "centered large instruction text",
+              "no redundant elements"
+            ]
+          },
+          "required_elements": [
+            "clear basic operation rule",
+            "highlighted key action"
+          ],
+          "replaceable_elements": [
+            "specific operation note content",
+            "reference clip material"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_003",
+          "slot_type": "advanced_instruction_card",
+          "source_segment_id": "seg_003",
+          "source_time_range": [
+            10.5,
+            27.0
+          ],
+          "duration_seconds": 16.5,
+          "duration_ratio": 0.14,
+          "purpose": "explain advanced skill points and avoid common mistakes",
+          "template": "{advanced_skill_point}，{error_avoidance_tip}",
+          "input_requirements": {
+            "needed_assets": [
+              "multi_line_instruction_text",
+              "related_demo_clips"
+            ],
+            "min_clip_count": 7,
+            "visual_constraints": [
+              "centered multi-line text",
+              "each rule corresponds to one short clip"
+            ]
+          },
+          "required_elements": [
+            "progressive skill points",
+            "explicit error warning"
+          ],
+          "replaceable_elements": [
+            "advanced skill content",
+            "error type description",
+            "demo clip materials"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_004",
+          "slot_type": "element_demonstration",
+          "source_segment_id": "seg_004",
+          "source_time_range": [
+            27.0,
+            43.0
+          ],
+          "duration_seconds": 16.0,
+          "duration_ratio": 0.135,
+          "purpose": "show how different elements match sound effects to implement previous rules",
+          "template": "{element_name} + {corresponding_sound_effect}",
+          "input_requirements": {
+            "needed_assets": [
+              "multiple element clips",
+              "short keyword annotation text"
+            ],
+            "min_clip_count": 3,
+            "visual_constraints": [
+              "short centered keyword text",
+              "each element clip stays enough time for audience to observe"
+            ]
+          },
+          "required_elements": [
+            "multiple different operation elements",
+            "clear sound effect matching logic"
+          ],
+          "replaceable_elements": [
+            "element types",
+            "sound effect names",
+            "demo clip sources"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_005",
+          "slot_type": "supplementary_instruction_card",
+          "source_segment_id": "seg_005",
+          "source_time_range": [
+            43.0,
+            56.0
+          ],
+          "duration_seconds": 13.0,
+          "duration_ratio": 0.11,
+          "purpose": "complete skill system by adding edge case processing skills",
+          "template": "{edge_case_solution}，{high_effect_entry_skill}",
+          "input_requirements": {
+            "needed_assets": [
+              "supplementary_instruction_text",
+              "reference clips"
+            ],
+            "min_clip_count": 3,
+            "visual_constraints": [
+              "centered large instruction text",
+              "highlight key operation"
+            ]
+          },
+          "required_elements": [
+            "edge case processing method",
+            "high燃段落切入技巧"
+          ],
+          "replaceable_elements": [
+            "edge case scenario",
+            "solution content",
+            "reference clip materials"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_006",
+          "slot_type": "fast_effect_demo",
+          "source_segment_id": "seg_006",
+          "source_time_range": [
+            56.0,
+            72.0
+          ],
+          "duration_seconds": 16.0,
+          "duration_ratio": 0.135,
+          "purpose": "start rhythm acceleration, show continuous fast beat matching effect",
+          "template": "快点x{count} + {interesting_element_tip}",
+          "input_requirements": {
+            "needed_assets": [
+              "multiple fast switching clips",
+              "count annotation text"
+            ],
+            "min_clip_count": 9,
+            "visual_constraints": [
+              "short centered count text",
+              "cut on music beat"
+            ]
+          },
+          "required_elements": [
+            "continuous fast beat matching clips",
+            "at least one interesting element tip"
+          ],
+          "replaceable_elements": [
+            "clip content",
+            "count number",
+            "interesting element type"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_007",
+          "slot_type": "climax_high_burn_showcase",
+          "source_segment_id": "seg_007",
+          "source_time_range": [
+            72.0,
+            96.0
+          ],
+          "duration_seconds": 24.0,
+          "duration_ratio": 0.203,
+          "purpose": "present full high燃 montage effect with dense beat matching",
+          "template": "no extra long text, only minimal highlight text",
+          "input_requirements": {
+            "needed_assets": [
+              "plenty of high energy clips",
+              "high BGM with clear beats"
+            ],
+            "min_clip_count": 16,
+            "visual_constraints": [
+              "very few text overlays",
+              "all cuts align to music beats"
+            ]
+          },
+          "required_elements": [
+            "high energy visual clips",
+            "high beat sync rate"
+          ],
+          "replaceable_elements": [
+            "clip theme",
+            "BGM track"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_008",
+          "slot_type": "warning_instruction_demo",
+          "source_segment_id": "seg_008",
+          "source_time_range": [
+            96.0,
+            103.0
+          ],
+          "duration_seconds": 7.0,
+          "duration_ratio": 0.059,
+          "purpose": "reach final rhythm peak, show wrong operation contrast and final warning",
+          "template": "{warning_text} + END",
+          "input_requirements": {
+            "needed_assets": [
+              "fast switching clips",
+              "short warning text"
+            ],
+            "min_clip_count": 11,
+            "visual_constraints": [
+              "peak shot density",
+              "max beat alignment"
+            ]
+          },
+          "required_elements": [
+            "clear wrong operation warning",
+            "END mark"
+          ],
+          "replaceable_elements": [
+            "warning content",
+            "wrong demo clips"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_009",
+          "slot_type": "ending_summary_card",
+          "source_segment_id": "seg_009",
+          "source_time_range": [
+            103.0,
+            118.212
+          ],
+          "duration_seconds": 15.212,
+          "duration_ratio": 0.129,
+          "purpose": "cooldown rhythm, summarize all skills, give positive encouragement",
+          "template": "学会{skill_system}，成为{excellent_role}",
+          "input_requirements": {
+            "needed_assets": [
+              "summary_text",
+              "static background or slow clip"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "centered encouraging text",
+              "very low shot density"
+            ]
+          },
+          "required_elements": [
+            "full skill summary",
+            "positive encouragement content"
+          ],
+          "replaceable_elements": [
+            "skill system name",
+            "excellent role description",
+            "background style"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "editing_rules": [
+        {
+          "rule_name": "gradual_rhythm_acceleration",
+          "description": "Start with slow pace for instruction, gradually increase shot switching frequency and beat sync rate, reach peak at climax, then slow down at ending",
+          "source_evidence": [
+            "rhythm:rhythm_pattern",
+            "energy:energy_pattern"
+          ],
+          "applies_to_slots": [
+            "all slots"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "cut_on_strong_beat",
+          "description": "Switch shots exactly on music strong beats in fast demo and climax segments to maximize impact",
+          "source_evidence": [
+            "rhythm:cutting_strategy",
+            "rhythm:climax_analysis"
+          ],
+          "applies_to_slots": [
+            "slot_006",
+            "slot_007",
+            "slot_008"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "centered_large_text_highlight",
+          "description": "All core instruction rules use centered large bold text to ensure audience capture key points quickly",
+          "source_evidence": [
+            "packaging:key_packaging_patterns"
+          ],
+          "applies_to_slots": [
+            "slot_001",
+            "slot_002",
+            "slot_003",
+            "slot_005",
+            "slot_009"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "climax_text_minimization",
+          "description": "Minimize text overlay in high燃 climax segment to avoid disturbing visual rhythm impact",
+          "source_evidence": [
+            "packaging:key_packaging_patterns"
+          ],
+          "applies_to_slots": [
+            "slot_007"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "adaptation_guidance": {
+        "for_editing_tutorial": "保留标题价值承诺、多层级知识点讲解+实操示范交替、节奏逐步加速到高燃高潮、结尾正向鼓励的完整结构，直接替换对应剪辑技巧内容即可",
+        "for_product_ad": "将剪辑技能收益替换为产品核心利益点，把卡点示范替换为产品不同功能的展示，高燃高潮段落集中展示产品全场景使用效果，保留节奏递进结构",
+        "for_game_montage": "移除教学类文字卡片，替换为游戏高光片段的逐步展示，直接沿用从慢节奏铺垫到密集卡点高潮的节奏曲线，最大化视觉冲击感",
+        "for_sports_highlight": "替换所有教学内容为不同运动高光元素的卡点匹配，高潮段落集中输出连续密集的精彩瞬间，保留节奏逐步加速的结构"
+      }
+    },
+    "non_transferable_elements": [
+      {
+        "element": "platform_cta_text '发现更多创作者'",
+        "reason": "属于平台自带UI提示，不是创作者可控的内容结构，不需要迁移"
+      },
+      {
+        "element": "original specific demo materials (footage of shield, bow, etc.)",
+        "reason": "是原视频专属的影视素材，和原视频主题强绑定，迁移时需要替换为新主题对应的素材"
+      }
+    ],
+    "uncertainty": "具体转场样式、贴纸特效细节以及文字背景的精确对比度需要后续视觉工具进一步确认，高潮边界存在约3秒的模糊区间"
+  },
+  "analysis_metadata": {
+    "total_duration_seconds": 289.1,
+    "total_llm_calls": 29,
+    "total_tool_calls": 33,
+    "vision_budget": {
+      "total_used": 4,
+      "max_total": 16,
+      "max_per_agent": 4,
+      "used_by_agent": {
+        "packaging": 4
+      }
+    },
+    "blackboard_history": [
+      {
+        "timestamp": "2026-06-06T03:50:39.835175+00:00",
+        "action": "write",
+        "agent_name": "script",
+        "key": "script",
+        "summary": "script completed in 4 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-06T03:51:57.777555+00:00",
+        "action": "write",
+        "agent_name": "rhythm",
+        "key": "rhythm",
+        "summary": "rhythm completed after max rounds (11 LLM calls)"
+      },
+      {
+        "timestamp": "2026-06-06T03:52:50.764319+00:00",
+        "action": "write",
+        "agent_name": "packaging",
+        "key": "packaging",
+        "summary": "packaging completed in 8 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-06T03:53:21.960520+00:00",
+        "action": "write",
+        "agent_name": "value",
+        "key": "value",
+        "summary": "value completed in 2 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-06T03:53:47.786718+00:00",
+        "action": "write",
+        "agent_name": "energy",
+        "key": "energy",
+        "summary": "energy completed in 2 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-06T03:53:47.786841+00:00",
+        "action": "write",
+        "agent_name": "overview",
+        "key": "overview",
+        "summary": "dict keys=['video_id', 'duration', 'resolution', 'fps', 'scene_count', 'keyframe_count', 'transcript_segment_count', 'ocr_frame_count']"
+      },
+      {
+        "timestamp": "2026-06-06T03:54:44.789981+00:00",
+        "action": "write",
+        "agent_name": "transfer",
+        "key": "transfer",
+        "summary": "transfer completed in 2 LLM calls"
+      }
+    ],
+    "agent_details": {
+      "script": {
+        "llm_calls": 4,
+        "tool_calls": 3,
+        "tool_history": [
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"task_b394cdbc_3246165181_0605\", \"duration\": 118.212, \"resolution\": \"1280x720\", \"fps\": 24.0, \"scene_count\": 55, \"keyframe_count\": 71, \"transcript_segment_count\": 2, \"ocr_frame_count\": 38, \"beat_count\": 304, \"beat_sync_score\": 0.6852, \"bpm\": 156.25, \"estimated_pace\": \"medium\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 2.149, \"shot_density\": 0.4653, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"scene_id\": \"scene_000\", \"display_text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 5.042, \"scene_id\": \"scene_000\", \"display_text\": \"注意镜头的切换\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 9.0, \"scene_id\": \"scene_000\", \"display_text\": \"一切 音效\"}, {\"frame_id\": \"frame_004\", \"timestamp\": 10.458, \"scene_id\": \"scene_001\", \"display_text\": \"重音必切镜\"}, {\"frame_id\": \"frame_005\", \"timestamp\": 13.833, \"scene_id\": \"scene_002\", \"display_text\": \"学会听音乐匹配..."
+          },
+          {
+            "tool": "query_timeline",
+            "arguments": {
+              "start_time": 0.0,
+              "end_time": 12.0
+            },
+            "result_preview": "{\"time_range\": [0.0, 12.0], \"scenes\": [{\"scene_id\": \"scene_000\", \"index\": 0, \"start_time\": 0.0, \"end_time\": 10.083, \"duration\": 10.083, \"keyframe_ids\": [\"frame_000\", \"frame_001\", \"frame_002\", \"frame_003\"]}, {\"scene_id\": \"scene_001\", \"index\": 1, \"start_time\": 10.083, \"end_time\": 10.833, \"duration\": 0.75, \"keyframe_ids\": [\"frame_004\"]}, {\"scene_id\": \"scene_002\", \"index\": 2, \"start_time\": 10.833, \"end_time\": 19.917, \"duration\": 9.084, \"keyframe_ids\": [\"frame_005\", \"frame_006\", \"frame_007\"]}], \"keyf..."
+          }
+        ]
+      },
+      "rhythm": {
+        "llm_calls": 11,
+        "tool_calls": 10,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 5.0, \"hook_type\": \"title_card\", \"core_text\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}], \"reason\": \"开头用大字标题直接点明主题，承诺快速学会高燃混剪技巧，吸引观众停留\", \"confidence\": 0.95}, {\"segment_id\": \"seg_002\", \"function\": \"instruction\", \"start_time\": 5.0, \"end_time\": 10.5, \"core_text\": \"注意镜头的切换，配合音效，重音必切镜\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"注意镜头的..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"task_b394cdbc_3246165181_0605\", \"duration\": 118.212, \"resolution\": \"1280x720\", \"fps\": 24.0, \"scene_count\": 55, \"keyframe_count\": 71, \"transcript_segment_count\": 2, \"ocr_frame_count\": 38, \"beat_count\": 304, \"beat_sync_score\": 0.6852, \"bpm\": 156.25, \"estimated_pace\": \"medium\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 2.149, \"shot_density\": 0.4653, \"has_speech\": true}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 0.0,
+              "end_time": 5.0
+            },
+            "result_preview": "{\"time_range\": [0.0, 5.0], \"duration\": 5.0, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 10.083, \"shot_density\": 0.2, \"keyframe_count\": 1, \"keyframes_per_second\": 0.2, \"beat_count\": 9, \"beats_per_second\": 1.8, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 5.0,
+              "end_time": 10.5
+            },
+            "result_preview": "{\"time_range\": [5.0, 10.5], \"duration\": 5.5, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 5.417, \"shot_density\": 0.3636, \"keyframe_count\": 4, \"keyframes_per_second\": 0.7273, \"beat_count\": 15, \"beats_per_second\": 2.7273, \"text_frame_count\": 3, \"unique_text_count\": 3, \"ocr_change_count\": 2, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 10.5,
+              "end_time": 27.0
+            },
+            "result_preview": "{\"time_range\": [10.5, 27.0], \"duration\": 16.5, \"shot_count\": 8, \"scene_cut_count\": 7, \"avg_shot_duration\": 2.583, \"shot_density\": 0.4848, \"keyframe_count\": 8, \"keyframes_per_second\": 0.4848, \"beat_count\": 44, \"beats_per_second\": 2.6667, \"text_frame_count\": 8, \"unique_text_count\": 8, \"ocr_change_count\": 7, \"transcript_count\": 2, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 27.0,
+              "end_time": 43.0
+            },
+            "result_preview": "{\"time_range\": [27.0, 43.0], \"duration\": 16.0, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 4.354, \"shot_density\": 0.25, \"keyframe_count\": 7, \"keyframes_per_second\": 0.4375, \"beat_count\": 44, \"beats_per_second\": 2.75, \"text_frame_count\": 6, \"unique_text_count\": 6, \"ocr_change_count\": 5, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 43.0,
+              "end_time": 56.0
+            },
+            "result_preview": "{\"time_range\": [43.0, 56.0], \"duration\": 13.0, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 3.886, \"shot_density\": 0.3077, \"keyframe_count\": 5, \"keyframes_per_second\": 0.3846, \"beat_count\": 35, \"beats_per_second\": 2.6923, \"text_frame_count\": 3, \"unique_text_count\": 3, \"ocr_change_count\": 2, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 56.0,
+              "end_time": 72.0
+            },
+            "result_preview": "{\"time_range\": [56.0, 72.0], \"duration\": 16.0, \"shot_count\": 10, \"scene_cut_count\": 9, \"avg_shot_duration\": 2.117, \"shot_density\": 0.625, \"keyframe_count\": 11, \"keyframes_per_second\": 0.6875, \"beat_count\": 43, \"beats_per_second\": 2.6875, \"text_frame_count\": 7, \"unique_text_count\": 7, \"ocr_change_count\": 6, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 72.0,
+              "end_time": 96.0
+            },
+            "result_preview": "{\"time_range\": [72.0, 96.0], \"duration\": 24.0, \"shot_count\": 17, \"scene_cut_count\": 16, \"avg_shot_duration\": 1.505, \"shot_density\": 0.7083, \"keyframe_count\": 17, \"keyframes_per_second\": 0.7083, \"beat_count\": 62, \"beats_per_second\": 2.5833, \"text_frame_count\": 3, \"unique_text_count\": 3, \"ocr_change_count\": 2, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 96.0,
+              "end_time": 103.0
+            },
+            "result_preview": "{\"time_range\": [96.0, 103.0], \"duration\": 7.0, \"shot_count\": 12, \"scene_cut_count\": 11, \"avg_shot_duration\": 0.726, \"shot_density\": 1.7143, \"keyframe_count\": 10, \"keyframes_per_second\": 1.4286, \"beat_count\": 18, \"beats_per_second\": 2.5714, \"text_frame_count\": 2, \"unique_text_count\": 2, \"ocr_change_count\": 1, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          }
+        ]
+      },
+      "packaging": {
+        "llm_calls": 8,
+        "tool_calls": 7,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 5.0, \"hook_type\": \"title_card\", \"core_text\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}], \"reason\": \"开头用大字标题直接点明主题，承诺快速学会高燃混剪技巧，吸引观众停留\", \"confidence\": 0.95}, {\"segment_id\": \"seg_002\", \"function\": \"instruction\", \"start_time\": 5.0, \"end_time\": 10.5, \"core_text\": \"注意镜头的切换，配合音效，重音必切镜\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"注意镜头的..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"task_b394cdbc_3246165181_0605\", \"duration\": 118.212, \"resolution\": \"1280x720\", \"fps\": 24.0, \"scene_count\": 55, \"keyframe_count\": 71, \"transcript_segment_count\": 2, \"ocr_frame_count\": 38, \"beat_count\": 304, \"beat_sync_score\": 0.6852, \"bpm\": 156.25, \"estimated_pace\": \"medium\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 2.149, \"shot_density\": 0.4653, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"scene_id\": \"scene_000\", \"display_text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 5.042, \"scene_id\": \"scene_000\", \"display_text\": \"注意镜头的切换\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 9.0, \"scene_id\": \"scene_000\", \"display_text\": \"一切 音效\"}, {\"frame_id\": \"frame_004\", \"timestamp\": 10.458, \"scene_id\": \"scene_001\", \"display_text\": \"重音必切镜\"}, {\"frame_id\": \"frame_005\", \"timestamp\": 13.833, \"scene_id\": \"scene_002\", \"display_text\": \"学会听音乐匹配..."
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_000"
+            },
+            "result_preview": "{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"path\": \"output/task_b394cdbc_3246165181_0605/frames/frame_000.jpg\", \"display_text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 1, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 1}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_004"
+            },
+            "result_preview": "{\"frame_id\": \"frame_004\", \"timestamp\": 10.458, \"path\": \"output/task_b394cdbc_3246165181_0605/frames/frame_004.jpg\", \"display_text\": \"重音必切镜\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 2, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 2}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_051"
+            },
+            "result_preview": "{\"frame_id\": \"frame_051\", \"timestamp\": 94.646, \"path\": \"output/task_b394cdbc_3246165181_0605/frames/frame_051.jpg\", \"display_text\": \"卡点才巫\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 3, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 3}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_067"
+            },
+            "result_preview": "{\"frame_id\": \"frame_067\", \"timestamp\": 109.417, \"path\": \"output/task_b394cdbc_3246165181_0605/frames/frame_067.jpg\", \"display_text\": \"牛逼的剪辑师\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 4, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 4}}}"
+          }
+        ]
+      },
+      "value": {
+        "llm_calls": 2,
+        "tool_calls": 3,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 5.0, \"hook_type\": \"title_card\", \"core_text\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}], \"reason\": \"开头用大字标题直接点明主题，承诺快速学会高燃混剪技巧，吸引观众停留\", \"confidence\": 0.95}, {\"segment_id\": \"seg_002\", \"function\": \"instruction\", \"start_time\": 5.0, \"end_time\": 10.5, \"core_text\": \"注意镜头的切换，配合音效，重音必切镜\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"注意镜头的..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"task_b394cdbc_3246165181_0605\", \"duration\": 118.212, \"resolution\": \"1280x720\", \"fps\": 24.0, \"scene_count\": 55, \"keyframe_count\": 71, \"transcript_segment_count\": 2, \"ocr_frame_count\": 38, \"beat_count\": 304, \"beat_sync_score\": 0.6852, \"bpm\": 156.25, \"estimated_pace\": \"medium\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 2.149, \"shot_density\": 0.4653, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 3.0, \"scene_id\": \"scene_000\", \"display_text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 5.042, \"scene_id\": \"scene_000\", \"display_text\": \"注意镜头的切换\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 9.0, \"scene_id\": \"scene_000\", \"display_text\": \"一切 音效\"}, {\"frame_id\": \"frame_004\", \"timestamp\": 10.458, \"scene_id\": \"scene_001\", \"display_text\": \"重音必切镜\"}, {\"frame_id\": \"frame_005\", \"timestamp\": 13.833, \"scene_id\": \"scene_002\", \"display_text\": \"学会听音乐匹配..."
+          }
+        ]
+      },
+      "energy": {
+        "llm_calls": 2,
+        "tool_calls": 4,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 5.0, \"hook_type\": \"title_card\", \"core_text\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}], \"reason\": \"开头用大字标题直接点明主题，承诺快速学会高燃混剪技巧，吸引观众停留\", \"confidence\": 0.95}, {\"segment_id\": \"seg_002\", \"function\": \"instruction\", \"start_time\": 5.0, \"end_time\": 10.5, \"core_text\": \"注意镜头的切换，配合音效，重音必切镜\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"注意镜头的..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"medium\", \"bpm\": 156.25, \"beat_sync_score\": 0.6852, \"avg_shot_duration\": 2.149}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"pace\": \"slow\", \"shots_per_second\": 0.2, \"avg_shot_duration\": 10.083, \"beat_count\": 9, \"beats_per_second\": 1.8, \"cut_beat_alignment\": 0.0, \"role\": \"title setup, slow pace builds anticipation\", \"reason\": \"标题卡持续展示，无场景切镜，仅单帧画面呈现主题信息\", \"scene_cut_count\": 0, \"rhythm_driver\": \"information_reveal\", \"evidence_refs\": [\"metrics:..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"large_bold_instruction_text\", \"title_card_usage\": true, \"dominant_text_layout\": \"centered\", \"visual_emphasis\": [\"large_text\", \"high_frequency_instruction_text\", \"key_rule_highlight\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"packaging_role\": \"title_card\", \"text_density\": \"high\", \"layout\": \"large centered text\", \"evidence_refs\": ..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"系统教授用户高燃混剪的全流程剪辑实操技巧，从基础镜头切换、音效配合到进阶卡点规则、避坑要点完整覆盖\", \"value_type\": \"skill_learning\", \"target_audience\": \"想要学习视频剪辑的新手创作者、影视剪辑爱好者\", \"conversion_goal\": \"learn / save\", \"primary_hook_value\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"creator_cta\": null, \"platform_cta\": \"发现更多创作者\", \"selling_points\": null}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"value_role\": \"promise\", \"claim\": \"用短时间承诺快速掌握高燃混剪技能，直接点明主题吸引观众停留\", \"evidence_refs\": [\"frame_000\"], \"evide..."
+          }
+        ]
+      },
+      "transfer": {
+        "llm_calls": 2,
+        "tool_calls": 6,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "overview"
+            },
+            "result_preview": "{\"video_id\": \"task_b394cdbc_3246165181_0605\", \"duration\": 118.212, \"resolution\": \"1280x720\", \"fps\": 24.0, \"scene_count\": 55, \"keyframe_count\": 71, \"transcript_segment_count\": 2, \"ocr_frame_count\": 38, \"beat_count\": 304, \"beat_sync_score\": 0.6852, \"bpm\": 156.25, \"estimated_pace\": \"medium\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 2.149, \"shot_density\": 0.4653, \"has_speech\": true}"
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 5.0, \"hook_type\": \"title_card\", \"core_text\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"2分钟教你学会 高燃混剪 炫酷的开头很重要\"}], \"reason\": \"开头用大字标题直接点明主题，承诺快速学会高燃混剪技巧，吸引观众停留\", \"confidence\": 0.95}, {\"segment_id\": \"seg_002\", \"function\": \"instruction\", \"start_time\": 5.0, \"end_time\": 10.5, \"core_text\": \"注意镜头的切换，配合音效，重音必切镜\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"注意镜头的..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"medium\", \"bpm\": 156.25, \"beat_sync_score\": 0.6852, \"avg_shot_duration\": 2.149}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"pace\": \"slow\", \"shots_per_second\": 0.2, \"avg_shot_duration\": 10.083, \"beat_count\": 9, \"beats_per_second\": 1.8, \"cut_beat_alignment\": 0.0, \"role\": \"title setup, slow pace builds anticipation\", \"reason\": \"标题卡持续展示，无场景切镜，仅单帧画面呈现主题信息\", \"scene_cut_count\": 0, \"rhythm_driver\": \"information_reveal\", \"evidence_refs\": [\"metrics:..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"large_bold_instruction_text\", \"title_card_usage\": true, \"dominant_text_layout\": \"centered\", \"visual_emphasis\": [\"large_text\", \"high_frequency_instruction_text\", \"key_rule_highlight\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"packaging_role\": \"title_card\", \"text_density\": \"high\", \"layout\": \"large centered text\", \"evidence_refs\": ..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"系统教授用户高燃混剪的全流程剪辑实操技巧，从基础镜头切换、音效配合到进阶卡点规则、避坑要点完整覆盖\", \"value_type\": \"skill_learning\", \"target_audience\": \"想要学习视频剪辑的新手创作者、影视剪辑爱好者\", \"conversion_goal\": \"learn / save\", \"primary_hook_value\": \"2分钟教你学会高燃混剪，炫酷的开头很重要\", \"creator_cta\": null, \"platform_cta\": \"发现更多创作者\", \"selling_points\": null}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"value_role\": \"promise\", \"claim\": \"用短时间承诺快速掌握高燃混剪技能，直接点明主题吸引观众停留\", \"evidence_refs\": [\"frame_000\"], \"evide..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "energy"
+            },
+            "result_preview": "{\"energy_curve\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 5.0], \"energy_level\": \"medium\", \"role\": \"hook_attention\", \"drivers\": [\"large_title_card\", \"clear_2min_skill_learning_promise\"], \"evidence_refs\": [\"script:seg_001\", \"packaging:seg_001\", \"value:seg_001\"], \"confidence\": 0.92}, {\"segment_id\": \"seg_002\", \"time_range\": [5.0, 10.5], \"energy_level\": \"low\", \"role\": \"foundational_rule_setup\", \"drivers\": [\"basic_core_instruction_output\", \"low_scene_cut_density\"], \"evidence_refs\": [\"script:seg_..."
+          }
+        ]
+      }
+    }
+  }
+}
