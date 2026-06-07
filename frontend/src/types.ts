@@ -97,8 +97,37 @@ export interface VideoStructure {
 export interface AnalysisResult {
   video_id: string;
   video_url: string;
+  stage2_variant?: 'main' | 'leo';
+  stage2_failed?: boolean;
+  stage1_only?: boolean;
+  pending_variant?: 'main' | 'leo';
+  error?: string;
   video_structure: VideoStructure;
+  synthesis_result?: SynthesisResult;
   evidence_package: Record<string, unknown> | null;
+}
+
+// Leo variant Stage 2 (viral dimension analysis)
+export interface EvidenceItem {
+  source: string;
+  reference?: string;
+  quote?: string;
+  reasoning?: string;
+}
+
+export interface ClusteredDimension {
+  dimension_name: string;
+  viral_mechanism: string;
+  agent_agreement_count: number;
+  avg_strength_score: number;
+  supporting_agent_ids: number[];
+  representative_evidence: EvidenceItem[];
+}
+
+export interface SynthesisResult {
+  ranked_dimensions: ClusteredDimension[];
+  top_viral_reason: string;
+  analysis_note?: string;
 }
 
 // Stage 3 migration types

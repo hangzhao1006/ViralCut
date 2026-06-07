@@ -9,8 +9,10 @@ Run:
 from __future__ import annotations
 
 import os
+
 from dotenv import load_dotenv
-load_dotenv()
+
+load_dotenv()  # read .env when running locally (Docker injects via env_file)
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

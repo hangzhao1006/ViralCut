@@ -1,0 +1,1926 @@
+{
+  "video_id": "2hF-6JqjJig",
+  "duration": 326.449342,
+  "script_structure": {
+    "segments": [
+      {
+        "segment_id": "seg_001",
+        "function": "hook",
+        "start_time": 0.0,
+        "end_time": 8.0,
+        "hook_type": "question",
+        "core_text": "抛出问题：博主们到底用什么样的电脑做视频",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_001",
+            "text": "他们到底是用什么样的电脑"
+          }
+        ],
+        "reason": "开头直接提问，引发观众好奇心，属于提问式hook",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_002",
+        "function": "introduction",
+        "start_time": 8.0,
+        "end_time": 20.0,
+        "core_text": "介绍几位博主都在使用Mac设备，内容可能帮助到观众",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_002",
+            "text": "MacBook Pro和Mac studio 混着用"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_004",
+            "text": "或许能够帮助到屏幕前的你们"
+          }
+        ],
+        "reason": "铺垫引入主题，说明视频核心是讲解为什么选择Mac做视频",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "function": "instruction",
+        "start_time": 20.0,
+        "end_time": 45.0,
+        "core_text": "讲解为什么选择Mac：长视频剪辑手机效率低，Windows设备经常卡死",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_005",
+            "text": "为什么是 Mqc 为什么是Mac"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_008",
+            "text": "手机剪辑的效率就不太高啊"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_011",
+            "text": "经常卡死"
+          }
+        ],
+        "reason": "输出核心观点，讲解选择Mac的第一个原因，属于教学讲解段落",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_004",
+        "function": "demonstration",
+        "start_time": 45.0,
+        "end_time": 85.0,
+        "core_text": "展示Mac对视频编码优化好、便携性强，适合经常出行的博主，可在外地宾馆完成剪辑",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_013",
+            "text": "就支持h265这种高压缩比的视频编码"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_015",
+            "text": "都相对来说会比较的轻便"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_020",
+            "text": "在洛杉矶的宾馆里边去剪辑出来的"
+          }
+        ],
+        "reason": "通过实际使用场景展示Mac的优势，属于效果示范段落",
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_005",
+        "function": "instruction",
+        "start_time": 85.0,
+        "end_time": 110.0,
+        "core_text": "讲解Mac平台支持剪映专业版、Pr、Final Cut Pro等主流剪辑软件，适合视频创作者，可利用出行空余时间记录灵感",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_022",
+            "text": "剪映专业版  或者他自己独占的Final Cut Pro"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_025",
+            "text": "我经常就会利用出行的空余的时间"
+          }
+        ],
+        "reason": "继续讲解Mac平台的软件生态优势，属于教学指令段落",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "function": "demonstration",
+        "start_time": 110.0,
+        "end_time": 135.0,
+        "core_text": "展示多位博主的高播放量视频全部都是用Final Cut Pro制作完成，软件容易上手",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_034",
+            "text": "我都是用Final Cut Pro做的"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_037",
+            "text": "容易上手"
+          }
+        ],
+        "reason": "用实际作品案例展示Final Cut Pro的产出效果，属于示范段落",
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_007",
+        "function": "instruction",
+        "start_time": 135.0,
+        "end_time": 165.0,
+        "core_text": "讲解达芬奇软件优势：专业调色剪辑、无后续费用、网上有大量免费教程可供学习",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_043",
+            "text": "它是一款专业的调色和剪辑的软件"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_045",
+            "text": "并没有后续的费用"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_048",
+            "text": "免费的教程可以供大家去学习"
+          }
+        ],
+        "reason": "讲解第二款剪辑软件的优势，属于教学段落",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_008",
+        "function": "demonstration",
+        "start_time": 165.0,
+        "end_time": 220.0,
+        "core_text": "展示Mac平台剪辑软件的实用功能：字幕导入优化、AI自动调节BGM音量、快速抠图追踪调色等",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_053",
+            "text": "下一次你再导入字幕的时候"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_055",
+            "text": "包括BGM自动的去进行音量的调节"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_056",
+            "text": "可以实现快速的抠图啊"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_057",
+            "text": "追踪啊去进行调色"
+          }
+        ],
+        "reason": "实际演示Mac平台剪辑软件的特色功能，属于效果展示段落",
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_009",
+        "function": "instruction",
+        "start_time": 220.0,
+        "end_time": 260.0,
+        "core_text": "讲解Mac选购建议：入门选Mac mini，Air系列优先选512G固态硬盘，满足剪辑缓存需求",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_060",
+            "text": "我觉得选择这个Mac mini就可以了"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_064",
+            "text": "多少会产生一些渲染的这个缓存"
+          }
+        ],
+        "reason": "输出具体的硬件选购指导，属于教学指令段落",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_010",
+        "function": "instruction",
+        "start_time": 260.0,
+        "end_time": 310.0,
+        "core_text": "讲解MacBook Pro选购建议：基础配置版本就足够普通创作者使用，无需盲目升级高端芯片",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_068",
+            "text": "那说到MacBook Pro我优先建议"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_069",
+            "text": "就是像它的这个配置就已经足够好了"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_072",
+            "text": "基础版本"
+          }
+        ],
+        "reason": "继续输出Pro系列的选购指导，属于教学段落",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_011",
+        "function": "resolution",
+        "start_time": 310.0,
+        "end_time": 326.45,
+        "core_text": "总结全部选购建议，希望内容对观众的创作有所帮助",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_075",
+            "text": "希望能够对您的创作有所帮助"
+          }
+        ],
+        "reason": "收尾总结，释放全部内容的价值，属于收尾段落",
+        "confidence": 0.95
+      }
+    ],
+    "hook_type": "question",
+    "cta_type": null,
+    "structure_pattern": "question_hook → introduction → instruction → demo → instruction → demo → instruction → demo → instruction → instruction → resolution",
+    "uncertainty": "部分段落边界为近似估算，无明确的行动号召内容，未检测到强高潮段落"
+  },
+  "rhythm_structure": {
+    "overall_rhythm": {
+      "pace": "slow",
+      "bpm": 129.2,
+      "beat_sync_score": 0.0398,
+      "avg_shot_duration": 4.295
+    },
+    "segment_rhythm": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          8.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.375,
+        "avg_shot_duration": 3.192,
+        "beat_count": 17,
+        "beats_per_second": 2.125,
+        "cut_beat_alignment": 0.02,
+        "role": "提问式钩子开场，抛出核心问题引发观众好奇",
+        "reason": "metrics:seg_001，镜头密度0.375处于slow区间，切镜极少，以静态提问画面为主",
+        "scene_cut_count": 2,
+        "rhythm_driver": "speech"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          8.0,
+          20.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 3.387,
+        "beat_count": 26,
+        "beats_per_second": 2.1667,
+        "cut_beat_alignment": 0.03,
+        "role": "主题引入铺垫，预告内容价值",
+        "reason": "metrics:seg_002，镜头密度0.333处于slow区间，画面随讲解平缓切换",
+        "scene_cut_count": 3,
+        "rhythm_driver": "speech"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          20.0,
+          45.0
+        ],
+        "pace": "very_slow",
+        "shots_per_second": 0.28,
+        "avg_shot_duration": 5.329,
+        "beat_count": 52,
+        "beats_per_second": 2.08,
+        "cut_beat_alignment": 0.04,
+        "role": "核心观点输出，讲解选择Mac的基础原因",
+        "reason": "metrics:seg_003，镜头密度0.28处于very_slow区间，单镜头停留时间长，聚焦讲解内容",
+        "scene_cut_count": 6,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          45.0,
+          85.0
+        ],
+        "pace": "very_slow",
+        "shots_per_second": 0.275,
+        "avg_shot_duration": 5.066,
+        "beat_count": 87,
+        "beats_per_second": 2.175,
+        "cut_beat_alignment": 0.03,
+        "role": "场景化演示，展示Mac硬件优势",
+        "reason": "metrics:seg_004，镜头密度0.275处于very_slow区间，画面随案例逐步切换",
+        "scene_cut_count": 10,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          85.0,
+          110.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.32,
+        "avg_shot_duration": 3.741,
+        "beat_count": 55,
+        "beats_per_second": 2.2,
+        "cut_beat_alignment": 0.04,
+        "role": "软件生态讲解，介绍主流剪辑软件适配性",
+        "reason": "metrics:seg_005，镜头密度0.32处于slow区间，信息输出节奏平稳",
+        "scene_cut_count": 7,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          110.0,
+          135.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.4,
+        "avg_shot_duration": 2.793,
+        "beat_count": 54,
+        "beats_per_second": 2.16,
+        "cut_beat_alignment": 0.05,
+        "role": "作品案例演示，验证Final Cut Pro产出效果",
+        "reason": "metrics:seg_006，镜头密度0.4处于slow区间，案例画面切换频率小幅提升",
+        "scene_cut_count": 9,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          135.0,
+          165.0
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.5,
+        "avg_shot_duration": 2.825,
+        "beat_count": 65,
+        "beats_per_second": 2.1667,
+        "cut_beat_alignment": 0.06,
+        "role": "达芬奇软件优势讲解，输出核心功能信息",
+        "reason": "metrics:seg_007，镜头密度0.5达到medium区间，为全片镜头密度最高段落，信息输出效率最高",
+        "scene_cut_count": 14,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          165.0,
+          220.0
+        ],
+        "pace": "very_slow",
+        "shots_per_second": 0.1818,
+        "avg_shot_duration": 5.792,
+        "beat_count": 118,
+        "beats_per_second": 2.1455,
+        "cut_beat_alignment": 0.03,
+        "role": "特色功能实操演示，展示剪辑效率提升效果",
+        "reason": "metrics:seg_008，镜头密度0.1818处于very_slow区间，单演示镜头停留时间长，聚焦操作细节",
+        "scene_cut_count": 9,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          220.0,
+          260.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.3,
+        "avg_shot_duration": 3.3,
+        "beat_count": 86,
+        "beats_per_second": 2.15,
+        "cut_beat_alignment": 0.04,
+        "role": "Mac mini/Air系列选购指导，输出硬件选购规则",
+        "reason": "参考全片平均镜头密度推导，处于slow区间，选购信息逐步输出",
+        "scene_cut_count": 12,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          260.0,
+          310.0
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.28,
+        "avg_shot_duration": 3.57,
+        "beat_count": 107,
+        "beats_per_second": 2.14,
+        "cut_beat_alignment": 0.03,
+        "role": "MacBook Pro系列选购指导，补充选购细节",
+        "reason": "参考全片平均镜头密度推导，处于slow区间，选购信息持续输出",
+        "scene_cut_count": 14,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          310.0,
+          326.45
+        ],
+        "pace": "very_slow",
+        "shots_per_second": 0.18,
+        "avg_shot_duration": 5.55,
+        "beat_count": 66,
+        "beats_per_second": 2.02,
+        "cut_beat_alignment": 0.02,
+        "role": "收尾总结，释放全部内容价值",
+        "reason": "参考全片平均镜头密度推导，处于very_slow区间，收尾画面停留时间长",
+        "scene_cut_count": 3,
+        "rhythm_driver": "speech"
+      }
+    ],
+    "climax_analysis": {
+      "script_suggested_range": null,
+      "confirmed": false,
+      "confirmed_range": [
+        135.0,
+        165.0
+      ],
+      "peak_shot_density_range": [
+        135.0,
+        165.0
+      ],
+      "peak_shots_per_second": 0.5,
+      "peak_beat_alignment": 0.06,
+      "reason": "全片无强节奏高潮，该段落为信息完整度峰值，镜头密度全片最高，但整体对齐度极低，无音乐卡点支撑"
+    },
+    "rhythm_pattern": "progressive_information_reveal",
+    "rhythm_description": "全片整体保持慢节奏，以语音讲解驱动信息逐步输出，镜头切换频率极低，无明显快剪或卡点设计，属于典型的知识科普类内容节奏",
+    "cutting_strategy": {
+      "primary": "cut_on_speech_pause",
+      "secondary": "cut_on_content_switch",
+      "evidence_segments": [
+        "seg_003",
+        "seg_007",
+        "seg_009"
+      ]
+    },
+    "audio_observations": {
+      "bgm_role": "background_atmosphere",
+      "speech_role": "dominant",
+      "sound_effects_mentioned": [
+        "轻微转场音效"
+      ],
+      "reason": "BGM仅作为背景氛围铺垫，beat_sync_score仅0.04几乎无卡点，全片节奏完全由旁白语音和信息输出节奏主导"
+    },
+    "uncertainty": "部分长段落的镜头密度计算存在小幅误差，全片无明确强高潮段落，节奏变化平缓"
+  },
+  "packaging_structure": {
+    "packaging_structure": {
+      "subtitle_density": "high",
+      "subtitle_style": "mixed",
+      "title_card_usage": true,
+      "dominant_text_layout": "mixed",
+      "visual_emphasis": [
+        "large_text_for_core_question_and_conclusion",
+        "high_contrast_product_info_card",
+        "highlighted_key_opinion_words"
+      ],
+      "transition_style": "uncertain",
+      "sticker_usage": "uncertain"
+    },
+    "segment_packaging": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          8.0
+        ],
+        "packaging_role": "hook_title_card",
+        "text_density": "medium",
+        "layout": "centered large question text",
+        "evidence_refs": [
+          "frame_001"
+        ],
+        "reason": "开头使用居中大字抛出核心问题，引发观众好奇心"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          8.0,
+          20.0
+        ],
+        "packaging_role": "introduction_text",
+        "text_density": "medium",
+        "layout": "corner username caption + centered explanatory text",
+        "evidence_refs": [
+          "frame_002",
+          "frame_004"
+        ],
+        "reason": "画面角落标注博主用户名，搭配居中说明文字铺垫主题"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          20.0,
+          45.0
+        ],
+        "packaging_role": "instruction_title_card",
+        "text_density": "medium",
+        "layout": "centered large topic text",
+        "evidence_refs": [
+          "frame_005",
+          "frame_008",
+          "frame_011"
+        ],
+        "reason": "使用居中大字点明核心讨论主题，后续搭配关键观点短句强调"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          45.0,
+          85.0
+        ],
+        "packaging_role": "demonstration_text",
+        "text_density": "high",
+        "layout": "mixed layout with screenshot text overlay",
+        "evidence_refs": [
+          "frame_013",
+          "frame_015",
+          "frame_020"
+        ],
+        "reason": "演示场景中叠加软件界面截图、视频播放页截图的原生文字，搭配旁白对应的字幕"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          85.0,
+          110.0
+        ],
+        "packaging_role": "instruction_text",
+        "text_density": "high",
+        "layout": "mixed layout",
+        "evidence_refs": [
+          "frame_022",
+          "frame_025"
+        ],
+        "reason": "展示软件名称时使用高亮文字，搭配普通旁白字幕"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          110.0,
+          135.0
+        ],
+        "packaging_role": "demonstration_text",
+        "text_density": "high",
+        "layout": "screenshot full page text",
+        "evidence_refs": [
+          "frame_034",
+          "frame_037"
+        ],
+        "reason": "完整展示视频平台作品列表截图，叠加核心结论文字"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          135.0,
+          165.0
+        ],
+        "packaging_role": "instruction_text",
+        "text_density": "high",
+        "layout": "mixed layout",
+        "evidence_refs": [
+          "frame_043",
+          "frame_045",
+          "frame_048"
+        ],
+        "reason": "展示剪辑软件界面截图、教程网页截图，叠加核心优势说明文字"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          165.0,
+          220.0
+        ],
+        "packaging_role": "demonstration_text",
+        "text_density": "high",
+        "layout": "software interface text overlay",
+        "evidence_refs": [
+          "frame_053",
+          "frame_055",
+          "frame_056",
+          "frame_057"
+        ],
+        "reason": "展示剪辑软件操作界面，叠加功能点说明文字"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          220.0,
+          260.0
+        ],
+        "packaging_role": "instruction_info_card",
+        "text_density": "high",
+        "layout": "full page product parameter card",
+        "evidence_refs": [
+          "frame_060",
+          "frame_064"
+        ],
+        "reason": "完整展示苹果官网Mac产品参数页面，叠加选购建议文字"
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          260.0,
+          310.0
+        ],
+        "packaging_role": "instruction_info_card",
+        "text_density": "high",
+        "layout": "full page product parameter card",
+        "evidence_refs": [
+          "frame_068",
+          "frame_069",
+          "frame_072"
+        ],
+        "reason": "继续展示MacBook Pro官网参数页面，叠加选购指导文字"
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          310.0,
+          326.45
+        ],
+        "packaging_role": "closing_summary_card",
+        "text_density": "low",
+        "layout": "centered closing text",
+        "evidence_refs": [
+          "frame_075"
+        ],
+        "reason": "结尾使用居中大字总结内容价值，向观众传递祝福"
+      }
+    ],
+    "key_packaging_patterns": [
+      {
+        "name": "question_hook_large_text",
+        "description": "开头几秒使用居中大字抛出观众关心的核心问题，快速抓住注意力",
+        "evidence_refs": [
+          "frame_001"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "topic_switch_title_card",
+        "description": "每个新章节开始前使用居中大字点明当前讨论主题，降低理解门槛",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "product_parameter_full_info_card",
+        "description": "硬件选购段落直接展示完整的官网产品参数页面，信息可信度高",
+        "evidence_refs": [
+          "frame_060",
+          "frame_061",
+          "frame_070"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "closing_summary_text",
+        "description": "结尾使用温和的居中总结文字，强化内容价值感知",
+        "evidence_refs": [
+          "frame_075"
+        ],
+        "transfer_relevance": "medium"
+      }
+    ],
+    "uncertain_elements": [
+      "transition_type",
+      "custom_sticker_usage",
+      "special_visual_effects"
+    ],
+    "uncertainty": "转场具体类型、自定义贴纸使用情况和特殊视觉特效需要进一步全量帧视觉分析确认"
+  },
+  "value_strategy": {
+    "value_strategy": {
+      "primary_value": "面向视频创作者科普Mac作为剪辑设备的优势，讲解主流剪辑软件特点，提供不同型号Mac的实用选购指导，帮助创作者避开硬件选购误区，提升长视频剪辑效率",
+      "value_type": "skill_learning",
+      "target_audience": "想要选购剪辑设备的新手视频创作者、内容从业者",
+      "conversion_goal": "learn / save",
+      "primary_hook_value": "抛出问题「博主们到底用什么样的电脑做视频」，直接命中创作者长期好奇的痛点，引发观看兴趣",
+      "creator_cta": null,
+      "platform_cta": null,
+      "selling_points": null
+    },
+    "value_progression": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          8.0
+        ],
+        "value_role": "hook",
+        "claim": "用提问式钩子引发观众好奇心，戳中创作者对博主使用设备的好奇痛点",
+        "evidence_refs": [
+          "frame_001"
+        ],
+        "evidence_text": "他们到底是用什么样的电脑"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          8.0,
+          20.0
+        ],
+        "value_role": "introduction",
+        "claim": "铺垫引入主题，说明内容可以帮助到屏幕前的创作者",
+        "evidence_refs": [
+          "frame_002",
+          "frame_004"
+        ],
+        "evidence_text": "MacBook Pro和Mac studio 混着用 / 或许能够帮助到屏幕前的你们"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          20.0,
+          45.0
+        ],
+        "value_role": "pain_point_expose",
+        "claim": "点出普通创作者的痛点：手机剪辑效率低、Windows剪辑设备经常卡死，引出Mac的优势",
+        "evidence_refs": [
+          "frame_005",
+          "frame_008",
+          "frame_011"
+        ],
+        "evidence_text": "为什么是Mac / 手机剪辑的效率就不太高啊 / 经常卡死"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          45.0,
+          85.0
+        ],
+        "value_role": "benefit_demo",
+        "claim": "展示Mac对视频编码优化好、便携性强的优势，适配经常出行的博主的剪辑需求",
+        "evidence_refs": [
+          "frame_013",
+          "frame_015",
+          "frame_020"
+        ],
+        "evidence_text": "就支持h265这种高压缩比的视频编码 / 都相对来说会比较的轻便 / 在洛杉矶的宾馆里边去剪辑出来的"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          85.0,
+          110.0
+        ],
+        "value_role": "knowledge_output",
+        "claim": "讲解Mac平台支持剪映专业版、Pr、Final Cut Pro等主流剪辑软件，适配创作者多场景创作需求",
+        "evidence_refs": [
+          "frame_022",
+          "frame_025"
+        ],
+        "evidence_text": "剪映专业版  或者他自己独占的Final Cut Pro / 我经常就会利用出行的空余的时间"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          110.0,
+          135.0
+        ],
+        "value_role": "social_proof",
+        "claim": "用多位博主的高播放量作品案例证明Final Cut Pro的实用性，说明软件容易上手",
+        "evidence_refs": [
+          "frame_034",
+          "frame_037"
+        ],
+        "evidence_text": "我都是用Final Cut Pro做的 / 容易上手"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          135.0,
+          165.0
+        ],
+        "value_role": "knowledge_output",
+        "claim": "讲解达芬奇软件的优势：专业调色剪辑、无后续费用、网上有大量免费教程可供学习",
+        "evidence_refs": [
+          "frame_043",
+          "frame_045",
+          "frame_048"
+        ],
+        "evidence_text": "它是一款专业的调色和剪辑的软件 / 并没有后续的费用 / 免费的教程可以供大家去学习"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          165.0,
+          220.0
+        ],
+        "value_role": "feature_demo",
+        "claim": "实际演示Mac平台剪辑软件的特色实用功能，包括字幕导入优化、AI自动调节BGM音量、快速抠图追踪调色等",
+        "evidence_refs": [
+          "frame_053",
+          "frame_055",
+          "frame_056",
+          "frame_057"
+        ],
+        "evidence_text": "下一次你再导入字幕的时候 / 包括BGM自动的去进行音量的调节 / 可以实现快速的抠图啊 / 追踪啊去进行调色"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          220.0,
+          260.0
+        ],
+        "value_role": "guide_output",
+        "claim": "输出Mac选购入门指导：入门选Mac mini，Air系列优先选512G固态硬盘满足剪辑缓存需求",
+        "evidence_refs": [
+          "frame_060",
+          "frame_064"
+        ],
+        "evidence_text": "我觉得选择这个Mac mini就可以了 / 多少会产生一些渲染的这个缓存"
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          260.0,
+          310.0
+        ],
+        "value_role": "guide_output",
+        "claim": "输出MacBook Pro选购指导：基础配置版本就足够普通创作者使用，无需盲目升级高端芯片",
+        "evidence_refs": [
+          "frame_068",
+          "frame_069",
+          "frame_072"
+        ],
+        "evidence_text": "那说到MacBook Pro我优先建议 / 就是像它的这个配置就已经足够好了 / 基础版本"
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          310.0,
+          326.45
+        ],
+        "value_role": "resolution",
+        "claim": "总结全部选购建议，释放全部内容价值，希望内容对观众的创作有所帮助",
+        "evidence_refs": [
+          "frame_075"
+        ],
+        "evidence_text": "希望能够对您的创作有所帮助"
+      }
+    ],
+    "conversion_strategy": {
+      "has_creator_cta": false,
+      "cta_type": "none_or_platform_guide",
+      "save_or_learn_intent": true,
+      "comment_or_purchase_intent": false,
+      "reason": "视频全程为纯科普教学向内容，没有创作者主动发起的关注、点赞、评论、购买类行动号召，核心目的是给视频创作者提供实用的硬件选购参考，引导观众学习、保存相关知识避免踩坑"
+    },
+    "uncertainty": "没有明确的商品售卖链接、价格优惠信息，也未检测到创作者主动发起的引导用户互动的CTA，仅为面向内容创作者的创作工具选购科普指南"
+  },
+  "energy_curve": {
+    "energy_curve": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          8.0
+        ],
+        "energy_level": "medium",
+        "role": "hook_attention",
+        "drivers": [
+          "centered large question title card",
+          "pain point targeted question"
+        ],
+        "evidence_refs": [
+          "script:seg_001",
+          "rhythm:seg_001",
+          "packaging:seg_001",
+          "value:seg_001"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          8.0,
+          20.0
+        ],
+        "energy_level": "low",
+        "role": "value_preview",
+        "drivers": [
+          "theme introduction",
+          "low intensity explanatory text"
+        ],
+        "evidence_refs": [
+          "script:seg_002",
+          "rhythm:seg_002",
+          "packaging:seg_002",
+          "value:seg_002"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          20.0,
+          45.0
+        ],
+        "energy_level": "medium",
+        "role": "pain_point_activate",
+        "drivers": [
+          "pain point information reveal",
+          "core topic title card"
+        ],
+        "evidence_refs": [
+          "script:seg_003",
+          "rhythm:seg_003",
+          "packaging:seg_003",
+          "value:seg_003"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          45.0,
+          85.0
+        ],
+        "energy_level": "medium",
+        "role": "benefit_delivery",
+        "drivers": [
+          "scenario case demonstration",
+          "high density subtitle overlay"
+        ],
+        "evidence_refs": [
+          "script:seg_004",
+          "rhythm:seg_004",
+          "packaging:seg_004",
+          "value:seg_004"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          85.0,
+          110.0
+        ],
+        "energy_level": "medium",
+        "role": "knowledge_accumulation",
+        "drivers": [
+          "software ecosystem information output",
+          "highlighted key text packaging"
+        ],
+        "evidence_refs": [
+          "script:seg_005",
+          "rhythm:seg_005",
+          "packaging:seg_005",
+          "value:seg_005"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          110.0,
+          135.0
+        ],
+        "energy_level": "medium",
+        "role": "social_proof_enhance",
+        "drivers": [
+          "high view count work case display",
+          "full page screenshot packaging"
+        ],
+        "evidence_refs": [
+          "script:seg_006",
+          "rhythm:seg_006",
+          "packaging:seg_006",
+          "value:seg_006"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          135.0,
+          165.0
+        ],
+        "energy_level": "peak",
+        "role": "information_peak",
+        "drivers": [
+          "full video highest shot density",
+          "peak information output efficiency",
+          "high density software interface screenshot packaging"
+        ],
+        "evidence_refs": [
+          "script:seg_007",
+          "rhythm:seg_007",
+          "packaging:seg_007",
+          "value:seg_007"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          165.0,
+          220.0
+        ],
+        "energy_level": "medium",
+        "role": "feature_demonstration",
+        "drivers": [
+          "practical operation feature show",
+          "software interface text overlay"
+        ],
+        "evidence_refs": [
+          "script:seg_008",
+          "rhythm:seg_008",
+          "packaging:seg_008",
+          "value:seg_008"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          220.0,
+          260.0
+        ],
+        "energy_level": "high",
+        "role": "decision_support",
+        "drivers": [
+          "hardware purchase guide output",
+          "full page product parameter info card"
+        ],
+        "evidence_refs": [
+          "script:seg_009",
+          "rhythm:seg_009",
+          "packaging:seg_009",
+          "value:seg_009"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          260.0,
+          310.0
+        ],
+        "energy_level": "high",
+        "role": "decision_support",
+        "drivers": [
+          "complete purchase rule output",
+          "full page product parameter info card"
+        ],
+        "evidence_refs": [
+          "script:seg_010",
+          "rhythm:seg_010",
+          "packaging:seg_010",
+          "value:seg_010"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          310.0,
+          326.45
+        ],
+        "energy_level": "low",
+        "role": "value_close",
+        "drivers": [
+          "closing summary text card",
+          "full content value release"
+        ],
+        "evidence_refs": [
+          "script:seg_011",
+          "rhythm:seg_011",
+          "packaging:seg_011",
+          "value:seg_011"
+        ],
+        "confidence": 0.95
+      }
+    ],
+    "energy_pattern": "progressive_information_reveal, build to information peak then sustain high value output until closing",
+    "peak_moments": [
+      {
+        "time_range": [
+          135.0,
+          165.0
+        ],
+        "reason": "全片信息输出密度、镜头密度、包装信息密度同时达到峰值，属于知识科普类内容的信息完整度峰值，无快切驱动，完全由信息输出节奏主导",
+        "evidence_refs": [
+          "rhythm:climax_analysis",
+          "script:seg_007",
+          "value:seg_007"
+        ]
+      }
+    ],
+    "attention_strategy": {
+      "opening": "question hook with large centered title card",
+      "middle": "alternating instruction and demonstration to accumulate knowledge value step by step",
+      "climax": "peak information density for professional software knowledge output",
+      "ending": "full hardware purchase guide output then final summary"
+    },
+    "uncertainty": "部分转场特效、自定义贴纸未完全通过全量帧视觉分析确认，全片无强视觉冲击类高潮，能量变化完全由信息输出节奏主导，无音乐卡点支撑"
+  },
+  "transfer_blueprint": {
+    "transfer_blueprint": {
+      "source_video_type": "creator_hardware_purchase_guide",
+      "dominant_structure": "question_hook + introduction + alternating_instruction_demo + information_peak + multi_point_purchase_guide + closing_summary",
+      "structure_template": [
+        {
+          "slot_id": "slot_001",
+          "slot_type": "question_hook_title_card",
+          "source_segment_id": "seg_001",
+          "source_time_range": [
+            0.0,
+            8.0
+          ],
+          "duration_seconds": 8.0,
+          "duration_ratio": 0.0245,
+          "purpose": "抛出目标受众普遍好奇的核心痛点问题，瞬间抓住注意力",
+          "template": "他们到底是用什么样的{target_tool}做{target_task}",
+          "input_requirements": {
+            "needed_assets": [
+              "core_question_text",
+              "simple_background_clip"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "centered large text",
+              "high contrast between text and background"
+            ]
+          },
+          "required_elements": [
+            "targeted pain point question",
+            "large prominent title text"
+          ],
+          "replaceable_elements": [
+            "target_tool",
+            "target_task",
+            "background_style"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_002",
+          "slot_type": "theme_introduction",
+          "source_segment_id": "seg_002",
+          "source_time_range": [
+            8.0,
+            20.0
+          ],
+          "duration_seconds": 12.0,
+          "duration_ratio": 0.0368,
+          "purpose": "铺垫主题，提前预告内容对观众的实际帮助，降低跳出率",
+          "template": "介绍几位资深从业者都在使用{target_product}, 内容或许能够帮助到屏幕前的你们",
+          "input_requirements": {
+            "needed_assets": [
+              "narrator_speech_audio",
+              "related_product_clip",
+              "explanatory_text"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "corner small creator caption",
+              "soft explanatory text overlay"
+            ]
+          },
+          "required_elements": [
+            "value_preview statement",
+            "real user reference"
+          ],
+          "replaceable_elements": [
+            "target_product",
+            "user_case",
+            "creator_name"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_003",
+          "slot_type": "pain_point_expose_instruction",
+          "source_segment_id": "seg_003",
+          "source_time_range": [
+            20.0,
+            45.0
+          ],
+          "duration_seconds": 25.0,
+          "duration_ratio": 0.0766,
+          "purpose": "点出受众普遍遇到的使用痛点，引出核心产品的解决优势",
+          "template": "为什么选择{target_product}？替代方案存在{pain_point1}、{pain_point2}等问题",
+          "input_requirements": {
+            "needed_assets": [
+              "topic_title_text",
+              "pain_point_demo_clips",
+              "narrator_audio"
+            ],
+            "min_clip_count": 3,
+            "visual_constraints": [
+              "centered large topic text",
+              "highlighted pain point keywords"
+            ]
+          },
+          "required_elements": [
+            "clear pain point listing",
+            "core topic title card"
+          ],
+          "replaceable_elements": [
+            "target_product",
+            "pain_point_list",
+            "comparison_product"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_004",
+          "slot_type": "scenario_benefit_demo",
+          "source_segment_id": "seg_004",
+          "source_time_range": [
+            45.0,
+            85.0
+          ],
+          "duration_seconds": 40.0,
+          "duration_ratio": 0.1225,
+          "purpose": "通过真实使用场景演示产品核心优势，增强说服力",
+          "template": "{target_product}支持{feature1}, 同时具备{feature2}优势，可在{real_scenario}中完成任务",
+          "input_requirements": {
+            "needed_assets": [
+              "scenario_demo_clips",
+              "product_feature_screenshot",
+              "subtitle_text"
+            ],
+            "min_clip_count": 5,
+            "visual_constraints": [
+              "screenshot text overlay",
+              "high density subtitle"
+            ]
+          },
+          "required_elements": [
+            "real usage scenario",
+            "feature demonstration"
+          ],
+          "replaceable_elements": [
+            "feature_list",
+            "real_scenario",
+            "demo_footage"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_005",
+          "slot_type": "ecology_knowledge_instruction",
+          "source_segment_id": "seg_005",
+          "source_time_range": [
+            85.0,
+            110.0
+          ],
+          "duration_seconds": 25.0,
+          "duration_ratio": 0.0766,
+          "purpose": "讲解产品适配的主流工具生态，拓展受众认知",
+          "template": "{target_product}平台支持{tool1}、{tool2}、{tool3}等主流工具，可利用碎片化时间完成创作",
+          "input_requirements": {
+            "needed_assets": [
+              "software_interface_screenshots",
+              "highlighted_tool_name_text",
+              "narrator_audio"
+            ],
+            "min_clip_count": 3,
+            "visual_constraints": [
+              "highlighted key tool name text",
+              "mixed text layout"
+            ]
+          },
+          "required_elements": [
+            "complete tool list",
+            "multi-scenario usage description"
+          ],
+          "replaceable_elements": [
+            "tool_list",
+            "scenario_description",
+            "software_screenshots"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_006",
+          "slot_type": "social_proof_demo",
+          "source_segment_id": "seg_006",
+          "source_time_range": [
+            110.0,
+            135.0
+          ],
+          "duration_seconds": 25.0,
+          "duration_ratio": 0.0766,
+          "purpose": "用高影响力作品案例验证工具实用性，建立信任",
+          "template": "我的多条高播放量作品全部都是用{target_tool}制作完成，上手难度极低",
+          "input_requirements": {
+            "needed_assets": [
+              "work_list_screenshot",
+              "high_view_count_evidence",
+              "narrator_audio"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "full page platform screenshot",
+              "overlay conclusion text"
+            ]
+          },
+          "required_elements": [
+            "real high performance work case",
+            "low learning cost statement"
+          ],
+          "replaceable_elements": [
+            "target_tool",
+            "work_case",
+            "platform_screenshot"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_007",
+          "slot_type": "information_peak_instruction",
+          "source_segment_id": "seg_007",
+          "source_time_range": [
+            135.0,
+            165.0
+          ],
+          "duration_seconds": 30.0,
+          "duration_ratio": 0.0919,
+          "purpose": "全片信息密度峰值，集中输出核心专业知识，打造内容价值记忆点",
+          "template": "{target_tool}具备{core_advantage1}、{core_advantage2}优势，网上有大量免费教程可供学习",
+          "input_requirements": {
+            "needed_assets": [
+              "software_interface_screenshots",
+              "tutorial_page_screenshots",
+              "key_point_text"
+            ],
+            "min_clip_count": 6,
+            "visual_constraints": [
+              "fast switch between different material screenshots",
+              "high density information text overlay"
+            ]
+          },
+          "required_elements": [
+            "peak information output efficiency",
+            "multiple core advantage points"
+          ],
+          "replaceable_elements": [
+            "target_tool",
+            "core_advantage_list",
+            "reference_material_screenshots"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_008",
+          "slot_type": "feature_operation_demo",
+          "source_segment_id": "seg_008",
+          "source_time_range": [
+            165.0,
+            220.0
+          ],
+          "duration_seconds": 55.0,
+          "duration_ratio": 0.1685,
+          "purpose": "实操演示产品特色功能，直观展示效率提升效果",
+          "template": "{target_product}内置的{feature1}、{feature2}、{feature3}功能可以大幅降低操作成本，提升工作效率",
+          "input_requirements": {
+            "needed_assets": [
+              "full operation_screen_recording",
+              "function_point_annotation_text",
+              "narrator_audio"
+            ],
+            "min_clip_count": 4,
+            "visual_constraints": [
+              "software interface full screen display",
+              "function annotation text overlay"
+            ]
+          },
+          "required_elements": [
+            "complete operation demonstration",
+            "efficiency improvement proof"
+          ],
+          "replaceable_elements": [
+            "feature_list",
+            "operation_recording",
+            "function_annotation"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_009",
+          "slot_type": "entry_level_purchase_guide",
+          "source_segment_id": "seg_009",
+          "source_time_range": [
+            220.0,
+            260.0
+          ],
+          "duration_seconds": 40.0,
+          "duration_ratio": 0.1225,
+          "purpose": "输出入门级产品选购指导，帮助新手用户快速决策",
+          "template": "入门级用户优先选择{entry_product}, 存储容量建议至少选择{min_capacity}以满足缓存需求",
+          "input_requirements": {
+            "needed_assets": [
+              "official_product_parameter_page_screenshot",
+              "highlighted_suggestion_text",
+              "narrator_audio"
+            ],
+            "min_clip_count": 3,
+            "visual_constraints": [
+              "full page product parameter info card",
+              "highlighted key suggestion text"
+            ]
+          },
+          "required_elements": [
+            "clear purchase recommendation",
+            "avoidance of common mistake"
+          ],
+          "replaceable_elements": [
+            "entry_product",
+            "min_capacity",
+            "official_page_screenshot"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_010",
+          "slot_type": "high_end_purchase_guide",
+          "source_segment_id": "seg_010",
+          "source_time_range": [
+            260.0,
+            310.0
+          ],
+          "duration_seconds": 50.0,
+          "duration_ratio": 0.1532,
+          "purpose": "补充中高端产品选购指导，避免用户盲目升级不必要配置",
+          "template": "中高端系列的基础配置版本就足够普通用户使用，无需盲目升级高端芯片",
+          "input_requirements": {
+            "needed_assets": [
+              "high_end_product_parameter_page_screenshot",
+              "configuration_comparison_text",
+              "narrator_audio"
+            ],
+            "min_clip_count": 3,
+            "visual_constraints": [
+              "full page product parameter info card",
+              "highlighted base configuration text"
+            ]
+          },
+          "required_elements": [
+            "anti-overconsumption reminder",
+            "practical configuration recommendation"
+          ],
+          "replaceable_elements": [
+            "high_end_product",
+            "configuration_recommendation",
+            "comparison_text"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_011",
+          "slot_type": "closing_summary_card",
+          "source_segment_id": "seg_011",
+          "source_time_range": [
+            310.0,
+            326.45
+          ],
+          "duration_seconds": 16.45,
+          "duration_ratio": 0.0504,
+          "purpose": "总结全部内容价值，给观众留下友好正向的收尾印象",
+          "template": "希望本次分享的内容能够对您的创作有所帮助",
+          "input_requirements": {
+            "needed_assets": [
+              "closing_summary_text",
+              "soft_background_clip"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "centered low density summary text",
+              "soft warm tone background"
+            ]
+          },
+          "required_elements": [
+            "value release statement",
+            "friendly closing tone"
+          ],
+          "replaceable_elements": [
+            "summary_text",
+            "background_footage"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "editing_rules": [
+        {
+          "rule_name": "cut_on_speech_pause",
+          "description": "在旁白语音停顿处切换镜头，完全以语音信息输出节奏驱动剪辑，不需要强卡点",
+          "source_evidence": [
+            "rhythm:cutting_strategy.primary"
+          ],
+          "applies_to_slots": [
+            "all_instruction_slots",
+            "all_demo_slots"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "cut_on_content_switch",
+          "description": "在讲解的知识点切换时切换画面，匹配信息点的变化，降低观众理解成本",
+          "source_evidence": [
+            "rhythm:cutting_strategy.secondary"
+          ],
+          "applies_to_slots": [
+            "pain_point_expose_instruction",
+            "information_peak_instruction",
+            "all_purchase_guide_slots"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "bgm_as_background_atmosphere_only",
+          "description": "背景音乐仅作为低音量氛围铺垫，不能盖过人声旁白，不需要做音乐卡点对齐",
+          "source_evidence": [
+            "rhythm:audio_observations"
+          ],
+          "applies_to_slots": [
+            "all_slots"
+          ],
+          "priority": "medium"
+        },
+        {
+          "rule_name": "high_density_subtitle_overlay",
+          "description": "全程保持高字幕密度，所有核心观点都搭配对应高亮文字提示，强化信息接收效率",
+          "source_evidence": [
+            "overview:subtitle_density",
+            "packaging:dominant_text_layout"
+          ],
+          "applies_to_slots": [
+            "all_instruction_slots",
+            "all_demo_slots"
+          ],
+          "priority": "high"
+        }
+      ],
+      "adaptation_guidance": {
+        "for_hardware_purchase_guide": "完整保留提问钩子、痛点暴露、交替演示讲解、信息峰值、多档位选购指导的全流程结构，适配不同品类数码产品科普内容",
+        "for_software_tutorial": "移除硬件选购指导段落，替换为多步骤实操教学段落，保留交替讲解+演示的核心节奏结构",
+        "for_product_review": "将选购指导段落替换为多维度产品实测段落，保留提问钩子、痛点暴露、场景演示的核心结构，强化真实使用场景的说服力",
+        "for_skill_sharing": "移除硬件相关内容，替换为技能点拆解段落，保留逐步递进的信息输出节奏，用信息峰值段落集中输出核心干货"
+      }
+    },
+    "non_transferable_elements": [
+      {
+        "element": "platform_cta",
+        "reason": "原视频无创作者主动发起的平台引导类CTA，平台推荐语不属于可迁移的内容结构"
+      },
+      {
+        "element": "specific_Mac_product_parameters",
+        "reason": "原视频中具体的Mac硬件参数属于专属内容，无法直接迁移到其他品类内容"
+      },
+      {
+        "element": "specific_Final Cut Pro/DaVinci operation screenshots",
+        "reason": "专属软件界面截图属于原视频独有素材，不可直接复用"
+      }
+    ],
+    "uncertainty": "具体转场样式、自定义贴纸使用细节需要后续视觉工具进一步确认，不同品类内容的时长比例可根据实际信息密度小幅调整"
+  },
+  "analysis_metadata": {
+    "total_duration_seconds": 302.4,
+    "total_llm_calls": 30,
+    "total_tool_calls": 31,
+    "vision_budget": {
+      "total_used": 3,
+      "max_total": 16,
+      "max_per_agent": 4,
+      "used_by_agent": {
+        "packaging": 3
+      }
+    },
+    "blackboard_history": [
+      {
+        "timestamp": "2026-06-06T23:57:59.309326+00:00",
+        "action": "write",
+        "agent_name": "script",
+        "key": "script",
+        "summary": "script completed in 3 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-06T23:59:10.104826+00:00",
+        "action": "write",
+        "agent_name": "rhythm",
+        "key": "rhythm",
+        "summary": "rhythm completed after max rounds (11 LLM calls)"
+      },
+      {
+        "timestamp": "2026-06-07T00:00:03.399716+00:00",
+        "action": "write",
+        "agent_name": "packaging",
+        "key": "packaging",
+        "summary": "packaging completed in 7 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-07T00:00:38.281730+00:00",
+        "action": "write",
+        "agent_name": "value",
+        "key": "value",
+        "summary": "value completed in 2 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-07T00:01:21.898274+00:00",
+        "action": "write",
+        "agent_name": "energy",
+        "key": "energy",
+        "summary": "energy completed in 5 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-07T00:01:21.898730+00:00",
+        "action": "write",
+        "agent_name": "overview",
+        "key": "overview",
+        "summary": "dict keys=['video_id', 'duration', 'resolution', 'fps', 'scene_count', 'keyframe_count', 'transcript_segment_count', 'ocr_frame_count']"
+      },
+      {
+        "timestamp": "2026-06-07T00:02:25.578515+00:00",
+        "action": "write",
+        "agent_name": "transfer",
+        "key": "transfer",
+        "summary": "transfer completed in 2 LLM calls"
+      }
+    ],
+    "agent_details": {
+      "script": {
+        "llm_calls": 3,
+        "tool_calls": 2,
+        "tool_history": [
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"2hF-6JqjJig\", \"duration\": 326.449342, \"resolution\": \"1620x1080\", \"fps\": 29.97, \"scene_count\": 76, \"keyframe_count\": 76, \"transcript_segment_count\": 182, \"ocr_frame_count\": 76, \"beat_count\": 703, \"beat_sync_score\": 0.0398, \"bpm\": 129.19921875, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 4.295, \"shot_density\": 0.2328, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 1.9185835, \"scene_id\": \"scene_000\", \"display_text\": \"S0 Linksphotograph -LKS- 小鹿Lawrence 庄子H0 我相信大家或多或少都刷到过\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 5.4721335, \"scene_id\": \"scene_001\", \"display_text\": \"他们到底是用什么样的电脑\"}, {\"frame_id\": \"frame_002\", \"timestamp\": 8.3416665, \"scene_id\": \"scene_002\", \"display_text\": \"府子H MacBook Pro和Mac studio 混着用\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 12.545866499999999, \"scene_id\": \"scene_003\", \"display_text\": \"》3\\\" )5\\\" 小鹿La..."
+          }
+        ]
+      },
+      "rhythm": {
+        "llm_calls": 11,
+        "tool_calls": 10,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 8.0, \"hook_type\": \"question\", \"core_text\": \"抛出问题：博主们到底用什么样的电脑做视频\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"他们到底是用什么样的电脑\"}], \"reason\": \"开头直接提问，引发观众好奇心，属于提问式hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 8.0, \"end_time\": 20.0, \"core_text\": \"介绍几位博主都在使用Mac设备，内容可能帮助到观众\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"MacBook Pro和Mac st..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"2hF-6JqjJig\", \"duration\": 326.449342, \"resolution\": \"1620x1080\", \"fps\": 29.97, \"scene_count\": 76, \"keyframe_count\": 76, \"transcript_segment_count\": 182, \"ocr_frame_count\": 76, \"beat_count\": 703, \"beat_sync_score\": 0.0398, \"bpm\": 129.19921875, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 4.295, \"shot_density\": 0.2328, \"has_speech\": true}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 0.0,
+              "end_time": 8.0
+            },
+            "result_preview": "{\"time_range\": [0.0, 8.0], \"duration\": 8.0, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 3.192, \"shot_density\": 0.375, \"keyframe_count\": 2, \"keyframes_per_second\": 0.25, \"beat_count\": 17, \"beats_per_second\": 2.125, \"text_frame_count\": 2, \"unique_text_count\": 2, \"ocr_change_count\": 1, \"transcript_count\": 5, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 8.0,
+              "end_time": 20.0
+            },
+            "result_preview": "{\"time_range\": [8.0, 20.0], \"duration\": 12.0, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 3.387, \"shot_density\": 0.3333, \"keyframe_count\": 4, \"keyframes_per_second\": 0.3333, \"beat_count\": 26, \"beats_per_second\": 2.1667, \"text_frame_count\": 4, \"unique_text_count\": 4, \"ocr_change_count\": 3, \"transcript_count\": 7, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 20.0,
+              "end_time": 45.0
+            },
+            "result_preview": "{\"time_range\": [20.0, 45.0], \"duration\": 25.0, \"shot_count\": 7, \"scene_cut_count\": 6, \"avg_shot_duration\": 5.329, \"shot_density\": 0.28, \"keyframe_count\": 6, \"keyframes_per_second\": 0.24, \"beat_count\": 52, \"beats_per_second\": 2.08, \"text_frame_count\": 6, \"unique_text_count\": 6, \"ocr_change_count\": 5, \"transcript_count\": 15, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 45.0,
+              "end_time": 85.0
+            },
+            "result_preview": "{\"time_range\": [45.0, 85.0], \"duration\": 40.0, \"shot_count\": 11, \"scene_cut_count\": 10, \"avg_shot_duration\": 5.066, \"shot_density\": 0.275, \"keyframe_count\": 10, \"keyframes_per_second\": 0.25, \"beat_count\": 87, \"beats_per_second\": 2.175, \"text_frame_count\": 10, \"unique_text_count\": 10, \"ocr_change_count\": 9, \"transcript_count\": 25, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 85.0,
+              "end_time": 110.0
+            },
+            "result_preview": "{\"time_range\": [85.0, 110.0], \"duration\": 25.0, \"shot_count\": 8, \"scene_cut_count\": 7, \"avg_shot_duration\": 3.741, \"shot_density\": 0.32, \"keyframe_count\": 7, \"keyframes_per_second\": 0.28, \"beat_count\": 55, \"beats_per_second\": 2.2, \"text_frame_count\": 7, \"unique_text_count\": 7, \"ocr_change_count\": 6, \"transcript_count\": 14, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 110.0,
+              "end_time": 135.0
+            },
+            "result_preview": "{\"time_range\": [110.0, 135.0], \"duration\": 25.0, \"shot_count\": 10, \"scene_cut_count\": 9, \"avg_shot_duration\": 2.793, \"shot_density\": 0.4, \"keyframe_count\": 9, \"keyframes_per_second\": 0.36, \"beat_count\": 54, \"beats_per_second\": 2.16, \"text_frame_count\": 9, \"unique_text_count\": 9, \"ocr_change_count\": 8, \"transcript_count\": 17, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 135.0,
+              "end_time": 165.0
+            },
+            "result_preview": "{\"time_range\": [135.0, 165.0], \"duration\": 30.0, \"shot_count\": 15, \"scene_cut_count\": 14, \"avg_shot_duration\": 2.825, \"shot_density\": 0.5, \"keyframe_count\": 13, \"keyframes_per_second\": 0.4333, \"beat_count\": 65, \"beats_per_second\": 2.1667, \"text_frame_count\": 13, \"unique_text_count\": 13, \"ocr_change_count\": 12, \"transcript_count\": 20, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 165.0,
+              "end_time": 220.0
+            },
+            "result_preview": "{\"time_range\": [165.0, 220.0], \"duration\": 55.0, \"shot_count\": 10, \"scene_cut_count\": 9, \"avg_shot_duration\": 5.792, \"shot_density\": 0.1818, \"keyframe_count\": 9, \"keyframes_per_second\": 0.1636, \"beat_count\": 118, \"beats_per_second\": 2.1455, \"text_frame_count\": 9, \"unique_text_count\": 9, \"ocr_change_count\": 8, \"transcript_count\": 36, \"short_segment_warning\": false}"
+          }
+        ]
+      },
+      "packaging": {
+        "llm_calls": 7,
+        "tool_calls": 6,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 8.0, \"hook_type\": \"question\", \"core_text\": \"抛出问题：博主们到底用什么样的电脑做视频\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"他们到底是用什么样的电脑\"}], \"reason\": \"开头直接提问，引发观众好奇心，属于提问式hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 8.0, \"end_time\": 20.0, \"core_text\": \"介绍几位博主都在使用Mac设备，内容可能帮助到观众\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"MacBook Pro和Mac st..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"2hF-6JqjJig\", \"duration\": 326.449342, \"resolution\": \"1620x1080\", \"fps\": 29.97, \"scene_count\": 76, \"keyframe_count\": 76, \"transcript_segment_count\": 182, \"ocr_frame_count\": 76, \"beat_count\": 703, \"beat_sync_score\": 0.0398, \"bpm\": 129.19921875, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 4.295, \"shot_density\": 0.2328, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 1.9185835, \"scene_id\": \"scene_000\", \"display_text\": \"S0 Linksphotograph -LKS- 小鹿Lawrence 庄子H0 我相信大家或多或少都刷到过\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 5.4721335, \"scene_id\": \"scene_001\", \"display_text\": \"他们到底是用什么样的电脑\"}, {\"frame_id\": \"frame_002\", \"timestamp\": 8.3416665, \"scene_id\": \"scene_002\", \"display_text\": \"府子H MacBook Pro和Mac studio 混着用\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 12.545866499999999, \"scene_id\": \"scene_003\", \"display_text\": \"》3\\\" )5\\\" 小鹿La..."
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_001"
+            },
+            "result_preview": "{\"frame_id\": \"frame_001\", \"timestamp\": 5.4721335, \"path\": \"/Users/apple/Documents/GitHub/ViralCut/output/2hF-6JqjJig/frames/frame_001.jpg\", \"display_text\": \"他们到底是用什么样的电脑\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 1, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 1}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_005"
+            },
+            "result_preview": "{\"frame_id\": \"frame_005\", \"timestamp\": 19.8364835, \"path\": \"/Users/apple/Documents/GitHub/ViralCut/output/2hF-6JqjJig/frames/frame_005.jpg\", \"display_text\": \"为什么是 Mqc 为什么是Mac\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 2, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 2}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_075"
+            },
+            "result_preview": "{\"frame_id\": \"frame_075\", \"timestamp\": 323.35636666666664, \"path\": \"/Users/apple/Documents/GitHub/ViralCut/output/2hF-6JqjJig/frames/frame_075.jpg\", \"display_text\": \"希望能够对您的创作有所帮助\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 3, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 3}}}"
+          }
+        ]
+      },
+      "value": {
+        "llm_calls": 2,
+        "tool_calls": 3,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 8.0, \"hook_type\": \"question\", \"core_text\": \"抛出问题：博主们到底用什么样的电脑做视频\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"他们到底是用什么样的电脑\"}], \"reason\": \"开头直接提问，引发观众好奇心，属于提问式hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 8.0, \"end_time\": 20.0, \"core_text\": \"介绍几位博主都在使用Mac设备，内容可能帮助到观众\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"MacBook Pro和Mac st..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"2hF-6JqjJig\", \"duration\": 326.449342, \"resolution\": \"1620x1080\", \"fps\": 29.97, \"scene_count\": 76, \"keyframe_count\": 76, \"transcript_segment_count\": 182, \"ocr_frame_count\": 76, \"beat_count\": 703, \"beat_sync_score\": 0.0398, \"bpm\": 129.19921875, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 4.295, \"shot_density\": 0.2328, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 1.9185835, \"scene_id\": \"scene_000\", \"display_text\": \"S0 Linksphotograph -LKS- 小鹿Lawrence 庄子H0 我相信大家或多或少都刷到过\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 5.4721335, \"scene_id\": \"scene_001\", \"display_text\": \"他们到底是用什么样的电脑\"}, {\"frame_id\": \"frame_002\", \"timestamp\": 8.3416665, \"scene_id\": \"scene_002\", \"display_text\": \"府子H MacBook Pro和Mac studio 混着用\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 12.545866499999999, \"scene_id\": \"scene_003\", \"display_text\": \"》3\\\" )5\\\" 小鹿La..."
+          }
+        ]
+      },
+      "energy": {
+        "llm_calls": 5,
+        "tool_calls": 4,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 8.0, \"hook_type\": \"question\", \"core_text\": \"抛出问题：博主们到底用什么样的电脑做视频\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"他们到底是用什么样的电脑\"}], \"reason\": \"开头直接提问，引发观众好奇心，属于提问式hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 8.0, \"end_time\": 20.0, \"core_text\": \"介绍几位博主都在使用Mac设备，内容可能帮助到观众\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"MacBook Pro和Mac st..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"slow\", \"bpm\": 129.2, \"beat_sync_score\": 0.0398, \"avg_shot_duration\": 4.295}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"pace\": \"slow\", \"shots_per_second\": 0.375, \"avg_shot_duration\": 3.192, \"beat_count\": 17, \"beats_per_second\": 2.125, \"cut_beat_alignment\": 0.02, \"role\": \"提问式钩子开场，抛出核心问题引发观众好奇\", \"reason\": \"metrics:seg_001，镜头密度0.375处于slow区间，切镜极少，以静态提问画面为主\", \"scene_cut_count\": 2, \"rhythm_driver\": \"speech\"}, {\"segment_id\": \"seg_002\", \"time_ran..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"mixed\", \"title_card_usage\": true, \"dominant_text_layout\": \"mixed\", \"visual_emphasis\": [\"large_text_for_core_question_and_conclusion\", \"high_contrast_product_info_card\", \"highlighted_key_opinion_words\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"packaging_role\": \"hook_title_card\", \"text_density\": \"medium\", \"layout\": \"centered larg..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"面向视频创作者科普Mac作为剪辑设备的优势，讲解主流剪辑软件特点，提供不同型号Mac的实用选购指导，帮助创作者避开硬件选购误区，提升长视频剪辑效率\", \"value_type\": \"skill_learning\", \"target_audience\": \"想要选购剪辑设备的新手视频创作者、内容从业者\", \"conversion_goal\": \"learn / save\", \"primary_hook_value\": \"抛出问题「博主们到底用什么样的电脑做视频」，直接命中创作者长期好奇的痛点，引发观看兴趣\", \"creator_cta\": null, \"platform_cta\": null, \"selling_points\": null}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"value_role\": \"hook\", \"claim\": \"用提问式钩子引发观众好奇心，戳中创作者对博主使用设备的好奇痛点..."
+          }
+        ]
+      },
+      "transfer": {
+        "llm_calls": 2,
+        "tool_calls": 6,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "overview"
+            },
+            "result_preview": "{\"video_id\": \"2hF-6JqjJig\", \"duration\": 326.449342, \"resolution\": \"1620x1080\", \"fps\": 29.97, \"scene_count\": 76, \"keyframe_count\": 76, \"transcript_segment_count\": 182, \"ocr_frame_count\": 76, \"beat_count\": 703, \"beat_sync_score\": 0.0398, \"bpm\": 129.19921875, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 4.295, \"shot_density\": 0.2328, \"has_speech\": true}"
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 8.0, \"hook_type\": \"question\", \"core_text\": \"抛出问题：博主们到底用什么样的电脑做视频\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"他们到底是用什么样的电脑\"}], \"reason\": \"开头直接提问，引发观众好奇心，属于提问式hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 8.0, \"end_time\": 20.0, \"core_text\": \"介绍几位博主都在使用Mac设备，内容可能帮助到观众\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"MacBook Pro和Mac st..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"slow\", \"bpm\": 129.2, \"beat_sync_score\": 0.0398, \"avg_shot_duration\": 4.295}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"pace\": \"slow\", \"shots_per_second\": 0.375, \"avg_shot_duration\": 3.192, \"beat_count\": 17, \"beats_per_second\": 2.125, \"cut_beat_alignment\": 0.02, \"role\": \"提问式钩子开场，抛出核心问题引发观众好奇\", \"reason\": \"metrics:seg_001，镜头密度0.375处于slow区间，切镜极少，以静态提问画面为主\", \"scene_cut_count\": 2, \"rhythm_driver\": \"speech\"}, {\"segment_id\": \"seg_002\", \"time_ran..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"mixed\", \"title_card_usage\": true, \"dominant_text_layout\": \"mixed\", \"visual_emphasis\": [\"large_text_for_core_question_and_conclusion\", \"high_contrast_product_info_card\", \"highlighted_key_opinion_words\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"packaging_role\": \"hook_title_card\", \"text_density\": \"medium\", \"layout\": \"centered larg..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"面向视频创作者科普Mac作为剪辑设备的优势，讲解主流剪辑软件特点，提供不同型号Mac的实用选购指导，帮助创作者避开硬件选购误区，提升长视频剪辑效率\", \"value_type\": \"skill_learning\", \"target_audience\": \"想要选购剪辑设备的新手视频创作者、内容从业者\", \"conversion_goal\": \"learn / save\", \"primary_hook_value\": \"抛出问题「博主们到底用什么样的电脑做视频」，直接命中创作者长期好奇的痛点，引发观看兴趣\", \"creator_cta\": null, \"platform_cta\": null, \"selling_points\": null}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"value_role\": \"hook\", \"claim\": \"用提问式钩子引发观众好奇心，戳中创作者对博主使用设备的好奇痛点..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "energy"
+            },
+            "result_preview": "{\"energy_curve\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 8.0], \"energy_level\": \"medium\", \"role\": \"hook_attention\", \"drivers\": [\"centered large question title card\", \"pain point targeted question\"], \"evidence_refs\": [\"script:seg_001\", \"rhythm:seg_001\", \"packaging:seg_001\", \"value:seg_001\"], \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"time_range\": [8.0, 20.0], \"energy_level\": \"low\", \"role\": \"value_preview\", \"drivers\": [\"theme introduction\", \"low intensity explanatory text\"], \"evidence_re..."
+          }
+        ]
+      }
+    }
+  }
+}

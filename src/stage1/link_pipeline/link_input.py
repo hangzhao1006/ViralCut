@@ -25,6 +25,21 @@ def _detect_platform(url: str) -> str:
                 return platform
     return "unknown"
 
+_last_pct = {"v": -10}
+
+def _progress_hook(d):
+    if d.get("status") == "downloading":
+        try:
+            pct = int(float(d.get("_percent_str", "0").strip().rstrip("%")))
+        except (ValueError, AttributeError):
+            return
+        # 每10%打一次，避免刷屏
+        if pct >= _last_pct["v"] + 10:
+            _last_pct["v"] = pct
+            logger.info("Downloading video... %d%%", pct)
+    elif d.get("status") == "finished":
+        _last_pct["v"] = -10
+        logger.info("Download finished, processing...")
 
 def download_from_url(
     url: str,
@@ -61,6 +76,7 @@ def download_from_url(
         "no_warnings": False,
         # Embed subtitles / thumbnails only if available; never fatal
         "writethumbnail": False,
+        "progress_hooks": [_progress_hook], 
     }
 
     if cookie_file:

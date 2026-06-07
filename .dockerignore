@@ -1,0 +1,11 @@
+.env
+.git
+output/
+backend/static/
+node_modules/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.venv/
+venv/

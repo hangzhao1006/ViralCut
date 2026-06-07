@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   backend:
     build:
@@ -8,10 +6,12 @@ services:
     env_file:
       - .env
     volumes:
-      - ./output:/app/output
-      - ./backend/static:/app/backend/static
+      - ./output:/app/output                 # Stage 1/2/3 产物（容器外可见、重启不丢）
+      - ./backend/static:/app/backend/static  # 前端可访问的产物
+      - model-cache:/root/.cache              # faster-whisper / openai-whisper / huggingface 模型
+      - easyocr-cache:/root/.EasyOCR          # link_pipeline 的 EasyOCR 模型
     ports:
-      - "8000:8000"
+      - "8080:8000"
     restart: unless-stopped
 
   frontend:
@@ -19,7 +19,11 @@ services:
       context: .
       dockerfile: frontend/Dockerfile
     ports:
-      - "3000:80"
+      - "3030:80"
     depends_on:
       - backend
     restart: unless-stopped
+
+volumes:
+  model-cache:
+  easyocr-cache:

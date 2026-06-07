@@ -2,20 +2,44 @@ import type { AnalysisResult, MigrationResult } from '../types';
 
 const API_BASE = '/api';
 
-export async function uploadAndAnalyze(file: File): Promise<{ task_id: string }> {
+export async function uploadAndAnalyze(file: File, stage2Variant: string = 'main', pauseAfterStage1: boolean = false): Promise<{ task_id: string }> {
   const formData = new FormData();
   formData.append('video', file);
+  formData.append('stage2_variant', stage2Variant);
+  formData.append('pause_after_stage1', String(pauseAfterStage1));
   const res = await fetch(`${API_BASE}/analyze`, { method: 'POST', body: formData });
+  return res.json();
+}
+
+export async function analyzeLink(url: string, stage2Variant: string = 'main', pauseAfterStage1: boolean = false): Promise<{ task_id: string }> {
+  const res = await fetch(`${API_BASE}/analyze/link`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url, stage2_variant: stage2Variant, pause_after_stage1: pauseAfterStage1 }),
+  });
+  return res.json();
+}
+
+export async function restage2(videoId: string, stage2Variant: string): Promise<{ task_id: string }> {
+  const res = await fetch(`${API_BASE}/analyze/restage2`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ video_id: videoId, stage2_variant: stage2Variant }),
+  });
   return res.json();
 }
 
 export interface TaskStatus {
   task_id: string;
-  status: 'processing' | 'done' | 'failed' | 'not_found';
+  status: 'processing' | 'done' | 'failed' | 'not_found' | 'stage1_done';
   stage?: string;
   current_step?: string;
   message?: string;
   video_id?: string;
+  log_tail?: string[];
+  stage2_variant?: 'main' | 'leo';
+  stage1_available?: boolean;
+  stage1_steps?: Record<string, { state: 'waiting' | 'active' | 'done'; pct: number | null }>;
 }
 
 export async function getStatus(taskId: string): Promise<TaskStatus> {
