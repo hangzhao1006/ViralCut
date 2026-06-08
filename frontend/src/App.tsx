@@ -12,7 +12,7 @@ import MigrationForm from './components/migration/MigrationForm';
 import MigrationPreview from './components/migration/MigrationPreview';
 import MigrationProgress from './components/migration/MigrationProgress';
 import DataInspector from './components/DataInspector';
-import ViralDimensions from './components/ViralDimensions';
+import LeoAgentGrid from './components/LeoAgentGrid';
 import { extractPartialSlots } from './lib/streamParse';
 
 export default function App() {
@@ -27,7 +27,6 @@ export default function App() {
   const [bottomView, setBottomView] = useState<'analysis' | 'migration' | 'data'>('analysis');
   const [samples, setSamples] = useState<string[]>([]);
   const [linkUrl, setLinkUrl] = useState('');
-  const [stage2Variant, setStage2Variant] = useState<'main' | 'leo'>('main');
   const [taskStatus, setTaskStatus] = useState<TaskStatus | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const startRef = useRef<number>(0);
@@ -57,7 +56,7 @@ export default function App() {
     setElapsed(0);
     setAnalysis(null);
     setTaskStatus({ task_id: '', status: 'processing', stage: 'stage1', message: '上传中...' });
-    const { task_id } = await api.uploadAndAnalyze(file, stage2Variant, true);
+    const { task_id } = await api.uploadAndAnalyze(file, 'both', true);
     pollTask(task_id);
   }
 
@@ -67,7 +66,7 @@ export default function App() {
     setElapsed(0);
     setAnalysis(null);
     setTaskStatus({ task_id: '', status: 'processing', stage: 'stage1', message: '下载链接视频中...' });
-    const { task_id } = await api.analyzeLink(url.trim(), stage2Variant, true);
+    const { task_id } = await api.analyzeLink(url.trim(), 'both', true);
     pollTask(task_id);
   }
 
@@ -75,52 +74,41 @@ export default function App() {
     const poll = setInterval(async () => {
       const status = await api.getStatus(task_id);
       setTaskStatus(status);
+
       if (status.status === 'done') {
         clearInterval(poll);
         setAnalysis(await api.getResult(task_id));
       } else if (status.status === 'stage1_done') {
-        // Stage 1 finished, awaiting user confirmation to run Stage 2
         clearInterval(poll);
         const preview = await api.getResult(task_id);
         if (preview && !preview.error) setAnalysis(preview);
+      } else if (status.status === 'processing' && status.has_leo_result) {
+        // Leo done, main still running — fetch partial result and keep polling
+        try {
+          const partial = await api.getResult(task_id);
+          if (partial && partial.synthesis_result) setAnalysis(partial);
+        } catch { /* keep polling */ }
       } else if (status.status === 'failed') {
         clearInterval(poll);
-        // Stage 2 may have failed while Stage 1 succeeded — show the Stage 1 result anyway
         if (status.stage1_available && status.video_id) {
           try {
             const partial = await api.getResult(task_id);
             if (partial && !partial.error) setAnalysis(partial);
-          } catch { /* keep failure banner */ }
+          } catch { /* show failure banner */ }
         }
       }
     }, 2000);
   }
 
-  // Continue to Stage 2 after previewing Stage 1 (reuse cached evidence)
-  function handleContinueStage2(variant: 'main' | 'leo') {
+  function handleContinueStage2() {
     const vid = analysis?.video_id;
     if (!vid) return;
-    setStage2Variant(variant);
     startRef.current = Date.now();
     setElapsed(0);
     setMigration(null);
     setAnalysis(null);
-    setTaskStatus({ task_id: '', status: 'processing', stage: 'stage2', message: '开始 Stage 2 分析...' });
-    api.restage2(vid, variant).then(({ task_id }) => pollTask(task_id));
-  }
-
-  // Switch Stage 2 mode. If a video is already analyzed, re-run ONLY Stage 2 (reuse Stage 1).
-  function handleVariantChange(v: 'main' | 'leo') {
-    setStage2Variant(v);
-    const vid = analysis?.video_id;
-    const currentVariant = analysis?.stage2_variant ?? 'main';
-    if (vid && currentVariant !== v) {
-      startRef.current = Date.now();
-      setElapsed(0);
-      setMigration(null);
-      setTaskStatus({ task_id: '', status: 'processing', stage: 'stage2', message: '复用Stage1，切换分析模式...' });
-      api.restage2(vid, v).then(({ task_id }) => pollTask(task_id));
-    }
+    setTaskStatus({ task_id: '', status: 'processing', stage: 'stage2', message: '开始完整分析...' });
+    api.restage2(vid, 'both').then(({ task_id }) => pollTask(task_id));
   }
 
   async function handleMigrate(newContent: Record<string, unknown>) {
@@ -147,7 +135,6 @@ export default function App() {
             setMigration(result);
           } else {
             alert('迁移解析失败，请看后端日志');
-            console.log('migration result:', result);
           }
         },
       );
@@ -189,15 +176,14 @@ export default function App() {
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    a.click();
+    a.href = url; a.download = filename; a.click();
     URL.revokeObjectURL(url);
   }
 
   function handleExport() {
     if (!analysis) return;
-    downloadJson(analysis.video_structure, `${analysis.video_id}_video_structure.json`);
+    if (analysis.video_structure) downloadJson(analysis.video_structure, `${analysis.video_id}_video_structure.json`);
+    if (analysis.synthesis_result) downloadJson(analysis.synthesis_result, `${analysis.video_id}_synthesis.json`);
     if (migration) downloadJson(migration, `${analysis.video_id}_migration_result.json`);
   }
 
@@ -206,36 +192,34 @@ export default function App() {
     reader.onload = () => {
       try {
         const data = JSON.parse(reader.result as string);
-        if (data.video_structure) {
+        if (data.video_structure || data.synthesis_result) {
           setAnalysis(data as AnalysisResult);
         } else if (data.transfer_blueprint || data.script_structure) {
-          setAnalysis({
-            video_id: data.video_id ?? 'uploaded',
-            video_url: '',
-            video_structure: data,
-            evidence_package: null,
-          });
+          setAnalysis({ video_id: data.video_id ?? 'uploaded', video_url: '', video_structure: data, evidence_package: null });
         }
         setMigration(null);
         setBottomView('analysis');
         setTaskStatus(null);
       } catch {
-        alert('JSON 解析失败，请上传 video_structure.json 或完整分析结果');
+        alert('JSON 解析失败，请上传分析结果文件');
       }
     };
     reader.readAsText(file);
   }
 
   const structure = analysis?.video_structure;
-  // Transfer blueprint may be nested as transfer_blueprint.transfer_blueprint OR directly.
-  // Pick whichever level actually carries structure_template (the real blueprint).
   const tb = structure?.transfer_blueprint as
-    | { transfer_blueprint?: TransferBlueprint; structure_template?: unknown }
-    | undefined;
+    | { transfer_blueprint?: TransferBlueprint; structure_template?: unknown } | undefined;
   const blueprint: TransferBlueprint | undefined =
     tb?.transfer_blueprint?.structure_template ? tb.transfer_blueprint
     : (tb as TransferBlueprint | undefined)?.structure_template ? (tb as TransferBlueprint)
     : undefined;
+
+  // Leo is available whenever synthesis_result exists (whether main is done or still loading)
+  const leoReady = !!analysis?.synthesis_result;
+  const mainReady = !!analysis?.video_structure;
+  // Main is still loading when leo is done but main isn't
+  const mainStillLoading = !!analysis?.main_loading || (analyzing && !!taskStatus?.has_leo_result);
 
   return (
     <div className="min-h-screen text-slate-900">
@@ -258,27 +242,9 @@ export default function App() {
             </div>
           </div>
           <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3 border-t border-slate-200/70 pt-3">
-            {/* Group 1: New analysis — pick Stage 2 mode, then upload OR link */}
             <div className="flex flex-col gap-1">
               <span className="vc-kicker">① 分析新视频</span>
               <div className="flex items-center gap-3">
-                {/* Stage 2 mode */}
-                <div className="flex items-center gap-1 rounded-xl bg-slate-100/70 p-1">
-                  <button onClick={() => handleVariantChange('main')}
-                    className={`rounded-lg px-2.5 py-1 text-[11px] font-medium transition ${stage2Variant === 'main' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500'}`}
-                    title="结构分析：脚本/节奏/迁移蓝图，支持迁移">
-                    结构分析
-                  </button>
-                  <button onClick={() => handleVariantChange('leo')}
-                    className={`rounded-lg px-2.5 py-1 text-[11px] font-medium transition ${stage2Variant === 'leo' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500'}`}
-                    title="爆款归因：多视角维度排名（不支持迁移）">
-                    爆款归因
-                  </button>
-                </div>
-
-                <span className="text-slate-300">·</span>
-
-                {/* Input: upload OR link */}
                 <label className="vc-button cursor-pointer">
                   上传视频
                   <input type="file" accept="video/*" className="hidden"
@@ -293,16 +259,11 @@ export default function App() {
                     placeholder="粘贴视频链接"
                     className="h-[34px] w-40 rounded-xl border border-slate-200 bg-white px-3 text-xs text-slate-700 outline-none transition focus:border-indigo-300 focus:ring-4 focus:ring-indigo-100"
                   />
-                  <button onClick={() => handleAnalyzeLink(linkUrl)} className="vc-button">
-                    分析链接
-                  </button>
+                  <button onClick={() => handleAnalyzeLink(linkUrl)} className="vc-button">分析链接</button>
                 </div>
               </div>
             </div>
-
             <div className="h-9 w-px self-end bg-slate-200" />
-
-            {/* Group 2: Load existing results */}
             <div className="flex flex-col gap-1">
               <span className="vc-kicker">② 加载已有</span>
               <div className="flex items-center gap-2">
@@ -320,20 +281,15 @@ export default function App() {
                 </label>
               </div>
             </div>
-
             <div className="h-9 w-px self-end bg-slate-200" />
-
-            {/* Group 3: Export */}
             <div className="flex flex-col gap-1">
               <span className="vc-kicker">③ 导出</span>
-              <button disabled={!analysis} onClick={handleExport} className="vc-button">
-                导出结果
-              </button>
+              <button disabled={!analysis} onClick={handleExport} className="vc-button">导出结果</button>
             </div>
           </div>
         </div>
 
-        {/* Progress while analyzing */}
+        {/* Progress banner */}
         {taskStatus && (analyzing || taskStatus.status === 'failed') && (
           taskStatus.status === 'failed' ? (
             <div className="mb-4 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700 shadow-sm">
@@ -342,16 +298,17 @@ export default function App() {
           ) : <AgentProgress status={taskStatus} elapsed={elapsed} />
         )}
 
+        {/* Empty state */}
         {!analysis && !analyzing && (
           <div className="vc-card flex min-h-[520px] flex-col items-center justify-center rounded-[2rem] px-6 py-24 text-center">
             <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-950 text-2xl text-white shadow-xl shadow-slate-900/20">▶</div>
             <div className="text-lg font-semibold tracking-tight text-slate-900">开始一次结构拆解</div>
-            <div className="mt-2 max-w-md text-sm leading-6 text-slate-500">上传爆款视频或选择样例，系统会完成 Stage 1 证据提取和 Stage 2 多 Agent 结构分析。</div>
+            <div className="mt-2 max-w-md text-sm leading-6 text-slate-500">上传爆款视频或选择样例，同时跑结构分析（6 Agent）和爆款归因（6 视角）。</div>
           </div>
         )}
 
-        {/* Stage 1 only — Stage 2 failed or not present, but Stage 1 evidence exists */}
-        {analysis && !structure && !analysis.synthesis_result && analysis.evidence_package && (() => {
+        {/* Stage 1 done — awaiting confirmation */}
+        {analysis && !mainReady && !leoReady && analysis.evidence_package && analysis.stage1_only && (() => {
           const ev = analysis.evidence_package as Record<string, any>;
           const meta = ev.metadata ?? {};
           const basic = ev.basic_analysis ?? {};
@@ -359,39 +316,30 @@ export default function App() {
           const facts: [string, string][] = [
             ['时长', meta.duration ? `${Number(meta.duration).toFixed(1)}s` : '—'],
             ['镜头数', String(basic.shot_count ?? (ev.scenes?.length ?? '—'))],
-            ['字幕段', String((ev.transcript?.length ?? 0))],
-            ['画面文字', String((ev.ocr_results?.length ?? 0))],
+            ['字幕段', String(ev.transcript?.length ?? 0)],
             ['BPM', beats.bpm ? Number(beats.bpm).toFixed(1) : '—'],
             ['节奏', String(basic.estimated_pace ?? '—')],
+            ['字幕密度', String(basic.subtitle_density ?? '—')],
           ];
           return (
             <div className="vc-card overflow-hidden rounded-[2rem] p-5">
               {analysis.stage2_failed && (
                 <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-3 py-2.5 text-[12px] text-red-700">
-                  Stage 2 分析失败，但 Stage 1 证据已成功提取并保留（可在下方查看、点「导出结果」保存）。<br />
+                  Stage 2 分析失败，但 Stage 1 证据已成功提取。<br />
                   <span className="text-red-500">{analysis.error}</span>
                 </div>
               )}
-              {analysis.stage1_only && (
-                <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3">
-                  <div className="text-[12px] text-indigo-900">
-                    Stage 1 已完成，下方可预览提取结果。确认后继续 Stage 2 分析：
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <button onClick={() => handleContinueStage2('main')} className="vc-button vc-button-primary">
-                      继续 · 结构分析
-                    </button>
-                    <button onClick={() => handleContinueStage2('leo')} className="vc-button">
-                      继续 · 爆款归因
-                    </button>
-                  </div>
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3">
+                <div className="text-[12px] text-indigo-900">
+                  Stage 1 已完成。确认后同时跑 <strong>爆款归因</strong>（快，并行）和 <strong>结构分析</strong>（慢，串行）：
                 </div>
-              )}
+                <button onClick={handleContinueStage2} className="vc-button vc-button-primary">
+                  进入完整分析（归因 + 结构）→
+                </button>
+              </div>
               <div className="grid grid-cols-[minmax(0,1fr)_360px] gap-5">
                 <div className="flex items-center justify-center rounded-2xl bg-slate-50 p-5">
-                  <div className="w-full max-w-[560px]">
-                    <video src={analysis.video_url} controls className="w-full rounded-xl" />
-                  </div>
+                  <video src={analysis.video_url} controls className="w-full max-w-[560px] rounded-xl" />
                 </div>
                 <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
                   <div className="mb-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">Stage 1 提取结果</div>
@@ -403,76 +351,67 @@ export default function App() {
                       </div>
                     ))}
                   </div>
-                  <details className="mt-3">
-                    <summary className="cursor-pointer text-[11px] text-slate-400 hover:text-slate-600">查看原始 evidence JSON</summary>
-                    <pre className="mt-2 max-h-64 overflow-auto rounded-xl bg-slate-900 p-3 font-mono text-[10px] leading-relaxed text-emerald-300">
-                      {JSON.stringify(ev, null, 2)}
-                    </pre>
-                  </details>
                 </div>
               </div>
             </div>
           );
         })()}
 
-        {/* Leo variant: viral dimension analysis (no timeline/migration) */}
-        {analysis && analysis.stage2_variant === 'leo' && analysis.synthesis_result && (
-          <div className="vc-card overflow-hidden rounded-[2rem] p-5">
-            <div className="mb-4 grid grid-cols-[minmax(0,1fr)_360px] gap-5">
-              <div className="flex items-center justify-center rounded-2xl bg-[radial-gradient(circle_at_50%_20%,rgba(79,70,229,0.08),transparent_34%),#f8fafc] p-5">
-                <div className="w-full max-w-[560px]">
-                  <video src={analysis.video_url} controls className="w-full rounded-xl" />
-                </div>
-              </div>
-              <ViralDimensions synthesis={analysis.synthesis_result} />
+        {/* Leo done, main still loading — show synthesis + main progress */}
+        {leoReady && !mainReady && mainStillLoading && (
+          <div className="vc-card overflow-hidden rounded-[2rem]">
+            <div className="p-5">
+              <video src={analysis?.video_url} controls className="w-full max-w-[560px] rounded-xl" />
             </div>
-            <div className="rounded-xl bg-amber-50 px-3 py-2 text-[11px] text-amber-700">
-              当前为"爆款归因"分析（多视角维度排名），不含时间线结构，因此不支持结构迁移。如需迁移，请用"结构分析"重新分析。
-            </div>
+            <LeoAgentGrid synthesis={analysis!.synthesis_result!} isLoading={false} />
           </div>
         )}
 
-        {/* Unified workspace (main variant) */}
-        {analysis && structure && (
+        {/* Unified workspace — main result ready (+ optional leo at bottom) */}
+        {mainReady && structure && (
           <div className="vc-card overflow-hidden rounded-[2rem]">
-            {/* 3-column — wider left column */}
+            {/* 3-column workspace */}
             <div className="grid min-h-[520px] grid-cols-[300px_minmax(0,1fr)_320px] bg-white">
-              {/* Left: asset library (top) + generate form (bottom) */}
+              {/* Left: asset library + migration form */}
               <div className="flex flex-col border-r border-slate-200/80 bg-slate-50/60">
                 <div className="border-b border-slate-200/80">
-                  <AssetLibrary assets={assets} onAssetsAdded={(a) => setAssets((prev) => [...prev, ...a])} onRemove={(id) => setAssets((prev) => prev.filter((x) => x.id !== id))} />
+                  <AssetLibrary assets={assets}
+                    onAssetsAdded={(a) => setAssets((prev) => [...prev, ...a])}
+                    onRemove={(id) => setAssets((prev) => prev.filter((x) => x.id !== id))} />
                 </div>
                 {blueprint ? (
                   <MigrationForm blueprint={blueprint} assets={assets} loading={migrating} onMigrate={handleMigrate} />
                 ) : (
                   <div className="p-4 text-[11px] leading-relaxed text-slate-400">
-                    未检测到迁移蓝图（Transfer 环节未生成或失败），暂不能生成新视频。请确认用「结构分析」模式分析，且 Transfer agent 成功。
+                    未检测到迁移蓝图，Transfer agent 可能未完成。
                   </div>
                 )}
               </div>
 
-              {/* Center: video preview */}
+              {/* Center: video */}
               <div className="flex items-center justify-center bg-[radial-gradient(circle_at_50%_20%,rgba(79,70,229,0.08),transparent_34%),#f8fafc] p-5">
                 <div className="w-full max-w-[560px]">
-                  <VideoPlayer videoUrl={analysis.video_url} structure={structure}
+                  <VideoPlayer videoUrl={analysis!.video_url} structure={structure}
                     currentTime={currentTime} onTimeUpdate={setCurrentTime} seekTo={seekTo} />
                 </div>
               </div>
 
-              {/* Right: current segment analysis */}
+              {/* Right: agent panel */}
               <div className="border-l border-slate-200/80 bg-white p-4">
                 <div className="mb-3 flex items-center justify-between">
                   <div>
                     <div className="vc-kicker">Inspector</div>
                     <div className="mt-1 text-sm font-semibold text-slate-900">当前片段分析</div>
                   </div>
-                  <div className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-500">{currentTime.toFixed(1)}s</div>
+                  <div className="rounded-full bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-500">
+                    {currentTime.toFixed(1)}s
+                  </div>
                 </div>
                 <AgentPanel structure={structure} currentTime={currentTime} />
               </div>
             </div>
 
-            {/* Bottom: timeline */}
+            {/* Bottom tabs */}
             <div className="border-t border-slate-200/80 bg-white p-4">
               <div className="mb-3 flex items-center gap-2 rounded-2xl bg-slate-100/70 p-1">
                 <button onClick={() => setBottomView('analysis')}
@@ -491,27 +430,31 @@ export default function App() {
                 )}
               </div>
               {bottomView === 'analysis' && (
-                <MultiTrackTimeline structure={structure} evidence={analysis.evidence_package}
+                <MultiTrackTimeline structure={structure} evidence={analysis!.evidence_package}
                   currentTime={currentTime} onSeek={doSeek} />
               )}
               {bottomView === 'data' && (
-                <DataInspector structure={structure} evidence={analysis.evidence_package} />
+                <DataInspector structure={structure} evidence={analysis!.evidence_package} />
               )}
               {bottomView === 'migration' && (
                 migration && blueprint ? (
                   <MigrationPreview blueprint={blueprint} migration={migration}
                     onSlotUpdate={handleSlotUpdate} onSlotRegenerate={handleSlotRegenerate} />
                 ) : (migrating || streamText) && blueprint ? (
-                  <MigrationProgress
-                    blueprint={blueprint}
-                    parsedSlots={extractPartialSlots(streamText)}
-                    done={!migrating}
-                  />
+                  <MigrationProgress blueprint={blueprint} parsedSlots={extractPartialSlots(streamText)} done={!migrating} />
                 ) : (
-                  <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 py-12 text-center text-sm text-slate-400">在左栏填写主题后点击"生成新视频"</div>
+                  <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 py-12 text-center text-sm text-slate-400">
+                    在左栏填写主题后点击"生成新视频"
+                  </div>
                 )
               )}
             </div>
+
+            {/* Leo agent grid — always at the very bottom */}
+            <LeoAgentGrid
+              synthesis={analysis?.synthesis_result ?? null}
+              isLoading={!leoReady}
+            />
           </div>
         )}
       </div>

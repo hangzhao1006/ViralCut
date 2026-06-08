@@ -97,12 +97,13 @@ export interface VideoStructure {
 export interface AnalysisResult {
   video_id: string;
   video_url: string;
-  stage2_variant?: 'main' | 'leo';
+  stage2_variant?: 'main' | 'leo' | 'both';
   stage2_failed?: boolean;
   stage1_only?: boolean;
-  pending_variant?: 'main' | 'leo';
+  pending_variant?: 'main' | 'leo' | 'both';
+  main_loading?: boolean;   // true when leo done but main still running
   error?: string;
-  video_structure: VideoStructure;
+  video_structure?: VideoStructure;
   synthesis_result?: SynthesisResult;
   evidence_package: Record<string, unknown> | null;
 }

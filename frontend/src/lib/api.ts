@@ -37,9 +37,12 @@ export interface TaskStatus {
   message?: string;
   video_id?: string;
   log_tail?: string[];
-  stage2_variant?: 'main' | 'leo';
+  stage2_variant?: 'main' | 'leo' | 'both';
   stage1_available?: boolean;
   stage1_steps?: Record<string, { state: 'waiting' | 'active' | 'done'; pct: number | null }>;
+  has_leo_result?: boolean;
+  current_phase?: 'leo' | 'main';
+  completed_agents?: string[];
 }
 
 export async function getStatus(taskId: string): Promise<TaskStatus> {

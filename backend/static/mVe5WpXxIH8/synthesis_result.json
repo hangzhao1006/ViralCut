@@ -1,0 +1,100 @@
+{
+  "ranked_dimensions": [
+    {
+      "dimension_name": "校园共鸣",
+      "viral_mechanism": "通过展现学生时代化学课上疯狂且有趣的实验，精准唤醒大众对校园生活的集体记忆与群体认同，将枯燥的学术场景重塑为极具情感共鸣的社交符号。",
+      "agent_agreement_count": 5,
+      "avg_strength_score": 8.6,
+      "supporting_agent_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "representative_evidence": [
+        {
+          "source": "metadata",
+          "reference": "social_metadata.title",
+          "quote": "Science class was always so lit",
+          "reasoning": "视频标题直接定调“科学课总是这么酷炫”，迅速勾起受众对学生时代的怀旧情怀与情感共鸣。"
+        },
+        {
+          "source": "ocr",
+          "reference": "frame_011",
+          "quote": "BITUTAMBILGII N SG Wereally be doing the craziest shit in chemistry NATTERS",
+          "reasoning": "极具网感和年轻人口吻的吐槽字幕，强化了“化学课总有疯狂事”的群体共鸣，极易激发评论区互动。"
+        }
+      ]
+    },
+    {
+      "dimension_name": "视觉奇观",
+      "viral_mechanism": "利用“碘钟反应”等化学实验极具反差的瞬间变色效果，制造打破日常认知惯性的视觉奇观，在极短时间内形成强烈的感官爽感与注意力黑洞。",
+      "agent_agreement_count": 4,
+      "avg_strength_score": 8.8,
+      "supporting_agent_ids": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "representative_evidence": [
+        {
+          "source": "ocr",
+          "reference": "frame_010",
+          "quote": "TUTANBILGII lodine Clock Test",
+          "reasoning": "经典的碘钟反应具有瞬间变色的戏剧性视觉效果，是视频核心的视觉回馈与情绪爆发点。"
+        },
+        {
+          "source": "ocr",
+          "reference": "frame_006",
+          "quote": "BITUTANBILGII science class or magic show? JIIOII 92 500",
+          "reasoning": "文案将科学课与魔术秀进行类比，直接拉高了观众对接下来视觉奇观的期待值。"
+        }
+      ]
+    },
+    {
+      "dimension_name": "悬念爆发",
+      "viral_mechanism": "通过倒计时读秒积蓄悬念，在化学反应发生的瞬间配合现场真实、混乱的尖叫与惊叹，实现从延迟满足到高唤醒度情绪的瞬间释放。",
+      "agent_agreement_count": 2,
+      "avg_strength_score": 9.0,
+      "supporting_agent_ids": [
+        1,
+        5
+      ],
+      "representative_evidence": [
+        {
+          "source": "transcript",
+          "reference": "30.0-36.52",
+          "quote": "9",
+          "reasoning": "口头倒计时的出现，配合化学实验的进行，为后续视觉突变积蓄了强烈的悬念和观众的期待感。"
+        },
+        {
+          "source": "transcript",
+          "reference": "54.12-55.12",
+          "quote": "Shit!",
+          "reasoning": "化学反应瞬间发生时现场爆发出的真实粗口与惊叹，标志着视觉悬念的完美揭晓与情绪高潮的爆发。"
+        }
+      ]
+    },
+    {
+      "dimension_name": "社交货币",
+      "viral_mechanism": "将神奇的科学现象与年轻人的酷感标签绑定，为用户提供炫耀和分享的绝佳素材，极大地激发了利他分享和圈层互动的社交动力。",
+      "agent_agreement_count": 1,
+      "avg_strength_score": 9.5,
+      "supporting_agent_ids": [
+        5
+      ],
+      "representative_evidence": [
+        {
+          "source": "ocr",
+          "reference": "frame_011",
+          "quote": "BITUTAMBILGII N SG Wereally be doing the craziest shit in chemistry NATTERS",
+          "reasoning": "文案用“疯狂的化学课”强化了青少年的叛逆与酷感标签，进一步提升了年轻群体在社交网络上的炫耀资本。"
+        }
+      ]
+    }
+  ],
+  "top_viral_reason": "该视频的核心爆款逻辑在于“视觉奇观”与“校园情怀”的完美共振。视频以经典的“碘钟反应”为载体，通过倒计时和瞬间变色的强视觉反差，制造了极具张力的悬念与即时感官爽感。同时，视频巧妙地将这一科学奇观包装为“学生时代化学课的疯狂日常”，精准唤醒了全球网民对校园生活的集体记忆与群体认同。这种“奇观+共鸣”的双重驱动，配合极具网感的文案，使其转化为高价值的社交货币，从而在社交媒体上引发了破亿级的病毒式传播。",
+  "analysis_note": "值得注意的是，Agent 5 提出了独特的“社交货币驱动”维度（强度达 9.5），指出视频不仅是内容层面的好看，更在机制上为年轻用户提供了彰显个性、引发圈层互动的社交资本。此外，视频在悬念构建上利用了倒计时与现场真实尖叫（Agent 1 & 5 提及），这种高唤醒度的情绪反差是维持极高完播率和互动率的隐性功臣。"
+}

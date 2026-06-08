@@ -1,0 +1,1949 @@
+{
+  "video_id": "b_V49-rLPmM",
+  "duration": 66.037551,
+  "script_structure": {
+    "segments": [
+      {
+        "segment_id": "seg_001",
+        "function": "hook",
+        "start_time": 0.0,
+        "end_time": 6.3,
+        "hook_type": "direct",
+        "core_text": "开场快速切换画面搭配人声呼喊，直接进入高节奏内容",
+        "evidence": [
+          {
+            "type": "transcript",
+            "ref": "0.34-6.24",
+            "text": "Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!"
+          }
+        ],
+        "reason": "开头无标题卡直接用快节奏画面和人声抓住注意力，属于直入主题的hook",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_002",
+        "function": "demonstration",
+        "start_time": 6.3,
+        "end_time": 9.97,
+        "core_text": "展示第一个coincidence主题的对应画面内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_003",
+            "text": "coincidence"
+          }
+        ],
+        "reason": "画面出现coincidence文字，同步展示对应匹配的巧合画面",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "function": "demonstration",
+        "start_time": 9.97,
+        "end_time": 14.97,
+        "core_text": "展示第二个coincidence主题的对应画面内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_005",
+            "text": "coincidence"
+          }
+        ],
+        "reason": "再次出现coincidence文字，切换到新的巧合匹配画面",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_004",
+        "function": "demonstration",
+        "start_time": 14.97,
+        "end_time": 18.73,
+        "core_text": "展示第三个coincidence主题的对应画面内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_007",
+            "text": "coincidence"
+          }
+        ],
+        "reason": "第三次出现coincidence文字，切换新的匹配画面",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_005",
+        "function": "demonstration",
+        "start_time": 18.73,
+        "end_time": 23.1,
+        "core_text": "展示第四个coincidence主题的对应画面内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_009",
+            "text": "coincidence"
+          },
+          {
+            "type": "transcript",
+            "ref": "20.42-23.06",
+            "text": "stone! profile 1130"
+          }
+        ],
+        "reason": "第四次出现coincidence文字，搭配对应语音内容展示匹配画面",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "function": "demonstration",
+        "start_time": 23.1,
+        "end_time": 27.67,
+        "core_text": "展示第五个coincidence主题的对应画面内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_011",
+            "text": "coincidence"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_013",
+            "text": "coincidence"
+          },
+          {
+            "type": "transcript",
+            "ref": "26.08-27.08",
+            "text": "AHHHHHH"
+          }
+        ],
+        "reason": "连续两次出现coincidence文字，搭配惊呼语音展示高冲击力匹配画面",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_007",
+        "function": "transition",
+        "start_time": 27.67,
+        "end_time": 34.37,
+        "core_text": "数字2展示作为过渡，引出第二部分内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_014",
+            "text": "2"
+          },
+          {
+            "type": "transcript",
+            "ref": "30.0-35.88",
+            "text": "He got that"
+          }
+        ],
+        "reason": "画面出现数字2，作为分段过渡标识，衔接前后两部分内容",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_008",
+        "function": "demonstration",
+        "start_time": 34.37,
+        "end_time": 41.67,
+        "core_text": "第二部分第一个coincidence主题匹配画面展示",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_015",
+            "text": "coincidence"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_017",
+            "text": "coincidence"
+          },
+          {
+            "type": "transcript",
+            "ref": "35.88-42.02",
+            "text": "OMG"
+          }
+        ],
+        "reason": "连续两次出现coincidence文字，搭配惊叹语音展示新的匹配画面",
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_009",
+        "function": "climax",
+        "start_time": 41.67,
+        "end_time": 49.75,
+        "core_text": "高潮部分连续展示高燃巧合匹配画面，搭配赞叹语音",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_020",
+            "text": "coincidence"
+          },
+          {
+            "type": "transcript",
+            "ref": "42.02-48.08",
+            "text": "Here we look! That's a Boss!"
+          }
+        ],
+        "reason": "节奏最快，画面匹配度最高，搭配赞叹语音形成视觉冲击最强的段落",
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_010",
+        "function": "demonstration",
+        "start_time": 49.75,
+        "end_time": 57.9,
+        "core_text": "后续多个coincidence主题匹配画面展示，搭配疑问语音",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_021",
+            "text": "Afleastheplantedamnew@ne"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_022",
+            "text": "coincidence"
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_025",
+            "text": "coincidence"
+          },
+          {
+            "type": "transcript",
+            "ref": "50.54-58.22",
+            "text": "Bro do you need this? exploration Oh! Exocus! Why were the guys getting caught recently?"
+          }
+        ],
+        "reason": "继续展示多个巧合匹配画面，搭配疑问类语音推进内容",
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_011",
+        "function": "resolution",
+        "start_time": 57.9,
+        "end_time": 66.04,
+        "core_text": "收尾部分展示最后匹配画面，搭配感叹语音结束内容",
+        "evidence": [
+          {
+            "type": "ocr",
+            "ref": "frame_026",
+            "text": "["
+          },
+          {
+            "type": "ocr",
+            "ref": "frame_029",
+            "text": "coincidence"
+          },
+          {
+            "type": "transcript",
+            "ref": "58.22-64.22",
+            "text": "Oh! Oh! Yeah!"
+          }
+        ],
+        "reason": "最后展示剩余画面，语音以感叹收尾，完成整个内容的情绪释放",
+        "confidence": 0.85
+      }
+    ],
+    "hook_type": "direct",
+    "cta_type": null,
+    "structure_pattern": "direct_hook → repeated coincidence demo sequence → number transition → second demo sequence → climax → final demo → resolution",
+    "uncertainty": "部分OCR识别文字存在乱码，部分段落边界根据文字出现时间近似划分，无明确CTA内容"
+  },
+  "rhythm_structure": {
+    "overall_rhythm": {
+      "pace": "medium",
+      "bpm": 161.499,
+      "beat_sync_score": 0.1136,
+      "avg_shot_duration": 2.199
+    },
+    "segment_rhythm": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          6.3
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.4762,
+        "avg_shot_duration": 2.1,
+        "beat_count": 17,
+        "beats_per_second": 2.6984,
+        "cut_beat_alignment": 0.12,
+        "role": "direct hook, fast opening to grab attention",
+        "reason": "开场直接切换3个镜头搭配多人呼喊人声，快速切入主题，数据来源metrics:seg_001",
+        "scene_cut_count": 2,
+        "rhythm_driver": "speech"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          6.3,
+          9.97
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.8174,
+        "avg_shot_duration": 1.456,
+        "beat_count": 9,
+        "beats_per_second": 2.4523,
+        "cut_beat_alignment": 0.1,
+        "role": "first coincidence demo",
+        "reason": "展示第一个巧合匹配画面，shot密度上升，数据来源metrics:seg_002",
+        "scene_cut_count": 2,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          9.97,
+          14.97
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.6,
+        "avg_shot_duration": 1.9,
+        "beat_count": 14,
+        "beats_per_second": 2.8,
+        "cut_beat_alignment": 0.08,
+        "role": "second coincidence demo",
+        "reason": "展示第二个巧合匹配画面，节奏保持稳定，数据来源metrics:seg_003",
+        "scene_cut_count": 2,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          14.97,
+          18.73
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.5319,
+        "avg_shot_duration": 1.883,
+        "beat_count": 10,
+        "beats_per_second": 2.6596,
+        "cut_beat_alignment": 0.09,
+        "role": "third coincidence demo",
+        "reason": "展示第三个巧合匹配画面，节奏平稳，数据来源metrics:seg_004",
+        "scene_cut_count": 1,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          18.73,
+          23.1
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.6865,
+        "avg_shot_duration": 2.478,
+        "beat_count": 11,
+        "beats_per_second": 2.5172,
+        "cut_beat_alignment": 0.11,
+        "role": "fourth coincidence demo",
+        "reason": "展示第四个巧合匹配画面，搭配对应语音，数据来源metrics:seg_005",
+        "scene_cut_count": 2,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          23.1,
+          27.67
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.8753,
+        "avg_shot_duration": 2.817,
+        "beat_count": 13,
+        "beats_per_second": 2.8446,
+        "cut_beat_alignment": 0.13,
+        "role": "fifth coincidence demo",
+        "reason": "连续展示两个巧合匹配画面，搭配惊呼语音，节奏进一步提升，数据来源metrics:seg_006",
+        "scene_cut_count": 3,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          27.67,
+          34.37
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.2985,
+        "avg_shot_duration": 3.7,
+        "beat_count": 18,
+        "beats_per_second": 2.6866,
+        "cut_beat_alignment": 0.07,
+        "role": "transition segment",
+        "reason": "数字2作为过渡标识，镜头切换频率明显降低，节奏短暂放缓，数据来源metrics:seg_007",
+        "scene_cut_count": 1,
+        "rhythm_driver": "information_reveal"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          34.37,
+          41.67
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.5479,
+        "avg_shot_duration": 2.567,
+        "beat_count": 20,
+        "beats_per_second": 2.7397,
+        "cut_beat_alignment": 0.12,
+        "role": "second part first demo",
+        "reason": "第二部分首个巧合匹配画面展示，节奏重新回升，数据来源metrics:seg_008",
+        "scene_cut_count": 3,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          41.67,
+          49.75
+        ],
+        "pace": "fast",
+        "shots_per_second": 1.21,
+        "avg_shot_duration": 0.826,
+        "beat_count": 22,
+        "beats_per_second": 2.73,
+        "cut_beat_alignment": 0.21,
+        "role": "climax, high intensity demo",
+        "reason": "全段连续展示高冲击力巧合匹配画面，镜头切换密度全片最高，数据来源metrics:seg_009",
+        "scene_cut_count": 7,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          49.75,
+          57.9
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.74,
+        "avg_shot_duration": 1.35,
+        "beat_count": 21,
+        "beats_per_second": 2.59,
+        "cut_beat_alignment": 0.1,
+        "role": "post-climax demo",
+        "reason": "高潮后继续展示多个巧合匹配画面，节奏逐步回落，数据来源metrics:seg_010",
+        "scene_cut_count": 5,
+        "rhythm_driver": "visual_version_change"
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          57.9,
+          66.04
+        ],
+        "pace": "slow",
+        "shots_per_second": 0.37,
+        "avg_shot_duration": 2.7,
+        "beat_count": 21,
+        "beats_per_second": 2.57,
+        "cut_beat_alignment": 0.06,
+        "role": "resolution, final wrap-up",
+        "reason": "收尾展示最后匹配画面，节奏明显放缓，完成情绪释放，数据来源metrics:seg_011",
+        "scene_cut_count": 2,
+        "rhythm_driver": "speech"
+      }
+    ],
+    "climax_analysis": {
+      "script_suggested_range": [
+        41.67,
+        49.75
+      ],
+      "confirmed": true,
+      "confirmed_range": [
+        41.67,
+        49.75
+      ],
+      "peak_shot_density_range": [
+        41.67,
+        49.75
+      ],
+      "peak_shots_per_second": 1.21,
+      "peak_beat_alignment": 0.21,
+      "reason": "该段巧合匹配画面展示密度全片最高，信息完整度峰值，视觉冲击最强，为全片节奏最高点"
+    },
+    "rhythm_pattern": "gradual_acceleration",
+    "rhythm_description": "视频从开场直入主题逐步提升画面切换频率，经过过渡段短暂放缓后再次加速，在中段达到节奏高潮，之后逐步回落收尾",
+    "cutting_strategy": {
+      "primary": "cut_on_visual_match",
+      "secondary": "cut_on_speech_peak",
+      "evidence_segments": [
+        "seg_006",
+        "seg_009",
+        "seg_010"
+      ]
+    },
+    "audio_observations": {
+      "bgm_role": "atmosphere_support",
+      "speech_role": "rhythm_driven",
+      "sound_effects_mentioned": [
+        "呼喊声",
+        "惊呼声",
+        "赞叹声"
+      ],
+      "reason": "BGM仅提供背景氛围，beat_sync_score仅0.11无明显卡点，人声呼喊、惊叹等语音节点主导大部分切镜节奏"
+    },
+    "uncertainty": "部分短时长段落的shot密度数据存在小幅波动，无明确强卡点设计"
+  },
+  "packaging_structure": {
+    "packaging_structure": {
+      "subtitle_density": "low",
+      "subtitle_style": "large_bold_instruction_text",
+      "title_card_usage": false,
+      "dominant_text_layout": "centered",
+      "visual_emphasis": [
+        "repeated large keyword text",
+        "numbered segment marker"
+      ],
+      "transition_style": "uncertain",
+      "sticker_usage": "uncertain"
+    },
+    "segment_packaging": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          6.3
+        ],
+        "packaging_role": "no_text_hook",
+        "text_density": "none",
+        "layout": "no on-screen text",
+        "evidence_refs": [
+          "frame_000"
+        ],
+        "reason": "开场无任何画面文字，直接用快节奏画面和人声抓注意力"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          6.3,
+          9.97
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "low",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_003"
+        ],
+        "reason": "画面展示大字'coincidence'标注当前巧合匹配主题"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          9.97,
+          14.97
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "low",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "reason": "再次展示大字'coincidence'标记新的巧合匹配内容"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          14.97,
+          18.73
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "low",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_007"
+        ],
+        "reason": "第三次展示大字'coincidence'标记新的巧合匹配内容"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          18.73,
+          23.1
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "low",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_009"
+        ],
+        "reason": "第四次展示大字'coincidence'标记新的巧合匹配内容"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          23.1,
+          27.67
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "medium",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_011",
+          "frame_013"
+        ],
+        "reason": "连续两次展示大字'coincidence'标记高冲击力巧合匹配内容"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          27.67,
+          34.37
+        ],
+        "packaging_role": "segment_transition_marker",
+        "text_density": "low",
+        "layout": "large centered number",
+        "evidence_refs": [
+          "frame_014"
+        ],
+        "reason": "画面展示大字数字'2'作为分段过渡标识，引出第二部分内容"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          34.37,
+          41.67
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "medium",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_015",
+          "frame_017"
+        ],
+        "reason": "连续两次展示大字'coincidence'标记第二部分的巧合匹配内容"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          41.67,
+          49.75
+        ],
+        "packaging_role": "climax_keyword_emphasis",
+        "text_density": "low",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_020"
+        ],
+        "reason": "高潮段落展示大字'coincidence'标记最高冲击力的核心匹配画面"
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          49.75,
+          57.9
+        ],
+        "packaging_role": "keyword_emphasis",
+        "text_density": "medium",
+        "layout": "mixed centered text",
+        "evidence_refs": [
+          "frame_021",
+          "frame_022",
+          "frame_025"
+        ],
+        "reason": "多次展示大字'coincidence'，夹杂少量识别异常的乱码文字"
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          57.9,
+          66.04
+        ],
+        "packaging_role": "closing_keyword_emphasis",
+        "text_density": "low",
+        "layout": "large centered text",
+        "evidence_refs": [
+          "frame_026",
+          "frame_029"
+        ],
+        "reason": "收尾段落最后展示大字'coincidence'完成内容闭环"
+      }
+    ],
+    "key_packaging_patterns": [
+      {
+        "name": "repeated_keyword_marking",
+        "description": "全片重复使用居中展示的大字'coincidence'标记每一处巧合匹配画面，统一视觉标识",
+        "evidence_refs": [
+          "frame_003",
+          "frame_005",
+          "frame_007",
+          "frame_009",
+          "frame_011",
+          "frame_013",
+          "frame_015",
+          "frame_017",
+          "frame_020",
+          "frame_022",
+          "frame_025",
+          "frame_029"
+        ],
+        "transfer_relevance": "high"
+      },
+      {
+        "name": "numbered_segment_transition",
+        "description": "使用居中展示的大字数字'2'作为两部分内容的过渡分割标识",
+        "evidence_refs": [
+          "frame_014"
+        ],
+        "transfer_relevance": "medium"
+      }
+    ],
+    "uncertain_elements": [
+      "transition_type",
+      "sticker_usage",
+      "text_font_detail",
+      "background_contrast_level"
+    ],
+    "uncertainty": "当前视觉描述为占位状态，转场具体样式、贴纸是否存在、文字字体细节和背景对比度需要进一步视觉确认"
+  },
+  "value_strategy": {
+    "value_strategy": {
+      "primary_value": "通过大量创意巧合匹配的高燃画面给观众提供强视觉冲击的趣味娱乐体验",
+      "value_type": "entertainment",
+      "target_audience": "喜爱高节奏趣味创意剪辑内容的短视频用户",
+      "conversion_goal": "无明确主动转化目标，仅提供纯娱乐内容消费",
+      "primary_hook_value": "开场直接用快节奏画面和人声呼喊快速抓住观众注意力，立刻进入高情绪强度的内容",
+      "creator_cta": null,
+      "platform_cta": null,
+      "selling_points": null
+    },
+    "value_progression": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          6.3
+        ],
+        "value_role": "hook",
+        "claim": "直入主题用快节奏画面和人声快速拉高观众情绪，抓住注意力",
+        "evidence_refs": [
+          "0.34-6.24"
+        ],
+        "evidence_text": "Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!"
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          6.3,
+          9.97
+        ],
+        "value_role": "demonstration",
+        "claim": "展示第一个巧合匹配画面，正式开启趣味内容",
+        "evidence_refs": [
+          "frame_003"
+        ],
+        "evidence_text": "coincidence"
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          9.97,
+          14.97
+        ],
+        "value_role": "demonstration",
+        "claim": "展示第二个巧合匹配画面，持续输出趣味点",
+        "evidence_refs": [
+          "frame_005"
+        ],
+        "evidence_text": "coincidence"
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          14.97,
+          18.73
+        ],
+        "value_role": "demonstration",
+        "claim": "展示第三个巧合匹配画面，维持内容节奏",
+        "evidence_refs": [
+          "frame_007"
+        ],
+        "evidence_text": "coincidence"
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          18.73,
+          23.1
+        ],
+        "value_role": "demonstration",
+        "claim": "展示第四个巧合匹配画面，搭配语音强化趣味感",
+        "evidence_refs": [
+          "frame_009",
+          "20.42-23.06"
+        ],
+        "evidence_text": "coincidence、stone! profile 1130"
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          23.1,
+          27.67
+        ],
+        "value_role": "demonstration",
+        "claim": "连续展示两个巧合匹配画面，搭配惊呼语音提升情绪强度",
+        "evidence_refs": [
+          "frame_011",
+          "frame_013",
+          "26.08-27.08"
+        ],
+        "evidence_text": "coincidence、coincidence、AHHHHHH"
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          27.67,
+          34.37
+        ],
+        "value_role": "transition",
+        "claim": "用数字2做过渡，引出第二部分内容，给观众短暂的节奏缓冲",
+        "evidence_refs": [
+          "frame_014",
+          "30.0-35.88"
+        ],
+        "evidence_text": "2、He got that"
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          34.37,
+          41.67
+        ],
+        "value_role": "demonstration",
+        "claim": "连续展示两个新的巧合匹配画面，搭配惊叹语音继续拉高情绪",
+        "evidence_refs": [
+          "frame_015",
+          "frame_017",
+          "35.88-42.02"
+        ],
+        "evidence_text": "coincidence、coincidence、OMG"
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          41.67,
+          49.75
+        ],
+        "value_role": "climax",
+        "claim": "进入内容高潮，展示匹配度最高的高燃巧合画面，搭配赞叹语音释放最强情绪",
+        "evidence_refs": [
+          "frame_020",
+          "42.02-48.08"
+        ],
+        "evidence_text": "coincidence、Here we look! That's a Boss!"
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          49.75,
+          57.9
+        ],
+        "value_role": "demonstration",
+        "claim": "继续展示多个巧合匹配画面，搭配疑问语音丰富内容层次",
+        "evidence_refs": [
+          "frame_022",
+          "frame_025",
+          "50.54-58.22"
+        ],
+        "evidence_text": "coincidence、coincidence、Bro do you need this? exploration Oh! Exocus! Why were the guys getting caught recently?"
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          57.9,
+          66.04
+        ],
+        "value_role": "resolution",
+        "claim": "展示最后一组巧合匹配画面，用感叹语音收尾完成整体情绪释放",
+        "evidence_refs": [
+          "frame_029",
+          "58.22-64.22"
+        ],
+        "evidence_text": "coincidence、Oh! Oh! Yeah!"
+      }
+    ],
+    "conversion_strategy": {
+      "has_creator_cta": false,
+      "cta_type": "none_or_platform_guide",
+      "save_or_learn_intent": false,
+      "comment_or_purchase_intent": false,
+      "reason": "全程搜索关注、收藏、评论、购买等关键词均无结果，视频仅为纯娱乐向的创意巧合画面展示，没有任何创作者主动引导用户进行关注、收藏、评论或购买的转化动作"
+    },
+    "uncertainty": "部分OCR识别存在乱码，未发现任何商品、价格、品牌、教学教程类相关信息，也无明确创作者主动CTA内容"
+  },
+  "energy_curve": {
+    "energy_curve": [
+      {
+        "segment_id": "seg_001",
+        "time_range": [
+          0.0,
+          6.3
+        ],
+        "energy_level": "high",
+        "role": "hook_attention",
+        "drivers": [
+          "direct fast opening",
+          "multiple shouting speech",
+          "no pre-title delay"
+        ],
+        "evidence_refs": [
+          "script:seg_001",
+          "rhythm:seg_001",
+          "value:seg_001"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_002",
+        "time_range": [
+          6.3,
+          9.97
+        ],
+        "energy_level": "medium",
+        "role": "first_demo_launch",
+        "drivers": [
+          "first coincidence visual match",
+          "large centered keyword text"
+        ],
+        "evidence_refs": [
+          "script:seg_002",
+          "rhythm:seg_002",
+          "packaging:seg_002",
+          "value:seg_002"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
+          9.97,
+          14.97
+        ],
+        "energy_level": "medium",
+        "role": "continuous_demo",
+        "drivers": [
+          "second coincidence visual match",
+          "stable beat density"
+        ],
+        "evidence_refs": [
+          "script:seg_003",
+          "rhythm:seg_003",
+          "packaging:seg_003",
+          "value:seg_003"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_004",
+        "time_range": [
+          14.97,
+          18.73
+        ],
+        "energy_level": "medium",
+        "role": "continuous_demo",
+        "drivers": [
+          "third coincidence visual match",
+          "consistent rhythm"
+        ],
+        "evidence_refs": [
+          "script:seg_004",
+          "rhythm:seg_004",
+          "packaging:seg_004",
+          "value:seg_004"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_005",
+        "time_range": [
+          18.73,
+          23.1
+        ],
+        "energy_level": "medium",
+        "role": "continuous_demo",
+        "drivers": [
+          "fourth coincidence visual match",
+          "supporting speech"
+        ],
+        "evidence_refs": [
+          "script:seg_005",
+          "rhythm:seg_005",
+          "packaging:seg_005",
+          "value:seg_005"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_006",
+        "time_range": [
+          23.1,
+          27.67
+        ],
+        "energy_level": "high",
+        "role": "pre_climax_acceleration",
+        "drivers": [
+          "double consecutive coincidence match",
+          "exclamation speech",
+          "double keyword text"
+        ],
+        "evidence_refs": [
+          "script:seg_006",
+          "rhythm:seg_006",
+          "packaging:seg_006",
+          "value:seg_006"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_007",
+        "time_range": [
+          27.67,
+          34.37
+        ],
+        "energy_level": "low",
+        "role": "rhythm_buffer_transition",
+        "drivers": [
+          "slow down shot density",
+          "number 2 segment marker",
+          "temporary content pause"
+        ],
+        "evidence_refs": [
+          "script:seg_007",
+          "rhythm:seg_007",
+          "packaging:seg_007",
+          "value:seg_007"
+        ],
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_008",
+        "time_range": [
+          34.37,
+          41.67
+        ],
+        "energy_level": "high",
+        "role": "second_part_acceleration",
+        "drivers": [
+          "double consecutive coincidence match",
+          "OMG exclamation speech",
+          "double keyword text"
+        ],
+        "evidence_refs": [
+          "script:seg_008",
+          "rhythm:seg_008",
+          "packaging:seg_008",
+          "value:seg_008"
+        ],
+        "confidence": 0.85
+      },
+      {
+        "segment_id": "seg_009",
+        "time_range": [
+          41.67,
+          49.75
+        ],
+        "energy_level": "peak",
+        "role": "full_climax",
+        "drivers": [
+          "peak visual match density",
+          "highest visual_version_change frequency",
+          "boss praise speech",
+          "peak information completeness"
+        ],
+        "evidence_refs": [
+          "script:seg_009",
+          "rhythm:seg_009",
+          "packaging:seg_009",
+          "value:seg_009"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_010",
+        "time_range": [
+          49.75,
+          57.9
+        ],
+        "energy_level": "medium",
+        "role": "post_climax_demo",
+        "drivers": [
+          "multiple remaining coincidence matches",
+          "question speech to enrich content"
+        ],
+        "evidence_refs": [
+          "script:seg_010",
+          "rhythm:seg_010",
+          "packaging:seg_010",
+          "value:seg_010"
+        ],
+        "confidence": 0.8
+      },
+      {
+        "segment_id": "seg_011",
+        "time_range": [
+          57.9,
+          66.04
+        ],
+        "energy_level": "low",
+        "role": "resolution_wrap_up",
+        "drivers": [
+          "final coincidence match",
+          "closing exclamation speech",
+          "emotion release"
+        ],
+        "evidence_refs": [
+          "script:seg_011",
+          "rhythm:seg_011",
+          "packaging:seg_011",
+          "value:seg_011"
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "energy_pattern": "gradual_accelerate_to_climax_then_decline",
+    "peak_moments": [
+      {
+        "time_range": [
+          41.67,
+          49.75
+        ],
+        "reason": "巧合匹配画面展示密度全片最高，视觉版本变化节奏最快，搭配赞叹语音，信息完整度和视觉冲击同时达到峰值",
+        "evidence_refs": [
+          "rhythm:climax_analysis",
+          "script:seg_009",
+          "value:seg_009"
+        ]
+      }
+    ],
+    "attention_strategy": {
+      "opening": "direct fast hook with multiple shouting speech, no pre-title delay",
+      "middle": "repeated coincidence visual demo with large centered keyword emphasis, rhythm buffer after first demo batch",
+      "climax": "peak density of high-impact coincidence visual matches, driven by visual_version_change",
+      "ending": "final demo with closing exclamation speech, natural emotion release without explicit CTA"
+    },
+    "uncertainty": "部分OCR识别存在乱码，转场样式、贴纸使用、文字字体细节等包装元素需要进一步视觉API确认，无明确强卡点设计的细节数据待补充"
+  },
+  "transfer_blueprint": {
+    "transfer_blueprint": {
+      "source_video_type": "entertainment_coincidence_montage",
+      "dominant_structure": "direct_high_energy_hook → repeated_matched_demo_sequence → numbered_transition → second_demo_batch → peak_climax → post_climax_demo → resolution",
+      "structure_template": [
+        {
+          "slot_id": "slot_001",
+          "slot_type": "no_text_direct_hook",
+          "source_segment_id": "seg_001",
+          "source_time_range": [
+            0.0,
+            6.3
+          ],
+          "duration_seconds": 6.3,
+          "duration_ratio": 0.095,
+          "purpose": "no pre-title delay, immediately grab audience attention with high energy",
+          "template": "fast cut 2-3 high-impact opening clips + multiple shouting/excited human voices",
+          "input_requirements": {
+            "needed_assets": [
+              "2-3 high energy opening clips",
+              "excited shouting voiceover clips"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "no opening title card",
+              "no slow fade-in"
+            ]
+          },
+          "required_elements": [
+            "zero pre-delay opening",
+            "high energy human voice at start"
+          ],
+          "replaceable_elements": [
+            "opening clip content",
+            "shouting voice language"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_002",
+          "slot_type": "matched_demo_unit",
+          "source_segment_id": "seg_002",
+          "source_time_range": [
+            6.3,
+            9.97
+          ],
+          "duration_seconds": 3.7,
+          "duration_ratio": 0.056,
+          "purpose": "show first matched visual pair, launch core content",
+          "template": "matched visual clip pair + large centered keyword text",
+          "input_requirements": {
+            "needed_assets": [
+              "2 matched visual clips",
+              "keyword text asset"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "large centered text",
+              "low subtitle density"
+            ]
+          },
+          "required_elements": [
+            "clear visual match",
+            "centered large keyword mark"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_003",
+          "slot_type": "matched_demo_unit",
+          "source_segment_id": "seg_003",
+          "source_time_range": [
+            9.97,
+            14.97
+          ],
+          "duration_seconds": 5.0,
+          "duration_ratio": 0.076,
+          "purpose": "show second matched visual pair, maintain content rhythm",
+          "template": "matched visual clip pair + large centered keyword text",
+          "input_requirements": {
+            "needed_assets": [
+              "2 matched visual clips",
+              "keyword text asset"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "large centered text",
+              "low subtitle density"
+            ]
+          },
+          "required_elements": [
+            "clear visual match",
+            "centered large keyword mark"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_004",
+          "slot_type": "matched_demo_unit",
+          "source_segment_id": "seg_004",
+          "source_time_range": [
+            14.97,
+            18.73
+          ],
+          "duration_seconds": 3.76,
+          "duration_ratio": 0.057,
+          "purpose": "show third matched visual pair, keep steady pace",
+          "template": "matched visual clip pair + large centered keyword text",
+          "input_requirements": {
+            "needed_assets": [
+              "2 matched visual clips",
+              "keyword text asset"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "large centered text",
+              "low subtitle density"
+            ]
+          },
+          "required_elements": [
+            "clear visual match",
+            "centered large keyword mark"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_005",
+          "slot_type": "matched_demo_unit",
+          "source_segment_id": "seg_005",
+          "source_time_range": [
+            18.73,
+            23.1
+          ],
+          "duration_seconds": 4.37,
+          "duration_ratio": 0.066,
+          "purpose": "show fourth matched visual pair, add supporting speech",
+          "template": "matched visual clip pair + large centered keyword text + short supporting speech",
+          "input_requirements": {
+            "needed_assets": [
+              "2 matched visual clips",
+              "keyword text asset",
+              "short supporting voiceover"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "large centered text",
+              "low subtitle density"
+            ]
+          },
+          "required_elements": [
+            "clear visual match",
+            "centered large keyword mark"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content",
+            "supporting speech content"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_006",
+          "slot_type": "pre_climax_double_demo",
+          "source_segment_id": "seg_006",
+          "source_time_range": [
+            23.1,
+            27.67
+          ],
+          "duration_seconds": 4.57,
+          "duration_ratio": 0.069,
+          "purpose": "show two consecutive matched pairs, accelerate emotion",
+          "template": "two consecutive matched visual pairs + double large centered keyword text + exclamation speech",
+          "input_requirements": {
+            "needed_assets": [
+              "4 matched visual clips",
+              "2 keyword text assets",
+              "exclamation voiceover"
+            ],
+            "min_clip_count": 4,
+            "visual_constraints": [
+              "large centered text",
+              "fast cut between matches"
+            ]
+          },
+          "required_elements": [
+            "two consecutive matches",
+            "exclamation human voice"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content",
+            "exclamation language"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_007",
+          "slot_type": "numbered_segment_transition",
+          "source_segment_id": "seg_007",
+          "source_time_range": [
+            27.67,
+            34.37
+          ],
+          "duration_seconds": 6.7,
+          "duration_ratio": 0.101,
+          "purpose": "slow down rhythm, separate two content batches, give audience buffer",
+          "template": "slow single clip + large centered number marker",
+          "input_requirements": {
+            "needed_assets": [
+              "1 slow transition clip",
+              "large number text asset"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "low shot density",
+              "large centered number text"
+            ]
+          },
+          "required_elements": [
+            "clear numbered segment marker",
+            "rhythm slowdown"
+          ],
+          "replaceable_elements": [
+            "number value",
+            "transition clip content"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_008",
+          "slot_type": "second_batch_double_demo",
+          "source_segment_id": "seg_008",
+          "source_time_range": [
+            34.37,
+            41.67
+          ],
+          "duration_seconds": 7.3,
+          "duration_ratio": 0.11,
+          "purpose": "restart acceleration, show two new consecutive matched pairs",
+          "template": "two consecutive matched visual pairs + double large centered keyword text + surprise exclamation speech",
+          "input_requirements": {
+            "needed_assets": [
+              "4 matched visual clips",
+              "2 keyword text assets",
+              "surprise exclamation voiceover"
+            ],
+            "min_clip_count": 4,
+            "visual_constraints": [
+              "large centered text",
+              "fast cut between matches"
+            ]
+          },
+          "required_elements": [
+            "two consecutive matches",
+            "surprise human voice"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content",
+            "surprise speech language"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_009",
+          "slot_type": "peak_climax_demo",
+          "source_segment_id": "seg_009",
+          "source_time_range": [
+            41.67,
+            49.75
+          ],
+          "duration_seconds": 8.08,
+          "duration_ratio": 0.122,
+          "purpose": "reach full energy peak, show highest density high-impact matches",
+          "template": "6-7 consecutive high quality matched visual pairs + large centered keyword text + praise speech",
+          "input_requirements": {
+            "needed_assets": [
+              "12-14 high quality matched visual clips",
+              "keyword text asset",
+              "praise voiceover"
+            ],
+            "min_clip_count": 12,
+            "visual_constraints": [
+              "peak shot density",
+              "fast cut speed"
+            ]
+          },
+          "required_elements": [
+            "peak match density",
+            "highest visual impact",
+            "praise human voice"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content",
+            "praise speech language"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_010",
+          "slot_type": "post_climax_demo_sequence",
+          "source_segment_id": "seg_010",
+          "source_time_range": [
+            49.75,
+            57.9
+          ],
+          "duration_seconds": 8.15,
+          "duration_ratio": 0.123,
+          "purpose": "gradually reduce pace, show remaining matched pairs",
+          "template": "3-4 matched visual pairs + large centered keyword text + question speech",
+          "input_requirements": {
+            "needed_assets": [
+              "6-8 matched visual clips",
+              "3-4 keyword text assets",
+              "question voiceover"
+            ],
+            "min_clip_count": 6,
+            "visual_constraints": [
+              "medium shot density",
+              "large centered text"
+            ]
+          },
+          "required_elements": [
+            "multiple remaining matches",
+            "natural pace decline"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content",
+            "question speech content"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_011",
+          "slot_type": "resolution_wrap_up",
+          "source_segment_id": "seg_011",
+          "source_time_range": [
+            57.9,
+            66.04
+          ],
+          "duration_seconds": 8.14,
+          "duration_ratio": 0.123,
+          "purpose": "show final matched pair, release emotion naturally",
+          "template": "last matched visual pair + large centered keyword text + closing exclamation speech",
+          "input_requirements": {
+            "needed_assets": [
+              "2 final matched visual clips",
+              "keyword text asset",
+              "closing exclamation voiceover"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "low shot density",
+              "no explicit CTA"
+            ]
+          },
+          "required_elements": [
+            "final match",
+            "natural emotion release"
+          ],
+          "replaceable_elements": [
+            "match theme",
+            "keyword text content",
+            "closing speech content"
+          ],
+          "priority": "medium"
+        }
+      ],
+      "editing_rules": [
+        {
+          "rule_name": "cut_on_visual_match",
+          "description": "在两个匹配画面的衔接点直接切镜，强化视觉匹配的冲击感",
+          "source_evidence": [
+            "rhythm:cutting_strategy primary"
+          ],
+          "applies_to_slots": [
+            "matched_demo_unit",
+            "pre_climax_double_demo",
+            "second_batch_double_demo",
+            "peak_climax_demo",
+            "post_climax_demo_sequence"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "cut_on_speech_peak",
+          "description": "在人声呼喊、惊叹、赞叹的语音峰值处切换镜头，强化情绪节奏",
+          "source_evidence": [
+            "rhythm:cutting_strategy secondary"
+          ],
+          "applies_to_slots": [
+            "no_text_direct_hook",
+            "pre_climax_double_demo",
+            "peak_climax_demo",
+            "resolution_wrap_up"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "gradual_acceleration_then_decline",
+          "description": "整体节奏从开场中等速度逐步提升，在高潮段达到最快切镜速度，之后逐步回落收尾",
+          "source_evidence": [
+            "rhythm:rhythm_pattern",
+            "energy:energy_pattern"
+          ],
+          "applies_to_slots": [
+            "all slots"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "repeated_centered_keyword_mark",
+          "description": "每一组匹配画面都搭配居中展示的大字体统一关键词，形成统一视觉标识",
+          "source_evidence": [
+            "packaging:key_packaging_patterns repeated_keyword_marking"
+          ],
+          "applies_to_slots": [
+            "all demo slots"
+          ],
+          "priority": "high"
+        }
+      ],
+      "adaptation_guidance": {
+        "for_entertainment_montage": "完全保留直入主题开场、重复匹配演示、数字过渡、高潮峰值密度展示的完整结构，替换匹配主题和对应关键词即可",
+        "for_product_ad": "将巧合匹配替换为产品功能与用户场景的匹配，保留节奏递进和高冲击高潮展示，去掉无意义的过渡缓冲",
+        "for_tutorial": "将匹配演示替换为技巧步骤演示，把统一关键词替换为步骤编号，保留节奏递进结构，弱化高燃惊呼语音",
+        "for_vlog": "将巧合匹配替换为日常趣味瞬间的配对展示，保留无标题直入开场和情绪自然释放的收尾"
+      }
+    },
+    "non_transferable_elements": [
+      {
+        "element": "original specific 'coincidence' keyword text",
+        "reason": "属于原视频特定主题标识，需要替换为新内容对应的统一关键词"
+      },
+      {
+        "element": "original specific 161BGM audio track",
+        "reason": "原视频BGM仅作为氛围支撑，可替换为适配新内容的同节奏BGM"
+      },
+      {
+        "element": "platform_cta",
+        "reason": "原视频无创作者主动CTA，平台推荐引导不属于可迁移结构规则"
+      }
+    ],
+    "uncertainty": "具体转场样式、贴纸使用、文字字体细节和背景对比度需要后续视觉工具进一步确认，原视频beat_sync_score较低无严格强卡点要求"
+  },
+  "analysis_metadata": {
+    "total_duration_seconds": 322.9,
+    "total_llm_calls": 35,
+    "total_tool_calls": 38,
+    "vision_budget": {
+      "total_used": 4,
+      "max_total": 16,
+      "max_per_agent": 4,
+      "used_by_agent": {
+        "packaging": 4
+      }
+    },
+    "blackboard_history": [
+      {
+        "timestamp": "2026-06-08T03:32:47.431711+00:00",
+        "action": "write",
+        "agent_name": "script",
+        "key": "script",
+        "summary": "script completed in 3 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-08T03:34:06.033738+00:00",
+        "action": "write",
+        "agent_name": "rhythm",
+        "key": "rhythm",
+        "summary": "rhythm completed after max rounds (11 LLM calls)"
+      },
+      {
+        "timestamp": "2026-06-08T03:34:45.462784+00:00",
+        "action": "write",
+        "agent_name": "packaging",
+        "key": "packaging",
+        "summary": "packaging completed in 3 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-08T03:35:25.065409+00:00",
+        "action": "write",
+        "agent_name": "value",
+        "key": "value",
+        "summary": "value completed in 6 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-08T03:36:08.972120+00:00",
+        "action": "write",
+        "agent_name": "energy",
+        "key": "energy",
+        "summary": "energy completed in 5 LLM calls"
+      },
+      {
+        "timestamp": "2026-06-08T03:36:08.972120+00:00",
+        "action": "write",
+        "agent_name": "overview",
+        "key": "overview",
+        "summary": "dict keys=['video_id', 'duration', 'resolution', 'fps', 'scene_count', 'keyframe_count', 'transcript_segment_count', 'ocr_frame_count']"
+      },
+      {
+        "timestamp": "2026-06-08T03:37:22.413692+00:00",
+        "action": "write",
+        "agent_name": "transfer",
+        "key": "transfer",
+        "summary": "transfer completed in 7 LLM calls"
+      }
+    ],
+    "agent_details": {
+      "script": {
+        "llm_calls": 3,
+        "tool_calls": 6,
+        "tool_history": [
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"b_V49-rLPmM\", \"duration\": 66.037551, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 30, \"keyframe_count\": 30, \"transcript_segment_count\": 21, \"ocr_frame_count\": 15, \"beat_count\": 176, \"beat_sync_score\": 0.1136, \"bpm\": 161.4990234375, \"estimated_pace\": \"medium\", \"subtitle_density\": \"low\", \"avg_shot_duration\": 2.199, \"shot_density\": 0.4548, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_003\", \"timestamp\": 6.65, \"scene_id\": \"scene_003\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_005\", \"timestamp\": 10.316666999999999, \"scene_id\": \"scene_005\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_007\", \"timestamp\": 15.316666999999999, \"scene_id\": \"scene_007\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_009\", \"timestamp\": 19.083333, \"scene_id\": \"scene_009\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_011\", \"timestamp\": 23.450000000000003,..."
+          },
+          {
+            "tool": "query_timeline",
+            "arguments": {
+              "start_time": 0.0,
+              "end_time": 10.0
+            },
+            "result_preview": "{\"time_range\": [0.0, 10.0], \"scenes\": [{\"scene_id\": \"scene_000\", \"index\": 0, \"start_time\": 0.0, \"end_time\": 4.433333, \"duration\": 4.433333, \"keyframe_ids\": [\"frame_000\"]}, {\"scene_id\": \"scene_001\", \"index\": 1, \"start_time\": 4.433333, \"end_time\": 5.0, \"duration\": 0.5666669999999998, \"keyframe_ids\": [\"frame_001\"]}, {\"scene_id\": \"scene_002\", \"index\": 2, \"start_time\": 5.0, \"end_time\": 6.3, \"duration\": 1.2999999999999998, \"keyframe_ids\": [\"frame_002\"]}, {\"scene_id\": \"scene_003\", \"index\": 3, \"start_ti..."
+          },
+          {
+            "tool": "query_timeline",
+            "arguments": {
+              "start_time": 10.0,
+              "end_time": 30.0
+            },
+            "result_preview": "{\"time_range\": [10.0, 30.0], \"scenes\": [{\"scene_id\": \"scene_005\", \"index\": 5, \"start_time\": 9.966667, \"end_time\": 10.666667, \"duration\": 0.7000000000000011, \"keyframe_ids\": [\"frame_005\"]}, {\"scene_id\": \"scene_006\", \"index\": 6, \"start_time\": 10.666667, \"end_time\": 14.966667, \"duration\": 4.299999999999999, \"keyframe_ids\": [\"frame_006\"]}, {\"scene_id\": \"scene_007\", \"index\": 7, \"start_time\": 14.966667, \"end_time\": 15.666667, \"duration\": 0.7000000000000011, \"keyframe_ids\": [\"frame_007\"]}, {\"scene_id\":..."
+          },
+          {
+            "tool": "query_timeline",
+            "arguments": {
+              "start_time": 30.0,
+              "end_time": 50.0
+            },
+            "result_preview": "{\"time_range\": [30.0, 50.0], \"scenes\": [{\"scene_id\": \"scene_014\", \"index\": 14, \"start_time\": 27.666667, \"end_time\": 34.366667, \"duration\": 6.699999999999999, \"keyframe_ids\": [\"frame_014\"]}, {\"scene_id\": \"scene_015\", \"index\": 15, \"start_time\": 34.366667, \"end_time\": 35.066667, \"duration\": 0.7000000000000028, \"keyframe_ids\": [\"frame_015\"]}, {\"scene_id\": \"scene_016\", \"index\": 16, \"start_time\": 35.066667, \"end_time\": 40.966667, \"duration\": 5.899999999999999, \"keyframe_ids\": [\"frame_016\"]}, {\"scene_i..."
+          },
+          {
+            "tool": "query_timeline",
+            "arguments": {
+              "start_time": 50.0,
+              "end_time": 66.0
+            },
+            "result_preview": "{\"time_range\": [50.0, 66.0], \"scenes\": [{\"scene_id\": \"scene_021\", \"index\": 21, \"start_time\": 47.333333, \"end_time\": 52.166667, \"duration\": 4.833333999999994, \"keyframe_ids\": [\"frame_021\"]}, {\"scene_id\": \"scene_022\", \"index\": 22, \"start_time\": 52.166667, \"end_time\": 52.866667, \"duration\": 0.7000000000000028, \"keyframe_ids\": [\"frame_022\"]}, {\"scene_id\": \"scene_023\", \"index\": 23, \"start_time\": 52.866667, \"end_time\": 54.866667, \"duration\": 2.0, \"keyframe_ids\": [\"frame_023\"]}, {\"scene_id\": \"scene_024..."
+          }
+        ]
+      },
+      "rhythm": {
+        "llm_calls": 11,
+        "tool_calls": 10,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.3, \"hook_type\": \"direct\", \"core_text\": \"开场快速切换画面搭配人声呼喊，直接进入高节奏内容\", \"evidence\": [{\"type\": \"transcript\", \"ref\": \"0.34-6.24\", \"text\": \"Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!\"}], \"reason\": \"开头无标题卡直接用快节奏画面和人声抓住注意力，属于直入主题的hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"demonstration\", \"start_time\": 6.3, \"end_time\": 9.97, \"core_text\": \"展示第一个coincidence主题的对..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"b_V49-rLPmM\", \"duration\": 66.037551, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 30, \"keyframe_count\": 30, \"transcript_segment_count\": 21, \"ocr_frame_count\": 15, \"beat_count\": 176, \"beat_sync_score\": 0.1136, \"bpm\": 161.4990234375, \"estimated_pace\": \"medium\", \"subtitle_density\": \"low\", \"avg_shot_duration\": 2.199, \"shot_density\": 0.4548, \"has_speech\": true}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 0.0,
+              "end_time": 6.3
+            },
+            "result_preview": "{\"time_range\": [0.0, 6.3], \"duration\": 6.3, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 2.1, \"shot_density\": 0.4762, \"keyframe_count\": 3, \"keyframes_per_second\": 0.4762, \"beat_count\": 17, \"beats_per_second\": 2.6984, \"text_frame_count\": 0, \"unique_text_count\": 0, \"ocr_change_count\": 0, \"transcript_count\": 4, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 6.3,
+              "end_time": 9.97
+            },
+            "result_preview": "{\"time_range\": [6.3, 9.97], \"duration\": 3.67, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 1.456, \"shot_density\": 0.8174, \"keyframe_count\": 2, \"keyframes_per_second\": 0.545, \"beat_count\": 9, \"beats_per_second\": 2.4523, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 9.97,
+              "end_time": 14.97
+            },
+            "result_preview": "{\"time_range\": [9.97, 14.97], \"duration\": 5.0, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 1.9, \"shot_density\": 0.6, \"keyframe_count\": 2, \"keyframes_per_second\": 0.4, \"beat_count\": 14, \"beats_per_second\": 2.8, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 14.97,
+              "end_time": 18.73
+            },
+            "result_preview": "{\"time_range\": [14.97, 18.73], \"duration\": 3.76, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 1.883, \"shot_density\": 0.5319, \"keyframe_count\": 2, \"keyframes_per_second\": 0.5319, \"beat_count\": 10, \"beats_per_second\": 2.6596, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 0, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 18.73,
+              "end_time": 23.1
+            },
+            "result_preview": "{\"time_range\": [18.73, 23.1], \"duration\": 4.37, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 2.478, \"shot_density\": 0.6865, \"keyframe_count\": 2, \"keyframes_per_second\": 0.4577, \"beat_count\": 11, \"beats_per_second\": 2.5172, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 3, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 23.1,
+              "end_time": 27.67
+            },
+            "result_preview": "{\"time_range\": [23.1, 27.67], \"duration\": 4.57, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 2.817, \"shot_density\": 0.8753, \"keyframe_count\": 3, \"keyframes_per_second\": 0.6565, \"beat_count\": 13, \"beats_per_second\": 2.8446, \"text_frame_count\": 2, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 27.67,
+              "end_time": 34.37
+            },
+            "result_preview": "{\"time_range\": [27.67, 34.37], \"duration\": 6.7, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 3.7, \"shot_density\": 0.2985, \"keyframe_count\": 1, \"keyframes_per_second\": 0.1493, \"beat_count\": 18, \"beats_per_second\": 2.6866, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 34.37,
+              "end_time": 41.67
+            },
+            "result_preview": "{\"time_range\": [34.37, 41.67], \"duration\": 7.3, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 2.567, \"shot_density\": 0.5479, \"keyframe_count\": 3, \"keyframes_per_second\": 0.411, \"beat_count\": 20, \"beats_per_second\": 2.7397, \"text_frame_count\": 2, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 2, \"short_segment_warning\": false}"
+          }
+        ]
+      },
+      "packaging": {
+        "llm_calls": 3,
+        "tool_calls": 7,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.3, \"hook_type\": \"direct\", \"core_text\": \"开场快速切换画面搭配人声呼喊，直接进入高节奏内容\", \"evidence\": [{\"type\": \"transcript\", \"ref\": \"0.34-6.24\", \"text\": \"Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!\"}], \"reason\": \"开头无标题卡直接用快节奏画面和人声抓住注意力，属于直入主题的hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"demonstration\", \"start_time\": 6.3, \"end_time\": 9.97, \"core_text\": \"展示第一个coincidence主题的对..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"b_V49-rLPmM\", \"duration\": 66.037551, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 30, \"keyframe_count\": 30, \"transcript_segment_count\": 21, \"ocr_frame_count\": 15, \"beat_count\": 176, \"beat_sync_score\": 0.1136, \"bpm\": 161.4990234375, \"estimated_pace\": \"medium\", \"subtitle_density\": \"low\", \"avg_shot_duration\": 2.199, \"shot_density\": 0.4548, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_003\", \"timestamp\": 6.65, \"scene_id\": \"scene_003\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_005\", \"timestamp\": 10.316666999999999, \"scene_id\": \"scene_005\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_007\", \"timestamp\": 15.316666999999999, \"scene_id\": \"scene_007\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_009\", \"timestamp\": 19.083333, \"scene_id\": \"scene_009\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_011\", \"timestamp\": 23.450000000000003,..."
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_000"
+            },
+            "result_preview": "{\"frame_id\": \"frame_000\", \"timestamp\": 2.2166665, \"path\": \"E:\\\\MIT\\\\26Summer\\\\Bytedance competition\\\\ViralCut\\\\output\\\\b_V49-rLPmM\\\\frames\\\\frame_000.jpg\", \"display_text\": \"\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 1, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 1}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_003"
+            },
+            "result_preview": "{\"frame_id\": \"frame_003\", \"timestamp\": 6.65, \"path\": \"E:\\\\MIT\\\\26Summer\\\\Bytedance competition\\\\ViralCut\\\\output\\\\b_V49-rLPmM\\\\frames\\\\frame_003.jpg\", \"display_text\": \"coincidence\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 2, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 2}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_020"
+            },
+            "result_preview": "{\"frame_id\": \"frame_020\", \"timestamp\": 46.983333, \"path\": \"E:\\\\MIT\\\\26Summer\\\\Bytedance competition\\\\ViralCut\\\\output\\\\b_V49-rLPmM\\\\frames\\\\frame_020.jpg\", \"display_text\": \"coincidence\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 3, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 3}}}"
+          },
+          {
+            "tool": "look_at_keyframe",
+            "arguments": {
+              "frame_id": "frame_029"
+            },
+            "result_preview": "{\"frame_id\": \"frame_029\", \"timestamp\": 65.61666683333334, \"path\": \"E:\\\\MIT\\\\26Summer\\\\Bytedance competition\\\\ViralCut\\\\output\\\\b_V49-rLPmM\\\\frames\\\\frame_029.jpg\", \"display_text\": \"coincidence\", \"vision_description\": \"Vision API placeholder: use display_text/path for now.\", \"budget\": {\"total_used\": 4, \"max_total\": 16, \"max_per_agent\": 4, \"used_by_agent\": {\"packaging\": 4}}}"
+          }
+        ]
+      },
+      "value": {
+        "llm_calls": 6,
+        "tool_calls": 5,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.3, \"hook_type\": \"direct\", \"core_text\": \"开场快速切换画面搭配人声呼喊，直接进入高节奏内容\", \"evidence\": [{\"type\": \"transcript\", \"ref\": \"0.34-6.24\", \"text\": \"Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!\"}], \"reason\": \"开头无标题卡直接用快节奏画面和人声抓住注意力，属于直入主题的hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"demonstration\", \"start_time\": 6.3, \"end_time\": 9.97, \"core_text\": \"展示第一个coincidence主题的对..."
+          },
+          {
+            "tool": "get_overview",
+            "arguments": {},
+            "result_preview": "{\"video_id\": \"b_V49-rLPmM\", \"duration\": 66.037551, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 30, \"keyframe_count\": 30, \"transcript_segment_count\": 21, \"ocr_frame_count\": 15, \"beat_count\": 176, \"beat_sync_score\": 0.1136, \"bpm\": 161.4990234375, \"estimated_pace\": \"medium\", \"subtitle_density\": \"low\", \"avg_shot_duration\": 2.199, \"shot_density\": 0.4548, \"has_speech\": true}"
+          },
+          {
+            "tool": "get_all_display_texts",
+            "arguments": {},
+            "result_preview": "[{\"frame_id\": \"frame_003\", \"timestamp\": 6.65, \"scene_id\": \"scene_003\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_005\", \"timestamp\": 10.316666999999999, \"scene_id\": \"scene_005\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_007\", \"timestamp\": 15.316666999999999, \"scene_id\": \"scene_007\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_009\", \"timestamp\": 19.083333, \"scene_id\": \"scene_009\", \"display_text\": \"coincidence\"}, {\"frame_id\": \"frame_011\", \"timestamp\": 23.450000000000003,..."
+          },
+          {
+            "tool": "search_text",
+            "arguments": {
+              "keyword": "关注"
+            },
+            "result_preview": "[]"
+          },
+          {
+            "tool": "search_text",
+            "arguments": {
+              "keyword": "收藏"
+            },
+            "result_preview": "[]"
+          }
+        ]
+      },
+      "energy": {
+        "llm_calls": 5,
+        "tool_calls": 4,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.3, \"hook_type\": \"direct\", \"core_text\": \"开场快速切换画面搭配人声呼喊，直接进入高节奏内容\", \"evidence\": [{\"type\": \"transcript\", \"ref\": \"0.34-6.24\", \"text\": \"Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!\"}], \"reason\": \"开头无标题卡直接用快节奏画面和人声抓住注意力，属于直入主题的hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"demonstration\", \"start_time\": 6.3, \"end_time\": 9.97, \"core_text\": \"展示第一个coincidence主题的对..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"medium\", \"bpm\": 161.499, \"beat_sync_score\": 0.1136, \"avg_shot_duration\": 2.199}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"pace\": \"medium\", \"shots_per_second\": 0.4762, \"avg_shot_duration\": 2.1, \"beat_count\": 17, \"beats_per_second\": 2.6984, \"cut_beat_alignment\": 0.12, \"role\": \"direct hook, fast opening to grab attention\", \"reason\": \"开场直接切换3个镜头搭配多人呼喊人声，快速切入主题，数据来源metrics:seg_001\", \"scene_cut_count\": 2, \"rhythm_driver\": \"speech\"}, {\"segment..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"low\", \"subtitle_style\": \"large_bold_instruction_text\", \"title_card_usage\": false, \"dominant_text_layout\": \"centered\", \"visual_emphasis\": [\"repeated large keyword text\", \"numbered segment marker\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"packaging_role\": \"no_text_hook\", \"text_density\": \"none\", \"layout\": \"no on-screen text\", \"evidence_refs\": [\"frame_000\"]..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"通过大量创意巧合匹配的高燃画面给观众提供强视觉冲击的趣味娱乐体验\", \"value_type\": \"entertainment\", \"target_audience\": \"喜爱高节奏趣味创意剪辑内容的短视频用户\", \"conversion_goal\": \"无明确主动转化目标，仅提供纯娱乐内容消费\", \"primary_hook_value\": \"开场直接用快节奏画面和人声呼喊快速抓住观众注意力，立刻进入高情绪强度的内容\", \"creator_cta\": null, \"platform_cta\": null, \"selling_points\": null}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"value_role\": \"hook\", \"claim\": \"直入主题用快节奏画面和人声快速拉高观众情绪，抓住注意力\", \"evidence_refs\": [\"0.34-6.24\"], \"evidence_te..."
+          }
+        ]
+      },
+      "transfer": {
+        "llm_calls": 7,
+        "tool_calls": 6,
+        "tool_history": [
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "overview"
+            },
+            "result_preview": "{\"video_id\": \"b_V49-rLPmM\", \"duration\": 66.037551, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 30, \"keyframe_count\": 30, \"transcript_segment_count\": 21, \"ocr_frame_count\": 15, \"beat_count\": 176, \"beat_sync_score\": 0.1136, \"bpm\": 161.4990234375, \"estimated_pace\": \"medium\", \"subtitle_density\": \"low\", \"avg_shot_duration\": 2.199, \"shot_density\": 0.4548, \"has_speech\": true}"
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "script"
+            },
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.3, \"hook_type\": \"direct\", \"core_text\": \"开场快速切换画面搭配人声呼喊，直接进入高节奏内容\", \"evidence\": [{\"type\": \"transcript\", \"ref\": \"0.34-6.24\", \"text\": \"Jeder ist da! A little gruelle Jackie Hey! Hey! Hey! Stand! hyung, fan, you!\"}], \"reason\": \"开头无标题卡直接用快节奏画面和人声抓住注意力，属于直入主题的hook\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"demonstration\", \"start_time\": 6.3, \"end_time\": 9.97, \"core_text\": \"展示第一个coincidence主题的对..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "rhythm"
+            },
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"medium\", \"bpm\": 161.499, \"beat_sync_score\": 0.1136, \"avg_shot_duration\": 2.199}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"pace\": \"medium\", \"shots_per_second\": 0.4762, \"avg_shot_duration\": 2.1, \"beat_count\": 17, \"beats_per_second\": 2.6984, \"cut_beat_alignment\": 0.12, \"role\": \"direct hook, fast opening to grab attention\", \"reason\": \"开场直接切换3个镜头搭配多人呼喊人声，快速切入主题，数据来源metrics:seg_001\", \"scene_cut_count\": 2, \"rhythm_driver\": \"speech\"}, {\"segment..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "packaging"
+            },
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"low\", \"subtitle_style\": \"large_bold_instruction_text\", \"title_card_usage\": false, \"dominant_text_layout\": \"centered\", \"visual_emphasis\": [\"repeated large keyword text\", \"numbered segment marker\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"packaging_role\": \"no_text_hook\", \"text_density\": \"none\", \"layout\": \"no on-screen text\", \"evidence_refs\": [\"frame_000\"]..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "value"
+            },
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"通过大量创意巧合匹配的高燃画面给观众提供强视觉冲击的趣味娱乐体验\", \"value_type\": \"entertainment\", \"target_audience\": \"喜爱高节奏趣味创意剪辑内容的短视频用户\", \"conversion_goal\": \"无明确主动转化目标，仅提供纯娱乐内容消费\", \"primary_hook_value\": \"开场直接用快节奏画面和人声呼喊快速抓住观众注意力，立刻进入高情绪强度的内容\", \"creator_cta\": null, \"platform_cta\": null, \"selling_points\": null}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"value_role\": \"hook\", \"claim\": \"直入主题用快节奏画面和人声快速拉高观众情绪，抓住注意力\", \"evidence_refs\": [\"0.34-6.24\"], \"evidence_te..."
+          },
+          {
+            "tool": "read_blackboard",
+            "arguments": {
+              "agent_name": "energy"
+            },
+            "result_preview": "{\"energy_curve\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.3], \"energy_level\": \"high\", \"role\": \"hook_attention\", \"drivers\": [\"direct fast opening\", \"multiple shouting speech\", \"no pre-title delay\"], \"evidence_refs\": [\"script:seg_001\", \"rhythm:seg_001\", \"value:seg_001\"], \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"time_range\": [6.3, 9.97], \"energy_level\": \"medium\", \"role\": \"first_demo_launch\", \"drivers\": [\"first coincidence visual match\", \"large centered keyword text\"], \"evidence_refs\":..."
+          }
+        ]
+      }
+    }
+  }
+}

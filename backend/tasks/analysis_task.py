@@ -220,9 +220,95 @@ def _run_stage2_leo(task_id: str, video_id: str, source_video_path: str | None) 
     task_store.update(task_id, status="done", video_ext=ext, message="分析完成")
 
 
+def _run_stage2_both(task_id: str, video_id: str, source_video_path: str | None) -> None:
+    """Run leo first (fast, parallel) then main (slower, sequential). Shows results as each phase completes."""
+    import asyncio
+
+    evidence_path = f"output/{video_id}/evidence_package.json"
+    dest = f"{STATIC_DIR}/{video_id}"
+
+    # Setup: copy frames/video/evidence to static dir, clear stale Stage 2 outputs
+    ext = _copy_outputs(video_id, source_video_path)
+
+    # ── Phase 1: Leo (parallel agents, fast) ─────────────────────────
+    task_store.update(
+        task_id,
+        video_id=video_id, stage="stage2",
+        message="爆款归因中（1/2）...",
+        stage2_variant="both", current_phase="leo", completed_agents=[],
+    )
+
+    leo_dir = os.path.abspath("src/stage2/leo_variant")
+    if leo_dir not in sys.path:
+        sys.path.insert(0, leo_dir)
+    from orchestrator import run_viral_analysis  # type: ignore
+
+    model       = os.getenv("LEO_MODEL", "gpt-4o")
+    num_agents  = int(os.getenv("LEO_NUM_AGENTS", "6"))
+    leo_api_key = os.getenv("LEO_API_KEY") or os.getenv("OPENAI_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+    leo_base_url = os.getenv("LEO_BASE_URL", "https://api.openai.com/v1")
+
+    if leo_api_key:
+        # Preflight: surface auth/model errors early
+        try:
+            from openai import OpenAI
+            _c = OpenAI(api_key=leo_api_key, base_url=leo_base_url)
+            _c.chat.completions.create(model=model, messages=[{"role": "user", "content": "ping"}], max_tokens=1)
+        except Exception as exc:
+            task_store.update(task_id, message=f"爆款归因跳过（连接失败：{exc}），直接运行结构分析...")
+        else:
+            with open(evidence_path, encoding="utf-8") as f:
+                evidence = json.load(f)
+            synthesis = asyncio.run(run_viral_analysis(
+                evidence, model=model, num_agents=num_agents,
+                api_key=leo_api_key, base_url=leo_base_url,
+            ))
+            synthesis_dict = synthesis.model_dump() if hasattr(synthesis, "model_dump") else dict(synthesis)
+            with open(f"{dest}/synthesis_result.json", "w", encoding="utf-8") as f:
+                json.dump(synthesis_dict, f, ensure_ascii=False, indent=2, default=str)
+    else:
+        task_store.update(task_id, message="爆款归因跳过（未配置LEO_API_KEY），直接运行结构分析...")
+
+    # Signal: leo phase done — frontend can now fetch partial result (synthesis_result available)
+    task_store.update(
+        task_id,
+        has_leo_result=True, current_phase="main",
+        message="爆款归因完成，结构分析中（2/2）...",
+        video_ext=ext, completed_agents=[],
+    )
+
+    # ── Phase 2: Main (sequential agents) ────────────────────────────
+    completed: list[str] = []
+
+    def _prog(agent: str, msg: str) -> None:
+        task_store.update(task_id, current_step=agent, message=f"[结构] {msg}")
+
+    def _done(agent: str) -> None:
+        if agent not in completed:
+            completed.append(agent)
+        task_store.update(task_id, completed_agents=list(completed))
+
+    from src.stage2.pipeline import run_full_pipeline
+    try:
+        result_main = run_full_pipeline(evidence_path, progress_callback=_prog, on_agent_done=_done)
+    except TypeError:
+        try:
+            result_main = run_full_pipeline(evidence_path, progress_callback=_prog)
+        except TypeError:
+            result_main = run_full_pipeline(evidence_path)
+        task_store.update(task_id, completed_agents=AGENT_ORDER)
+
+    with open(f"{dest}/video_structure.json", "w", encoding="utf-8") as f:
+        json.dump(result_main, f, ensure_ascii=False, indent=2, default=str)
+
+    task_store.update(task_id, status="done", video_ext=ext, completed_agents=AGENT_ORDER, message="全部分析完成")
+
+
 def _dispatch_stage2(task_id: str, video_id: str, source_video_path: str | None, variant: str) -> None:
     if variant == "leo":
         _run_stage2_leo(task_id, video_id, source_video_path)
+    elif variant == "both":
+        _run_stage2_both(task_id, video_id, source_video_path)
     else:
         _run_stage2_main(task_id, video_id, source_video_path)
 

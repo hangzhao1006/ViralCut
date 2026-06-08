@@ -131,15 +131,33 @@ export default function AgentProgress({ status, elapsed }: Props) {
       </div>
 
       {/* Stage labels */}
-      <div className="flex items-center gap-2 mb-4 text-xs">
-        <span className={`flex items-center gap-1.5 ${stage1Done ? 'text-emerald-700' : 'text-blue-600'}`}>
-          {stage1Done ? '✓' : '◐'} Stage 1 视频预处理
-        </span>
-        <span className="text-gray-300">·</span>
-        <span className={`flex items-center gap-1.5 ${stage2Active ? 'text-blue-600' : status.status === 'done' ? 'text-emerald-700' : 'text-gray-400'}`}>
-          {status.status === 'done' ? '✓' : stage2Active ? '◐' : '○'} Stage 2 多Agent分析
-        </span>
-      </div>
+      {(() => {
+        const phase = (status as Record<string, unknown>).current_phase as string | undefined;
+        const isBoth = status.stage2_variant === 'both';
+        return (
+          <div className="flex items-center gap-2 mb-4 text-xs flex-wrap">
+            <span className={`flex items-center gap-1.5 ${stage1Done ? 'text-emerald-700' : 'text-blue-600'}`}>
+              {stage1Done ? '✓' : '◐'} Stage 1 视频预处理
+            </span>
+            <span className="text-gray-300">·</span>
+            {isBoth ? (
+              <>
+                <span className={`flex items-center gap-1.5 ${phase === 'main' || status.status === 'done' ? 'text-emerald-700' : stage2Active ? 'text-blue-600' : 'text-gray-400'}`}>
+                  {phase === 'main' || status.status === 'done' ? '✓' : stage2Active ? '◐' : '○'} 爆款归因
+                </span>
+                <span className="text-gray-300">·</span>
+                <span className={`flex items-center gap-1.5 ${status.status === 'done' ? 'text-emerald-700' : phase === 'main' ? 'text-blue-600' : 'text-gray-400'}`}>
+                  {status.status === 'done' ? '✓' : phase === 'main' ? '◐' : '○'} 结构分析
+                </span>
+              </>
+            ) : (
+              <span className={`flex items-center gap-1.5 ${stage2Active ? 'text-blue-600' : status.status === 'done' ? 'text-emerald-700' : 'text-gray-400'}`}>
+                {status.status === 'done' ? '✓' : stage2Active ? '◐' : '○'} Stage 2 多Agent分析
+              </span>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Stage 1 sub-steps OR Stage 2 agent cards */}
       {!stage1Done ? (
@@ -188,11 +206,11 @@ export default function AgentProgress({ status, elapsed }: Props) {
               : <div className="text-emerald-400/70">› {status.message ?? '正在启动...'}</div>}
           </div>
         </div>
-      ) : status.stage2_variant === 'leo' ? (
+      ) : (status.stage2_variant === 'leo' || (status.stage2_variant === 'both' && (status as Record<string, unknown>).current_phase === 'leo')) ? (
         <div>
           <div className="grid grid-cols-3 gap-2">
             {LEO_LENSES.map((l) => {
-              const isDone = status.status === 'done';
+              const isDone = status.status === 'done' || (status as Record<string, unknown>).current_phase === 'main';
               return (
                 <div key={l.key} className={`rounded-xl p-3 border transition-all ${isDone ? 'bg-white border-gray-200' : 'bg-blue-50/60 border-blue-200'}`}>
                   <div className="flex items-center justify-between mb-1.5">

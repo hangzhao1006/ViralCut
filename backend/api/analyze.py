@@ -97,16 +97,23 @@ def _load_result(video_id: str, video_ext: str = ".mp4") -> dict:
         "evidence_package": evidence,
     }
 
-    # main variant: video_structure.json ; leo variant: synthesis_result.json
-    vs_path = f"{base}/video_structure.json"
+    vs_path  = f"{base}/video_structure.json"
     syn_path = f"{base}/synthesis_result.json"
-    if os.path.exists(vs_path):
+    has_vs  = os.path.exists(vs_path)
+    has_syn = os.path.exists(syn_path)
+
+    if has_vs:
         with open(vs_path, encoding="utf-8") as f:
             result["video_structure"] = json.load(f)
-        result["stage2_variant"] = "main"
-    if os.path.exists(syn_path):
+    if has_syn:
         with open(syn_path, encoding="utf-8") as f:
             result["synthesis_result"] = json.load(f)
+
+    if has_vs and has_syn:
+        result["stage2_variant"] = "both"
+    elif has_vs:
+        result["stage2_variant"] = "main"
+    elif has_syn:
         result["stage2_variant"] = "leo"
 
     return result
@@ -118,6 +125,11 @@ async def get_result(task_id: str):
     status = task.get("status")
     if status == "done":
         return _load_result(task["video_id"], task.get("video_ext", ".mp4"))
+    # Both mode: leo done, main still running — return partial result so frontend can show leo immediately
+    if status == "processing" and task.get("has_leo_result") and task.get("video_id"):
+        res = _load_result(task["video_id"], task.get("video_ext", ".mp4"))
+        res["main_loading"] = True
+        return res
     # Stage 1 finished and awaiting confirmation to run Stage 2
     if status == "stage1_done" and task.get("video_id"):
         res = _load_result(task["video_id"], task.get("video_ext", ".mp4"))
