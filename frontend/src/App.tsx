@@ -329,12 +329,12 @@ export default function App() {
                   <span className="text-red-500">{analysis.error}</span>
                 </div>
               )}
-              <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3">
-                <div className="text-[12px] text-indigo-900">
-                  Stage 1 已完成。确认后同时跑 <strong>爆款归因</strong>（快，并行）和 <strong>结构分析</strong>（慢，串行）：
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#e0e0e0] bg-[#f5f5f7] px-4 py-3">
+                <div className="text-[12px] text-[#6e6e73]">
+                  Stage 1 完成 · 确认后同时运行爆款归因（并行）和结构分析（串行）
                 </div>
                 <button onClick={handleContinueStage2} className="vc-button vc-button-primary">
-                  进入完整分析（归因 + 结构）→
+                  进入 Stage 2 →
                 </button>
               </div>
               <div className="grid grid-cols-[minmax(0,1fr)_360px] gap-5">

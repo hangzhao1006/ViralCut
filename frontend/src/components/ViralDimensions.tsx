@@ -1,79 +1,139 @@
 import type { SynthesisResult } from '../types';
 
-interface Props {
-  synthesis: SynthesisResult;
-}
+const MONO: React.CSSProperties = {
+  fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
+};
+
+interface Props { synthesis: SynthesisResult; }
 
 export default function ViralDimensions({ synthesis }: Props) {
   const dims = synthesis.ranked_dimensions ?? [];
-  const maxScore = 10;
 
   return (
-    <div className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
+    <div style={{
+      border: '1px solid #e8e8e8',
+      borderRadius: 16,
+      background: '#fff',
+      padding: '20px',
+      overflowY: 'auto',
+      maxHeight: '100%',
+    }}>
       {/* Top reason */}
-      <div className="mb-5 rounded-2xl border border-indigo-100 bg-indigo-50/70 px-4 py-3">
-        <div className="mb-1 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-indigo-400">
-          <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" /> 核心爆款原因
+      <div style={{
+        marginBottom: 20,
+        padding: '14px 16px',
+        borderRadius: 12,
+        background: '#f5f5f7',
+        border: '1px solid #eeeeee',
+      }}>
+        <div style={{ ...MONO, fontSize: 10, letterSpacing: '0.14em', color: '#aeaeb2', textTransform: 'uppercase', marginBottom: 8 }}>
+          Top Viral Reason
         </div>
-        <div className="text-sm leading-relaxed text-indigo-950">{synthesis.top_viral_reason}</div>
+        <div style={{ fontSize: 13, lineHeight: 1.7, color: '#1d1d1f' }}>
+          {synthesis.top_viral_reason}
+        </div>
       </div>
 
       {/* Ranked dimensions */}
-      <div className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400">
-        爆款维度排名（多视角 Agent 聚类）
+      <div style={{ ...MONO, fontSize: 10, letterSpacing: '0.14em', color: '#aeaeb2', textTransform: 'uppercase', marginBottom: 12 }}>
+        Dimension Rankings
       </div>
-      <div className="space-y-2.5">
-        {dims.map((d, i) => (
-          <div key={i} className="rounded-2xl border border-slate-200/80 bg-white p-3.5 shadow-sm transition hover:border-indigo-200 hover:shadow-md">
-            <div className="mb-2 flex items-start justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-slate-900 px-2 text-[11px] font-semibold text-white">
-                  {i + 1}
-                </span>
-                <span className="text-sm font-semibold text-slate-900">{d.dimension_name}</span>
-              </div>
-              <div className="flex shrink-0 items-center gap-2">
-                <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-700">
-                  {d.agent_agreement_count} 个视角认同
-                </span>
-                <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600">
-                  强度 {d.avg_strength_score?.toFixed(1)}
-                </span>
-              </div>
-            </div>
-
-            {/* Strength bar */}
-            <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-slate-100">
-              <div className="h-full rounded-full bg-indigo-500" style={{ width: `${(d.avg_strength_score / maxScore) * 100}%` }} />
-            </div>
-
-            <div className="text-xs leading-relaxed text-slate-600">{d.viral_mechanism}</div>
-
-            {/* Evidence */}
-            {d.representative_evidence?.length > 0 && (
-              <details className="mt-2 group">
-                <summary className="flex cursor-pointer items-center gap-1.5 text-[11px] font-medium text-slate-400 transition hover:text-slate-600">
-                  <span className="transition group-open:rotate-90">▸</span> {d.representative_evidence.length} 条证据
-                </summary>
-                <div className="mt-2 space-y-1.5">
-                  {d.representative_evidence.map((ev, j) => (
-                    <div key={j} className="rounded-xl bg-slate-50 px-2.5 py-2 text-[11px] text-slate-600">
-                      <span className="mr-1.5 rounded bg-white px-1.5 py-0.5 text-[10px] font-medium text-slate-500 ring-1 ring-slate-200">
-                        {ev.source}
-                      </span>
-                      {ev.quote && <span className="text-slate-700">"{ev.quote}" </span>}
-                      {ev.reasoning && <span className="text-slate-500">{ev.reasoning}</span>}
-                    </div>
-                  ))}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {dims.map((d, i) => {
+          const score = Math.min(10, d.avg_strength_score ?? 0);
+          return (
+            <div key={i} style={{
+              border: '1px solid #eeeeee',
+              borderRadius: 12,
+              padding: '12px 14px',
+              background: i === 0 ? '#f9f9f9' : '#fff',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10, marginBottom: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{
+                    ...MONO,
+                    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    width: 22, height: 22, borderRadius: 6,
+                    background: i === 0 ? '#1d1d1f' : '#f0f0f0',
+                    fontSize: 10, fontWeight: 700,
+                    color: i === 0 ? '#fff' : '#6e6e73',
+                    flexShrink: 0,
+                  }}>
+                    {i + 1}
+                  </span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: '#1d1d1f' }}>
+                    {d.dimension_name}
+                  </span>
                 </div>
-              </details>
-            )}
-          </div>
-        ))}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                  <span style={{
+                    ...MONO, fontSize: 10, color: '#6e6e73',
+                    padding: '2px 8px', borderRadius: 6,
+                    border: '1px solid #e8e8e8',
+                  }}>
+                    {d.agent_agreement_count} agents
+                  </span>
+                  <span style={{ ...MONO, fontSize: 10, color: '#aeaeb2' }}>
+                    {score.toFixed(1)}
+                  </span>
+                </div>
+              </div>
+
+              {/* Strength bar */}
+              <div style={{ height: 2, background: '#f0f0f0', borderRadius: 1, marginBottom: 8 }}>
+                <div style={{
+                  height: 2, borderRadius: 1,
+                  width: `${score * 10}%`,
+                  background: i === 0 ? '#1d1d1f' : '#c0c0c0',
+                }} />
+              </div>
+
+              <div style={{ fontSize: 12, color: '#6e6e73', lineHeight: 1.65 }}>
+                {d.viral_mechanism}
+              </div>
+
+              {/* Evidence */}
+              {d.representative_evidence?.length > 0 && (
+                <details style={{ marginTop: 8 }}>
+                  <summary style={{
+                    cursor: 'pointer', fontSize: 11, color: '#aeaeb2',
+                    listStyle: 'none', display: 'flex', alignItems: 'center', gap: 4,
+                  }}>
+                    <span>▸</span> {d.representative_evidence.length} evidence items
+                  </summary>
+                  <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {d.representative_evidence.map((ev, j) => (
+                      <div key={j} style={{
+                        padding: '8px 10px', borderRadius: 8,
+                        background: '#f5f5f7', border: '1px solid #eeeeee',
+                        fontSize: 11, color: '#6e6e73', lineHeight: 1.6,
+                      }}>
+                        <span style={{
+                          ...MONO, fontSize: 9, color: '#aeaeb2',
+                          background: '#fff', border: '1px solid #e8e8e8',
+                          padding: '1px 6px', borderRadius: 4,
+                          marginRight: 6,
+                        }}>
+                          {ev.source}
+                        </span>
+                        {ev.quote && <span style={{ color: '#1d1d1f' }}>"{ev.quote}" </span>}
+                        {ev.reasoning && <span>{ev.reasoning}</span>}
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {synthesis.analysis_note && (
-        <div className="mt-4 rounded-xl bg-slate-50 px-3 py-2.5 text-[11px] leading-relaxed text-slate-500">
+        <div style={{
+          marginTop: 14, padding: '12px 14px',
+          borderRadius: 10, background: '#f5f5f7',
+          fontSize: 11, color: '#6e6e73', lineHeight: 1.65,
+        }}>
           {synthesis.analysis_note}
         </div>
       )}

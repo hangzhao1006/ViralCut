@@ -1,41 +1,39 @@
 import type { TaskStatus } from '../../lib/api';
 
 const AGENTS = [
-  { key: 'script', name: 'Script', label: '脚本结构' },
-  { key: 'rhythm', name: 'Rhythm', label: '节奏分析' },
-  { key: 'packaging', name: 'Packaging', label: '视觉包装' },
-  { key: 'value', name: 'Value', label: '价值主张' },
-  { key: 'energy', name: 'Energy', label: '能量曲线' },
-  { key: 'transfer', name: 'Transfer', label: '迁移蓝图' },
+  { key: 'script',    label: 'Script',    desc: '脚本结构' },
+  { key: 'rhythm',    label: 'Rhythm',    desc: '节奏分析' },
+  { key: 'packaging', label: 'Packaging', desc: '视觉包装' },
+  { key: 'value',     label: 'Value',     desc: '价值主张' },
+  { key: 'energy',    label: 'Energy',    desc: '能量曲线' },
+  { key: 'transfer',  label: 'Transfer',  desc: '迁移蓝图' },
 ];
 
 const STAGE1_STEPS = [
-  { key: 'scene', name: '分镜检测', desc: '切分镜头' },
-  { key: 'keyframe', name: '关键帧', desc: '抽取代表帧' },
-  { key: 'ocr', name: '画面文字', desc: 'OCR识别' },
-  { key: 'asr', name: '语音转写', desc: 'ASR字幕' },
-  { key: 'beats', name: '音乐节拍', desc: 'BPM/卡点' },
-  { key: 'basic', name: '基础分析', desc: '镜头统计' },
+  { key: 'scene',    label: '分镜检测', desc: 'Scene detect' },
+  { key: 'keyframe', label: '关键帧',   desc: 'Keyframes' },
+  { key: 'ocr',      label: '画面文字', desc: 'OCR' },
+  { key: 'asr',      label: '语音转写', desc: 'ASR' },
+  { key: 'beats',    label: '音乐节拍', desc: 'Beats / BPM' },
+  { key: 'basic',    label: '基础分析', desc: 'Statistics' },
 ];
 
-// Leo variant runs these lenses in PARALLEL (no sequential per-agent tracking)
 const LEO_LENSES = [
-  { key: 'emotion', name: '情感心理' },
-  { key: 'narrative', name: '叙事结构' },
-  { key: 'social', name: '社会文化' },
-  { key: 'cognition', name: '信息认知' },
-  { key: 'form', name: '制作形式' },
-  { key: 'behavior', name: '行为社交' },
+  { key: 'emotion',    label: '情感 Agent', char: '🌀' },
+  { key: 'narrative',  label: '叙事 Agent', char: '🎯' },
+  { key: 'social',     label: '社会 Agent', char: '🌊' },
+  { key: 'cognition',  label: '信息 Agent', char: '⚡' },
+  { key: 'form',       label: '制作 Agent', char: '🔷' },
+  { key: 'behavior',   label: '行为 Agent', char: '🫧' },
 ];
 
-// Match Stage 1 step activity from captured pipeline logs (broad keywords for both pipelines)
-const STAGE1_KEYWORDS: Record<string, RegExp[]> = {
-  scene: [/scene/i, /pyscenedetect/i, /镜头/, /shot/i, /分镜/],
+const STAGE1_KW: Record<string, RegExp[]> = {
+  scene:    [/scene/i, /pyscenedetect/i, /镜头/, /shot/i, /分镜/],
   keyframe: [/keyframe/i, /关键帧/, /extract.?frame/i, /代表帧/],
-  ocr: [/\bocr\b/i, /rapidocr/i, /easyocr/i, /画面文字/, /文字识别/],
-  asr: [/whisper/i, /\basr\b/i, /transcri/i, /语音/, /字幕/],
-  beats: [/\bbeat/i, /\bbpm\b/i, /librosa/i, /节拍/, /tempo/i, /卡点/],
-  basic: [/basic_analysis/i, /基础分析/, /镜头统计/],
+  ocr:      [/\bocr\b/i, /rapidocr/i, /easyocr/i, /画面文字/, /文字识别/],
+  asr:      [/whisper/i, /\basr\b/i, /transcri/i, /语音/, /字幕/],
+  beats:    [/\bbeat/i, /\bbpm\b/i, /librosa/i, /节拍/, /tempo/i, /卡点/],
+  basic:    [/basic_analysis/i, /基础分析/, /镜头统计/],
 };
 
 type StepProg = { state: 'waiting' | 'active' | 'done'; pct?: number | null };
@@ -43,39 +41,41 @@ type StepProg = { state: 'waiting' | 'active' | 'done'; pct?: number | null };
 function parseStage1(logs: string[] | undefined): Record<string, StepProg> {
   const out: Record<string, StepProg> = {};
   for (const s of STAGE1_STEPS) out[s.key] = { state: 'waiting' };
-  if (!logs || logs.length === 0) return out;
+  if (!logs?.length) return out;
 
-  const order: string[] = [];
+  const seen: string[] = [];
   let lastKey: string | null = null;
   let lastPct: number | undefined;
 
   for (const line of logs) {
-    for (const key of Object.keys(STAGE1_KEYWORDS)) {
-      if (STAGE1_KEYWORDS[key].some((p) => p.test(line))) {
-        if (!order.includes(key)) order.push(key);
+    for (const key of Object.keys(STAGE1_KW)) {
+      if (STAGE1_KW[key].some((p) => p.test(line))) {
+        if (!seen.includes(key)) seen.push(key);
         lastKey = key;
         const m = line.match(/(\d+)\s*\/\s*(\d+)/);
         lastPct = m ? Math.round((+m[1] / Math.max(1, +m[2])) * 100) : undefined;
       }
     }
   }
-
-  for (const k of order) out[k] = { state: 'done', pct: 100 };
+  for (const k of seen) out[k] = { state: 'done', pct: 100 };
   if (lastKey) out[lastKey] = { state: 'active', pct: lastPct };
   return out;
 }
 
-interface Props {
-  status: TaskStatus;
-  elapsed: number;
-}
+const MONO: React.CSSProperties = {
+  fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
+};
+
+interface Props { status: TaskStatus; elapsed: number; }
 
 export default function AgentProgress({ status, elapsed }: Props) {
-  const stage = status.stage ?? 'stage1';
-  const current = status.current_step ?? '';
-  const completed: string[] = (status as { completed_agents?: string[] }).completed_agents ?? [];
+  const stage     = status.stage ?? 'stage1';
+  const current   = status.current_step ?? '';
+  const completed = (status as Record<string, unknown>).completed_agents as string[] ?? [];
+  const phase     = (status as Record<string, unknown>).current_phase as string | undefined;
+  const isBoth    = status.stage2_variant === 'both';
 
-  const stage1Done = stage === 'stage2' || status.status === 'done';
+  const stage1Done  = stage === 'stage2' || status.status === 'done';
   const stage2Active = stage === 'stage2' && status.status === 'processing';
 
   function agentState(key: string): 'done' | 'running' | 'waiting' {
@@ -87,166 +87,213 @@ export default function AgentProgress({ status, elapsed }: Props) {
   const mins = Math.floor(elapsed / 60);
   const secs = elapsed % 60;
 
-  // Prefer backend-accumulated step progress (monotonic, no flicker); fall back to log parsing.
   const s1: Record<string, StepProg> =
     status.stage1_steps && Object.keys(status.stage1_steps).length > 0
       ? (status.stage1_steps as Record<string, StepProg>)
       : parseStage1(status.log_tail);
 
-  const failed = status.status === 'failed';
-
-  if (failed) {
+  // ── Failure state ──────────────────────────────────────────────────
+  if (status.status === 'failed') {
     return (
-      <div className="bg-red-50 border border-red-200 rounded-2xl p-5 mb-4">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="text-red-500 text-base">✕</span>
-          <span className="text-sm font-semibold text-red-800">分析失败</span>
-          <span className="text-xs text-red-400">已用 {mins}分{secs.toString().padStart(2, '0')}秒</span>
+      <div style={{
+        border: '1px solid #ffd0cc',
+        borderRadius: 16,
+        padding: '16px 20px',
+        background: '#fff8f7',
+        marginBottom: 16,
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+          <span style={{ fontSize: 12, fontWeight: 600, color: '#ff3b30' }}>Analysis failed</span>
+          <span style={{ ...MONO, fontSize: 10, color: '#aeaeb2' }}>
+            {mins}:{secs.toString().padStart(2, '0')}
+          </span>
         </div>
-        <div className="text-[13px] text-red-700 mb-3">{status.message ?? '未知错误'}</div>
-        {status.log_tail && status.log_tail.length > 0 && (
-          <div className="rounded-xl bg-slate-900 px-3 py-2.5 font-mono text-[10px] leading-relaxed text-red-300 max-h-32 overflow-y-auto">
-            {status.log_tail.map((line, i) => (
-              <div key={i}><span className="text-slate-500">›</span> {line}</div>
-            ))}
+        <div style={{ fontSize: 13, color: '#6e6e73', marginBottom: 10 }}>
+          {status.message ?? 'Unknown error'}
+        </div>
+        {status.log_tail?.length ? (
+          <div style={{
+            borderRadius: 10, background: '#0a0a0a',
+            padding: '10px 12px', fontFamily: 'ui-monospace, Menlo, monospace',
+            fontSize: 10, lineHeight: 1.7, color: '#ff6b6b',
+            maxHeight: 120, overflowY: 'auto',
+          }}>
+            {status.log_tail.map((l, i) => <div key={i}>› {l}</div>)}
           </div>
-        )}
+        ) : null}
       </div>
     );
   }
 
+  // ── Stage labels ───────────────────────────────────────────────────
+  const leoPhase  = phase === 'leo'  || (!isBoth && status.stage2_variant === 'leo');
+  const mainPhase = phase === 'main' || (!isBoth && status.stage2_variant !== 'leo');
+  const leoDone   = isBoth && phase === 'main';
+
   return (
-    <div className="bg-gray-50 rounded-2xl p-5 mb-4">
-      <div className="flex items-center justify-between mb-4">
-        <span className="text-sm font-medium">分析进度</span>
-        <span className="text-xs text-gray-500">
-          已用 {mins}分{secs.toString().padStart(2, '0')}秒
+    <div style={{
+      border: '1px solid #e8e8e8', borderRadius: 16,
+      padding: '18px 20px', background: '#fff',
+      marginBottom: 16,
+    }}>
+      {/* Timer + stage breadcrumb */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          {/* Stage 1 */}
+          <span style={{ fontSize: 11, fontWeight: 500, color: stage1Done ? '#34c759' : '#6366f1' }}>
+            {stage1Done ? '✓' : '◐'} Stage 1
+          </span>
+          <span style={{ color: '#e0e0e0', fontSize: 12 }}>›</span>
+          {/* Stage 2 labels */}
+          {isBoth ? (
+            <>
+              <span style={{ fontSize: 11, fontWeight: 500, color: leoDone || status.status === 'done' ? '#34c759' : stage2Active && leoPhase ? '#6366f1' : '#aeaeb2' }}>
+                {leoDone || status.status === 'done' ? '✓' : leoPhase ? '◐' : '○'} 爆款归因
+              </span>
+              <span style={{ color: '#e0e0e0', fontSize: 12 }}>›</span>
+              <span style={{ fontSize: 11, fontWeight: 500, color: status.status === 'done' ? '#34c759' : mainPhase && stage2Active ? '#6366f1' : '#aeaeb2' }}>
+                {status.status === 'done' ? '✓' : mainPhase && stage2Active ? '◐' : '○'} 结构分析
+              </span>
+            </>
+          ) : (
+            <span style={{ fontSize: 11, fontWeight: 500, color: status.status === 'done' ? '#34c759' : stage2Active ? '#6366f1' : '#aeaeb2' }}>
+              {status.status === 'done' ? '✓' : stage2Active ? '◐' : '○'} Stage 2
+            </span>
+          )}
+        </div>
+        <span style={{ ...MONO, fontSize: 10, color: '#aeaeb2' }}>
+          {mins}:{secs.toString().padStart(2, '0')}
         </span>
       </div>
 
-      {/* Stage progress bar */}
-      <div className="flex gap-2 mb-4">
-        <div className={`flex-1 h-1 rounded-full ${stage1Done ? 'bg-emerald-600' : 'bg-emerald-400 animate-pulse'}`} />
-        <div className={`flex-[5] h-1 rounded-full ${status.status === 'done' ? 'bg-emerald-600' : stage2Active ? 'bg-emerald-400' : 'bg-gray-200'}`} />
+      {/* Thin progress track */}
+      <div style={{ display: 'flex', gap: 4, marginBottom: 16, height: 3 }}>
+        <div style={{ flex: 1, borderRadius: 2, background: stage1Done ? '#34c759' : '#6366f1', opacity: stage1Done ? 1 : 0.6 }} />
+        <div style={{ flex: isBoth ? 2 : 5, borderRadius: 2, background: status.status === 'done' ? '#34c759' : stage2Active ? '#e8e8e8' : '#eeeeee' }}>
+          {stage2Active && (
+            <div style={{ height: '100%', width: leoDone ? '50%' : '15%', borderRadius: 2, background: '#6366f1', transition: 'width 1s' }} />
+          )}
+        </div>
       </div>
 
-      {/* Stage labels */}
-      {(() => {
-        const phase = (status as Record<string, unknown>).current_phase as string | undefined;
-        const isBoth = status.stage2_variant === 'both';
-        return (
-          <div className="flex items-center gap-2 mb-4 text-xs flex-wrap">
-            <span className={`flex items-center gap-1.5 ${stage1Done ? 'text-emerald-700' : 'text-blue-600'}`}>
-              {stage1Done ? '✓' : '◐'} Stage 1 视频预处理
-            </span>
-            <span className="text-gray-300">·</span>
-            {isBoth ? (
-              <>
-                <span className={`flex items-center gap-1.5 ${phase === 'main' || status.status === 'done' ? 'text-emerald-700' : stage2Active ? 'text-blue-600' : 'text-gray-400'}`}>
-                  {phase === 'main' || status.status === 'done' ? '✓' : stage2Active ? '◐' : '○'} 爆款归因
-                </span>
-                <span className="text-gray-300">·</span>
-                <span className={`flex items-center gap-1.5 ${status.status === 'done' ? 'text-emerald-700' : phase === 'main' ? 'text-blue-600' : 'text-gray-400'}`}>
-                  {status.status === 'done' ? '✓' : phase === 'main' ? '◐' : '○'} 结构分析
-                </span>
-              </>
-            ) : (
-              <span className={`flex items-center gap-1.5 ${stage2Active ? 'text-blue-600' : status.status === 'done' ? 'text-emerald-700' : 'text-gray-400'}`}>
-                {status.status === 'done' ? '✓' : stage2Active ? '◐' : '○'} Stage 2 多Agent分析
-              </span>
-            )}
-          </div>
-        );
-      })()}
-
-      {/* Stage 1 sub-steps OR Stage 2 agent cards */}
-      {!stage1Done ? (
+      {/* ── Stage 1 sub-steps ── */}
+      {!stage1Done && (
         <div>
-          <div className="grid grid-cols-3 gap-2">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 12 }}>
             {STAGE1_STEPS.map((s) => {
               const p = s1[s.key];
-              const isDone = p.state === 'done';
+              const isDone   = p.state === 'done';
               const isActive = p.state === 'active';
-              // fill width: real % if available, else 40% indeterminate pulse while active, 100% done, 0 waiting
-              const fillPct = isDone ? 100 : isActive ? (p.pct ?? 40) : 0;
               return (
-                <div key={s.key}
-                  className={`relative overflow-hidden rounded-xl p-3 border transition-all ${
-                    isDone ? 'border-emerald-200 bg-white' : isActive ? 'border-blue-300 bg-white' : 'border-gray-200 bg-white opacity-50'
-                  }`}>
-                  {/* charging fill */}
-                  <div
-                    className={`absolute inset-y-0 left-0 transition-all duration-700 ${
-                      isDone ? 'bg-emerald-100/70' : 'bg-blue-100/70'
-                    } ${isActive && p.pct == null ? 'animate-pulse' : ''}`}
-                    style={{ width: `${fillPct}%` }}
-                  />
-                  <div className="relative">
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className={`text-[13px] font-medium ${isDone ? 'text-emerald-900' : isActive ? 'text-blue-900' : 'text-gray-500'}`}>{s.name}</span>
-                      {isDone ? <span className="text-emerald-600 text-base">✓</span>
-                        : isActive ? <span className="text-blue-600 text-base animate-spin inline-block">◐</span>
-                        : <span className="text-gray-300 text-base">○</span>}
-                    </div>
-                    <div className={`text-[11px] ${isActive ? 'text-blue-600' : 'text-gray-500'}`}>
-                      {isDone ? '已完成' : isActive ? (p.pct != null ? `${p.pct}%` : s.desc) : s.desc}
-                    </div>
+                <div key={s.key} style={{
+                  border: `1px solid ${isDone ? '#e8e8e8' : isActive ? '#6366f1' : '#eeeeee'}`,
+                  borderRadius: 10,
+                  padding: '10px 12px',
+                  background: '#fff',
+                  opacity: p.state === 'waiting' ? 0.45 : 1,
+                  transition: 'border-color 0.3s, opacity 0.3s',
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
+                    <span style={{ fontSize: 12, fontWeight: 500, color: '#1d1d1f' }}>{s.label}</span>
+                    {isDone
+                      ? <span style={{ fontSize: 12, color: '#34c759' }}>✓</span>
+                      : isActive
+                      ? <span style={{ fontSize: 12, color: '#6366f1' }}>◐</span>
+                      : <span style={{ fontSize: 12, color: '#d0d0d0' }}>○</span>
+                    }
+                  </div>
+                  <div style={{ ...MONO, fontSize: 10, color: isActive ? '#6366f1' : '#aeaeb2' }}>
+                    {isDone ? 'Done' : isActive ? (p.pct != null ? `${p.pct}%` : s.desc) : s.desc}
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="mt-3 rounded-xl bg-slate-900 px-3 py-2.5 font-mono text-[10px] leading-relaxed text-emerald-300 max-h-28 overflow-y-auto">
-            {(status.log_tail && status.log_tail.length > 0)
-              ? status.log_tail.map((line, i) => (
-                  <div key={i} className={i === (status.log_tail!.length - 1) ? 'text-emerald-200' : 'text-emerald-400/70'}>
-                    <span className="text-slate-500">›</span> {line}
+
+          {/* Log tail */}
+          <div style={{
+            borderRadius: 10, background: '#0a0a0a',
+            padding: '10px 14px',
+            fontFamily: 'ui-monospace, Menlo, monospace',
+            fontSize: 10, lineHeight: 1.75, color: '#34c759',
+            maxHeight: 96, overflowY: 'auto',
+          }}>
+            {status.log_tail?.length
+              ? status.log_tail.map((l, i) => (
+                  <div key={i} style={{ color: i === status.log_tail!.length - 1 ? '#34c759' : 'rgba(52,199,89,0.5)' }}>
+                    <span style={{ color: '#444' }}>›</span> {l}
                   </div>
                 ))
-              : <div className="text-emerald-400/70">› {status.message ?? '正在启动...'}</div>}
+              : <div style={{ color: 'rgba(52,199,89,0.5)' }}>› {status.message ?? 'Starting...'}</div>
+            }
           </div>
         </div>
-      ) : (status.stage2_variant === 'leo' || (status.stage2_variant === 'both' && (status as Record<string, unknown>).current_phase === 'leo')) ? (
+      )}
+
+      {/* ── Leo lenses (parallel) ── */}
+      {stage1Done && leoPhase && (
         <div>
-          <div className="grid grid-cols-3 gap-2">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 8 }}>
             {LEO_LENSES.map((l) => {
-              const isDone = status.status === 'done' || (status as Record<string, unknown>).current_phase === 'main';
+              const isDone = status.status === 'done' || leoDone;
               return (
-                <div key={l.key} className={`rounded-xl p-3 border transition-all ${isDone ? 'bg-white border-gray-200' : 'bg-blue-50/60 border-blue-200'}`}>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-[13px] font-medium">{l.name}</span>
-                    {isDone ? <span className="text-emerald-600 text-base">✓</span> : <span className="text-blue-500 text-base animate-pulse">◐</span>}
-                  </div>
-                  <div className="text-[11px] text-blue-600">{isDone ? '已完成' : '并行分析中'}</div>
+                <div key={l.key} style={{
+                  border: `1px solid ${isDone ? '#e8e8e8' : '#6366f1'}`,
+                  borderRadius: 10,
+                  padding: '10px 8px',
+                  background: '#fff',
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6,
+                  transition: 'border-color 0.3s',
+                }}>
+                  <div style={{
+                    width: 32, height: 32, borderRadius: '50%',
+                    background: '#f5f5f7', border: '1px solid #e8e8e8',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: 16,
+                    opacity: isDone ? 1 : 0.4,
+                    transition: 'opacity 0.4s',
+                  }}>{l.char}</div>
+                  <span style={{ fontSize: 10, color: '#6e6e73', textAlign: 'center' }}>{l.label}</span>
+                  <span style={{ fontSize: 10, color: isDone ? '#34c759' : '#6366f1' }}>
+                    {isDone ? '✓' : '◐'}
+                  </span>
                 </div>
               );
             })}
           </div>
-          <div className="mt-2 text-[11px] text-gray-500">爆款归因：多个视角Agent并行分析后聚类排名</div>
+          <div style={{ marginTop: 10, fontFamily: 'ui-monospace, monospace', fontSize: 10, color: '#aeaeb2' }}>
+            6 lenses running in parallel — synthesizing when complete
+          </div>
         </div>
-      ) : (
-        <div className="grid grid-cols-3 gap-2">
+      )}
+
+      {/* ── Main structure agents (sequential) ── */}
+      {stage1Done && !leoPhase && (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
           {AGENTS.map((a) => {
             const st = agentState(a.key);
             return (
-              <div
-                key={a.key}
-                className={`rounded-xl p-3 border transition-all ${
-                  st === 'done'
-                    ? 'bg-white border-gray-200'
+              <div key={a.key} style={{
+                border: `1px solid ${st === 'running' ? '#6366f1' : '#eeeeee'}`,
+                borderRadius: 10,
+                padding: '10px 12px',
+                background: '#fff',
+                opacity: st === 'waiting' ? 0.45 : 1,
+                transition: 'border-color 0.3s, opacity 0.3s',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4 }}>
+                  <span style={{ fontFamily: 'ui-monospace, monospace', fontSize: 12, fontWeight: 500, color: '#1d1d1f' }}>
+                    {a.label}
+                  </span>
+                  {st === 'done'
+                    ? <span style={{ fontSize: 12, color: '#34c759' }}>✓</span>
                     : st === 'running'
-                    ? 'bg-blue-50 border-blue-300'
-                    : 'bg-white border-gray-200 opacity-50'
-                }`}
-              >
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-[13px] font-medium">{a.name}</span>
-                  {st === 'done' && <span className="text-emerald-600 text-base">✓</span>}
-                  {st === 'running' && <span className="text-blue-600 text-base animate-spin inline-block">◐</span>}
-                  {st === 'waiting' && <span className="text-gray-300 text-base">○</span>}
+                    ? <span style={{ fontSize: 12, color: '#6366f1' }}>◐</span>
+                    : <span style={{ fontSize: 12, color: '#d8d8d8' }}>○</span>
+                  }
                 </div>
-                <div className={`text-[11px] ${st === 'running' ? 'text-blue-600' : 'text-gray-500'}`}>
-                  {st === 'done' ? '已完成' : st === 'running' ? (status.message ?? '分析中...') : '等待中'}
+                <div style={{ fontFamily: 'ui-monospace, monospace', fontSize: 10, color: st === 'running' ? '#6366f1' : '#aeaeb2' }}>
+                  {st === 'done' ? 'Done' : st === 'running' ? (status.message ?? 'Running…') : a.desc}
                 </div>
               </div>
             );

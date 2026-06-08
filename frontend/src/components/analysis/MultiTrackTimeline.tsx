@@ -17,9 +17,15 @@ const FUNCTION_LABELS: Record<string, string> = {
 };
 
 const FUNCTION_TEXT_COLORS: Record<string, string> = {
-  hook: '#fff', introduction: '#26215C', instruction: '#26215C',
-  demonstration: '#04342C', comparison: '#fff', transition: '#fff',
-  climax: '#fff', resolution: '#fff', cta: '#412402',
+  hook:         '#ffffff',   // white on indigo-900
+  climax:       '#ffffff',   // white on indigo-800
+  cta:          '#ffffff',   // white on indigo-600
+  demonstration:'#ffffff',   // white on indigo-500
+  comparison:   '#eef2ff',   // near-white on indigo-400
+  introduction: '#312e81',   // dark indigo on indigo-300
+  instruction:  '#3730a3',   // dark indigo on indigo-200
+  transition:   '#334155',   // dark on slate-400
+  resolution:   '#475569',   // dark on slate-300
 };
 
 export default function MultiTrackTimeline({ structure, evidence, currentTime, onSeek }: Props) {
@@ -69,10 +75,10 @@ export default function MultiTrackTimeline({ structure, evidence, currentTime, o
       </div>
 
       <div
-        className="absolute w-0.5 bg-rose-500 z-10 pointer-events-none"
-        style={{ top: 54, bottom: 62, left: `calc(4rem + (100% - 4rem) * ${(currentTime / duration).toFixed(4)})` }}
+        className="absolute w-px z-10 pointer-events-none"
+        style={{ top: 54, bottom: 62, left: `calc(4rem + (100% - 4rem) * ${(currentTime / duration).toFixed(4)})`, background: '#1d1d1f' }}
       >
-        <div className="absolute -top-1.5 -left-[5px] w-3 h-3 rounded-full bg-rose-500 border-2 border-white" />
+        <div className="absolute -top-1.5 -left-[4px] w-2.5 h-2.5 rounded-full border-2 border-white" style={{ background: '#1d1d1f' }} />
       </div>
 
       <div ref={trackRef} onClick={handleTrackClick} className="cursor-pointer">
@@ -123,8 +129,8 @@ export default function MultiTrackTimeline({ structure, evidence, currentTime, o
           <span className="w-16 text-[10px] text-gray-500">能量</span>
           <div className="flex-1 h-11 relative">
             <svg width="100%" height="44" viewBox="0 0 100 44" preserveAspectRatio="none" className="block">
-              <path d={`${energyPath} L100,44 L0,44 Z`} fill="#EF9F2733" />
-              <path d={energyPath} fill="none" stroke="#EF9F27" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+              <path d={`${energyPath} L100,44 L0,44 Z`} fill="rgba(99,102,241,0.08)" />
+              <path d={energyPath} fill="none" stroke="#818CF8" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
             </svg>
           </div>
         </div>
@@ -133,8 +139,8 @@ export default function MultiTrackTimeline({ structure, evidence, currentTime, o
           <span className="w-16 text-[10px] text-gray-500">文字</span>
           <div className="relative h-[18px] flex-1 rounded-lg bg-slate-50 ring-1 ring-inset ring-slate-100">
             {ocrMarks.map((t, i) => (
-              <div key={i} className="absolute top-0.5 bottom-0.5 w-1 bg-indigo-400 rounded-full"
-                style={{ left: `${(t / duration) * 100}%` }} title="画面文字" />
+              <div key={i} className="absolute top-0.5 bottom-0.5 w-0.5 rounded-full"
+                style={{ left: `${(t / duration) * 100}%`, background: '#64748b' }} title="画面文字" />
             ))}
           </div>
         </div>

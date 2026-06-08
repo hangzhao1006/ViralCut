@@ -53,28 +53,28 @@ export default function AgentPanel({ structure, currentTime }: Props) {
   const cards = [
     {
       name: '这段在做什么',
-      color: '#4F46E5',
+      color: '#4F46E5',  // indigo-600
       badge: 'Script',
       value: seg ? (FUNCTION_CN[seg.function] ?? seg.function) : '—',
       sub: seg?.core_text ?? '播放视频查看分析',
     },
     {
       name: '节奏',
-      color: '#10B981',
+      color: '#818CF8',  // indigo-400
       badge: 'Rhythm',
       value: rhythm ? (PACE_CN[rhythm.pace] ?? rhythm.pace) : '—',
       sub: rhythm ? `由${DRIVER_CN[rhythm.rhythm_driver ?? ''] ?? '画面'}驱动` : '',
     },
     {
       name: '价值类型',
-      color: '#0EA5E9',
+      color: '#6366F1',  // indigo-500
       badge: 'Value',
       value: VALUE_CN[valueType] ?? valueType ?? '—',
       sub: String(valueStrategy.primary_value ?? '').slice(0, 54),
     },
     {
       name: '注意力强度',
-      color: '#F59E0B',
+      color: '#312E81',  // indigo-900 — deepest for intensity
       badge: 'Energy',
       value: energyLevel ? `${ENERGY_BAR[energyLevel] ?? ''} ${ENERGY_CN[energyLevel] ?? energyLevel}` : '—',
       sub: energy?.role ?? '',
