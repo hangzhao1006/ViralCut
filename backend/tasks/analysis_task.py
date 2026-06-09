@@ -257,15 +257,18 @@ def _run_stage2_both(task_id: str, video_id: str, source_video_path: str | None)
         except Exception as exc:
             task_store.update(task_id, message=f"爆款归因跳过（连接失败：{exc}），直接运行结构分析...")
         else:
-            with open(evidence_path, encoding="utf-8") as f:
-                evidence = json.load(f)
-            synthesis = asyncio.run(run_viral_analysis(
-                evidence, model=model, num_agents=num_agents,
-                api_key=leo_api_key, base_url=leo_base_url,
-            ))
-            synthesis_dict = synthesis.model_dump() if hasattr(synthesis, "model_dump") else dict(synthesis)
-            with open(f"{dest}/synthesis_result.json", "w", encoding="utf-8") as f:
-                json.dump(synthesis_dict, f, ensure_ascii=False, indent=2, default=str)
+            try:
+                with open(evidence_path, encoding="utf-8") as f:
+                    evidence = json.load(f)
+                synthesis = asyncio.run(run_viral_analysis(
+                    evidence, model=model, num_agents=num_agents,
+                    api_key=leo_api_key, base_url=leo_base_url,
+                ))
+                synthesis_dict = synthesis.model_dump() if hasattr(synthesis, "model_dump") else dict(synthesis)
+                with open(f"{dest}/synthesis_result.json", "w", encoding="utf-8") as f:
+                    json.dump(synthesis_dict, f, ensure_ascii=False, indent=2, default=str)
+            except Exception as exc:
+                task_store.update(task_id, message=f"爆款归因运行失败（{exc}），跳过，继续结构分析...")
     else:
         task_store.update(task_id, message="爆款归因跳过（未配置LEO_API_KEY），直接运行结构分析...")
 

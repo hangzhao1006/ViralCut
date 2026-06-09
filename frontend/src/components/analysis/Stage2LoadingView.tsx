@@ -103,7 +103,7 @@ interface Props {
 }
 
 export default function Stage2LoadingView({ status, elapsed, videoUrl, synthesis }: Props) {
-  const completed = ((status as Record<string, unknown>).completed_agents as string[] | undefined) ?? [];
+  const completed = ((status as unknown as Record<string, unknown>).completed_agents as string[] | undefined) ?? [];
   const current = status.current_step ?? '';
   const [tick, setTick] = useState(0);
 

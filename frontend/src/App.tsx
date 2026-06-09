@@ -15,6 +15,7 @@ import MigrationProgress from './components/migration/MigrationProgress';
 import DataInspector from './components/DataInspector';
 import LeoAgentGrid from './components/LeoAgentGrid';
 import { extractPartialSlots } from './lib/streamParse';
+import Landing from './components/Landing';
 
 export default function App() {
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
@@ -31,6 +32,7 @@ export default function App() {
   const [taskStatus, setTaskStatus] = useState<TaskStatus | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [loadingVideoUrl, setLoadingVideoUrl] = useState('');
+  const [showLanding, setShowLanding] = useState(true);
   const startRef = useRef<number>(0);
 
   useEffect(() => {
@@ -223,7 +225,7 @@ export default function App() {
   const mainReady = !!analysis?.video_structure;
   // Main is still loading when leo is done but main isn't
   const mainStillLoading = !!analysis?.main_loading || (analyzing && !!taskStatus?.has_leo_result);
-
+  if (showLanding) return <Landing onEnter={() => setShowLanding(false)} />;
   return (
     <div className="min-h-screen text-slate-900">
       <div className="mx-auto max-w-[1440px] px-4 py-4 sm:px-6 lg:px-8">

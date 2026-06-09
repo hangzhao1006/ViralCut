@@ -1,0 +1,25 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tile -->
+  <rect x="14" y="14" width="100" height="100" rx="28" fill="#18181B"/>
+
+  <!-- Timeline spine -->
+  <rect x="35" y="39" width="7" height="50" rx="3.5" fill="#F8FAFC"/>
+
+  <!-- Source triangle -->
+  <path
+    d="M50 39.6C50 37.35 52.48 35.98 54.38 37.18L79.8 53.32C81.57 54.44 81.57 57.02 79.8 58.14L50 77.05V39.6Z"
+    fill="#F8FAFC"
+  />
+
+  <!-- Extracted structure triangle -->
+  <path
+    d="M58 62.2C58 60.15 60.25 58.89 61.98 59.98L88.1 76.42C89.75 77.46 89.75 79.88 88.1 80.92L58 99.85V62.2Z"
+    fill="#6366F1"
+  />
+
+  <!-- Transferred result triangle -->
+  <path
+    d="M80 42.6C80 40.72 82.05 39.56 83.66 40.53L100.15 50.47C101.66 51.38 101.66 53.58 100.15 54.49L80 66.65V42.6Z"
+    fill="#A5B4FC"
+  />
+</svg>

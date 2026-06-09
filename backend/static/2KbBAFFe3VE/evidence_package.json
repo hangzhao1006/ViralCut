@@ -8610,9 +8610,9 @@
     "beat_sync_score": 0.057
   },
   "processing_info": {
-    "started_at": "2026-06-07T07:02:29.847425+00:00",
-    "completed_at": "2026-06-07T07:05:25.242537+00:00",
-    "total_duration_ms": 175395,
+    "started_at": "2026-06-07T08:03:17.726017+00:00",
+    "completed_at": "2026-06-07T08:05:57.329351+00:00",
+    "total_duration_ms": 159603,
     "processors": [
       {
         "name": "download",

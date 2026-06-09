@@ -71,8 +71,8 @@ interface Props { status: TaskStatus; elapsed: number; }
 export default function AgentProgress({ status, elapsed }: Props) {
   const stage     = status.stage ?? 'stage1';
   const current   = status.current_step ?? '';
-  const completed = (status as Record<string, unknown>).completed_agents as string[] ?? [];
-  const phase     = (status as Record<string, unknown>).current_phase as string | undefined;
+  const completed = (status as unknown as Record<string, unknown>).completed_agents as string[] ?? [];
+  const phase     = (status as unknown as Record<string, unknown>).current_phase as string | undefined;
   const isBoth    = status.stage2_variant === 'both';
 
   const stage1Done  = stage === 'stage2' || status.status === 'done';
