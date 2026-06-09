@@ -8,8 +8,8 @@
     "platform": "youtube",
     "social_metadata": {
       "title": "Science class was always so lit",
-      "like_count": 1652920,
-      "view_count": 107185798,
+      "like_count": 1653156,
+      "view_count": 107195504,
       "comment_count": 14000,
       "upload_date": "20260101",
       "thumbnail_url": "https://i.ytimg.com/vi/mVe5WpXxIH8/sd2.jpg?sqp=-oaymwEoCIAFEOAD8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYSSBRKGUwDw==&rs=AOn4CLDx-l8bN_-tECo_LBWtpiuVkWj4IA"
@@ -306,184 +306,208 @@
   "transcript": [
     {
       "start": 0.0,
-      "end": 6.3,
-      "text": "grunting",
-      "confidence": -5.261770629882813
+      "end": 23.02,
+      "text": "Shit actually",
+      "confidence": -4.928119977315267
     },
     {
-      "start": 6.3,
-      "end": 8.3,
-      "text": "I want you to get down on your knees",
-      "confidence": -0.7128706158332105
+      "start": 23.02,
+      "end": 25.02,
+      "text": "I'm in the middle of the night.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 8.3,
-      "end": 9.3,
-      "text": "Tell me what it is",
-      "confidence": -0.7128706158332105
+      "start": 25.02,
+      "end": 26.02,
+      "text": "There we go.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 9.3,
-      "end": 10.3,
-      "text": "Tell me what it is",
-      "confidence": -0.7128706158332105
+      "start": 26.02,
+      "end": 27.02,
+      "text": "Hey!",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 10.3,
-      "end": 12.3,
-      "text": "Oh no!",
-      "confidence": -0.7128706158332105
+      "start": 27.02,
+      "end": 28.02,
+      "text": "Oh my god!",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 12.3,
-      "end": 14.3,
-      "text": "You did it!",
-      "confidence": -0.7128706158332105
+      "start": 28.02,
+      "end": 29.02,
+      "text": "Whoa!",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 14.3,
-      "end": 16.3,
-      "text": "You did it!",
-      "confidence": -0.7128706158332105
+      "start": 29.02,
+      "end": 30.02,
+      "text": "Hey!",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 16.3,
-      "end": 18.3,
-      "text": "Don't get me!",
-      "confidence": -0.7128706158332105
+      "start": 30.02,
+      "end": 32.019999999999996,
+      "text": "I'm in the middle of that.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 18.3,
-      "end": 20.3,
-      "text": "Oh no!",
-      "confidence": -0.7128706158332105
+      "start": 32.019999999999996,
+      "end": 33.019999999999996,
+      "text": "Yes.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 20.3,
-      "end": 22.3,
-      "text": "I want you to get down on your knees",
-      "confidence": -0.7128706158332105
+      "start": 33.019999999999996,
+      "end": 34.019999999999996,
+      "text": "Hey, very much.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 22.3,
-      "end": 24.3,
-      "text": "I'm gonna die now",
-      "confidence": -0.7128706158332105
+      "start": 34.019999999999996,
+      "end": 35.019999999999996,
+      "text": "Hey.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 24.3,
-      "end": 26.3,
-      "text": "Here we go!",
-      "confidence": -0.7128706158332105
+      "start": 35.019999999999996,
+      "end": 36.019999999999996,
+      "text": "Oh.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 26.3,
-      "end": 28.3,
-      "text": "Oh no!",
-      "confidence": -0.7128706158332105
+      "start": 36.019999999999996,
+      "end": 37.019999999999996,
+      "text": "I gotta let you go.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 28.3,
-      "end": 30.3,
-      "text": "Oh no!",
-      "confidence": -0.7128706158332105
+      "start": 37.019999999999996,
+      "end": 38.019999999999996,
+      "text": "Let me get my advice.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 30.3,
-      "end": 32.3,
-      "text": "I'm gonna be your dad",
-      "confidence": -0.7128706158332105
+      "start": 38.019999999999996,
+      "end": 39.019999999999996,
+      "text": "You know what I'm gonna do?",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 32.3,
-      "end": 34.3,
-      "text": "I'm gonna be your dad",
-      "confidence": -0.7128706158332105
+      "start": 39.019999999999996,
+      "end": 40.019999999999996,
+      "text": "I'm gonna let you go.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 34.3,
-      "end": 36.3,
-      "text": "Oh no!",
-      "confidence": -0.3778017217462713
+      "start": 40.019999999999996,
+      "end": 41.019999999999996,
+      "text": "I didn't mean to lost it in the night.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 36.3,
-      "end": 38.3,
-      "text": "I'm gonna let you go",
-      "confidence": -0.3778017217462713
+      "start": 41.019999999999996,
+      "end": 42.019999999999996,
+      "text": "So I'm so close to my show.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 38.3,
-      "end": 40.3,
-      "text": "I'm gonna let you go",
-      "confidence": -0.3778017217462713
+      "start": 42.019999999999996,
+      "end": 43.019999999999996,
+      "text": "I need to be low.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 40.3,
-      "end": 42.3,
-      "text": "I'm gonna let you go",
-      "confidence": -0.3778017217462713
+      "start": 43.019999999999996,
+      "end": 45.019999999999996,
+      "text": "I had to go and play with you.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 42.3,
-      "end": 44.3,
-      "text": "I'm gonna let you go",
-      "confidence": -0.3778017217462713
+      "start": 45.019999999999996,
+      "end": 46.019999999999996,
+      "text": "Okay, get up.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 44.3,
-      "end": 46.3,
-      "text": "I'm gonna let you go",
-      "confidence": -0.3778017217462713
+      "start": 46.019999999999996,
+      "end": 47.019999999999996,
+      "text": "I'm gonna go with the flow.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 46.3,
-      "end": 48.3,
-      "text": "Okay, get up",
-      "confidence": -0.3778017217462713
+      "start": 47.019999999999996,
+      "end": 48.019999999999996,
+      "text": "You just want to go with the flow.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 48.3,
-      "end": 50.3,
-      "text": "Oh my god",
-      "confidence": -0.3778017217462713
+      "start": 48.019999999999996,
+      "end": 49.019999999999996,
+      "text": "Oh my god.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 50.3,
-      "end": 52.3,
-      "text": "Is that awesome?",
-      "confidence": -0.3778017217462713
+      "start": 49.019999999999996,
+      "end": 50.019999999999996,
+      "text": "Oh my god.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 52.3,
-      "end": 54.3,
-      "text": "Okay, ready?",
-      "confidence": -0.3778017217462713
+      "start": 50.019999999999996,
+      "end": 52.019999999999996,
+      "text": "It's not awesome.",
+      "confidence": -0.6591029541654737
     },
     {
-      "start": 54.3,
-      "end": 56.3,
-      "text": "Oh my god",
-      "confidence": -0.3778017217462713
+      "start": 53.02,
+      "end": 54.02,
+      "text": "You can't, right?",
+      "confidence": -0.5886525754575376
     },
     {
-      "start": 56.3,
-      "end": 58.3,
-      "text": "It's not this way",
-      "confidence": -0.3778017217462713
+      "start": 54.02,
+      "end": 55.02,
+      "text": "Shit.",
+      "confidence": -0.5886525754575376
     },
     {
-      "start": 58.3,
-      "end": 60.3,
-      "text": "Long as you harden low",
-      "confidence": -0.3778017217462713
+      "start": 55.02,
+      "end": 56.02,
+      "text": "BOO!",
+      "confidence": -0.5886525754575376
+    },
+    {
+      "start": 56.02,
+      "end": 57.02,
+      "text": "I'm gonna play with you.",
+      "confidence": -0.5886525754575376
+    },
+    {
+      "start": 57.02,
+      "end": 58.02,
+      "text": "I'm gonna let you go.",
+      "confidence": -0.5886525754575376
+    },
+    {
+      "start": 58.02,
+      "end": 59.02,
+      "text": "I'm gonna let you go.",
+      "confidence": -0.5886525754575376
+    },
+    {
+      "start": 59.02,
+      "end": 60.02,
+      "text": "I'm gonna let you go.",
+      "confidence": -0.5886525754575376
     }
   ],
   "asr_info": {
     "language": "en",
     "language_probability": null,
-    "raw_segment_count": 29,
-    "final_segment_count": 29,
+    "raw_segment_count": 33,
+    "final_segment_count": 33,
     "mode": "normal",
     "model": "base"
   },
@@ -5980,8 +6004,8 @@
     "shot_count": 17,
     "avg_shot_duration": 3.531,
     "shot_density": 0.2832,
-    "transcript_segment_count": 29,
-    "transcript_char_count": 448,
+    "transcript_segment_count": 33,
+    "transcript_char_count": 555,
     "ocr_text_count": 85,
     "ocr_text_per_second": 1.4159,
     "subtitle_density": "high",
@@ -5989,9 +6013,9 @@
     "beat_sync_score": 0.0662
   },
   "processing_info": {
-    "started_at": "2026-06-09T03:31:21.771843+00:00",
-    "completed_at": "2026-06-09T03:33:12.684816+00:00",
-    "total_duration_ms": 110912,
+    "started_at": "2026-06-09T04:11:14.526048+00:00",
+    "completed_at": "2026-06-09T04:14:24.547988+00:00",
+    "total_duration_ms": 190021,
     "processors": [
       {
         "name": "download",

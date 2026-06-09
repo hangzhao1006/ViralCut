@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import type { TransferBlueprint, MigrationResult, MigratedSlot } from '../../types';
-import { STRATEGY_LABELS } from '../../lib/colors';
 import EditableSlotCard from './EditableSlotCard';
 
 interface Props {
@@ -194,11 +193,6 @@ function SkeletonMap({
                     {m.gap && (
                       <div style={{ fontSize: 10, color: '#854F0B', marginTop: 2 }}>
                         {m.gap.missing}
-                        {m.fill_strategy && (
-                          <span style={{ display: 'block', color: '#94a3b8' }}>
-                            → {STRATEGY_LABELS[m.fill_strategy.type] ?? m.fill_strategy.type}
-                          </span>
-                        )}
                       </div>
                     )}
                   </>

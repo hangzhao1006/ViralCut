@@ -7,15 +7,26 @@
         "segment_id": "seg_001",
         "function": "hook",
         "start_time": 0.0,
-        "end_time": 6.0,
-        "hook_type": "direct",
-        "core_text": "开场快速展示博主账号标识，搭配紧张的人声铺垫悬念",
+        "end_time": 3.0,
+        "hook_type": "title_card",
+        "core_text": "视频开篇展示标识与主题引入",
         "evidence": [
           {
             "type": "ocr",
             "ref": "frame_000",
             "text": "(x ys BHUNBIEII L 5"
-          },
+          }
+        ],
+        "reason": "开篇用标识画面直接切入主题，快速抓住观众注意力",
+        "confidence": 0.9
+      },
+      {
+        "segment_id": "seg_002",
+        "function": "introduction",
+        "start_time": 3.0,
+        "end_time": 6.0,
+        "core_text": "展示创作者账号标识进行铺垫",
+        "evidence": [
           {
             "type": "ocr",
             "ref": "frame_001",
@@ -25,67 +36,50 @@
             "type": "ocr",
             "ref": "frame_002",
             "text": "BITUTINBILGIII"
-          },
-          {
-            "type": "transcript",
-            "ref": "0.0-6.3",
-            "text": "grunting"
           }
         ],
-        "reason": "开头直接展示账号标识，用紧张的音效快速抓住观众注意力，属于直入主题的开场hook",
+        "reason": "连续展示创作者ID，完成账号露出铺垫",
         "confidence": 0.9
       },
       {
-        "segment_id": "seg_002",
-        "function": "introduction",
+        "segment_id": "seg_003",
+        "function": "instruction",
         "start_time": 6.0,
         "end_time": 14.0,
-        "hook_type": null,
-        "core_text": "用对话引导观众关注即将发生的事件，铺垫化学实验场景",
+        "core_text": "讲解化学实验相关的基础操作要点",
         "evidence": [
           {
             "type": "ocr",
             "ref": "frame_003",
             "text": "Soliow Cendepor OcCoun+ 0 In BITUTANBILGII II Nobo"
-          },
-          {
-            "type": "transcript",
-            "ref": "6.3-14.3",
-            "text": "I want you to get down on your knees, Tell me what it is, Oh no!, You did it!"
           }
         ],
-        "reason": "通过连续的对话引导观众情绪，为后续的实验展示做铺垫",
-        "confidence": 0.85
+        "reason": "画面文字呈现实验相关的说明内容，属于教学讲解部分",
+        "confidence": 0.8
       },
       {
-        "segment_id": "seg_003",
+        "segment_id": "seg_004",
         "function": "demonstration",
         "start_time": 14.0,
         "end_time": 21.0,
-        "hook_type": null,
-        "core_text": "展示第一次化学实验的惊险过程，出现意外状况",
+        "core_text": "展示实验操作的初步过程",
         "evidence": [
           {
             "type": "ocr",
             "ref": "frame_004",
             "text": "110 II1 112 113 U11 115 BLUIel"
-          },
-          {
-            "type": "transcript",
-            "ref": "14.3-20.3",
-            "text": "You did it!, Don't get me!, Oh no!"
           }
         ],
-        "reason": "呈现实验操作的实际画面和突发状况，属于过程示范展示",
+        "reason": "对应实验操作的实拍演示画面，呈现操作过程",
         "confidence": 0.8
       },
       {
-        "segment_id": "seg_004",
-        "function": "transition",
+        "segment_id": "seg_005",
+        "function": "hook",
         "start_time": 21.0,
-        "end_time": 25.0,
-        "hook_type": null,
-        "core_text": "抛出问题：这是科学课还是魔术表演？引出后续更神奇的实验",
+        "end_time": 27.0,
+        "hook_type": "question",
+        "core_text": "抛出疑问：这是科学课还是魔术表演？",
         "evidence": [
           {
             "type": "ocr",
@@ -93,183 +87,109 @@
             "text": "BITUTANBILGII science class or magic show? JIIOII 92 500"
           },
           {
-            "type": "transcript",
-            "ref": "20.3-26.3",
-            "text": "I want you to get down on your knees, I'm gonna die now, Here we go!"
-          }
-        ],
-        "reason": "用提问式的文字过渡，将普通实验引导向更有冲击力的神奇化学实验",
-        "confidence": 0.9
-      },
-      {
-        "segment_id": "seg_005",
-        "function": "demonstration",
-        "start_time": 25.0,
-        "end_time": 30.2,
-        "hook_type": null,
-        "core_text": "继续展示实验的惊险操作，出现多次惊呼的意外画面",
-        "evidence": [
-          {
             "type": "ocr",
             "ref": "frame_007",
             "text": "BITUTANIBILBII science class or magic show?"
-          },
-          {
-            "type": "transcript",
-            "ref": "24.3-30.3",
-            "text": "Here we go!, Oh no!, Oh no!"
           }
         ],
-        "reason": "延续实验操作的展示，保持紧张的节奏，属于示范环节的延续",
-        "confidence": 0.8
+        "reason": "用提问式文案制造悬念，吸引观众继续观看实验效果",
+        "confidence": 0.9
       },
       {
         "segment_id": "seg_006",
-        "function": "instruction",
-        "start_time": 30.2,
-        "end_time": 36.5,
-        "hook_type": null,
-        "core_text": "讲解实验操作的注意要点，引导观众关注后续的碘钟实验",
+        "function": "demonstration",
+        "start_time": 27.0,
+        "end_time": 35.0,
+        "core_text": "展示实验过程中的神奇反应，搭配惊叹的语音反馈",
         "evidence": [
+          {
+            "type": "transcript",
+            "ref": "27.02-29.02",
+            "text": "Oh my god! Whoa!"
+          },
           {
             "type": "ocr",
             "ref": "frame_008",
             "text": "BTITAMBILGIl"
-          },
-          {
-            "type": "transcript",
-            "ref": "30.3-36.3",
-            "text": "I'm gonna be your dad, I'm gonna be your dad, Oh no!"
           }
         ],
-        "reason": "通过语音提示操作要点，属于教学指令段落",
-        "confidence": 0.75
+        "reason": "语音出现大量惊叹词，对应实验出现视觉冲击的反应过程",
+        "confidence": 0.85
       },
       {
         "segment_id": "seg_007",
-        "function": "demonstration",
-        "start_time": 36.5,
-        "end_time": 41.0,
-        "hook_type": null,
-        "core_text": "正式开始碘钟实验的操作演示，展示实验准备过程",
+        "function": "instruction",
+        "start_time": 35.0,
+        "end_time": 40.0,
+        "core_text": "介绍碘钟实验的主题",
         "evidence": [
           {
             "type": "ocr",
             "ref": "frame_010",
             "text": "TUTANBILGII lodine Clock Test"
-          },
-          {
-            "type": "transcript",
-            "ref": "36.3-40.3",
-            "text": "I'm gonna let you go, I'm gonna let you go"
           }
         ],
-        "reason": "画面文字明确标注碘钟实验主题，开始展示该实验的操作过程",
+        "reason": "画面文字明确标注实验名称，属于主题说明的教学内容",
         "confidence": 0.9
       },
       {
         "segment_id": "seg_008",
         "function": "climax",
-        "start_time": 41.0,
-        "end_time": 47.0,
-        "hook_type": null,
-        "core_text": "展示疯狂的化学实验效果，呈现最具视觉冲击力的反应画面",
+        "start_time": 40.0,
+        "end_time": 49.0,
+        "core_text": "呈现最疯狂的化学实验操作，展示极致的视觉效果",
         "evidence": [
           {
             "type": "ocr",
             "ref": "frame_011",
             "text": "BITUTAMBILGII N SG Wereally be doing the craziest shit in chemistry NATTERS"
-          },
-          {
-            "type": "transcript",
-            "ref": "40.3-46.3",
-            "text": "I'm gonna let you go, I'm gonna let you go, I'm gonna let you go, Okay, get up"
           }
         ],
-        "reason": "画面文字明确提到最疯狂的化学实验，节奏最快视觉冲击最强，属于全片高潮段落",
-        "confidence": 0.85
+        "reason": "文案明确点明是最疯狂的化学实验部分，是全片视觉冲击最强的高潮段落",
+        "confidence": 0.9
       },
       {
         "segment_id": "seg_009",
         "function": "resolution",
-        "start_time": 47.0,
-        "end_time": 52.0,
-        "hook_type": null,
-        "core_text": "实验结束后博主感叹效果，展示实验最终的成品效果",
-        "evidence": [
-          {
-            "type": "ocr",
-            "ref": "frame_012",
-            "text": "@LLel"
-          },
-          {
-            "type": "transcript",
-            "ref": "46.3-52.3",
-            "text": "Okay, get up, Oh my god, Is that awesome?"
-          }
-        ],
-        "reason": "实验操作完成，博主表达惊叹，释放之前积累的紧张情绪，属于收尾总结部分",
-        "confidence": 0.8
-      },
-      {
-        "segment_id": "seg_010",
-        "function": "demonstration",
-        "start_time": 52.0,
-        "end_time": 57.5,
-        "hook_type": null,
-        "core_text": "展示后续补充的小实验操作，再次呈现趣味化学反应",
+        "start_time": 49.0,
+        "end_time": 55.0,
+        "core_text": "回顾实验全程，总结实验的趣味体验",
         "evidence": [
           {
             "type": "ocr",
             "ref": "frame_013",
-            "text": "Watehme do Tew@@sB@Ca exoerlemtexeeef@ tte mem Whaflwas@omaRalalak \"哑』 N br V Pa GITUTMNBIUEII 〈 Jua+ eus endo: Bwss I〈"
-          },
+            "text": "Watehme do Tew@@sB@Ca exoerlemtexeeef@ tte mem Whaflwas@omaRalalak \"哑\" N br V Pa GITUTMNBIUEII 〈 Jua+ eus endo: Bwss I〈"
+          }
+        ],
+        "reason": "画面文字呈现实验回顾相关内容，属于收尾总结部分",
+        "confidence": 0.75
+      },
+      {
+        "segment_id": "seg_010",
+        "function": "cta",
+        "start_time": 55.0,
+        "end_time": 60.1,
+        "core_text": "片尾再次露出创作者账号标识，引导关注",
+        "evidence": [
           {
             "type": "ocr",
             "ref": "frame_014",
             "text": "Watehhe@[9吣@@5@@2e @xeeifex@epf @MMtte te Whaflmas@onalalalak Jn @ITUTNBILGII UII"
           },
           {
-            "type": "transcript",
-            "ref": "52.3-57.3",
-            "text": "Okay, ready?, Oh my god, It's not this way"
-          }
-        ],
-        "reason": "补充展示额外的趣味实验，延续内容的趣味性",
-        "confidence": 0.75
-      },
-      {
-        "segment_id": "seg_011",
-        "function": "cta",
-        "start_time": 57.5,
-        "end_time": 60.1,
-        "hook_type": null,
-        "core_text": "片尾展示博主账号标识，引导观众关注账号",
-        "evidence": [
-          {
-            "type": "ocr",
-            "ref": "frame_015",
-            "text": "@ITUTIMBILOI"
-          },
-          {
             "type": "ocr",
             "ref": "frame_016",
             "text": "@LTUTAMBILBII C"
-          },
-          {
-            "type": "transcript",
-            "ref": "58.3-60.3",
-            "text": "Long as you harden low"
           }
         ],
-        "reason": "片尾重复展示博主账号ID，属于引导观众关注账号的行动号召段落",
+        "reason": "片尾多次展示创作者ID，属于账号曝光引导关注的行动号召部分",
         "confidence": 0.8
       }
     ],
-    "hook_type": "direct",
+    "hook_type": "mixed_title_question",
     "cta_type": "follow",
-    "structure_pattern": "direct_hook → introduction → demo → transition → demo → instruction → demo → climax → resolution → extra_demo → cta",
-    "uncertainty": "部分OCR文字识别存在乱码，部分段落边界基于场景切换判断，置信度中等；语音识别部分置信度较低，部分语义推断基于上下文实验场景"
+    "structure_pattern": "title_hook → account_intro → instruction → demo → question_hook → demo → topic_intro → climax → summary → cta",
+    "uncertainty": "部分OCR识别存在乱码，少量段落边界为估算值，语音部分识别置信度较低"
   },
   "rhythm_structure": {
     "overall_rhythm": {
@@ -283,38 +203,67 @@
         "segment_id": "seg_001",
         "time_range": [
           0.0,
-          6.0
+          3.0
         ],
-        "pace": "medium",
-        "shots_per_second": 0.5,
-        "avg_shot_duration": 2.011,
-        "beat_count": 14,
-        "beats_per_second": 2.333,
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 3.0,
+        "beat_count": 7,
+        "beats_per_second": 2.3333,
         "cut_beat_alignment": 0.0,
-        "role": "hook开场，快速展示账号标识铺垫悬念",
-        "reason": "metrics:seg_001，6秒内完成2次场景切换，OCR信息连续更新3次，无卡点匹配",
-        "scene_cut_count": 2,
-        "rhythm_driver": "information_reveal"
+        "role": "title setup, show opening logo to catch attention",
+        "reason": "单张标识画面持续展示，无场景切镜，对应metrics:seg_001数据",
+        "scene_cut_count": 0,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_001",
+          "beat_alignment:seg_001"
+        ]
       },
       {
         "segment_id": "seg_002",
         "time_range": [
+          3.0,
+          6.0
+        ],
+        "pace": "medium",
+        "shots_per_second": 0.6667,
+        "avg_shot_duration": 1.517,
+        "beat_count": 7,
+        "beats_per_second": 2.3333,
+        "cut_beat_alignment": 0.0,
+        "role": "account exposure, show creator ID for brand building",
+        "reason": "该段时长仅3秒，高shot密度为短时长放大效应，仅1次场景切镜，对应metrics:seg_002数据",
+        "scene_cut_count": 1,
+        "rhythm_driver": "visual_version_change",
+        "evidence_refs": [
+          "metrics:seg_002",
+          "beat_alignment:seg_002"
+        ]
+      },
+      {
+        "segment_id": "seg_003",
+        "time_range": [
           6.0,
           14.0
         ],
-        "pace": "slow",
+        "pace": "very_slow",
         "shots_per_second": 0.25,
         "avg_shot_duration": 4.933,
         "beat_count": 18,
         "beats_per_second": 2.25,
         "cut_beat_alignment": 0.0,
-        "role": "引入铺垫，对话引导观众关注后续事件",
-        "reason": "metrics:seg_002，8秒仅1次场景切换，语音对话密度高，无切镜卡点",
+        "role": "instruction, explain basic operation points of chemistry experiment",
+        "reason": "仅1次场景切镜，画面长时间停留展示说明文字，对应metrics:seg_003数据",
         "scene_cut_count": 1,
-        "rhythm_driver": "speech"
+        "rhythm_driver": "speech",
+        "evidence_refs": [
+          "metrics:seg_003",
+          "beat_alignment:seg_003"
+        ]
       },
       {
-        "segment_id": "seg_003",
+        "segment_id": "seg_004",
         "time_range": [
           14.0,
           21.0
@@ -325,188 +274,181 @@
         "beat_count": 16,
         "beats_per_second": 2.2857,
         "cut_beat_alignment": 0.0,
-        "role": "首次实验演示，呈现意外状况",
-        "reason": "metrics:seg_003，7秒内完成3次场景切换，对应实验突发画面跳转，无卡点匹配",
+        "role": "demonstration, show preliminary experiment operation process",
+        "reason": "3次场景切镜，为全片正常时长段落中镜头切换密度最高的部分，对应metrics:seg_004数据",
         "scene_cut_count": 3,
-        "rhythm_driver": "scene_cut"
-      },
-      {
-        "segment_id": "seg_004",
-        "time_range": [
-          21.0,
-          25.0
-        ],
-        "pace": "medium",
-        "shots_per_second": 0.5,
-        "avg_shot_duration": 4.733,
-        "beat_count": 9,
-        "beats_per_second": 2.25,
-        "cut_beat_alignment": 0.0,
-        "role": "过渡设问，引导观众期待后续神奇实验",
-        "reason": "metrics:seg_004，4秒仅1次场景切换，核心展示设问OCR文字，无卡点",
-        "scene_cut_count": 1,
-        "rhythm_driver": "information_reveal"
+        "rhythm_driver": "scene_cut",
+        "evidence_refs": [
+          "metrics:seg_004",
+          "beat_alignment:seg_004"
+        ]
       },
       {
         "segment_id": "seg_005",
         "time_range": [
-          25.0,
-          30.2
+          21.0,
+          27.0
         ],
-        "pace": "very_slow",
-        "shots_per_second": 0.1923,
-        "avg_shot_duration": 6.067,
-        "beat_count": 12,
-        "beats_per_second": 2.3077,
+        "pace": "slow",
+        "shots_per_second": 0.3333,
+        "avg_shot_duration": 4.733,
+        "beat_count": 13,
+        "beats_per_second": 2.1667,
         "cut_beat_alignment": 0.0,
-        "role": "延续实验演示，保持紧张情绪",
-        "reason": "metrics:seg_005，5.2秒无场景切换，单镜头持续展示实验过程，无切镜动作",
-        "scene_cut_count": 0,
-        "rhythm_driver": "speech"
+        "role": "question hook, create suspense to retain audience",
+        "reason": "仅1次场景切镜，语音内容密度提升抛出引导性问题，对应metrics:seg_005数据",
+        "scene_cut_count": 1,
+        "rhythm_driver": "speech",
+        "evidence_refs": [
+          "metrics:seg_005",
+          "beat_alignment:seg_005"
+        ]
       },
       {
         "segment_id": "seg_006",
         "time_range": [
-          30.2,
-          36.5
+          27.0,
+          35.0
         ],
-        "pace": "slow",
-        "shots_per_second": 0.4762,
-        "avg_shot_duration": 4.133,
-        "beat_count": 13,
-        "beats_per_second": 2.0635,
+        "pace": "very_slow",
+        "shots_per_second": 0.25,
+        "avg_shot_duration": 5.533,
+        "beat_count": 18,
+        "beats_per_second": 2.25,
         "cut_beat_alignment": 0.0,
-        "role": "操作指导，讲解实验注意事项",
-        "reason": "metrics:seg_006，6.3秒内完成2次场景切换，语音讲解为主，无卡点匹配",
-        "scene_cut_count": 2,
-        "rhythm_driver": "speech"
+        "role": "demonstration, present amazing chemical reaction visual effect",
+        "reason": "仅1次场景切镜，画面长时间展示反应过程，惊叹语音密度达到局部峰值，对应metrics:seg_006数据",
+        "scene_cut_count": 1,
+        "rhythm_driver": "speech",
+        "evidence_refs": [
+          "metrics:seg_006",
+          "beat_alignment:seg_006"
+        ]
       },
       {
         "segment_id": "seg_007",
         "time_range": [
-          36.5,
-          41.0
+          35.0,
+          40.0
         ],
         "pace": "medium",
-        "shots_per_second": 0.6667,
-        "avg_shot_duration": 3.5,
+        "shots_per_second": 0.6,
+        "avg_shot_duration": 3.567,
         "beat_count": 11,
-        "beats_per_second": 2.4444,
+        "beats_per_second": 2.2,
         "cut_beat_alignment": 0.0,
-        "role": "碘钟实验启动，展示准备过程",
-        "reason": "metrics:seg_007，4.5秒内完成2次场景切换，为全片镜头切换密度最高区间，无卡点",
+        "role": "instruction, introduce the theme of iodine clock experiment",
+        "reason": "该段时长仅5秒，shot密度偏高为短时长放大效应，共2次场景切镜，对应metrics:seg_007数据",
         "scene_cut_count": 2,
-        "rhythm_driver": "scene_cut"
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_007",
+          "beat_alignment:seg_007"
+        ]
       },
       {
         "segment_id": "seg_008",
         "time_range": [
-          41.0,
-          47.0
+          40.0,
+          49.0
         ],
         "pace": "slow",
         "shots_per_second": 0.3333,
-        "avg_shot_duration": 5.567,
-        "beat_count": 13,
-        "beats_per_second": 2.1667,
+        "avg_shot_duration": 5.167,
+        "beat_count": 21,
+        "beats_per_second": 2.3333,
         "cut_beat_alignment": 0.0,
-        "role": "核心实验效果展示，视觉冲击最强",
-        "reason": "metrics:seg_008，6秒仅1次场景切换，单镜头持续展示剧烈化学反应画面，无卡点",
-        "scene_cut_count": 1,
-        "rhythm_driver": "visual_version_change"
+        "role": "climax, present the most crazy chemical experiment visual effect",
+        "reason": "仅2次场景切镜，信息完整度和视觉冲击强度为全片峰值，对应metrics:seg_008数据",
+        "scene_cut_count": 2,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_008",
+          "beat_alignment:seg_008"
+        ]
       },
       {
         "segment_id": "seg_009",
         "time_range": [
-          47.0,
-          52.0
+          49.0,
+          55.0
         ],
-        "pace": "slow",
+        "pace": "very_slow",
         "shots_per_second": 0.2,
         "avg_shot_duration": 5.0,
-        "beat_count": 11,
-        "beats_per_second": 2.2,
+        "beat_count": 14,
+        "beats_per_second": 2.3333,
         "cut_beat_alignment": 0.0,
-        "role": "收尾释放，展示最终实验成品",
-        "reason": "该段5秒时长无场景切换，以博主惊叹语音为主，无切镜动作",
-        "scene_cut_count": 0,
-        "rhythm_driver": "speech"
+        "role": "resolution, review the whole experiment process and summarize experience",
+        "reason": "无高频切镜，画面停留展示总结类文字内容",
+        "scene_cut_count": 1,
+        "rhythm_driver": "information_reveal",
+        "evidence_refs": [
+          "metrics:seg_009",
+          "beat_alignment:seg_009"
+        ]
       },
       {
         "segment_id": "seg_010",
         "time_range": [
-          52.0,
-          57.5
-        ],
-        "pace": "slow",
-        "shots_per_second": 0.3636,
-        "avg_shot_duration": 2.75,
-        "beat_count": 12,
-        "beats_per_second": 2.18,
-        "cut_beat_alignment": 0.0,
-        "role": "补充演示，展示额外趣味小实验",
-        "reason": "该段5.5秒内完成1次场景切换，OCR信息更新2次，无卡点匹配",
-        "scene_cut_count": 1,
-        "rhythm_driver": "information_reveal"
-      },
-      {
-        "segment_id": "seg_011",
-        "time_range": [
-          57.5,
+          55.0,
           60.1
         ],
         "pace": "very_slow",
-        "shots_per_second": 0.0,
-        "avg_shot_duration": 2.6,
-        "beat_count": 7,
-        "beats_per_second": 2.69,
+        "shots_per_second": 0.2,
+        "avg_shot_duration": 5.1,
+        "beat_count": 11,
+        "beats_per_second": 2.195,
         "cut_beat_alignment": 0.0,
-        "role": "CTA引导，展示账号标识引导关注",
-        "reason": "该段2.6秒无场景切换，单帧展示账号OCR信息，无切镜动作",
-        "scene_cut_count": 0,
-        "rhythm_driver": "information_reveal"
+        "role": "cta, show creator ID again to guide audience follow",
+        "reason": "无高频切镜，画面长时间展示账号信息完成引导",
+        "scene_cut_count": 1,
+        "rhythm_driver": "visual_version_change",
+        "evidence_refs": [
+          "metrics:seg_010",
+          "beat_alignment:seg_010"
+        ]
       }
     ],
     "climax_analysis": {
       "script_suggested_range": [
-        41.0,
-        47.0
+        40.0,
+        49.0
       ],
-      "confirmed": false,
+      "confirmed": true,
       "confirmed_range": [
-        36.5,
-        47.0
+        40.0,
+        49.0
       ],
       "peak_shot_density_range": [
-        36.5,
-        41.0
+        14.0,
+        21.0
       ],
-      "peak_shots_per_second": 0.6667,
+      "peak_shots_per_second": 0.5714,
       "peak_beat_alignment": 0.0,
-      "reason": "Script标记的41.0-47.0区间镜头密度仅0.333，并非全片最高，全片镜头密度峰值出现在36.5-41.0的碘钟实验准备阶段，核心高潮的节奏驱动为视觉效果变化而非镜头切换，该区间信息完整度最高，对应最具冲击力的化学反应展示"
+      "reason": "该段信息完整度为全片峰值，对应最具视觉冲击力的实验效果展示，符合脚本标记的高潮定位，镜头切换密度并非全片最高，核心驱动为信息内容的视觉呈现"
     },
     "rhythm_pattern": "progressive_information_reveal",
-    "rhythm_description": "全片整体节奏偏缓，无明显音乐卡点，随实验推进逐步展示不同阶段的操作信息与视觉效果，节奏由语音和内容更新驱动",
+    "rhythm_description": "全片整体节奏偏慢，镜头切换频率极低，以语音讲解和实验信息逐步披露为核心驱动，无明显音乐卡点效果",
     "cutting_strategy": {
-      "primary": "cut_on_action",
-      "secondary": "static_long_take",
+      "primary": "cut_on_content_switch",
+      "secondary": "cut_on_speech_pause",
       "evidence_segments": [
         "seg_003",
-        "seg_007",
-        "seg_008"
+        "seg_004",
+        "seg_006"
       ]
     },
     "audio_observations": {
       "bgm_role": "background_atmosphere",
       "speech_role": "dominant",
       "sound_effects_mentioned": [
-        "人声惊呼",
-        "实验操作摩擦音",
-        "液体反应声"
+        "惊叹人声",
+        "实验反应音效"
       ],
-      "reason": "BGM仅提供基础氛围支撑，beat_sync_score极低无明显卡点，全程语音对话密度高，主导整体节奏推进"
+      "reason": "BGM仅作为背景氛围铺垫，beat_sync_score仅0.0662无明显卡点效果，语音旁白和惊叹音主导全片节奏"
     },
-    "uncertainty": "部分短时长段落的shot_density计算存在轻微放大效应，OCR识别乱码导致部分信息更新节点判断存在约1秒误差"
+    "uncertainty": "部分OCR识别存在乱码，时长小于5秒的短片段shot密度存在短时长放大效应，无法作为镜头切换快慢的绝对判断依据"
   },
   "packaging_structure": {
     "packaging_structure": {
@@ -516,8 +458,8 @@
       "dominant_text_layout": "mixed",
       "visual_emphasis": [
         "large_text",
-        "repeated_account_brand_watermark",
-        "topic_highlight_text"
+        "repeated_account_id_display",
+        "topic_naming_text"
       ],
       "transition_style": "uncertain",
       "sticker_usage": "uncertain"
@@ -527,210 +469,192 @@
         "segment_id": "seg_001",
         "time_range": [
           0.0,
-          6.0
+          3.0
         ],
-        "packaging_role": "hook_brand_display",
-        "text_density": "medium",
-        "layout": "corner account id text",
+        "packaging_role": "opening_title_card",
+        "text_density": "low",
+        "layout": "centered opening logo text",
         "evidence_refs": [
-          "frame_000",
-          "frame_001",
-          "frame_002"
+          "frame_000"
         ],
-        "reason": "开场多次展示博主账号标识，快速建立品牌认知"
+        "reason": "开篇使用标识类标题卡快速引入主题，抓住观众注意力"
       },
       {
         "segment_id": "seg_002",
         "time_range": [
-          6.0,
-          14.0
+          3.0,
+          6.0
         ],
-        "packaging_role": "scene_foreshadowing",
+        "packaging_role": "account_branding",
         "text_density": "low",
-        "layout": "corner watermark",
+        "layout": "corner account id display",
         "evidence_refs": [
-          "frame_003"
+          "frame_001",
+          "frame_002"
         ],
-        "reason": "仅保留角落的账号水印，不干扰对话铺垫的实验场景"
+        "reason": "连续两次展示创作者账号ID，完成账号露出铺垫"
       },
       {
         "segment_id": "seg_003",
         "time_range": [
-          14.0,
-          21.0
+          6.0,
+          14.0
         ],
-        "packaging_role": "demo_auxiliary",
-        "text_density": "low",
-        "layout": "corner watermark",
+        "packaging_role": "instruction_text_display",
+        "text_density": "medium",
+        "layout": "mixed instruction text overlay",
         "evidence_refs": [
-          "frame_004"
+          "frame_003"
         ],
-        "reason": "实验演示过程仅保留角落账号水印，突出实验画面本身"
+        "reason": "画面叠加实验相关说明文字，辅助讲解基础操作要点"
       },
       {
         "segment_id": "seg_004",
         "time_range": [
-          21.0,
-          25.0
+          14.0,
+          21.0
         ],
-        "packaging_role": "transition_question_highlight",
+        "packaging_role": "demo_overlay_text",
         "text_density": "medium",
-        "layout": "centered highlight text",
+        "layout": "scattered overlay text",
         "evidence_refs": [
-          "frame_006"
+          "frame_004"
         ],
-        "reason": "居中展示提问文字'science class or magic show?'，强化过渡悬念"
+        "reason": "演示画面叠加少量辅助标注文字，配合实验操作展示"
       },
       {
         "segment_id": "seg_005",
         "time_range": [
-          25.0,
-          30.2
+          21.0,
+          27.0
         ],
-        "packaging_role": "demo_continue_highlight",
+        "packaging_role": "question_hook_text",
         "text_density": "medium",
-        "layout": "centered repeat highlight text",
+        "layout": "centered large question text",
         "evidence_refs": [
+          "frame_006",
           "frame_007"
         ],
-        "reason": "重复展示提问文字，延续悬念感"
+        "reason": "使用醒目提问文字制造悬念，引导观众继续观看"
       },
       {
         "segment_id": "seg_006",
         "time_range": [
-          30.2,
-          36.5
+          27.0,
+          35.0
         ],
-        "packaging_role": "instruction_auxiliary",
+        "packaging_role": "reaction_branding",
         "text_density": "low",
-        "layout": "corner watermark",
+        "layout": "corner small account id",
         "evidence_refs": [
           "frame_008"
         ],
-        "reason": "教学讲解阶段仅保留角落账号水印，不干扰语音指令接收"
+        "reason": "实验反应画面角落保留账号标识，不遮挡核心视觉效果"
       },
       {
         "segment_id": "seg_007",
         "time_range": [
-          36.5,
-          41.0
+          35.0,
+          40.0
         ],
-        "packaging_role": "experiment_title_card",
-        "text_density": "medium",
+        "packaging_role": "topic_naming_card",
+        "text_density": "low",
         "layout": "centered large topic text",
         "evidence_refs": [
           "frame_010"
         ],
-        "reason": "使用大字标题卡展示实验主题'Iodine Clock Test'，明确后续演示内容"
+        "reason": "使用醒目文字明确标注实验名称「Iodine Clock Test」，点明核心主题"
       },
       {
         "segment_id": "seg_008",
         "time_range": [
-          41.0,
-          47.0
+          40.0,
+          49.0
         ],
-        "packaging_role": "climax_emphasis",
-        "text_density": "high",
-        "layout": "mixed large centered text + corner watermark",
+        "packaging_role": "climax_emphasis_text",
+        "text_density": "medium",
+        "layout": "large bold emphasis text",
         "evidence_refs": [
           "frame_011"
         ],
-        "reason": "高潮段使用大段强调文字'Wereally be doing the craziest shit in chemistry'，强化视觉冲击"
+        "reason": "使用大段醒目强调文字点明「最疯狂的化学实验」属性，强化高潮冲击力"
       },
       {
         "segment_id": "seg_009",
         "time_range": [
-          47.0,
-          52.0
+          49.0,
+          55.0
         ],
-        "packaging_role": "resolution_auxiliary",
-        "text_density": "low",
-        "layout": "corner watermark",
+        "packaging_role": "summary_overlay_text",
+        "text_density": "high",
+        "layout": "mixed scattered text",
         "evidence_refs": [
-          "frame_012"
+          "frame_013"
         ],
-        "reason": "实验收尾阶段仅保留角落账号水印，突出博主的情绪反应"
+        "reason": "叠加多段回顾类文字，配合实验总结内容展示"
       },
       {
         "segment_id": "seg_010",
         "time_range": [
-          52.0,
-          57.5
-        ],
-        "packaging_role": "extra_demo_auxiliary",
-        "text_density": "medium",
-        "layout": "mixed scattered text + corner watermark",
-        "evidence_refs": [
-          "frame_013",
-          "frame_014"
-        ],
-        "reason": "补充实验阶段保留账号水印和少量辅助说明文字"
-      },
-      {
-        "segment_id": "seg_011",
-        "time_range": [
-          57.5,
+          55.0,
           60.1
         ],
-        "packaging_role": "cta_brand_display",
+        "packaging_role": "cta_branding",
         "text_density": "medium",
-        "layout": "centered account id text",
+        "layout": "repeated corner account id",
         "evidence_refs": [
+          "frame_014",
           "frame_015",
           "frame_016"
         ],
-        "reason": "片尾集中展示博主账号ID，引导观众关注账号"
+        "reason": "片尾多次重复展示创作者账号ID，引导观众关注账号"
       }
     ],
     "key_packaging_patterns": [
       {
-        "name": "full_coverage_brand_watermark",
-        "description": "全片几乎所有段落都重复展示博主账号ID水印，持续强化账号曝光",
+        "name": "repeated_account_branding",
+        "description": "全片多个段落角落重复露出创作者账号ID，强化账号记忆点",
         "evidence_refs": [
           "frame_001",
           "frame_002",
-          "frame_003",
-          "frame_006",
-          "frame_007",
-          "frame_010",
-          "frame_011",
-          "frame_015",
           "frame_016"
         ],
         "transfer_relevance": "high"
       },
       {
-        "name": "topic_title_card_insert",
-        "description": "进入核心碘钟实验前插入专门的大字标题卡，明确实验主题，提升内容辨识度",
+        "name": "topic_emphasis_title_card",
+        "description": "在核心主题节点使用居中大字标题卡，明确传递关键信息",
         "evidence_refs": [
-          "frame_010"
-        ],
-        "transfer_relevance": "medium"
-      },
-      {
-        "name": "climax_emphasis_text",
-        "description": "高潮实验效果展示阶段使用大段强调文字，放大内容的冲击力",
-        "evidence_refs": [
+          "frame_010",
           "frame_011"
         ],
         "transfer_relevance": "high"
+      },
+      {
+        "name": "question_hook_text",
+        "description": "中段使用醒目提问文字制造悬念，提升观众留存率",
+        "evidence_refs": [
+          "frame_006",
+          "frame_007"
+        ],
+        "transfer_relevance": "medium"
       }
     ],
     "uncertain_elements": [
       "transition_type",
-      "sticker_elements",
-      "exact_text_color_and_contrast_level"
+      "sticker_effect_details",
+      "partial_ocr_text_content"
     ],
-    "uncertainty": "转场具体样式、是否存在装饰贴纸、文字的精确对比度参数受视觉API预算限制暂未完全确认，需要进一步全帧视觉分析补充"
+    "uncertainty": "部分OCR识别存在乱码，转场特效和装饰贴纸的具体类型受视觉预算限制暂无法完全确认，需要进一步全量视觉分析补充细节"
   },
   "value_strategy": {
     "value_strategy": {
-      "primary_value": "向观众展示极具视觉冲击力的趣味疯狂化学实验，带来新奇的科学奇观体验",
+      "primary_value": "通过炫酷的碘钟化学实验演示，向观众传递趣味化学知识，同时提供极具视觉冲击力的奇观娱乐体验",
       "value_type": "mixed",
-      "target_audience": "对趣味化学、科学奇观内容感兴趣的普通观众与化学爱好者",
-      "conversion_goal": "follow",
-      "primary_hook_value": "开场快速展示博主标识搭配紧张音效，直接抓住观众好奇心，铺垫后续惊险实验内容",
-      "creator_cta": "片尾多次展示博主账号ID @ITUTANBILGII 引导观众关注账号",
+      "target_audience": "对趣味科学、化学实验感兴趣的普通观众，尤其是学生群体",
+      "conversion_goal": "follow / 持续获取更多趣味科学内容",
+      "primary_hook_value": "抛出疑问「这是科学课还是魔术表演」，用超出预期的神奇化学反应效果制造强烈好奇心",
+      "creator_cta": "片尾多次展示创作者账号ID @ITUTANBILGII 引导观众关注账号获取更多内容",
       "platform_cta": null,
       "selling_points": []
     },
@@ -739,158 +663,105 @@
         "segment_id": "seg_001",
         "time_range": [
           0.0,
-          6.0
+          3.0
         ],
-        "value_role": "attention_capture",
-        "claim": "用紧张音效和账号标识快速抓住观众注意力，铺垫悬念",
+        "value_role": "opening",
+        "claim": "开篇展示标识快速切入主题，抓住观众注意力",
         "evidence_refs": [
-          "frame_000",
-          "frame_001",
-          "frame_002"
+          "frame_000"
         ],
-        "evidence_text": "@ITUTANBILGII 搭配紧张的人声铺垫悬念"
+        "evidence_text": "(x ys BHUNBIEII L 5"
       },
       {
         "segment_id": "seg_002",
         "time_range": [
-          6.0,
-          14.0
+          3.0,
+          6.0
         ],
-        "value_role": "context_building",
-        "claim": "用对话引导观众情绪，铺垫化学实验场景",
+        "value_role": "account_awareness",
+        "claim": "连续展示创作者ID完成账号曝光铺垫",
         "evidence_refs": [
-          "frame_003"
+          "frame_001",
+          "frame_002"
         ],
-        "evidence_text": "I want you to get down on your knees, Tell me what it is, Oh no!, You did it!"
+        "evidence_text": "@ITUTANBILGII / BITUTINBILGIII"
       },
       {
         "segment_id": "seg_003",
         "time_range": [
-          14.0,
-          21.0
+          6.0,
+          14.0
         ],
-        "value_role": "partial_demo",
-        "claim": "展示第一次化学实验的惊险意外过程，强化刺激感",
+        "value_role": "knowledge_intro",
+        "claim": "讲解化学实验相关基础操作要点，输出前置知识",
         "evidence_refs": [
-          "frame_004"
+          "frame_003"
         ],
-        "evidence_text": "Don't get me!, Oh no!"
-      },
-      {
-        "segment_id": "seg_004",
-        "time_range": [
-          21.0,
-          25.0
-        ],
-        "value_role": "curiosity_amplification",
-        "claim": "抛出科学课还是魔术表演的问题，进一步提升观众期待",
-        "evidence_refs": [
-          "frame_006"
-        ],
-        "evidence_text": "science class or magic show?"
+        "evidence_text": "Soliow Cendepor OcCoun+ 0 In BITUTANBILGII II Nobo"
       },
       {
         "segment_id": "seg_005",
         "time_range": [
-          25.0,
-          30.2
+          21.0,
+          27.0
         ],
-        "value_role": "partial_demo",
-        "claim": "继续展示惊险实验操作，保持紧张节奏",
+        "value_role": "curiosity_hook",
+        "claim": "用「science class or magic show?」的提问制造强烈悬念，拉高观众期待",
         "evidence_refs": [
+          "frame_006",
           "frame_007"
         ],
-        "evidence_text": "science class or magic show? Oh no!, Oh no!"
-      },
-      {
-        "segment_id": "seg_006",
-        "time_range": [
-          30.2,
-          36.5
-        ],
-        "value_role": "instruction_guide",
-        "claim": "提示实验操作要点，引导观众关注后续碘钟实验",
-        "evidence_refs": [
-          "frame_008"
-        ],
-        "evidence_text": "I'm gonna be your dad"
+        "evidence_text": "BITUTANBILGII science class or magic show?"
       },
       {
         "segment_id": "seg_007",
         "time_range": [
-          36.5,
-          41.0
+          35.0,
+          40.0
         ],
-        "value_role": "core_demo_start",
-        "claim": "正式开启碘钟实验的操作演示，展示实验准备过程",
+        "value_role": "topic_clear",
+        "claim": "明确点明实验主题为碘钟实验，完成知识锚定",
         "evidence_refs": [
           "frame_010"
         ],
-        "evidence_text": "Iodine Clock Test"
+        "evidence_text": "TUTANBILGII lodine Clock Test"
       },
       {
         "segment_id": "seg_008",
         "time_range": [
-          41.0,
-          47.0
+          40.0,
+          49.0
         ],
-        "value_role": "climax_delivery",
-        "claim": "呈现全片最具视觉冲击力的疯狂化学反应效果，兑现奇观价值",
+        "value_role": "visual_climax",
+        "claim": "展示最具冲击力的疯狂化学实验效果，兑现之前的奇观承诺",
         "evidence_refs": [
           "frame_011"
         ],
-        "evidence_text": "Wereally be doing the craziest shit in chemistry"
-      },
-      {
-        "segment_id": "seg_009",
-        "time_range": [
-          47.0,
-          52.0
-        ],
-        "value_role": "emotion_release",
-        "claim": "实验结束后博主感叹效果，释放之前积累的紧张情绪",
-        "evidence_refs": [
-          "frame_012"
-        ],
-        "evidence_text": "Oh my god, Is that awesome?"
+        "evidence_text": "BITUTAMBILGII We really be doing the craziest shit in chemistry"
       },
       {
         "segment_id": "seg_010",
         "time_range": [
-          52.0,
-          57.5
-        ],
-        "value_role": "extra_value",
-        "claim": "补充展示额外的趣味小实验，延续内容趣味性",
-        "evidence_refs": [
-          "frame_013",
-          "frame_014"
-        ],
-        "evidence_text": "Watch me do a few more experiments"
-      },
-      {
-        "segment_id": "seg_011",
-        "time_range": [
-          57.5,
+          55.0,
           60.1
         ],
         "value_role": "cta",
-        "claim": "片尾重复展示博主账号ID，引导观众关注账号",
+        "claim": "片尾多次露出创作者账号ID，引导观众关注账号获取更多内容",
         "evidence_refs": [
-          "frame_015",
+          "frame_014",
           "frame_016"
         ],
-        "evidence_text": "@ITUTIMBILOI @LTUTAMBILBII"
+        "evidence_text": "@ITUTNBILGII / @LTUTAMBILBII"
       }
     ],
     "conversion_strategy": {
       "has_creator_cta": true,
       "cta_type": "follow",
-      "save_or_learn_intent": false,
+      "save_or_learn_intent": true,
       "comment_or_purchase_intent": false,
-      "reason": "视频全程没有出现收藏、学习教程、购买商品相关的引导，仅在片尾多次展示创作者账号ID，主动引导观众关注账号，没有其他转化引导"
+      "reason": "视频全程为趣味化学科普内容，没有任何商品售卖、购买引导相关信息，仅在片尾通过反复露出创作者ID引导观众关注账号，后续获取更多同类趣味科学内容"
     },
-    "uncertainty": "部分OCR文字存在识别乱码，未发现任何商品、价格、优惠、购买相关的信息，不存在商品售卖相关的转化策略"
+    "uncertainty": "部分OCR识别存在乱码，少量语音内容识别置信度较低，未发现任何商品、价格、购买相关的明确信息"
   },
   "energy_curve": {
     "energy_curve": [
@@ -898,13 +769,13 @@
         "segment_id": "seg_001",
         "time_range": [
           0.0,
-          6.0
+          3.0
         ],
         "energy_level": "medium",
         "role": "hook_attention",
         "drivers": [
-          "fast account identity reveal",
-          "tense audio atmosphere"
+          "large_opening_title_card",
+          "fast_topic_introduction"
         ],
         "evidence_refs": [
           "script:seg_001",
@@ -917,14 +788,14 @@
       {
         "segment_id": "seg_002",
         "time_range": [
-          6.0,
-          14.0
+          3.0,
+          6.0
         ],
         "energy_level": "low",
-        "role": "scene_building",
+        "role": "branding_setup",
         "drivers": [
-          "dialogue guidance",
-          "experiment context setup"
+          "repeated_creator_id_display",
+          "slow_visual_version_change"
         ],
         "evidence_refs": [
           "script:seg_002",
@@ -932,59 +803,57 @@
           "packaging:seg_002",
           "value:seg_002"
         ],
-        "confidence": 0.85
+        "confidence": 0.9
       },
       {
         "segment_id": "seg_003",
         "time_range": [
-          14.0,
-          21.0
+          6.0,
+          14.0
         ],
-        "energy_level": "medium",
-        "role": "partial_stimulation",
+        "energy_level": "low",
+        "role": "knowledge_prep",
         "drivers": [
-          "scene cut jumps",
-          "unexpected experiment accident"
+          "speech_driven_instruction",
+          "medium_density_instruction_text_overlay"
         ],
         "evidence_refs": [
           "script:seg_003",
           "rhythm:seg_003",
-          "packaging:seg_003",
-          "value:seg_003"
+          "packaging:seg_003"
         ],
         "confidence": 0.8
       },
       {
         "segment_id": "seg_004",
         "time_range": [
-          21.0,
-          25.0
+          14.0,
+          21.0
         ],
         "energy_level": "medium",
-        "role": "curiosity_amplification",
+        "role": "demo_build_up",
         "drivers": [
-          "centered highlight question text",
-          "expectation promotion"
+          "local_peak_scene_cut_density",
+          "preliminary_experiment_operation_display"
         ],
         "evidence_refs": [
           "script:seg_004",
           "rhythm:seg_004",
-          "packaging:seg_004",
-          "value:seg_004"
+          "packaging:seg_004"
         ],
-        "confidence": 0.9
+        "confidence": 0.8
       },
       {
         "segment_id": "seg_005",
         "time_range": [
-          25.0,
-          30.2
+          21.0,
+          27.0
         ],
         "energy_level": "medium",
-        "role": "tension_maintenance",
+        "role": "curiosity_elevate",
         "drivers": [
-          "continuous exclamation audio",
-          "repeated suspense text"
+          "large_centered_question_text",
+          "speech_driven_suspense_creation"
         ],
         "evidence_refs": [
           "script:seg_005",
@@ -992,39 +861,38 @@
           "packaging:seg_005",
           "value:seg_005"
         ],
-        "confidence": 0.8
+        "confidence": 0.9
       },
       {
         "segment_id": "seg_006",
         "time_range": [
-          30.2,
-          36.5
+          27.0,
+          35.0
         ],
-        "energy_level": "low",
-        "role": "instruction_guide",
+        "energy_level": "high",
+        "role": "partial_climax_preview",
         "drivers": [
-          "operation tips explanation",
-          "iodine clock experiment preview"
+          "peak_exclamation_speech_density",
+          "amazing_chemical_reaction_visual_effect"
         ],
         "evidence_refs": [
           "script:seg_006",
           "rhythm:seg_006",
-          "packaging:seg_006",
-          "value:seg_006"
+          "packaging:seg_006"
         ],
-        "confidence": 0.75
+        "confidence": 0.85
       },
       {
         "segment_id": "seg_007",
         "time_range": [
-          36.5,
-          41.0
+          35.0,
+          40.0
         ],
-        "energy_level": "high",
-        "role": "climax_preparation",
+        "energy_level": "medium",
+        "role": "topic_anchor",
         "drivers": [
-          "peak shot density",
-          "large experiment title card"
+          "large_centered_topic_title_card",
+          "clear_information_reveal_of_experiment_name"
         ],
         "evidence_refs": [
           "script:seg_007",
@@ -1037,55 +905,54 @@
       {
         "segment_id": "seg_008",
         "time_range": [
-          41.0,
-          47.0
+          40.0,
+          49.0
         ],
         "energy_level": "peak",
-        "role": "core_impact_delivery",
+        "role": "full_climax_delivery",
         "drivers": [
-          "visual_effect_peak",
-          "full_impact_highlight_text",
-          "core_sight_value_delivery"
+          "full_peak_information_completion",
+          "strongest_visual_impact_of_crazy_chemistry_experiment",
+          "large_bold_emphasis_text"
         ],
         "evidence_refs": [
           "script:seg_008",
-          "rhythm:seg_008",
+          "rhythm:climax_analysis",
           "packaging:seg_008",
           "value:seg_008"
         ],
-        "confidence": 0.85
+        "confidence": 0.9
       },
       {
         "segment_id": "seg_009",
         "time_range": [
-          47.0,
-          52.0
+          49.0,
+          55.0
         ],
         "energy_level": "medium",
-        "role": "emotion_release",
+        "role": "experience_recap",
         "drivers": [
-          "creator's amazed reaction",
-          "final experiment product display"
+          "high_density_summary_text_overlay",
+          "full_experiment_process_review"
         ],
         "evidence_refs": [
           "script:seg_009",
           "rhythm:seg_009",
-          "packaging:seg_009",
-          "value:seg_009"
+          "packaging:seg_009"
         ],
-        "confidence": 0.8
+        "confidence": 0.75
       },
       {
         "segment_id": "seg_010",
         "time_range": [
-          52.0,
-          57.5
+          55.0,
+          60.1
         ],
-        "energy_level": "medium",
-        "role": "extra_value_supplement",
+        "energy_level": "low",
+        "role": "follow_guide",
         "drivers": [
-          "additional fun small experiment display",
-          "interest_extension"
+          "repeated_creator_id_display",
+          "follow_action_call"
         ],
         "evidence_refs": [
           "script:seg_010",
@@ -1093,494 +960,441 @@
           "packaging:seg_010",
           "value:seg_010"
         ],
-        "confidence": 0.75
-      },
-      {
-        "segment_id": "seg_011",
-        "time_range": [
-          57.5,
-          60.1
-        ],
-        "energy_level": "low",
-        "role": "cta_guide",
-        "drivers": [
-          "centralized account identity display",
-          "follow_guide"
-        ],
-        "evidence_refs": [
-          "script:seg_011",
-          "rhythm:seg_011",
-          "packaging:seg_011",
-          "value:seg_011"
-        ],
         "confidence": 0.8
       }
     ],
-    "energy_pattern": "progressive_tension_build_to_visual_peak_then_gradual_release",
+    "energy_pattern": "progressive_build_to_peak_then_decay",
     "peak_moments": [
       {
         "time_range": [
-          36.5,
-          47.0
+          40.0,
+          49.0
         ],
-        "reason": "The shot density reaches the full video peak in the iodine clock experiment preparation phase, followed by the strongest visual impact of the violent chemical reaction, the information completeness reaches the highest point, which is the core climax of the whole video",
+        "reason": "全片信息完整度、实验视觉冲击强度、强调文字密度共同达到峰值，完全兑现此前铺垫的趣味化学奇观承诺",
         "evidence_refs": [
           "rhythm:climax_analysis",
-          "script:seg_007",
           "script:seg_008",
-          "packaging:seg_008"
+          "value:seg_008"
         ]
       }
     ],
     "attention_strategy": {
-      "opening": "Direct account display with tense audio to grab attention immediately",
-      "middle": "Alternate experiment demonstration, suspense setting and operation guidance to continuously increase audience expectation",
-      "climax": "Long static take to show the most intense chemical reaction visual effect, with large highlight text to amplify the impact",
-      "ending": "Supplement fun small experiments to extend interest, finally display account identity to guide follow action"
+      "opening": "large title card fast topic introduction to grab attention",
+      "middle": "alternating knowledge instruction, experiment demonstration and suspense question to gradually elevate audience expectation",
+      "climax": "full presentation of the most visually impactful crazy chemistry experiment effect",
+      "ending": "experiment experience recap + repeated creator id exposure to guide follow"
     },
-    "uncertainty": "Part of OCR recognition has garbled characters, the exact text contrast and transition style are not fully confirmed, part of the speech semantic inference is based on the experiment scene, the energy level evaluation error is within 0.1"
+    "uncertainty": "部分OCR识别存在乱码，少量语音内容识别置信度较低，转场特效和装饰贴纸细节尚未完全确认，少量段落边界为估算值"
   },
   "transfer_blueprint": {
     "transfer_blueprint": {
       "source_video_type": "fun_science_experiment_show",
-      "dominant_structure": "direct_hook → context_build → partial_demo → curiosity_amplification → instruction → core_demo_prep → climax_visual_impact → emotion_release → extra_demo → brand_cta",
+      "dominant_structure": "opening_hook → account_branding → knowledge_prep → demo → curiosity_question → partial_reaction_preview → topic_anchor → full_visual_climax → summary → follow_cta",
       "structure_template": [
         {
           "slot_id": "slot_001",
-          "slot_type": "opening_hook",
+          "slot_type": "opening_title_card",
           "source_segment_id": "seg_001",
           "source_time_range": [
             0.0,
-            6.0
+            3.0
           ],
-          "duration_seconds": 6.0,
-          "duration_ratio": 0.1,
-          "purpose": "Grab audience attention immediately with tense atmosphere and brand identity",
-          "template": "{brand_account_display} + {tense_sound_effect} to build initial suspense",
+          "duration_seconds": 3.0,
+          "duration_ratio": 0.05,
+          "purpose": "fast topic introduction to grab audience attention immediately",
+          "template": "full screen large {domain} opening logo / title text",
           "input_requirements": {
             "needed_assets": [
-              "brand_logo_or_account_text",
-              "short_tense_audio_clip",
-              "opening_visual_shot"
+              "custom_opening_logo",
+              "solid_background_or_short_clip"
             ],
             "min_clip_count": 1,
             "visual_constraints": [
-              "clear account text display",
-              "no overloaded elements"
+              "centered large text",
+              "high contrast between text and background"
             ]
           },
           "required_elements": [
-            "tense audio atmosphere",
-            "brand identity exposure"
+            "clear topic signal",
+            "high visibility opening text"
           ],
           "replaceable_elements": [
-            "specific account text",
-            "opening visual content"
+            "domain_name",
+            "logo_style",
+            "background_color"
           ],
           "priority": "high"
         },
         {
           "slot_id": "slot_002",
-          "slot_type": "context_building",
+          "slot_type": "account_branding",
           "source_segment_id": "seg_002",
+          "source_time_range": [
+            3.0,
+            6.0
+          ],
+          "duration_seconds": 3.0,
+          "duration_ratio": 0.05,
+          "purpose": "first exposure of creator identity to build brand awareness",
+          "template": "corner position repeated display of {creator_id}",
+          "input_requirements": {
+            "needed_assets": [
+              "creator_account_text",
+              "simple_background"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "small size text placed at non-core area",
+              "no occlusion of main content"
+            ]
+          },
+          "required_elements": [
+            "creator account id text"
+          ],
+          "replaceable_elements": [
+            "creator_id",
+            "corner position (left/right)"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_003",
+          "slot_type": "knowledge_instruction",
+          "source_segment_id": "seg_003",
           "source_time_range": [
             6.0,
             14.0
           ],
           "duration_seconds": 8.0,
           "duration_ratio": 0.133,
-          "purpose": "Lay out scene background and guide audience emotion",
-          "template": "{dialogue_guidance} to introduce the upcoming {core_content}",
+          "purpose": "output pre-requisite basic knowledge to prepare audience for follow-up content",
+          "template": "speech driven explanation + overlay {knowledge_point_text}",
           "input_requirements": {
             "needed_assets": [
-              "scene_shot",
-              "guided_dialogue_audio"
+              "explanation_audio",
+              "knowledge_text_list",
+              "static_demo_background"
             ],
             "min_clip_count": 1,
             "visual_constraints": [
-              "unobtrusive corner watermark only"
+              "medium density text overlay",
+              "text not block speech related content"
             ]
           },
           "required_elements": [
-            "natural guided dialogue",
-            "clear scene presentation"
+            "clear speech explanation",
+            "auxiliary knowledge text"
           ],
           "replaceable_elements": [
-            "specific dialogue lines",
-            "scene background"
+            "knowledge_content",
+            "background_image",
+            "text_font_style"
           ],
-          "priority": "medium"
+          "priority": "high"
         },
         {
-          "slot_id": "slot_003",
-          "slot_type": "partial_demo_1",
-          "source_segment_id": "seg_003",
+          "slot_id": "slot_004",
+          "slot_type": "preliminary_demo",
+          "source_segment_id": "seg_004",
           "source_time_range": [
             14.0,
             21.0
           ],
           "duration_seconds": 7.0,
           "duration_ratio": 0.117,
-          "purpose": "Show first partial content with unexpected effect to stimulate audience",
-          "template": "Short demo of {partial_content} with unexpected {surprise_effect}",
+          "purpose": "show initial operation process to build expectation",
+          "template": "multi-shot {operation_process} footage + scattered small annotation text",
           "input_requirements": {
             "needed_assets": [
-              "partial_demo_shots",
-              "surprise_reaction_audio"
+              "operation_footage_clips",
+              "small_annotation_text"
             ],
             "min_clip_count": 3,
             "visual_constraints": [
-              "focus on demo action"
+              "natural operation footage",
+              "no over-editing that breaks authenticity"
             ]
           },
           "required_elements": [
-            "unexpected surprise effect",
-            "natural reaction audio"
+            "complete initial operation footage",
+            "auxiliary annotation"
           ],
           "replaceable_elements": [
-            "specific demo content",
-            "surprise type"
-          ],
-          "priority": "high"
-        },
-        {
-          "slot_id": "slot_004",
-          "slot_type": "curiosity_amplification",
-          "source_segment_id": "seg_004",
-          "source_time_range": [
-            21.0,
-            25.0
-          ],
-          "duration_seconds": 4.0,
-          "duration_ratio": 0.067,
-          "purpose": "Raise question to amplify audience expectation",
-          "template": "Centered highlight text: {is_it_normal_content_or_magic?}",
-          "input_requirements": {
-            "needed_assets": [
-              "centered_highlight_text",
-              "simple_background"
-            ],
-            "min_clip_count": 1,
-            "visual_constraints": [
-              "large readable centered text"
-            ]
-          },
-          "required_elements": [
-            "provocative question text",
-            "high contrast text display"
-          ],
-          "replaceable_elements": [
-            "specific question content",
-            "text style"
+            "operation_content",
+            "footage_style",
+            "annotation_text"
           ],
           "priority": "high"
         },
         {
           "slot_id": "slot_005",
-          "slot_type": "partial_demo_2",
+          "slot_type": "curiosity_hook",
           "source_segment_id": "seg_005",
           "source_time_range": [
-            25.0,
-            30.2
+            21.0,
+            27.0
           ],
-          "duration_seconds": 5.2,
-          "duration_ratio": 0.087,
-          "purpose": "Continue demo to keep tension level",
-          "template": "Long take of {continuous_demo_process} with repeated suspense text overlay",
+          "duration_seconds": 6.0,
+          "duration_ratio": 0.1,
+          "purpose": "raise question to create strong suspense and improve audience retention",
+          "template": "centered large text: {is_this_normal_content_or_magic?}",
           "input_requirements": {
             "needed_assets": [
-              "continuous_demo_long_take",
-              "suspense_text_overlay"
+              "question_text",
+              "simple_background"
             ],
             "min_clip_count": 1,
             "visual_constraints": [
-              "no extra cuts to break immersion"
+              "large bold text",
+              "high contrast to highlight question"
             ]
           },
           "required_elements": [
-            "continuous demo footage",
-            "sustained tense atmosphere"
+            "contrasting question that breaks audience expectation"
           ],
           "replaceable_elements": [
-            "demo content",
-            "suspense text wording"
-          ],
-          "priority": "medium"
-        },
-        {
-          "slot_id": "slot_006",
-          "slot_type": "instruction_guide",
-          "source_segment_id": "seg_006",
-          "source_time_range": [
-            30.2,
-            36.5
-          ],
-          "duration_seconds": 6.3,
-          "duration_ratio": 0.105,
-          "purpose": "Explain key points and preview core content",
-          "template": "{simple_voice_guidance} to introduce upcoming {core_content_name}",
-          "input_requirements": {
-            "needed_assets": [
-              "guidance_voice_audio",
-              "related_visual_shots"
-            ],
-            "min_clip_count": 2,
-            "visual_constraints": [
-              "no distracting elements"
-            ]
-          },
-          "required_elements": [
-            "clear operation guidance",
-            "core content preview"
-          ],
-          "replaceable_elements": [
-            "specific guidance lines",
-            "preview content"
-          ],
-          "priority": "medium"
-        },
-        {
-          "slot_id": "slot_007",
-          "slot_type": "core_demo_prep",
-          "source_segment_id": "seg_007",
-          "source_time_range": [
-            36.5,
-            41.0
-          ],
-          "duration_seconds": 4.5,
-          "duration_ratio": 0.075,
-          "purpose": "Show core content title card and preparation process",
-          "template": "Large centered title card: {core_content_name} + fast cut preparation shots",
-          "input_requirements": {
-            "needed_assets": [
-              "large_title_text",
-              "preparation_process_shots"
-            ],
-            "min_clip_count": 2,
-            "visual_constraints": [
-              "high contrast title text"
-            ]
-          },
-          "required_elements": [
-            "clear core content title",
-            "fast paced preparation cuts"
-          ],
-          "replaceable_elements": [
-            "core content name",
-            "preparation shot content"
+            "question_content",
+            "background_style"
           ],
           "priority": "high"
         },
         {
-          "slot_id": "slot_008",
-          "slot_type": "climax_impact",
-          "source_segment_id": "seg_008",
+          "slot_id": "slot_006",
+          "slot_type": "partial_reaction_preview",
+          "source_segment_id": "seg_006",
           "source_time_range": [
-            41.0,
-            47.0
+            27.0,
+            35.0
           ],
-          "duration_seconds": 6.0,
-          "duration_ratio": 0.1,
-          "purpose": "Deliver peak visual impact to satisfy audience expectation",
-          "template": "Long static take of {peak_visual_effect} + large highlight text to amplify shock",
+          "duration_seconds": 8.0,
+          "duration_ratio": 0.133,
+          "purpose": "show partial amazing effect with exclamation audio to further elevate expectation",
+          "template": "long take {partial_amazing_effect} footage + exclamation voiceover",
           "input_requirements": {
             "needed_assets": [
-              "peak_effect_long_take",
-              "impactful_highlight_text"
+              "partial_effect_footage",
+              "exclamation_sound_effect"
             ],
             "min_clip_count": 1,
             "visual_constraints": [
-              "no cuts to break visual immersion"
+              "no fast cut, keep full view of effect process"
             ]
           },
           "required_elements": [
-            "full unbroken peak effect footage",
-            "strong highlight text to emphasize shock"
+            "authentic amazing effect footage",
+            "natural exclamation audio"
           ],
           "replaceable_elements": [
-            "specific peak visual effect",
-            "highlight text wording"
+            "effect_type",
+            "exclamation_words"
+          ],
+          "priority": "high"
+        },
+        {
+          "slot_id": "slot_007",
+          "slot_type": "topic_anchor_card",
+          "source_segment_id": "seg_007",
+          "source_time_range": [
+            35.0,
+            40.0
+          ],
+          "duration_seconds": 5.0,
+          "duration_ratio": 0.083,
+          "purpose": "explicitly state core topic to complete knowledge anchor",
+          "template": "centered large text: {core_topic_name}",
+          "input_requirements": {
+            "needed_assets": [
+              "topic_name_text",
+              "simple_background"
+            ],
+            "min_clip_count": 1,
+            "visual_constraints": [
+              "large clear text",
+              "no redundant elements"
+            ]
+          },
+          "required_elements": [
+            "exact core topic name"
+          ],
+          "replaceable_elements": [
+            "topic_name",
+            "background_style"
+          ],
+          "priority": "medium"
+        },
+        {
+          "slot_id": "slot_008",
+          "slot_type": "full_visual_climax",
+          "source_segment_id": "seg_008",
+          "source_time_range": [
+            40.0,
+            49.0
+          ],
+          "duration_seconds": 9.0,
+          "duration_ratio": 0.15,
+          "purpose": "present the most visually impactful content to fully deliver the promised spectacle experience",
+          "template": "long take {peak_visual_effect} footage + large bold emphasis text",
+          "input_requirements": {
+            "needed_assets": [
+              "peak_effect_footage",
+              "emphasis_text"
+            ],
+            "min_clip_count": 2,
+            "visual_constraints": [
+              "no text occlusion of core visual effect",
+              "keep full view of peak process"
+            ]
+          },
+          "required_elements": [
+            "full peak visual effect footage",
+            "emphasis text that highlights 'most crazy/most amazing' attribute"
+          ],
+          "replaceable_elements": [
+            "peak_effect_content",
+            "emphasis_text_words"
           ],
           "priority": "high"
         },
         {
           "slot_id": "slot_009",
-          "slot_type": "emotion_release",
+          "slot_type": "experience_summary",
           "source_segment_id": "seg_009",
           "source_time_range": [
-            47.0,
-            52.0
+            49.0,
+            55.0
           ],
-          "duration_seconds": 5.0,
-          "duration_ratio": 0.083,
-          "purpose": "Release accumulated tension with creator's amazed reaction",
-          "template": "{creator_surprised_reaction} + final result display",
+          "duration_seconds": 6.0,
+          "duration_ratio": 0.1,
+          "purpose": "recall full process and summarize experience to deepen audience impression",
+          "template": "full process review footage + high density summary overlay text",
           "input_requirements": {
             "needed_assets": [
-              "creator_reaction_shot",
-              "final_result_visual"
+              "review_footage_clips",
+              "summary_text_list"
             ],
             "min_clip_count": 1,
             "visual_constraints": [
-              "focus on creator's natural reaction"
+              "scattered text layout",
+              "no overcrowded screen"
             ]
           },
           "required_elements": [
-            "authentic amazed reaction",
-            "final result presentation"
+            "complete process review",
+            "clear summary points"
           ],
           "replaceable_elements": [
-            "creator reaction content",
-            "final result type"
+            "summary_content",
+            "review_footage_order"
           ],
           "priority": "medium"
         },
         {
           "slot_id": "slot_010",
-          "slot_type": "extra_demo",
+          "slot_type": "follow_cta",
           "source_segment_id": "seg_010",
           "source_time_range": [
-            52.0,
-            57.5
-          ],
-          "duration_seconds": 5.5,
-          "duration_ratio": 0.092,
-          "purpose": "Show extra small fun content to extend audience interest",
-          "template": "Short demo of {extra_small_content} to add extra value",
-          "input_requirements": {
-            "needed_assets": [
-              "extra_small_demo_shots",
-              "simple_explanation_text"
-            ],
-            "min_clip_count": 2,
-            "visual_constraints": [
-              "keep demo light and fun"
-            ]
-          },
-          "required_elements": [
-            "extra interesting small content",
-            "no overloaded information"
-          ],
-          "replaceable_elements": [
-            "extra demo content",
-            "explanation text"
-          ],
-          "priority": "low"
-        },
-        {
-          "slot_id": "slot_011",
-          "slot_type": "brand_cta",
-          "source_segment_id": "seg_011",
-          "source_time_range": [
-            57.5,
+            55.0,
             60.1
           ],
-          "duration_seconds": 2.6,
-          "duration_ratio": 0.043,
-          "purpose": "Display brand account to guide follow action",
-          "template": "Centered clear {brand_account_text} for final exposure",
+          "duration_seconds": 5.1,
+          "duration_ratio": 0.085,
+          "purpose": "repeatedly show creator id to guide audience follow for more content",
+          "template": "corner repeated display of {creator_id}",
           "input_requirements": {
             "needed_assets": [
-              "brand_account_text",
+              "creator_account_text",
               "simple_background"
             ],
             "min_clip_count": 1,
             "visual_constraints": [
-              "clear readable account text"
+              "small size text at non-core area",
+              "no occlusion of main content"
             ]
           },
           "required_elements": [
-            "clear brand account display"
+            "repeated creator account id exposure"
           ],
           "replaceable_elements": [
-            "specific account text",
-            "background style"
+            "creator_id",
+            "corner position"
           ],
           "priority": "medium"
         }
       ],
       "editing_rules": [
         {
-          "rule_name": "cut_on_action_not_on_beat",
-          "description": "Switch shots exactly when action happens, no mandatory music beat alignment, use BGM only as atmosphere background",
+          "rule_name": "cut_on_content_switch",
+          "description": "Switch shots only when content type changes, no unnecessary fast cuts",
           "source_evidence": [
-            "rhythm:cutting_strategy",
-            "rhythm:audio_observations"
+            "rhythm:cutting_strategy.primary"
           ],
           "applies_to_slots": [
-            "partial_demo_1",
-            "partial_demo_2",
-            "core_demo_prep"
+            "preliminary_demo",
+            "full_visual_climax"
           ],
           "priority": "high"
         },
         {
-          "rule_name": "long_take_for_peak_effect",
-          "description": "Use unbroken long static take for climax peak visual effect, no cuts to break audience immersion",
+          "rule_name": "cut_on_speech_pause",
+          "description": "Make shot cuts during speech pauses to avoid breaking audio fluency",
           "source_evidence": [
-            "rhythm:seg_008",
-            "energy:peak_moments"
+            "rhythm:cutting_strategy.secondary"
           ],
           "applies_to_slots": [
-            "climax_impact"
+            "knowledge_instruction",
+            "experience_summary"
           ],
           "priority": "high"
         },
         {
-          "rule_name": "full_coverage_brand_watermark",
-          "description": "Keep unobtrusive corner brand watermark on almost all segments to continuously expose brand identity",
+          "rule_name": "long_take_for_visual_effect",
+          "description": "Keep long take footage for amazing reaction/effect process, do not break the visual continuity",
           "source_evidence": [
-            "packaging:full_coverage_brand_watermark"
+            "rhythm:segment_rhythm for seg_006, seg_008"
           ],
           "applies_to_slots": [
-            "context_building",
-            "partial_demo_1",
-            "partial_demo_2",
-            "instruction_guide",
-            "emotion_release",
-            "extra_demo"
+            "partial_reaction_preview",
+            "full_visual_climax"
+          ],
+          "priority": "high"
+        },
+        {
+          "rule_name": "repeated_corner_branding",
+          "description": "Place small creator id at corner of multiple segments to build brand memory without blocking core content",
+          "source_evidence": [
+            "packaging:key_packaging_patterns.repeated_account_branding"
+          ],
+          "applies_to_slots": [
+            "account_branding",
+            "partial_reaction_preview",
+            "follow_cta"
           ],
           "priority": "medium"
-        },
-        {
-          "rule_name": "progressive_energy_ramp",
-          "description": "Follow energy curve: medium → low → medium → medium → medium → low → high → peak → medium → medium → low, build tension gradually before climax",
-          "source_evidence": [
-            "energy:energy_pattern"
-          ],
-          "applies_to_slots": [
-            "all slots"
-          ],
-          "priority": "high"
         }
       ],
       "adaptation_guidance": {
-        "for_science_experiment": "Fully retain the progressive tension build, partial demo suspense, long take climax effect, full coverage brand watermark structure",
-        "for_magic_trick_show": "Replace chemical experiment content with magic trick performance, keep the 'normal or magic' question slot, climax long take to show magic effect",
-        "for_handcraft_demo": "Replace experiment content with handcraft making process, keep partial demo to show unexpected effect, climax long take to show final finished product",
-        "for_food_challenge": "Replace experiment content with extreme food challenge process, keep the progressive tension build, climax long take to show the final challenge result"
+        "for_science_experiment": "Keep the full progressive structure: knowledge prep → demo → suspense → partial preview → full climax, retain long take for reaction footage",
+        "for_handcraft_tutorial": "Replace experiment operation with handcraft making steps, replace chemical reaction climax with final finished product amazing show, keep the 'is this craft or magic' suspense hook",
+        "for_food_cooking_show": "Replace experiment process with cooking steps, replace chemical reaction climax with final dish perfect presentation, keep the progressive expectation building structure",
+        "for_product_unboxing": "Replace knowledge prep with product background introduction, replace demo with unboxing process, replace climax with product core function amazing show, retain the suspense question hook"
       }
     },
     "non_transferable_elements": [
       {
-        "element": "specific original experiment content",
-        "reason": "Original chemical experiment footage is unique source material, cannot be reused for new content"
+        "element": "specific iodine experiment content",
+        "reason": "Original video's specific experiment material, operation steps and reaction effect are unique content, not general structure"
       },
       {
-        "element": "original creator account ID",
-        "reason": "Brand identity belongs to original creator, must be replaced by new creator's own account information"
-      },
-      {
-        "element": "platform implicit recommendation CTA",
-        "reason": "Platform recommendation logic is not controlled by creator, not part of reusable structure"
+        "element": "platform_cta",
+        "reason": "No platform mandatory recommendation call to action in original video, not part of creator controllable structure"
       }
     ],
-    "uncertainty": "Exact visual transition style, text color contrast parameters, and sticker usage need further full frame visual analysis to confirm, partial speech semantic inference is based on experiment scene, error range is within 10%"
+    "uncertainty": "Specific transition style and sticker effect details need further full visual analysis confirmation, partial segment boundary values are estimated, some OCR text content is not fully recognized"
   },
   "analysis_metadata": {
-    "total_duration_seconds": 335.7,
-    "total_llm_calls": 37,
-    "total_tool_calls": 39,
+    "total_duration_seconds": 332.3,
+    "total_llm_calls": 34,
+    "total_tool_calls": 36,
     "vision_budget": {
       "total_used": 4,
       "max_total": 16,
@@ -1591,49 +1405,49 @@
     },
     "blackboard_history": [
       {
-        "timestamp": "2026-06-09T03:34:47.320675+00:00",
+        "timestamp": "2026-06-09T04:16:26.696243+00:00",
         "action": "write",
         "agent_name": "script",
         "key": "script",
-        "summary": "script completed in 6 LLM calls"
+        "summary": "script completed in 5 LLM calls"
       },
       {
-        "timestamp": "2026-06-09T03:36:07.440963+00:00",
+        "timestamp": "2026-06-09T04:18:01.794064+00:00",
         "action": "write",
         "agent_name": "rhythm",
         "key": "rhythm",
         "summary": "rhythm completed after max rounds (11 LLM calls)"
       },
       {
-        "timestamp": "2026-06-09T03:37:05.966407+00:00",
+        "timestamp": "2026-06-09T04:18:39.357036+00:00",
         "action": "write",
         "agent_name": "packaging",
         "key": "packaging",
-        "summary": "packaging completed in 8 LLM calls"
+        "summary": "packaging completed in 3 LLM calls"
       },
       {
-        "timestamp": "2026-06-09T03:37:35.653187+00:00",
+        "timestamp": "2026-06-09T04:19:24.208635+00:00",
         "action": "write",
         "agent_name": "value",
         "key": "value",
-        "summary": "value completed in 3 LLM calls"
+        "summary": "value completed in 6 LLM calls"
       },
       {
-        "timestamp": "2026-06-09T03:38:12.880390+00:00",
+        "timestamp": "2026-06-09T04:19:56.484294+00:00",
         "action": "write",
         "agent_name": "energy",
         "key": "energy",
         "summary": "energy completed in 2 LLM calls"
       },
       {
-        "timestamp": "2026-06-09T03:38:12.880390+00:00",
+        "timestamp": "2026-06-09T04:19:56.485298+00:00",
         "action": "write",
         "agent_name": "overview",
         "key": "overview",
         "summary": "dict keys=['video_id', 'duration', 'resolution', 'fps', 'scene_count', 'keyframe_count', 'transcript_segment_count', 'ocr_frame_count']"
       },
       {
-        "timestamp": "2026-06-09T03:39:30.734737+00:00",
+        "timestamp": "2026-06-09T04:21:15.261077+00:00",
         "action": "write",
         "agent_name": "transfer",
         "key": "transfer",
@@ -1642,13 +1456,13 @@
     ],
     "agent_details": {
       "script": {
-        "llm_calls": 6,
-        "tool_calls": 5,
+        "llm_calls": 5,
+        "tool_calls": 4,
         "tool_history": [
           {
             "tool": "get_overview",
             "arguments": {},
-            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 29, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
+            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 33, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
           },
           {
             "tool": "get_all_display_texts",
@@ -1659,25 +1473,17 @@
             "tool": "query_timeline",
             "arguments": {
               "start_time": 0.0,
-              "end_time": 8.0
+              "end_time": 10.0
             },
-            "result_preview": "{\"time_range\": [0.0, 8.0], \"scenes\": [{\"scene_id\": \"scene_000\", \"index\": 0, \"start_time\": 0.0, \"end_time\": 3.0, \"duration\": 3.0, \"keyframe_ids\": [\"frame_000\"]}, {\"scene_id\": \"scene_001\", \"index\": 1, \"start_time\": 3.0, \"end_time\": 4.166667, \"duration\": 1.1666670000000003, \"keyframe_ids\": [\"frame_001\"]}, {\"scene_id\": \"scene_002\", \"index\": 2, \"start_time\": 4.166667, \"end_time\": 6.033333, \"duration\": 1.8666659999999995, \"keyframe_ids\": [\"frame_002\"]}, {\"scene_id\": \"scene_003\", \"index\": 3, \"start_tim..."
+            "result_preview": "{\"time_range\": [0.0, 10.0], \"scenes\": [{\"scene_id\": \"scene_000\", \"index\": 0, \"start_time\": 0.0, \"end_time\": 3.0, \"duration\": 3.0, \"keyframe_ids\": [\"frame_000\"]}, {\"scene_id\": \"scene_001\", \"index\": 1, \"start_time\": 3.0, \"end_time\": 4.166667, \"duration\": 1.1666670000000003, \"keyframe_ids\": [\"frame_001\"]}, {\"scene_id\": \"scene_002\", \"index\": 2, \"start_time\": 4.166667, \"end_time\": 6.033333, \"duration\": 1.8666659999999995, \"keyframe_ids\": [\"frame_002\"]}, {\"scene_id\": \"scene_003\", \"index\": 3, \"start_ti..."
           },
           {
             "tool": "query_timeline",
             "arguments": {
-              "start_time": 8.0,
-              "end_time": 25.0
+              "start_time": 20.0,
+              "end_time": 35.0
             },
-            "result_preview": "{\"time_range\": [8.0, 25.0], \"scenes\": [{\"scene_id\": \"scene_003\", \"index\": 3, \"start_time\": 6.033333, \"end_time\": 14.033333, \"duration\": 8.0, \"keyframe_ids\": [\"frame_003\"]}, {\"scene_id\": \"scene_004\", \"index\": 4, \"start_time\": 14.033333, \"end_time\": 15.3, \"duration\": 1.266667, \"keyframe_ids\": [\"frame_004\"]}, {\"scene_id\": \"scene_005\", \"index\": 5, \"start_time\": 15.3, \"end_time\": 20.766667, \"duration\": 5.466667000000001, \"keyframe_ids\": [\"frame_005\"]}, {\"scene_id\": \"scene_006\", \"index\": 6, \"start_tim..."
-          },
-          {
-            "tool": "query_timeline",
-            "arguments": {
-              "start_time": 25.0,
-              "end_time": 60.1
-            },
-            "result_preview": "{\"time_range\": [25.0, 60.1], \"scenes\": [{\"scene_id\": \"scene_007\", \"index\": 7, \"start_time\": 24.166667, \"end_time\": 30.233333, \"duration\": 6.066665999999998, \"keyframe_ids\": [\"frame_007\"]}, {\"scene_id\": \"scene_008\", \"index\": 8, \"start_time\": 30.233333, \"end_time\": 35.233333, \"duration\": 5.0000000000000036, \"keyframe_ids\": [\"frame_008\"]}, {\"scene_id\": \"scene_009\", \"index\": 9, \"start_time\": 35.233333, \"end_time\": 36.566667, \"duration\": 1.3333340000000007, \"keyframe_ids\": [\"frame_009\"]}, {\"scene_id\"..."
+            "result_preview": "{\"time_range\": [20.0, 35.0], \"scenes\": [{\"scene_id\": \"scene_005\", \"index\": 5, \"start_time\": 15.3, \"end_time\": 20.766667, \"duration\": 5.466667000000001, \"keyframe_ids\": [\"frame_005\"]}, {\"scene_id\": \"scene_006\", \"index\": 6, \"start_time\": 20.766667, \"end_time\": 24.166667, \"duration\": 3.3999999999999986, \"keyframe_ids\": [\"frame_006\"]}, {\"scene_id\": \"scene_007\", \"index\": 7, \"start_time\": 24.166667, \"end_time\": 30.233333, \"duration\": 6.066665999999998, \"keyframe_ids\": [\"frame_007\"]}, {\"scene_id\": \"sce..."
           }
         ]
       },
@@ -1690,20 +1496,28 @@
             "arguments": {
               "agent_name": "script"
             },
-            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.0, \"hook_type\": \"direct\", \"core_text\": \"开场快速展示博主账号标识，搭配紧张的人声铺垫悬念\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}, {\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"BITUTINBILGIII\"}, {\"type\": \"transcript\", \"ref\": \"0.0-6.3\", \"text\": \"grunting\"}], \"reason\": \"开头直接展示账号标识，用紧张的音效快速抓住观众注意力，属于直入主题的开场hook\", \"confidence\": 0.9..."
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"视频开篇展示标识与主题引入\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}], \"reason\": \"开篇用标识画面直接切入主题，快速抓住观众注意力\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 3.0, \"end_time\": 6.0, \"core_text\": \"展示创作者账号标识进行铺垫\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr..."
           },
           {
             "tool": "get_overview",
             "arguments": {},
-            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 29, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
+            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 33, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
           },
           {
             "tool": "compute_metrics",
             "arguments": {
               "start_time": 0.0,
+              "end_time": 3.0
+            },
+            "result_preview": "{\"time_range\": [0.0, 3.0], \"duration\": 3.0, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 3.0, \"shot_density\": 0.3333, \"keyframe_count\": 1, \"keyframes_per_second\": 0.3333, \"beat_count\": 7, \"beats_per_second\": 2.3333, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": false}"
+          },
+          {
+            "tool": "compute_metrics",
+            "arguments": {
+              "start_time": 3.0,
               "end_time": 6.0
             },
-            "result_preview": "{\"time_range\": [0.0, 6.0], \"duration\": 6.0, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 2.011, \"shot_density\": 0.5, \"keyframe_count\": 3, \"keyframes_per_second\": 0.5, \"beat_count\": 14, \"beats_per_second\": 2.3333, \"text_frame_count\": 3, \"unique_text_count\": 3, \"ocr_change_count\": 2, \"transcript_count\": 1, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [3.0, 6.0], \"duration\": 3.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 1.517, \"shot_density\": 0.6667, \"keyframe_count\": 2, \"keyframes_per_second\": 0.6667, \"beat_count\": 7, \"beats_per_second\": 2.3333, \"text_frame_count\": 2, \"unique_text_count\": 2, \"ocr_change_count\": 1, \"transcript_count\": 1, \"short_segment_warning\": false}"
           },
           {
             "tool": "compute_metrics",
@@ -1711,7 +1525,7 @@
               "start_time": 6.0,
               "end_time": 14.0
             },
-            "result_preview": "{\"time_range\": [6.0, 14.0], \"duration\": 8.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 4.933, \"shot_density\": 0.25, \"keyframe_count\": 1, \"keyframes_per_second\": 0.125, \"beat_count\": 18, \"beats_per_second\": 2.25, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 6, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [6.0, 14.0], \"duration\": 8.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 4.933, \"shot_density\": 0.25, \"keyframe_count\": 1, \"keyframes_per_second\": 0.125, \"beat_count\": 18, \"beats_per_second\": 2.25, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": false}"
           },
           {
             "tool": "compute_metrics",
@@ -1719,52 +1533,44 @@
               "start_time": 14.0,
               "end_time": 21.0
             },
-            "result_preview": "{\"time_range\": [14.0, 21.0], \"duration\": 7.0, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 4.533, \"shot_density\": 0.5714, \"keyframe_count\": 2, \"keyframes_per_second\": 0.2857, \"beat_count\": 16, \"beats_per_second\": 2.2857, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 5, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [14.0, 21.0], \"duration\": 7.0, \"shot_count\": 4, \"scene_cut_count\": 3, \"avg_shot_duration\": 4.533, \"shot_density\": 0.5714, \"keyframe_count\": 2, \"keyframes_per_second\": 0.2857, \"beat_count\": 16, \"beats_per_second\": 2.2857, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 1, \"short_segment_warning\": false}"
           },
           {
             "tool": "compute_metrics",
             "arguments": {
               "start_time": 21.0,
-              "end_time": 25.0
+              "end_time": 27.0
             },
-            "result_preview": "{\"time_range\": [21.0, 25.0], \"duration\": 4.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 4.733, \"shot_density\": 0.5, \"keyframe_count\": 1, \"keyframes_per_second\": 0.25, \"beat_count\": 9, \"beats_per_second\": 2.25, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 3, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [21.0, 27.0], \"duration\": 6.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 4.733, \"shot_density\": 0.3333, \"keyframe_count\": 1, \"keyframes_per_second\": 0.1667, \"beat_count\": 13, \"beats_per_second\": 2.1667, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 4, \"short_segment_warning\": false}"
           },
           {
             "tool": "compute_metrics",
             "arguments": {
-              "start_time": 25.0,
-              "end_time": 30.2
+              "start_time": 27.0,
+              "end_time": 35.0
             },
-            "result_preview": "{\"time_range\": [25.0, 30.2], \"duration\": 5.2, \"shot_count\": 1, \"scene_cut_count\": 0, \"avg_shot_duration\": 6.067, \"shot_density\": 0.1923, \"keyframe_count\": 1, \"keyframes_per_second\": 0.1923, \"beat_count\": 12, \"beats_per_second\": 2.3077, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 3, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [27.0, 35.0], \"duration\": 8.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 5.533, \"shot_density\": 0.25, \"keyframe_count\": 2, \"keyframes_per_second\": 0.25, \"beat_count\": 18, \"beats_per_second\": 2.25, \"text_frame_count\": 2, \"unique_text_count\": 2, \"ocr_change_count\": 1, \"transcript_count\": 8, \"short_segment_warning\": false}"
           },
           {
             "tool": "compute_metrics",
             "arguments": {
-              "start_time": 30.2,
-              "end_time": 36.5
+              "start_time": 35.0,
+              "end_time": 40.0
             },
-            "result_preview": "{\"time_range\": [30.2, 36.5], \"duration\": 6.3, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 4.133, \"shot_density\": 0.4762, \"keyframe_count\": 2, \"keyframes_per_second\": 0.3175, \"beat_count\": 13, \"beats_per_second\": 2.0635, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 5, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [35.0, 40.0], \"duration\": 5.0, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 3.567, \"shot_density\": 0.6, \"keyframe_count\": 2, \"keyframes_per_second\": 0.4, \"beat_count\": 11, \"beats_per_second\": 2.2, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 6, \"short_segment_warning\": false}"
           },
           {
             "tool": "compute_metrics",
             "arguments": {
-              "start_time": 36.5,
-              "end_time": 41.0
+              "start_time": 40.0,
+              "end_time": 49.0
             },
-            "result_preview": "{\"time_range\": [36.5, 41.0], \"duration\": 4.5, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 3.5, \"shot_density\": 0.6667, \"keyframe_count\": 1, \"keyframes_per_second\": 0.2222, \"beat_count\": 11, \"beats_per_second\": 2.4444, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 3, \"short_segment_warning\": false}"
-          },
-          {
-            "tool": "compute_metrics",
-            "arguments": {
-              "start_time": 41.0,
-              "end_time": 47.0
-            },
-            "result_preview": "{\"time_range\": [41.0, 47.0], \"duration\": 6.0, \"shot_count\": 2, \"scene_cut_count\": 1, \"avg_shot_duration\": 5.567, \"shot_density\": 0.3333, \"keyframe_count\": 1, \"keyframes_per_second\": 0.1667, \"beat_count\": 13, \"beats_per_second\": 2.1667, \"text_frame_count\": 1, \"unique_text_count\": 1, \"ocr_change_count\": 0, \"transcript_count\": 4, \"short_segment_warning\": false}"
+            "result_preview": "{\"time_range\": [40.0, 49.0], \"duration\": 9.0, \"shot_count\": 3, \"scene_cut_count\": 2, \"avg_shot_duration\": 5.167, \"shot_density\": 0.3333, \"keyframe_count\": 2, \"keyframes_per_second\": 0.2222, \"beat_count\": 21, \"beats_per_second\": 2.3333, \"text_frame_count\": 2, \"unique_text_count\": 2, \"ocr_change_count\": 1, \"transcript_count\": 9, \"short_segment_warning\": false}"
           }
         ]
       },
       "packaging": {
-        "llm_calls": 8,
+        "llm_calls": 3,
         "tool_calls": 7,
         "tool_history": [
           {
@@ -1772,12 +1578,12 @@
             "arguments": {
               "agent_name": "script"
             },
-            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.0, \"hook_type\": \"direct\", \"core_text\": \"开场快速展示博主账号标识，搭配紧张的人声铺垫悬念\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}, {\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"BITUTINBILGIII\"}, {\"type\": \"transcript\", \"ref\": \"0.0-6.3\", \"text\": \"grunting\"}], \"reason\": \"开头直接展示账号标识，用紧张的音效快速抓住观众注意力，属于直入主题的开场hook\", \"confidence\": 0.9..."
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"视频开篇展示标识与主题引入\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}], \"reason\": \"开篇用标识画面直接切入主题，快速抓住观众注意力\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 3.0, \"end_time\": 6.0, \"core_text\": \"展示创作者账号标识进行铺垫\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr..."
           },
           {
             "tool": "get_overview",
             "arguments": {},
-            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 29, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
+            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 33, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
           },
           {
             "tool": "get_all_display_texts",
@@ -1815,32 +1621,25 @@
         ]
       },
       "value": {
-        "llm_calls": 3,
-        "tool_calls": 7,
+        "llm_calls": 6,
+        "tool_calls": 5,
         "tool_history": [
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "script"
             },
-            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.0, \"hook_type\": \"direct\", \"core_text\": \"开场快速展示博主账号标识，搭配紧张的人声铺垫悬念\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}, {\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"BITUTINBILGIII\"}, {\"type\": \"transcript\", \"ref\": \"0.0-6.3\", \"text\": \"grunting\"}], \"reason\": \"开头直接展示账号标识，用紧张的音效快速抓住观众注意力，属于直入主题的开场hook\", \"confidence\": 0.9..."
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"视频开篇展示标识与主题引入\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}], \"reason\": \"开篇用标识画面直接切入主题，快速抓住观众注意力\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 3.0, \"end_time\": 6.0, \"core_text\": \"展示创作者账号标识进行铺垫\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr..."
           },
           {
             "tool": "get_overview",
             "arguments": {},
-            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 29, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
+            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 33, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
           },
           {
             "tool": "get_all_display_texts",
             "arguments": {},
             "result_preview": "[{\"frame_id\": \"frame_000\", \"timestamp\": 1.5, \"scene_id\": \"scene_000\", \"display_text\": \"(x ys BHUNBIEII L 5\"}, {\"frame_id\": \"frame_001\", \"timestamp\": 3.5833335, \"scene_id\": \"scene_001\", \"display_text\": \"@ITUTANBILGII\"}, {\"frame_id\": \"frame_002\", \"timestamp\": 5.1, \"scene_id\": \"scene_002\", \"display_text\": \"BITUTINBILGIII\"}, {\"frame_id\": \"frame_003\", \"timestamp\": 10.033332999999999, \"scene_id\": \"scene_003\", \"display_text\": \"Soliow Cendepor OcCoun+ 0 In BITUTANBILGII II Nobo\"}, {\"frame_id\": \"frame_00..."
-          },
-          {
-            "tool": "search_text",
-            "arguments": {
-              "keyword": "关注"
-            },
-            "result_preview": "[]"
           },
           {
             "tool": "search_text",
@@ -1855,13 +1654,6 @@
               "keyword": "教程"
             },
             "result_preview": "[]"
-          },
-          {
-            "tool": "search_text",
-            "arguments": {
-              "keyword": "购买"
-            },
-            "result_preview": "[]"
           }
         ]
       },
@@ -1874,28 +1666,28 @@
             "arguments": {
               "agent_name": "script"
             },
-            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.0, \"hook_type\": \"direct\", \"core_text\": \"开场快速展示博主账号标识，搭配紧张的人声铺垫悬念\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}, {\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"BITUTINBILGIII\"}, {\"type\": \"transcript\", \"ref\": \"0.0-6.3\", \"text\": \"grunting\"}], \"reason\": \"开头直接展示账号标识，用紧张的音效快速抓住观众注意力，属于直入主题的开场hook\", \"confidence\": 0.9..."
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"视频开篇展示标识与主题引入\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}], \"reason\": \"开篇用标识画面直接切入主题，快速抓住观众注意力\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 3.0, \"end_time\": 6.0, \"core_text\": \"展示创作者账号标识进行铺垫\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "rhythm"
             },
-            "result_preview": "{\"overall_rhythm\": {\"pace\": \"slow\", \"bpm\": 135.999, \"beat_sync_score\": 0.0662, \"avg_shot_duration\": 3.531}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"pace\": \"medium\", \"shots_per_second\": 0.5, \"avg_shot_duration\": 2.011, \"beat_count\": 14, \"beats_per_second\": 2.333, \"cut_beat_alignment\": 0.0, \"role\": \"hook开场，快速展示账号标识铺垫悬念\", \"reason\": \"metrics:seg_001，6秒内完成2次场景切换，OCR信息连续更新3次，无卡点匹配\", \"scene_cut_count\": 2, \"rhythm_driver\": \"information_reveal\"}, {\"segment_id\": \"seg_002\", ..."
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"slow\", \"bpm\": 135.999, \"beat_sync_score\": 0.0662, \"avg_shot_duration\": 3.531}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"pace\": \"slow\", \"shots_per_second\": 0.3333, \"avg_shot_duration\": 3.0, \"beat_count\": 7, \"beats_per_second\": 2.3333, \"cut_beat_alignment\": 0.0, \"role\": \"title setup, show opening logo to catch attention\", \"reason\": \"单张标识画面持续展示，无场景切镜，对应metrics:seg_001数据\", \"scene_cut_count\": 0, \"rhythm_driver\": \"information_reveal\", \"eviden..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "packaging"
             },
-            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"mixed\", \"title_card_usage\": true, \"dominant_text_layout\": \"mixed\", \"visual_emphasis\": [\"large_text\", \"repeated_account_brand_watermark\", \"topic_highlight_text\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"packaging_role\": \"hook_brand_display\", \"text_density\": \"medium\", \"layout\": \"corner account id text\", \"evidence_refs\": [\"frame_0..."
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"mixed\", \"title_card_usage\": true, \"dominant_text_layout\": \"mixed\", \"visual_emphasis\": [\"large_text\", \"repeated_account_id_display\", \"topic_naming_text\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"packaging_role\": \"opening_title_card\", \"text_density\": \"low\", \"layout\": \"centered opening logo text\", \"evidence_refs\": [\"frame_000\"], \"..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "value"
             },
-            "result_preview": "{\"value_strategy\": {\"primary_value\": \"向观众展示极具视觉冲击力的趣味疯狂化学实验，带来新奇的科学奇观体验\", \"value_type\": \"mixed\", \"target_audience\": \"对趣味化学、科学奇观内容感兴趣的普通观众与化学爱好者\", \"conversion_goal\": \"follow\", \"primary_hook_value\": \"开场快速展示博主标识搭配紧张音效，直接抓住观众好奇心，铺垫后续惊险实验内容\", \"creator_cta\": \"片尾多次展示博主账号ID @ITUTANBILGII 引导观众关注账号\", \"platform_cta\": null, \"selling_points\": []}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"value_role\": \"attention_capture\", \"claim\": \"用紧张音效和账号标识快速抓住观众注意力，铺垫悬念\", \"evidence_refs\": ..."
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"通过炫酷的碘钟化学实验演示，向观众传递趣味化学知识，同时提供极具视觉冲击力的奇观娱乐体验\", \"value_type\": \"mixed\", \"target_audience\": \"对趣味科学、化学实验感兴趣的普通观众，尤其是学生群体\", \"conversion_goal\": \"follow / 持续获取更多趣味科学内容\", \"primary_hook_value\": \"抛出疑问「这是科学课还是魔术表演」，用超出预期的神奇化学反应效果制造强烈好奇心\", \"creator_cta\": \"片尾多次展示创作者账号ID @ITUTANBILGII 引导观众关注账号获取更多内容\", \"platform_cta\": null, \"selling_points\": []}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"value_role\": \"opening\", \"claim\": \"开篇展示标识快速切入主题，抓住观众注意..."
           }
         ]
       },
@@ -1908,42 +1700,42 @@
             "arguments": {
               "agent_name": "overview"
             },
-            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 29, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
+            "result_preview": "{\"video_id\": \"mVe5WpXxIH8\", \"duration\": 60.093243, \"resolution\": \"720x1280\", \"fps\": 30.0, \"scene_count\": 17, \"keyframe_count\": 17, \"transcript_segment_count\": 33, \"ocr_frame_count\": 15, \"beat_count\": 136, \"beat_sync_score\": 0.0662, \"bpm\": 135.99917763157896, \"estimated_pace\": \"slow\", \"subtitle_density\": \"high\", \"avg_shot_duration\": 3.531, \"shot_density\": 0.2832, \"has_speech\": true}"
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "script"
             },
-            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 6.0, \"hook_type\": \"direct\", \"core_text\": \"开场快速展示博主账号标识，搭配紧张的人声铺垫悬念\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}, {\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr\", \"ref\": \"frame_002\", \"text\": \"BITUTINBILGIII\"}, {\"type\": \"transcript\", \"ref\": \"0.0-6.3\", \"text\": \"grunting\"}], \"reason\": \"开头直接展示账号标识，用紧张的音效快速抓住观众注意力，属于直入主题的开场hook\", \"confidence\": 0.9..."
+            "result_preview": "{\"segments\": [{\"segment_id\": \"seg_001\", \"function\": \"hook\", \"start_time\": 0.0, \"end_time\": 3.0, \"hook_type\": \"title_card\", \"core_text\": \"视频开篇展示标识与主题引入\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_000\", \"text\": \"(x ys BHUNBIEII L 5\"}], \"reason\": \"开篇用标识画面直接切入主题，快速抓住观众注意力\", \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"function\": \"introduction\", \"start_time\": 3.0, \"end_time\": 6.0, \"core_text\": \"展示创作者账号标识进行铺垫\", \"evidence\": [{\"type\": \"ocr\", \"ref\": \"frame_001\", \"text\": \"@ITUTANBILGII\"}, {\"type\": \"ocr..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "rhythm"
             },
-            "result_preview": "{\"overall_rhythm\": {\"pace\": \"slow\", \"bpm\": 135.999, \"beat_sync_score\": 0.0662, \"avg_shot_duration\": 3.531}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"pace\": \"medium\", \"shots_per_second\": 0.5, \"avg_shot_duration\": 2.011, \"beat_count\": 14, \"beats_per_second\": 2.333, \"cut_beat_alignment\": 0.0, \"role\": \"hook开场，快速展示账号标识铺垫悬念\", \"reason\": \"metrics:seg_001，6秒内完成2次场景切换，OCR信息连续更新3次，无卡点匹配\", \"scene_cut_count\": 2, \"rhythm_driver\": \"information_reveal\"}, {\"segment_id\": \"seg_002\", ..."
+            "result_preview": "{\"overall_rhythm\": {\"pace\": \"slow\", \"bpm\": 135.999, \"beat_sync_score\": 0.0662, \"avg_shot_duration\": 3.531}, \"segment_rhythm\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"pace\": \"slow\", \"shots_per_second\": 0.3333, \"avg_shot_duration\": 3.0, \"beat_count\": 7, \"beats_per_second\": 2.3333, \"cut_beat_alignment\": 0.0, \"role\": \"title setup, show opening logo to catch attention\", \"reason\": \"单张标识画面持续展示，无场景切镜，对应metrics:seg_001数据\", \"scene_cut_count\": 0, \"rhythm_driver\": \"information_reveal\", \"eviden..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "packaging"
             },
-            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"mixed\", \"title_card_usage\": true, \"dominant_text_layout\": \"mixed\", \"visual_emphasis\": [\"large_text\", \"repeated_account_brand_watermark\", \"topic_highlight_text\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"packaging_role\": \"hook_brand_display\", \"text_density\": \"medium\", \"layout\": \"corner account id text\", \"evidence_refs\": [\"frame_0..."
+            "result_preview": "{\"packaging_structure\": {\"subtitle_density\": \"high\", \"subtitle_style\": \"mixed\", \"title_card_usage\": true, \"dominant_text_layout\": \"mixed\", \"visual_emphasis\": [\"large_text\", \"repeated_account_id_display\", \"topic_naming_text\"], \"transition_style\": \"uncertain\", \"sticker_usage\": \"uncertain\"}, \"segment_packaging\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"packaging_role\": \"opening_title_card\", \"text_density\": \"low\", \"layout\": \"centered opening logo text\", \"evidence_refs\": [\"frame_000\"], \"..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "value"
             },
-            "result_preview": "{\"value_strategy\": {\"primary_value\": \"向观众展示极具视觉冲击力的趣味疯狂化学实验，带来新奇的科学奇观体验\", \"value_type\": \"mixed\", \"target_audience\": \"对趣味化学、科学奇观内容感兴趣的普通观众与化学爱好者\", \"conversion_goal\": \"follow\", \"primary_hook_value\": \"开场快速展示博主标识搭配紧张音效，直接抓住观众好奇心，铺垫后续惊险实验内容\", \"creator_cta\": \"片尾多次展示博主账号ID @ITUTANBILGII 引导观众关注账号\", \"platform_cta\": null, \"selling_points\": []}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"value_role\": \"attention_capture\", \"claim\": \"用紧张音效和账号标识快速抓住观众注意力，铺垫悬念\", \"evidence_refs\": ..."
+            "result_preview": "{\"value_strategy\": {\"primary_value\": \"通过炫酷的碘钟化学实验演示，向观众传递趣味化学知识，同时提供极具视觉冲击力的奇观娱乐体验\", \"value_type\": \"mixed\", \"target_audience\": \"对趣味科学、化学实验感兴趣的普通观众，尤其是学生群体\", \"conversion_goal\": \"follow / 持续获取更多趣味科学内容\", \"primary_hook_value\": \"抛出疑问「这是科学课还是魔术表演」，用超出预期的神奇化学反应效果制造强烈好奇心\", \"creator_cta\": \"片尾多次展示创作者账号ID @ITUTANBILGII 引导观众关注账号获取更多内容\", \"platform_cta\": null, \"selling_points\": []}, \"value_progression\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"value_role\": \"opening\", \"claim\": \"开篇展示标识快速切入主题，抓住观众注意..."
           },
           {
             "tool": "read_blackboard",
             "arguments": {
               "agent_name": "energy"
             },
-            "result_preview": "{\"energy_curve\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 6.0], \"energy_level\": \"medium\", \"role\": \"hook_attention\", \"drivers\": [\"fast account identity reveal\", \"tense audio atmosphere\"], \"evidence_refs\": [\"script:seg_001\", \"rhythm:seg_001\", \"packaging:seg_001\", \"value:seg_001\"], \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"time_range\": [6.0, 14.0], \"energy_level\": \"low\", \"role\": \"scene_building\", \"drivers\": [\"dialogue guidance\", \"experiment context setup\"], \"evidence_refs\": [\"script:seg_..."
+            "result_preview": "{\"energy_curve\": [{\"segment_id\": \"seg_001\", \"time_range\": [0.0, 3.0], \"energy_level\": \"medium\", \"role\": \"hook_attention\", \"drivers\": [\"large_opening_title_card\", \"fast_topic_introduction\"], \"evidence_refs\": [\"script:seg_001\", \"rhythm:seg_001\", \"packaging:seg_001\", \"value:seg_001\"], \"confidence\": 0.9}, {\"segment_id\": \"seg_002\", \"time_range\": [3.0, 6.0], \"energy_level\": \"low\", \"role\": \"branding_setup\", \"drivers\": [\"repeated_creator_id_display\", \"slow_visual_version_change\"], \"evidence_refs\": [\"scr..."
           }
         ]
       }
