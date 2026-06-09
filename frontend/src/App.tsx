@@ -232,16 +232,29 @@ export default function App() {
 
         {/* Top bar */}
         <div className="mb-4 flex flex-col gap-4 rounded-3xl border border-white/70 bg-white/75 px-5 py-4 shadow-[0_18px_48px_rgba(15,23,42,0.08)] backdrop-blur">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-950 text-sm font-semibold text-white shadow-lg shadow-slate-900/20">VC</div>
+{/* 品牌区：点击返回首页，样式与 Landing 头部一致 */}
+          <div
+            onClick={() => setShowLanding(true)}
+            title="返回首页"
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setShowLanding(true); }}
+            className="group flex cursor-pointer items-center gap-3 rounded-2xl px-1.5 py-1 transition hover:bg-slate-100/60"
+          >
+            {/* 换 Logo：把这个 VC 方块替换成 <img src="/logo.svg" alt="ViralCut" className="h-10 w-10 rounded-2xl" /> */}
+            <img src="/logo.svg" alt="ViralCut" className="h-10 w-10 rounded-2xl" />
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[15px] font-semibold tracking-tight text-slate-950">{analysis ? analysis.video_id : 'ViralCut'}</span>
+                <span className="text-[15px] font-semibold tracking-tight text-slate-950">ViralCut</span>
+                {analysis && (
+                  <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] font-medium text-slate-500">{analysis.video_id}</span>
+                )}
                 {structure?.evaluation && (
                   <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[11px] font-medium text-emerald-700">
                     已分析 · {structure.evaluation.score}分
                   </span>
                 )}
+                <span className="text-[11px] text-slate-400 opacity-0 transition group-hover:opacity-100">← 返回首页</span>
               </div>
               <div className="mt-0.5 text-[11px] text-slate-500">爆款视频结构迁移引擎 · Evidence-based multi-agent workflow</div>
             </div>

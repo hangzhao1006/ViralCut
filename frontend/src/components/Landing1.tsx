@@ -102,7 +102,7 @@ export default function Landing({ onEnter }: LandingProps) {
           <div className="brand">
             {/* 换 Logo：把下面这行 <div className="logo">VC</div> 替换成
                 <img src="/logo.svg" className="logo-img" alt="ViralCut" /> */}
-            <img src="/logo.svg" className="logo-img" alt="ViralCut" />
+            <img src="/logo.svg" className="logo-img" alt="ViralCut" /> 
             <b>ViralCut</b>
           </div>
           <button className="btn btn-primary" onClick={onEnter}>进入工作台 →</button>
@@ -318,12 +318,11 @@ const STYLES = `
 }
 .vc-landing *{box-sizing:border-box;}
 .vc-landing a{color:inherit; text-decoration:none;}
-.vc-landing .wrap{width:min(100% - 48px, 1080px); max-width:1080px; margin:0 auto; padding:0;}
-.vc-landing .kicker{font-family:var(--mono); font-size:20px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);}
+.vc-landing .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+.vc-landing .kicker{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink3);}
 
 .vc-landing nav{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(20px); background:rgba(245,245,247,.72); border-bottom:1px solid var(--border-soft);}
-.vc-landing nav .wrap{width:min(100% - 48px, 1080px); max-width:1080px; padding:0;}
-.vc-landing .nav-in{display:flex; align-items:center; justify-content:space-between; height:64px;}
+.vc-landing .nav-in{display:flex; align-items:center; justify-content:space-between; height:60px;border:1px solid #767676;}
 .vc-landing .brand{display:flex; align-items:center; gap:10px;}
 .vc-landing .logo{width:30px; height:30px; border-radius:9px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; letter-spacing:.02em;}
 .vc-landing .logo-img{width:30px; height:30px; border-radius:9px; display:block; object-fit:contain;}
@@ -334,8 +333,8 @@ const STYLES = `
 .vc-landing .btn-ghost{border-color:var(--border); background:#fff; color:var(--ink);}
 .vc-landing .btn-ghost:hover{border-color:#c8c8cc;}
 
-.vc-landing .hero{padding:88px 0 76px;}
-.vc-landing .hero .kicker{margin-bottom:20px; margin-top:20px;}
+.vc-landing .hero{padding:84px 0 64px;}
+.vc-landing .hero .kicker{margin-bottom:20px;}
 .vc-landing h1{font-size:clamp(34px,5.4vw,58px); line-height:1.04; letter-spacing:-.025em; font-weight:680; margin:0 0 22px; max-width:14ch;}
 .vc-landing h1 .muted{color:var(--ink3);}
 .vc-landing .lead{font-size:clamp(15px,1.7vw,18px); color:var(--ink2); max-width:54ch; margin:0 0 32px;}
@@ -366,10 +365,10 @@ const STYLES = `
 .vc-landing .energy{position:absolute; inset:0;}
 .vc-landing .energy svg{width:100%; height:100%; display:block;}
 
-.vc-landing section{padding:128px 0;}
-.vc-landing .sec-head{max-width:60ch; margin-bottom:62px;}
-.vc-landing .sec-head .kicker{margin-bottom:34px; margin-top:34px;}
-.vc-landing h2{font-size:clamp(24px,3vw,34px); line-height:1.12; letter-spacing:-.02em; font-weight:660; margin:0 0 18px;}
+.vc-landing section{padding:100px 0;}
+.vc-landing .sec-head{max-width:60ch; margin-bottom:48px;}
+.vc-landing .sec-head .kicker{margin-bottom:14px;}
+.vc-landing h2{font-size:clamp(24px,3vw,34px); line-height:1.12; letter-spacing:-.02em; font-weight:660; margin:0 0 14px;}
 .vc-landing .sec-head p{color:var(--ink2); font-size:16px; margin:0; max-width:52ch;}
 
 .vc-landing .pain{background:var(--ink); color:#fff; border-radius:28px; padding:56px clamp(28px,5vw,64px);}
@@ -381,8 +380,8 @@ const STYLES = `
 .vc-landing .pain-grid .h{font-size:16px; font-weight:600; margin-bottom:6px;}
 .vc-landing .pain-grid .d{font-size:13px; color:rgba(255,255,255,.6); line-height:1.5;}
 
-.vc-landing .stage{display:grid; grid-template-columns:118px 1fr; gap:32px; padding:42px 0; border-top:1px solid var(--border);}
-.vc-landing .stage:first-of-type{border-top:none; padding-top:8px;}
+.vc-landing .stage{display:grid; grid-template-columns:118px 1fr; gap:28px; padding:30px 0; border-top:1px solid var(--border);}
+.vc-landing .stage:first-of-type{border-top:none;}
 .vc-landing .stage-num{font-family:var(--mono);}
 .vc-landing .stage-num .s{font-size:11px; color:var(--ink3); letter-spacing:.12em;}
 .vc-landing .stage-num .big{font-size:40px; font-weight:600; line-height:1; letter-spacing:-.02em; color:var(--ink); margin-top:6px;}
@@ -399,8 +398,8 @@ const STYLES = `
 .vc-landing .agents span{font-family:var(--mono); font-size:10px; padding:3px 7px; border-radius:6px; background:var(--indigo-50); color:var(--indigo-700);}
 .vc-landing .arrow{font-family:var(--mono); color:var(--ink3); padding:0 2px;}
 
-.vc-landing .orch-in{font-family:var(--mono); font-size:11px; color:var(--ink3); text-align:center; margin-bottom:40px; letter-spacing:.04em;}
-.vc-landing .teams{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+.vc-landing .orch-in{font-family:var(--mono); font-size:11px; color:var(--ink3); text-align:center; margin-bottom:16px; letter-spacing:.04em;}
+.vc-landing .teams{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
 .vc-landing .team{border:1px solid var(--border); border-radius:18px; background:#fff; padding:24px;}
 .vc-landing .team-h{display:flex; align-items:center; gap:8px; font-weight:640; font-size:15px; letter-spacing:-.01em;}
 .vc-landing .team-s{font-size:12.5px; color:var(--ink2); margin:6px 0 18px; line-height:1.55;}
@@ -411,15 +410,15 @@ const STYLES = `
 .vc-landing .vbar{width:1.5px; height:15px; background:var(--border); margin:5px 0 5px 22px;}
 .vc-landing .pllabel{font-family:var(--mono); font-size:10.5px; color:var(--ink3);}
 .vc-landing .outlab{font-family:var(--mono); font-size:10.5px; color:var(--indigo-700); font-weight:600;}
-.vc-landing .bb{margin-top:20px; border:1px dashed var(--indigo-300); border-radius:10px; padding:10px 13px; background:var(--indigo-50); font-size:12px; color:var(--indigo-700); font-weight:500;}
+.vc-landing .bb{margin-top:16px; border:1px dashed var(--indigo-300); border-radius:10px; padding:10px 13px; background:var(--indigo-50); font-size:12px; color:var(--indigo-700); font-weight:500;}
 .vc-landing .bb.alt{border-style:solid; border-color:var(--border); background:var(--bg); color:var(--ink2);}
 .vc-landing .meta-note{margin-top:12px; font-family:var(--mono); font-size:10.5px; color:var(--ink3); line-height:1.55;}
-.vc-landing .evalbar{margin-top:40px; border:1px solid var(--border); border-radius:16px; background:#fff; padding:18px 22px;}
+.vc-landing .evalbar{margin-top:14px; border:1px solid var(--border); border-radius:16px; background:#fff; padding:18px 22px;}
 .vc-landing .evalbar .eh{font-weight:640; font-size:14px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
 .vc-landing .evalbar .ed{font-size:12.5px; color:var(--ink2); margin-top:6px; line-height:1.55; max-width:74ch;}
 .vc-landing .hbadge{font-family:var(--mono); font-size:10px; color:var(--ink3); border:1px solid var(--border); border-radius:6px; padding:2px 7px; font-weight:500;}
-.vc-landing .tools-strip{margin-top:44px; padding-top:4px; display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
-.vc-landing .toolc{font-family:var(--mono); font-size:15px; color:var(--ink3); letter-spacing:.1em; text-transform:uppercase; margin-right:4px;}
+.vc-landing .tools-strip{margin-top:14px; display:flex; flex-wrap:wrap; gap:6px; align-items:center;}
+.vc-landing .toolc{font-family:var(--mono); font-size:10px; color:var(--ink3); letter-spacing:.1em; text-transform:uppercase; margin-right:4px;}
 .vc-landing .tool{font-family:var(--mono); font-size:10.5px; padding:4px 9px; border-radius:7px; background:#fff; border:1px solid var(--border); color:var(--ink2);}
 
 .vc-landing .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
@@ -429,8 +428,8 @@ const STYLES = `
 .vc-landing .card h4{font-size:16px; font-weight:640; margin:0 0 8px; letter-spacing:-.01em;}
 .vc-landing .card p{font-size:13px; color:var(--ink2); margin:0; line-height:1.55;}
 
-.vc-landing .arch{background:#fff; border:1px solid var(--border); border-radius:24px; padding:clamp(32px,4vw,52px); margin-top:4px;}
-.vc-landing .arch-row{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:22px 0; border-top:1px solid var(--border-soft);}
+.vc-landing .arch{background:#fff; border:1px solid var(--border); border-radius:24px; padding:clamp(28px,4vw,48px);}
+.vc-landing .arch-row{display:grid; grid-template-columns:120px 1fr; gap:24px; padding:20px 0; border-top:1px solid var(--border-soft);}
 .vc-landing .arch-row:first-child{border-top:none; padding-top:0;}
 .vc-landing .arch-row .al{font-family:var(--mono); font-size:11px; color:var(--ink3); letter-spacing:.06em; padding-top:3px; text-transform:uppercase;}
 .vc-landing .arch-row .av{display:flex; flex-wrap:wrap; gap:8px;}
@@ -447,13 +446,9 @@ const STYLES = `
 .vc-landing .reveal.in{opacity:1; transform:none;}
 
 @media (max-width:820px){
-  .vc-landing .wrap, .vc-landing nav .wrap{width:min(100% - 32px, 1080px);}
   .vc-landing .pain-grid,.vc-landing .cards,.vc-landing .teams{grid-template-columns:1fr;}
   .vc-landing .dual{grid-template-columns:1fr;}
-  .vc-landing section{padding:92px 0;}
-  .vc-landing .sec-head{margin-bottom:44px;}
-  .vc-landing .sec-head <div className="kicker">margin-bottom:24px;margin-top:24px</div>
-  .vc-landing .stage{grid-template-columns:1fr; gap:18px; padding:34px 0;}
+  .vc-landing .stage{grid-template-columns:1fr; gap:14px;}
   .vc-landing .arch-row{grid-template-columns:1fr; gap:10px;}
 }
 @media (prefers-reduced-motion:reduce){
