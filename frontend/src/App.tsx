@@ -6,6 +6,7 @@ import VideoPlayer from './components/analysis/VideoPlayer';
 import AgentPanel from './components/analysis/AgentPanel';
 import MultiTrackTimeline from './components/analysis/MultiTrackTimeline';
 import AgentProgress from './components/analysis/AgentProgress';
+import Stage2LoadingView from './components/analysis/Stage2LoadingView';
 import AssetLibrary from './components/AssetLibrary';
 import type { AnalyzedAsset } from './components/AssetLibrary';
 import MigrationForm from './components/migration/MigrationForm';
@@ -29,6 +30,7 @@ export default function App() {
   const [linkUrl, setLinkUrl] = useState('');
   const [taskStatus, setTaskStatus] = useState<TaskStatus | null>(null);
   const [elapsed, setElapsed] = useState(0);
+  const [loadingVideoUrl, setLoadingVideoUrl] = useState('');
   const startRef = useRef<number>(0);
 
   useEffect(() => {
@@ -103,6 +105,7 @@ export default function App() {
   function handleContinueStage2() {
     const vid = analysis?.video_id;
     if (!vid) return;
+    setLoadingVideoUrl(analysis?.video_url ?? '');
     startRef.current = Date.now();
     setElapsed(0);
     setMigration(null);
@@ -295,7 +298,16 @@ export default function App() {
             <div className="mb-4 rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700 shadow-sm">
               分析失败: {taskStatus.message}
             </div>
-          ) : <AgentProgress status={taskStatus} elapsed={elapsed} />
+          ) : taskStatus.stage === 'stage2' ? (
+            <Stage2LoadingView
+              status={taskStatus}
+              elapsed={elapsed}
+              videoUrl={loadingVideoUrl || analysis?.video_url || ''}
+              synthesis={analysis?.synthesis_result ?? null}
+            />
+          ) : (
+            <AgentProgress status={taskStatus} elapsed={elapsed} />
+          )
         )}
 
         {/* Empty state */}
@@ -357,8 +369,8 @@ export default function App() {
           );
         })()}
 
-        {/* Leo done, main still loading — show synthesis + main progress */}
-        {leoReady && !mainReady && mainStillLoading && (
+        {/* Leo done, main still loading — show synthesis + main progress (only when not in active stage2 loading view) */}
+        {leoReady && !mainReady && mainStillLoading && taskStatus?.stage !== 'stage2' && (
           <div className="vc-card overflow-hidden rounded-[2rem]">
             <div className="p-5">
               <video src={analysis?.video_url} controls className="w-full max-w-[560px] rounded-xl" />

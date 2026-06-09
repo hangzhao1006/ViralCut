@@ -13,13 +13,6 @@ const MONO: React.CSSProperties = {
   fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
 };
 
-// Extract the first sentence from a mechanism string
-function firstSentence(text: string): string {
-  const cut = text.search(/[。！？]/);
-  if (cut > 4 && cut < 72) return text.slice(0, cut + 1);
-  return text.length > 65 ? text.slice(0, 65) + '…' : text;
-}
-
 // ── Ring avatar ────────────────────────────────────────────────────
 function AgentRing({ char, done }: { char: string; done: boolean }) {
   const S = 72, r = 29;
@@ -70,7 +63,6 @@ function AgentRing({ char, done }: { char: string; done: boolean }) {
 
 // ── Speech bubble ──────────────────────────────────────────────────
 function SpeechBubble({ rank, dim }: { rank: number; dim: ClusteredDimension }) {
-  const sentence = firstSentence(dim.viral_mechanism ?? dim.dimension_name);
   const rankStr = `#${String(rank).padStart(2, '0')}`;
 
   return (
@@ -100,20 +92,15 @@ function SpeechBubble({ rank, dim }: { rank: number; dim: ClusteredDimension }) 
         border: '1px solid #e8e8e8',
         background: '#f9f9f9',
       }}>
-        {/* Rank reference — connects visually to the cluster card below */}
+        {/* Rank reference */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 5 }}>
           <span style={{ ...MONO, fontSize: 9, color: '#aeaeb2' }}>投票</span>
           <span style={{ ...MONO, fontSize: 10, fontWeight: 700, color: '#1d1d1f' }}>{rankStr}</span>
         </div>
 
-        {/* The "vote" — dimension name */}
-        <div style={{ fontSize: 11, fontWeight: 700, color: '#1d1d1f', marginBottom: 4, lineHeight: 1.35 }}>
+        {/* Dimension name only */}
+        <div style={{ fontSize: 11, fontWeight: 700, color: '#1d1d1f', lineHeight: 1.35 }}>
           {dim.dimension_name}
-        </div>
-
-        {/* The reasoning sentence */}
-        <div style={{ fontSize: 10, color: '#6e6e73', lineHeight: 1.6 }}>
-          {sentence}
         </div>
       </div>
     </div>

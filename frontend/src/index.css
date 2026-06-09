@@ -39,6 +39,16 @@ body {
 
 button, input, select, textarea { font: inherit; }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
 @layer components {
   .vc-card {
     @apply bg-white border border-[#e0e0e0] shadow-[0_1px_3px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)];
