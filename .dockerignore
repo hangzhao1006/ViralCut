@@ -1,11 +1,29 @@
+# secrets & runtime
 .env
-.git
+.env.local
 output/
 backend/static/
-node_modules/
-frontend/node_modules/
-frontend/dist/
+temp/
+
+# python
 __pycache__/
 *.pyc
 .venv/
 venv/
+
+# node / frontend build
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# vcs / editor / os
+.git
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+**/.DS_Store
+
+# 大文件 / 日志（别进镜像）
+src/stage1/scripts/test_videos/
+*.log
